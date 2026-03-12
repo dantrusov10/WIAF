@@ -1,14 +1,293 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>WIAF — цифровые торги на международную логистику</title>
-    <meta name="description" content="WIAF — платформа цифровых аукционов для международной логистики. Импортёры получают лучшие ставки от экспедиторов, экспедиторы получают новые сделки."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WIAF — цифровые торги на международную логистику</title>
+  <meta name="description" content="WIAF — цифровая платформа для аукционов на международную логистику. Импортёры получают конкурентные ставки, экспедиторы — новые сделки." />
+  <meta property="og:title" content="WIAF — цифровые торги на международную логистику" />
+  <meta property="og:description" content="Снижайте стоимость перевозок через прозрачные цифровые торги." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#hero">WIAF</a>
+      <nav class="menu">
+        <a href="#how">Как это работает</a>
+        <a href="#product">Платформа</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#news">Новости</a>
+      </nav>
+      <a class="btn btn-ghost" href="#cta">Запросить демо</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Цифровая платформа для международной логистики</div>
+          <h1>Снижайте стоимость перевозок через прозрачные цифровые торги</h1>
+          <p class="lead">
+            WIAF помогает импортёрам быстро получать конкурентные ставки от экспедиторов,
+            а логистическим компаниям — находить новые сделки в понятной цифровой среде.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#cta">Создать аукцион</a>
+            <a class="btn btn-secondary" href="#product">Посмотреть платформу</a>
+          </div>
+          <div class="hero-points">
+            <span>Бесплатно для импортёров</span>
+            <span>60 минут на торги</span>
+            <span>Комиссия для экспедитора — 1%, но не более 5000 ₽</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-head">
+            <span>Активный аукцион</span>
+            <span class="status">Идут торги</span>
+          </div>
+          <div class="metric-row">
+            <div class="metric">
+              <div class="metric-label">Маршрут</div>
+              <div class="metric-value">Шанхай → Москва</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Таймер</div>
+              <div class="metric-value">00:37:12</div>
+            </div>
+          </div>
+          <div class="bids">
+            <div class="bid"><span>Ставка #1</span><strong>428 000 ₽</strong></div>
+            <div class="bid"><span>Ставка #2</span><strong>412 000 ₽</strong></div>
+            <div class="bid"><span>Ставка #3</span><strong>398 000 ₽</strong></div>
+          </div>
+          <div class="saving">
+            <span>Текущая экономия</span>
+            <strong>−30 000 ₽</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Как это работает</div>
+          <h2>Понятный сценарий для импортёра и экспедитора</h2>
+          <p>Платформа делает торги прозрачными, быстрыми и управляемыми — без бесконечных переписок и ручного сравнения ставок.</p>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <div class="card-num">01</div>
+            <h3>Создайте аукцион</h3>
+            <p>Укажите маршрут, параметры груза, сроки и условия. Можно запускать торги с нуля или из готового шаблона.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">02</div>
+            <h3>Получайте ставки</h3>
+            <p>Экспедиторы участвуют в торгах в течение 60 минут. Каждая ставка фиксируется в системе по единым правилам.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">03</div>
+            <h3>Выберите победителя</h3>
+            <p>Контакты импортёра открываются только победителю. Дальше — договор, ЭДО и работа по реальной сделке.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="product">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Платформа WIAF</div>
+          <h2>Не просто лендинг, а цифровой интерфейс работы с торгами</h2>
+          <p>Ниже — визуализация ключевых разделов продукта, которые важны для ежедневной работы пользователя.</p>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="dashboard">Дашборд</button>
+          <button class="tab" data-tab="auctions">Мои аукционы</button>
+          <button class="tab" data-tab="templates">Шаблоны</button>
+          <button class="tab" data-tab="analytics">Аналитика</button>
+          <button class="tab" data-tab="documents">Документы</button>
+        </div>
+
+        <div class="panel-wrap">
+          <section class="panel active" id="dashboard">
+            <div class="mock-grid">
+              <div class="mock-card wide">
+                <h3>Операционная сводка</h3>
+                <p>Количество активных торгов, завершённых аукционов, средняя экономия и статус последних заявок.</p>
+                <div class="mini-stats">
+                  <div><span>Активные торги</span><strong>12</strong></div>
+                  <div><span>Средняя экономия</span><strong>8.7%</strong></div>
+                  <div><span>Новых ставок за сутки</span><strong>46</strong></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                <h3>Быстрые действия</h3>
+                <ul>
+                  <li>Создать новый аукцион</li>
+                  <li>Запустить из шаблона</li>
+                  <li>Открыть завершённые торги</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="auctions">
+            <div class="mock-card">
+              <h3>Мои аукционы</h3>
+              <p>Список текущих и завершённых торгов с фильтрами по маршруту, статусу, времени и победителю.</p>
+              <div class="table-like">
+                <div><span>Шанхай → Москва</span><strong>Идут торги</strong></div>
+                <div><span>Нинбо → Санкт-Петербург</span><strong>Завершён</strong></div>
+                <div><span>Гуанчжоу → Екатеринбург</span><strong>Ожидает публикации</strong></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="templates">
+            <div class="mock-card">
+              <h3>Шаблоны</h3>
+              <p>Сохраняйте типовые направления, условия, наборы документов и параметры груза для быстрого запуска новых торгов.</p>
+              <div class="chips">
+                <span>Китай → Москва / сборный груз</span>
+                <span>Турция → РФ / авто</span>
+                <span>FOB / морская перевозка</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="analytics">
+            <div class="mock-card">
+              <h3>Аналитика</h3>
+              <p>Сравнение ставок, история экономии, динамика стоимости по маршрутам и понимание реальной рыночной цены перевозки.</p>
+              <div class="mini-stats">
+                <div><span>Среднее число ставок</span><strong>5.4</strong></div>
+                <div><span>Экономия за квартал</span><strong>2.8 млн ₽</strong></div>
+                <div><span>Лучший маршрут по снижению</span><strong>−14%</strong></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="documents">
+            <div class="mock-card">
+              <h3>Документы и ЭДО</h3>
+              <p>База под цифровой документооборот: шаблоны, регламенты, договорные документы и история взаимодействий по сделке.</p>
+              <ul>
+                <li>Шаблоны договоров</li>
+                <li>История документов по аукциону</li>
+                <li>Подготовка к интеграции с ЭДО</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Почему WIAF</div>
+          <h2>Ценность, которая понятна рынку</h2>
+          <p>Платформа помогает решить конкретные задачи импортёров и экспедиторов, а не просто “оцифровать процесс”.</p>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>Снижение закупочной цены на логистику</h3>
+            <p>Конкурентные ставки в ограниченное время помогают получить более выгодное предложение без ручного тендера.</p>
+            <a href="#cta">Запустить торги</a>
+          </article>
+          <article class="card">
+            <h3>Быстрее, чем привычный сбор КП</h3>
+            <p>Один сценарий, единые правила, цифровой след ставок и готовая база шаблонов вместо хаоса в почте и мессенджерах.</p>
+            <a href="#cta">Посмотреть демо</a>
+          </article>
+          <article class="card">
+            <h3>Новые сделки для экспедиторов</h3>
+            <p>Экспедитор получает доступ к новым запросам и понятной механике участия, где результат зависит от цены и скорости реакции.</p>
+            <a href="#cta">Стать участником</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section seo-block">
+      <div class="container seo-grid">
+        <div>
+          <div class="eyebrow">Для SEO и контентной стратегии</div>
+          <h2>Платформа для торгов на международную логистику, ВЭД и перевозки</h2>
+          <p>
+            WIAF — это цифровая платформа для аукционов на международные перевозки, логистику и ВЭД.
+            Сервис помогает импортёрам снижать стоимость доставки за счёт конкурентных торгов,
+            а экспедиторам — находить новые запросы на перевозку и участвовать в прозрачных цифровых аукционах.
+          </p>
+          <p>
+            Платформа подходит для компаний, которые регулярно закупают международную логистику,
+            работают с морскими, автомобильными и мультимодальными перевозками,
+            ведут импорт из Китая, Турции и других стран и хотят получать рыночную цену быстрее и прозрачнее.
+          </p>
+        </div>
+        <div class="seo-card">
+          <h3>Ключевые формулировки</h3>
+          <ul>
+            <li>аукцион на международную перевозку</li>
+            <li>цифровые торги на логистику</li>
+            <li>платформа для импортёров и экспедиторов</li>
+            <li>снижение стоимости логистики через торги</li>
+            <li>маркетплейс логистических услуг</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Раздел в развитии</div>
+          <h2>Новости логистики и ВЭД</h2>
+          <p>База под будущий контентный блок: новости международной логистики, изменения в ВЭД, аналитика ставок, ключевые события рынка.</p>
+        </div>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>Изменения в ставках</h3>
+            <p>Отслеживание рыночной динамики по направлениям и типам перевозок.</p>
+          </article>
+          <article class="card">
+            <h3>Новости ВЭД</h3>
+            <p>Изменения в регулировании, документах, пошлинах и международных маршрутах.</p>
+          </article>
+          <article class="card">
+            <h3>Аналитика рынка</h3>
+            <p>Сводка ключевых событий для импортёров, закупщиков логистики и экспедиторов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="cta">
+      <div class="container cta-box">
+        <div>
+          <div class="eyebrow">Следующий шаг</div>
+          <h2>Запустите первые цифровые торги на логистику через WIAF</h2>
+          <p>Покажем, как платформа может работать под ваш процесс закупки перевозок и где она даст реальную экономию.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="#">Запросить демонстрацию</a>
+          <a class="btn btn-secondary" href="#">Создать аукцион</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
 </html>

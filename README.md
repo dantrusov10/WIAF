@@ -1,13 +1,11 @@
+# WIAF static GitHub Pages build
 
-# WIAF Site
+Это готовая статическая версия сайта для GitHub Pages.
+Ничего собирать не нужно.
 
-Современный сайт платформы цифровых логистических аукционов.
+Что загрузить в репозиторий:
+- index.html
+- styles.css
+- script.js
 
-## запуск
-
-npm install
-npm run dev
-
-## сборка
-
-npm run build
+Если GitHub Pages уже включён на ветке main / root, сайт откроется сразу.
