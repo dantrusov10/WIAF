@@ -4,6 +4,7 @@ import json
 import hashlib
 from datetime import datetime, timezone
 from urllib.parse import urljoin
+from email.utils import parsedate_to_datetime
 
 import requests
 import feedparser
@@ -62,9 +63,46 @@ def parse_date(value: str) -> str:
     if not value:
         return ""
     try:
-        return date_parser.parse(value).date().isoformat()
+        parsed = date_parser.parse(str(value))
+        if parsed.tzinfo is not None:
+            parsed = parsed.astimezone(timezone.utc)
+        return parsed.replace(microsecond=0).isoformat()
     except Exception:
-        return ""
+        try:
+            parsed = parsedate_to_datetime(str(value))
+            if parsed.tzinfo is not None:
+                parsed = parsed.astimezone(timezone.utc)
+            return parsed.replace(microsecond=0).isoformat()
+        except Exception:
+            return ""
+
+
+def sort_key_date(value: str) -> int:
+    if not value:
+        return 0
+    try:
+        norm = value if "T" in value else value + "T00:00:00"
+        return int(datetime.fromisoformat(norm.replace("Z", "+00:00")).timestamp())
+    except Exception:
+        return 0
+
+
+def localize_category(category: str) -> str:
+    mapping = {
+        "news": "новости",
+        "analytics": "аналитика",
+        "rates": "ставки",
+        "ports": "порты",
+        "rail": "железная дорога",
+        "road": "автологистика",
+        "air": "авиа",
+        "sea": "морская логистика",
+        "regulation": "регулирование",
+        "operator_news": "новости операторов",
+        "infrastructure": "инфраструктура",
+        "restrictions": "ограничения",
+    }
+    return mapping.get(category or "news", "новости")
 
 
 def category_by_text(text: str, default_category: str) -> str:
@@ -81,6 +119,10 @@ def category_by_text(text: str, default_category: str) -> str:
         return "analytics"
     if any(word in t for word in ["тамож", "customs", "фтс", "санкц", "регулир"]):
         return "regulation"
+    if any(word in t for word in ["море", "sea", "судоход", "судн", "контейнерн"]):
+        return "sea"
+    if any(word in t for word in ["мультимод", "transit", "corridor", "коридор"]):
+        return "multimodal"
     return default_category or "news"
 
 
@@ -103,7 +145,8 @@ def freshness_label(date_str: str) -> str:
     if not date_str:
         return "unknown"
     try:
-        dt = datetime.fromisoformat(date_str + ("" if "T" in date_str else "T00:00:00"))
+        norm = date_str if "T" in date_str else date_str + "T00:00:00"
+        dt = datetime.fromisoformat(norm.replace("Z", "+00:00"))
     except ValueError:
         return "unknown"
     delta_hours = (datetime.now() - dt).total_seconds() / 3600
@@ -127,13 +170,14 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
-def item_from_fields(source: dict, title: str, link: str, snippet: str = "", published_at: str = "") -> dict | None:
+def item_from_fields(source: dict, title: str, link: str, snippet: str = "", published_at: str = "", image_url: str = "", content_preview: str = "") -> dict | None:
     title = normalize_text(title)
     link = (link or "").strip()
     snippet = normalize_text(snippet)
     if not title or not link or link.startswith("javascript:"):
         return None
     item_hash = make_hash(source["source_name"], title, link)
+    category = category_by_text(f"{title} {snippet} {content_preview}", source.get("category_default", "news"))
     return {
         "id": f"news_{item_hash[:12]}",
         "source": source["source_name"],
@@ -142,11 +186,14 @@ def item_from_fields(source: dict, title: str, link: str, snippet: str = "", pub
         "lang": source.get("language", ""),
         "priority": source.get("priority", 0),
         "date": published_at,
+        "published_at": published_at,
         "title": title,
         "snippet": snippet[:350],
+        "content_preview": normalize_text(content_preview or snippet)[:700],
         "link": link,
-        "image_url": "",
-        "category": category_by_text(f"{title} {snippet}", source.get("category_default", "news")),
+        "image_url": (image_url or "").strip(),
+        "category": category,
+        "category_ru": localize_category(category),
         "transport_type": transport_by_text(f"{title} {snippet}"),
         "region": source.get("country", "unknown"),
         "freshness": freshness_label(published_at),
@@ -162,12 +209,28 @@ def fetch_rss_items(source: dict, url: str | None = None) -> list[dict]:
     feed = feedparser.parse(resp.content)
     items = []
     for entry in getattr(feed, "entries", [])[:40]:
+        image_url = ""
+        media_content = getattr(entry, "media_content", None) or []
+        media_thumbnail = getattr(entry, "media_thumbnail", None) or []
+        links = getattr(entry, "links", None) or []
+        if media_content and isinstance(media_content, list):
+            image_url = media_content[0].get("url", "")
+        elif media_thumbnail and isinstance(media_thumbnail, list):
+            image_url = media_thumbnail[0].get("url", "")
+        else:
+            for link_obj in links:
+                if getattr(link_obj, 'type', '').startswith('image/'):
+                    image_url = getattr(link_obj, 'href', '')
+                    break
+        raw_summary = getattr(entry, "summary", "") or getattr(entry, "description", "")
         item = item_from_fields(
             source,
             getattr(entry, "title", ""),
             getattr(entry, "link", ""),
-            getattr(entry, "summary", "") or getattr(entry, "description", ""),
+            raw_summary,
             parse_date(getattr(entry, "published", "") or getattr(entry, "updated", "")),
+            image_url=image_url,
+            content_preview=raw_summary,
         )
         if item:
             items.append(item)
@@ -195,7 +258,7 @@ def extract_generic_links(soup: BeautifulSoup, source: dict, base_url: str) -> l
         if not any(token in lower for token in ["news", "press", "article", "novost", "media", "post"]):
             continue
         seen.add(href)
-        item = item_from_fields(source, title, href)
+        item = item_from_fields(source, title, href, content_preview=title)
         if item:
             items.append(item)
         if len(items) >= 20:
@@ -219,7 +282,9 @@ def fetch_html_items(source: dict, url: str | None = None) -> list[dict]:
         href = urljoin(url, link_node.get("href", "") if link_node else "")
         published_at = parse_date(normalize_text(date_node.get_text(" ", strip=True) if date_node else ""))
         snippet = snippet_node.get_text(" ", strip=True) if snippet_node else ""
-        item = item_from_fields(source, title, href, snippet, published_at)
+        image_node = pick_first(node, source.get("image_selector", "img"))
+        image_url = urljoin(url, image_node.get("src", "") if image_node else "")
+        item = item_from_fields(source, title, href, snippet, published_at, image_url=image_url, content_preview=snippet)
         if item:
             items.append(item)
     if not items:
@@ -252,7 +317,7 @@ def merge_with_existing(new_items: list[dict]) -> tuple[list[dict], bool]:
     existing_map = {item.get("hash") or make_hash(item.get("source", ""), item.get("title", ""), item.get("link", "")): item for item in existing_items}
     merged = []
     seen = set()
-    for item in sorted(new_items + existing_items, key=lambda x: (x.get("priority", 0), x.get("date", "")), reverse=True):
+    for item in sorted(new_items + existing_items, key=lambda x: (sort_key_date(x.get('date') or x.get('published_at')), x.get('priority', 0)), reverse=True):
         key = item.get("hash") or make_hash(item.get("source", ""), item.get("title", ""), item.get("link", ""))
         if key in seen:
             continue
@@ -317,7 +382,7 @@ def main():
 
     unique = []
     seen = set()
-    for item in sorted(all_news, key=lambda x: (x.get('priority', 0), x.get('date', '')), reverse=True):
+    for item in sorted(all_news, key=lambda x: (sort_key_date(x.get('date') or x.get('published_at')), x.get('priority', 0)), reverse=True):
         key = item.get('hash')
         if key in seen:
             continue
