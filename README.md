@@ -12,7 +12,3 @@
 - Вход: https://wiaf.ru/Seller/Seller_login.php
 - Правила импортёра: https://wiaf.ru/Seller/pravila1-1-1.php
 - Правила экспедитора: https://wiaf.ru/BUYER/pravila2-2-2.php
-
-
-## Источники статей
-Сейчас публичная новостная лента собирается из открытых отраслевых источников Logirus и PortNews. Англоязычный FreightWaves отключён из основного потока и может использоваться только как резервный источник при отдельном включении в scripts/sources.py.

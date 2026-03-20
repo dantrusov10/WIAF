@@ -28,6 +28,7 @@ def now_iso():
 def normalize_text(value: str) -> str:
     if not value:
         return ""
+    value = re.sub(r"<[^>]+>", " ", value)
     return re.sub(r"\s+", " ", value).strip()
 
 
@@ -47,25 +48,31 @@ def parse_date(value: str) -> str:
 
 def category_by_text(text: str, default_category: str) -> str:
     t = (text or "").lower()
-    if any(word in t for word in ["ставк", "tariff", "rate", "freight"]):
+    if any(word in t for word in ["ставк", "tariff", "rate", "freight", "scfi", "wci"]):
         return "rates"
-    if any(word in t for word in ["порт", "port", "terminal"]):
+    if any(word in t for word in ["порт", "port", "terminal", "берег", "пристан"]):
         return "ports"
-    if any(word in t for word in ["rail", "жд", "railway"]):
+    if any(word in t for word in ["rail", "жд", "railway", "поезд", "контрейлер"]):
         return "rail"
-    if any(word in t for word in ["аналит", "analysis", "review"]):
+    if any(word in t for word in ["авто", "truck", "road", "дорог"]):
+        return "road"
+    if any(word in t for word in ["аналит", "analysis", "review", "обзор"]):
         return "analytics"
+    if any(word in t for word in ["тамож", "customs", "фтс", "санкц", "регулир"]):
+        return "regulation"
     return default_category or "news"
 
 
 def transport_by_text(text: str) -> str:
     t = (text or "").lower()
-    if any(word in t for word in ["container", "мор", "sea", "vessel", "port", "feu", "teu"]):
+    if any(word in t for word in ["container", "мор", "sea", "vessel", "port", "feu", "teu", "линия", "судно"]):
         return "sea"
-    if any(word in t for word in ["rail", "жд", "railway", "train"]):
+    if any(word in t for word in ["rail", "жд", "railway", "train", "вагон"]):
         return "rail"
-    if any(word in t for word in ["truck", "авто", "road"]):
+    if any(word in t for word in ["truck", "авто", "road", "грузов"]):
         return "road"
+    if any(word in t for word in ["air", "авиа", "cargo terminal"]):
+        return "air"
     if any(word in t for word in ["multimodal", "мультимод"]):
         return "multimodal"
     return "unknown"
@@ -95,16 +102,21 @@ def fetch_html(url: str) -> str:
 def fetch_rss_items(source: dict) -> list[dict]:
     feed = feedparser.parse(source["list_url"])
     items = []
-    for entry in feed.entries[:30]:
+    for entry in getattr(feed, "entries", [])[:30]:
         title = normalize_text(getattr(entry, "title", ""))
         link = getattr(entry, "link", "")
         snippet = normalize_text(getattr(entry, "summary", "") or getattr(entry, "description", ""))
         published_at = parse_date(getattr(entry, "published", "") or getattr(entry, "updated", ""))
+        if not title or not link:
+            continue
         item_hash = make_hash(source["source_name"], title, link)
         items.append({
             "id": f"news_{item_hash[:12]}",
             "source": source["source_name"],
             "source_id": source["source_id"],
+            "source_group": source.get("source_group", "other"),
+            "lang": source.get("language", ""),
+            "priority": source.get("priority", 0),
             "date": published_at,
             "title": title,
             "snippet": snippet[:350],
@@ -147,6 +159,9 @@ def fetch_html_items(source: dict) -> list[dict]:
             "id": f"news_{item_hash[:12]}",
             "source": source["source_name"],
             "source_id": source["source_id"],
+            "source_group": source.get("source_group", "other"),
+            "lang": source.get("language", ""),
+            "priority": source.get("priority", 0),
             "date": published_at,
             "title": title,
             "snippet": snippet[:350],
@@ -170,26 +185,59 @@ def save_json(filename: str, payload: dict):
 
 def main():
     all_news = []
-    for source in SOURCES:
-        if not source.get("enabled"):
-            continue
+    source_status = []
+
+    active_sources = sorted(
+        [s for s in SOURCES if s.get("enabled") and s.get("fetch_method") in ("rss", "html")],
+        key=lambda x: x.get("priority", 0),
+        reverse=True,
+    )
+
+    for source in active_sources:
         try:
             items = fetch_rss_items(source) if source["fetch_method"] == "rss" else fetch_html_items(source)
             all_news.extend(items)
+            source_status.append({
+                "source_id": source["source_id"],
+                "source_name": source["source_name"],
+                "fetch_method": source["fetch_method"],
+                "priority": source.get("priority", 0),
+                "enabled": source.get("enabled", False),
+                "country": source.get("country", ""),
+                "language": source.get("language", ""),
+                "items_count": len(items),
+                "status": "ok",
+                "checked_at": now_iso(),
+                "error": ""
+            })
             print(f"{source['source_name']}: {len(items)}")
         except Exception as e:
+            source_status.append({
+                "source_id": source["source_id"],
+                "source_name": source["source_name"],
+                "fetch_method": source.get("fetch_method", ""),
+                "priority": source.get("priority", 0),
+                "enabled": source.get("enabled", False),
+                "country": source.get("country", ""),
+                "language": source.get("language", ""),
+                "items_count": 0,
+                "status": "error",
+                "checked_at": now_iso(),
+                "error": str(e)[:300]
+            })
             print(f"ERROR in {source['source_name']}: {e}")
 
     unique = []
     seen = set()
-    for item in sorted(all_news, key=lambda x: x.get('date', ''), reverse=True):
+    for item in sorted(all_news, key=lambda x: (x.get('priority', 0), x.get('date', '')), reverse=True):
         if item['hash'] in seen:
             continue
         seen.add(item['hash'])
         unique.append(item)
 
     save_json("news.json", {"updated_at": now_iso(), "items": unique[:200]})
-    print(f"Saved {len(unique)} news items")
+    save_json("source_status.json", {"updated_at": now_iso(), "items": source_status})
+    print(f"Saved {len(unique)} news items from {len(active_sources)} active sources")
 
 
 if __name__ == "__main__":
