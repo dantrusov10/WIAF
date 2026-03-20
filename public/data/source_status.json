@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-03-20T14:40:26+00:00",
+  "updated_at": "2026-03-20T14:49:05+00:00",
   "summary": {
-    "updated_at": "2026-03-20T14:40:26+00:00",
+    "updated_at": "2026-03-20T14:49:05+00:00",
     "retention_days": 365,
-    "cutoff_date": "2025-03-20T14:40:26+00:00",
+    "cutoff_date": "2025-03-20T14:49:05+00:00",
     "active_sources": 10,
     "successful_sources": 5,
     "empty_sources": 4,
     "error_sources": 1,
     "fetched_items": 40,
-    "published_items": 64,
+    "published_items": 65,
     "cache_used": false,
     "stale_filtered_total": 0,
     "missing_date_filtered_total": 98
@@ -29,7 +29,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 20,
       "status": "empty",
-      "checked_at": "2026-03-20T14:37:40+00:00",
+      "checked_at": "2026-03-20T14:46:21+00:00",
       "error": ""
     },
     {
@@ -46,7 +46,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 16,
       "status": "ok",
-      "checked_at": "2026-03-20T14:38:26+00:00",
+      "checked_at": "2026-03-20T14:47:06+00:00",
       "error": ""
     },
     {
@@ -63,7 +63,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 9,
       "status": "ok",
-      "checked_at": "2026-03-20T14:38:45+00:00",
+      "checked_at": "2026-03-20T14:47:27+00:00",
       "error": ""
     },
     {
@@ -80,7 +80,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "ok",
-      "checked_at": "2026-03-20T14:39:04+00:00",
+      "checked_at": "2026-03-20T14:47:45+00:00",
       "error": ""
     },
     {
@@ -97,7 +97,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-03-20T14:39:17+00:00",
+      "checked_at": "2026-03-20T14:47:57+00:00",
       "error": ""
     },
     {
@@ -114,7 +114,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 19,
       "status": "empty",
-      "checked_at": "2026-03-20T14:39:35+00:00",
+      "checked_at": "2026-03-20T14:48:13+00:00",
       "error": ""
     },
     {
@@ -131,8 +131,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-03-20T14:39:57+00:00",
-      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7fd293787b90>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))"
+      "checked_at": "2026-03-20T14:48:34+00:00",
+      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7fde6c787c90>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))"
     },
     {
       "source_id": "fesco",
@@ -148,7 +148,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "empty",
-      "checked_at": "2026-03-20T14:40:19+00:00",
+      "checked_at": "2026-03-20T14:48:58+00:00",
       "error": ""
     },
     {
@@ -165,7 +165,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "ok",
-      "checked_at": "2026-03-20T14:40:25+00:00",
+      "checked_at": "2026-03-20T14:49:03+00:00",
       "error": ""
     },
     {
@@ -182,7 +182,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "empty",
-      "checked_at": "2026-03-20T14:40:26+00:00",
+      "checked_at": "2026-03-20T14:49:05+00:00",
       "error": ""
     }
   ]

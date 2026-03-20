@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-20T14:40:26+00:00",
+  "updated_at": "2026-03-20T14:49:05+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-20T14:40:26+00:00",
+  "cutoff_date": "2025-03-20T14:49:05+00:00",
   "items": [
     {
       "id": "news_462bccc74182",
@@ -28,6 +28,31 @@
       "status": "published",
       "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-16-20-marta-202-462bcc.html",
       "canonical_url": "https://wiaf.ru/news/seanews-analiticheskiy-daydzhest-seanews-16-20-marta-202-462bcc.html"
+    },
+    {
+      "id": "news_7c20acb14096",
+      "slug": "rzd_partner-kitay-vpervye-prevysil-evropu-po-postavkam-avtom-7c20ac",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-03-20T14:41:44+00:00",
+      "published_at": "2026-03-20T14:41:44+00:00",
+      "title": "Китай впервые превысил Европу по поставкам автомобилей на рынок ЕС",
+      "snippet": "По итогам 2025 года объем импорта китайских автомобилей и комплектующих в страны Евросоюза достиг 22 млрд евро. Таким образом, впервые поставки продукции автопрома из КНР в Европу оказались выше, чем экспорт европейских автопроизводителей в Китай. Об этом сообщает агентство DPA со ссылкой на исследование консалтинговой компании EY.",
+      "content_preview": "Китай впервые превысил Европу по поставкам автомобилей на рынок ЕС",
+      "link": "https://www.rzd-partner.ru/logistics/news/kitay-vpervye-prevysil-evropu-po-postavkam-avtomobiley-na-rynok-es/",
+      "image_url": "",
+      "category": "rates",
+      "category_ru": "ставки",
+      "transport_type": "авто",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "7c20acb140961d0a4bd24b89491bedf3",
+      "status": "published",
+      "static_url": "news/rzd_partner-kitay-vpervye-prevysil-evropu-po-postavkam-avtom-7c20ac.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-kitay-vpervye-prevysil-evropu-po-postavkam-avtom-7c20ac.html"
     },
     {
       "id": "news_2c403a286579",
