@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-03-20T10:30:00Z",
-  "news_count": 6,
-  "rates_count": 4,
-  "indices_count": 4,
-  "version": "mvp-2"
+  "updated_at": "2026-03-20T16:45:56+00:00",
+  "news_count": 81,
+  "rates_count": 6,
+  "indices_count": 7,
+  "corridors_count": 7,
+  "version": "mvp-auto-3"
 }
