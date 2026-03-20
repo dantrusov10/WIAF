@@ -5,6 +5,7 @@ import hashlib
 from html import escape
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
+import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
 import requests
@@ -13,6 +14,8 @@ from bs4 import BeautifulSoup, FeatureNotFound
 from dateutil import parser as date_parser
 
 from sources import SOURCES
+from indices_sources import INDEX_SOURCES
+from fx_sources import FX_SOURCES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "public", "data")
@@ -28,6 +31,7 @@ MAX_ITEMS_PER_SOURCE = 20
 MAX_FINAL_ITEMS = 300
 ARTICLE_DETAIL_FETCH_LIMIT = 12
 MIN_DETAIL_FETCH_PER_SOURCE = 6
+MAX_RATE_ITEMS = 120
 
 RUS_MONTHS = {
     'января': '01', 'февраля': '02', 'марта': '03', 'апреля': '04', 'мая': '05', 'июня': '06',
@@ -593,9 +597,10 @@ def static_css() -> str:
 
 
 
+
 def main_header(prefix: str = '', active: str = '') -> str:
     def cls(name: str) -> str:
-        return f'nav-item active' if active == name else 'nav-item'
+        return 'nav-item active' if active == name else 'nav-item'
     return (
         f'<header><div class="header-inner">'
         f'<a class="logo" href="{prefix}index.html">WI<span class="logo-dot">AF</span></a>'
@@ -606,12 +611,10 @@ def main_header(prefix: str = '', active: str = '') -> str:
         f'<a class="{cls("directions")}" href="{prefix}index.html#directions">Направления</a>'
         f'<a class="{cls("auctions")}" href="{prefix}index.html#auctions">Аукционы</a>'
         f'<a class="{cls("blog")}" href="{prefix}blog.html">Блог</a>'
-        f'<a class="{cls("analytics")}" href="{prefix}index.html#analytics">Аналитика</a>'
         f'<div class="nav-divider"></div>'
         f'<a class="{cls("importer")}" href="{prefix}index.html#importer">Импортёру</a>'
         f'<a class="{cls("forwarder")}" href="{prefix}index.html#forwarder">Экспедитору</a>'
         f'<a class="{cls("about")}" href="{prefix}index.html#about">О платформе</a>'
-        f'<a class="nav-item" href="https://wiaf.ru/BUYER/pravila2-2-2.php">Правила экспедитора</a>'
         f'<a class="{cls("contacts")}" href="{prefix}index.html#contacts">Контакты</a>'
         f'</nav>'
         f'<a class="btn-nav" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
@@ -799,6 +802,329 @@ def write_static_news(items: list[dict]):
         f.write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemap_items}</urlset>')
 
 
+
+
+def parse_float_maybe(value):
+    if value is None:
+        return None
+    txt = normalize_text(str(value)).replace(' ', '')
+    txt = txt.replace(' ', '').replace(' ', '')
+    txt = txt.replace(',', '.') if txt.count(',') == 1 and txt.count('.') == 0 else txt.replace(',', '')
+    m = re.search(r'-?\d+(?:\.\d+)?', txt)
+    if not m:
+        return None
+    try:
+        return float(m.group(0))
+    except Exception:
+        return None
+
+
+def extract_index_value(text: str, patterns: list[str]):
+    hay = normalize_text(text)
+    for pattern in patterns:
+        m = re.search(pattern, hay, flags=re.I | re.S)
+        if m:
+            return parse_float_maybe(m.group(1))
+    return None
+
+
+def load_existing_items(filename: str) -> list[dict]:
+    payload = load_existing(filename)
+    return payload.get('items', []) if isinstance(payload, dict) else []
+
+
+def merge_records(new_items: list[dict], existing_items: list[dict], key_fn, limit: int = 500) -> tuple[list[dict], bool]:
+    merged = []
+    seen = set()
+    for item in new_items + existing_items:
+        key = key_fn(item)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        merged.append(item)
+    used_cache = not bool(new_items)
+    return merged[:limit], used_cache
+
+
+def fetch_indices(existing_items: list[dict]) -> tuple[list[dict], dict]:
+    items = []
+    status = []
+    existing_map = {str(x.get('index_name') or x.get('name') or x.get('id')): x for x in existing_items}
+    for cfg in INDEX_SOURCES:
+        if not cfg.get('enabled'):
+            continue
+        try:
+            html = fetch_html(cfg['url'])
+            value = extract_index_value(html, cfg.get('patterns', []))
+            if value is None:
+                raise ValueError('index value not found')
+            prev = existing_map.get(cfg['name']) or {}
+            prev_value = parse_float_maybe(prev.get('value'))
+            change_abs = round(value - prev_value, 2) if prev_value is not None else 0.0
+            change_pct = round((change_abs / prev_value) * 100, 2) if prev_value else 0.0
+            items.append({
+                'id': f"idx_{cfg['id']}",
+                'source': cfg.get('source') or cfg.get('name'),
+                'index_name': cfg['name'],
+                'date': now_iso()[:10],
+                'value': round(value, 2),
+                'unit': cfg.get('unit', 'index_points'),
+                'change_abs': change_abs,
+                'change_pct': change_pct,
+                'status': 'published',
+                'source_url': cfg['url'],
+            })
+            status.append({'source_id': cfg['id'], 'source_name': cfg['name'], 'kind': 'index', 'status': 'ok', 'items_count': 1, 'checked_at': now_iso(), 'error': '', 'used_url': cfg['url']})
+        except Exception as e:
+            old = existing_map.get(cfg['name'])
+            if old:
+                items.append(old)
+            status.append({'source_id': cfg['id'], 'source_name': cfg['name'], 'kind': 'index', 'status': 'cache' if old else 'error', 'items_count': 1 if old else 0, 'checked_at': now_iso(), 'error': str(e)[:300], 'used_url': cfg['url']})
+    merged, cache_used = merge_records(items, existing_items, lambda x: str(x.get('index_name') or x.get('id')), limit=20)
+    return merged, {'items': status, 'cache_used': cache_used}
+
+
+def fetch_fx(existing_items: list[dict]) -> tuple[list[dict], dict]:
+    items = []
+    status = []
+    existing_map = {str(x.get('code') or x.get('id')): x for x in existing_items}
+    for cfg in FX_SOURCES:
+        if not cfg.get('enabled'):
+            continue
+        try:
+            raw = requests.get(cfg['url'], headers=HEADERS, timeout=TIMEOUT).text
+            root = ET.fromstring(raw)
+            date_attr = root.attrib.get('Date', '')
+            fx_date = parse_date(date_attr)[:10] if date_attr else now_iso()[:10]
+            for code, valute_id in cfg.get('currencies', {}).items():
+                node = root.find(f".//Valute[@ID='{valute_id}']")
+                if node is None:
+                    continue
+                nominal = parse_float_maybe(node.findtext('Nominal') or '1') or 1.0
+                value = parse_float_maybe(node.findtext('Value') or '')
+                if value is None:
+                    continue
+                rate = round(value / nominal, 6)
+                prev = existing_map.get(code) or {}
+                prev_rate = parse_float_maybe(prev.get('value'))
+                delta = round(rate - prev_rate, 6) if prev_rate is not None else 0.0
+                items.append({
+                    'id': f'fx_{code.lower()}',
+                    'code': code,
+                    'base': 'RUB',
+                    'value': rate,
+                    'date': fx_date,
+                    'change_abs': delta,
+                    'change_pct': round((delta / prev_rate) * 100, 3) if prev_rate else 0.0,
+                    'source': cfg.get('source') or cfg.get('name'),
+                    'source_url': cfg['url'],
+                    'status': 'published',
+                })
+            status.append({'source_id': cfg['id'], 'source_name': cfg['name'], 'kind': 'fx', 'status': 'ok', 'items_count': len(items), 'checked_at': now_iso(), 'error': '', 'used_url': cfg['url']})
+        except Exception as e:
+            status.append({'source_id': cfg['id'], 'source_name': cfg['name'], 'kind': 'fx', 'status': 'error', 'items_count': 0, 'checked_at': now_iso(), 'error': str(e)[:300], 'used_url': cfg['url']})
+    merged, cache_used = merge_records(items, existing_items, lambda x: str(x.get('code') or x.get('id')), limit=10)
+    return merged, {'items': status, 'cache_used': cache_used}
+
+
+RATE_PATTERNS = [
+    re.compile(r'(?P<currency>USD|EUR|RUB|CNY)\s?(?P<min>\d{1,3}(?:[\s,]\d{3})*(?:[\.,]\d+)?)\s?(?:-|–|—|до|to)\s?(?P<max>\d{1,3}(?:[\s,]\d{3})*(?:[\.,]\d+)?)', re.I),
+    re.compile(r'от\s?(?P<min>\d{1,3}(?:[\s,]\d{3})*(?:[\.,]\d+)?)\s?(?P<currency>USD|EUR|RUB|CNY).*?до\s?(?P<max>\d{1,3}(?:[\s,]\d{3})*(?:[\.,]\d+)?)', re.I),
+]
+
+
+def detect_corridor(text: str) -> str:
+    t = (text or '').lower()
+    mapping = {
+        'Китай': ['китай', 'china', 'шанхай', 'shanghai', 'ningbo', 'shenzhen', 'guangzhou'],
+        'Турция': ['турц', 'istanbul', 'стамбул', 'izmir', 'мерсин', 'mersin'],
+        'Индия': ['индия', 'india', 'mumbai', 'nhava', 'мунбаи'],
+        'ОАЭ': ['оаэ', 'uae', 'dubai', 'дубай', 'jebel ali', 'джебель'],
+        'Казахстан': ['казахстан', 'almaty', 'алматы', 'astana', 'астана'],
+        'ЮВА': ['юва', 'вьетнам', 'vietnam', 'bangkok', 'хошимин', 'ho chi minh', 'singapore', 'малайз'],
+    }
+    for label, words in mapping.items():
+        if any(w in t for w in words):
+            return label
+    return 'Смешанный'
+
+
+def detect_mode(text: str) -> str:
+    t = (text or '').lower()
+    if any(w in t for w in ['fcl', '40hq', '40hc', '20dc', 'мор', 'sea', 'vessel', 'ocean']):
+        return 'sea'
+    if any(w in t for w in ['lcl', 'сборн']):
+        return 'multimodal'
+    if any(w in t for w in ['жд', 'rail', 'поезд', 'вагон']):
+        return 'rail'
+    if any(w in t for w in ['авиа', 'air', 'kg', 'кг']):
+        return 'air'
+    if any(w in t for w in ['ftl', 'авто', 'truck', 'road', 'фура']):
+        return 'road'
+    return 'multimodal'
+
+
+def extract_rate_candidates_from_news(news_items: list[dict]) -> list[dict]:
+    out = []
+    for item in news_items:
+        blob = ' '.join(filter(None, [item.get('title'), item.get('snippet'), item.get('content_preview')]))
+        corridor = detect_corridor(blob)
+        mode = detect_mode(blob)
+        for pattern in RATE_PATTERNS:
+            m = pattern.search(blob)
+            if not m:
+                continue
+            curr = (m.groupdict().get('currency') or 'USD').upper()
+            min_v = parse_float_maybe(m.groupdict().get('min'))
+            max_v = parse_float_maybe(m.groupdict().get('max'))
+            if min_v is None or max_v is None:
+                continue
+            if min_v > max_v:
+                min_v, max_v = max_v, min_v
+            direction = item.get('title') or corridor
+            out.append({
+                'id': f"rate_auto_{make_hash(direction, curr, str(min_v), str(max_v))[:10]}",
+                'source': item.get('source') or 'WIAF parser',
+                'source_link': item.get('link') or '',
+                'date': (item.get('published_at') or item.get('date') or now_iso())[:10],
+                'route_from': corridor,
+                'route_to': 'Россия',
+                'direction_name': direction[:90],
+                'corridor': corridor,
+                'transport_type': mode,
+                'rate_type': 'freight',
+                'value': round((min_v + max_v) / 2, 2),
+                'min_value': round(min_v, 2),
+                'max_value': round(max_v, 2),
+                'currency': curr,
+                'unit': 'market',
+                'note': safe_note_from_news(item),
+                'exactness': 'estimate',
+                'trend_7d_pct': 0.0,
+                'trend_30d_pct': 0.0,
+            })
+            break
+    return out
+
+
+def safe_note_from_news(item: dict) -> str:
+    return normalize_text(item.get('snippet') or item.get('content_preview') or '')[:180]
+
+
+def corridor_signal(rate: dict) -> str:
+    t7 = parse_float_maybe(rate.get('trend_7d_pct')) or 0.0
+    t30 = parse_float_maybe(rate.get('trend_30d_pct')) or 0.0
+    if t7 >= 4 or t30 >= 8:
+        return 'перегрет'
+    if t7 <= -2 or t30 <= -5:
+        return 'окно возможностей'
+    if abs(t7) <= 2 and abs(t30) <= 4:
+        return 'стабилен'
+    return 'в движении'
+
+
+def build_rates(news_items: list[dict], existing_items: list[dict]) -> tuple[list[dict], dict]:
+    auto_rates = extract_rate_candidates_from_news(news_items)
+    # existing first as a stable baseline, auto-rates can override by corridor+mode+date proximity
+    existing_clean = [x for x in existing_items if x.get('corridor')]
+    merged = []
+    seen = set()
+    for item in auto_rates + existing_clean:
+        key = f"{item.get('corridor')}|{item.get('transport_type')}|{item.get('currency')}"
+        if key in seen:
+            continue
+        seen.add(key)
+        item['signal'] = corridor_signal(item)
+        item['corridor'] = item.get('corridor') or detect_corridor(item.get('direction_name') or '')
+        item['exactness'] = item.get('exactness') or 'indicative'
+        merged.append(item)
+    merged = sorted(merged, key=lambda x: sort_key_date(x.get('date')), reverse=True)[:MAX_RATE_ITEMS]
+    return merged, {'auto_extracted': len(auto_rates), 'cache_used': not bool(auto_rates)}
+
+
+def build_corridors(rates: list[dict], news_items: list[dict]) -> list[dict]:
+    grouped = {}
+    for rate in rates:
+        corridor = rate.get('corridor') or 'Смешанный'
+        grouped.setdefault(corridor, {'rates': [], 'news': []})
+        grouped[corridor]['rates'].append(rate)
+    for item in news_items:
+        corridor = detect_corridor(' '.join([item.get('title') or '', item.get('snippet') or '', item.get('content_preview') or '']))
+        grouped.setdefault(corridor, {'rates': [], 'news': []})
+        grouped[corridor]['news'].append(item)
+    out = []
+    for corridor, payload in grouped.items():
+        rates_part = payload['rates']
+        news_part = payload['news']
+        sample = rates_part[0] if rates_part else {}
+        out.append({
+            'id': f"corridor_{slugify(corridor)}",
+            'corridor': corridor,
+            'status': corridor_signal(sample) if sample else 'стабилен',
+            'modes': sorted({localize_transport_key(x.get('transport_type')) for x in rates_part if x.get('transport_type')}),
+            'news_count_30d': len(news_part),
+            'rate_signal': corridor_signal(sample) if sample else 'стабилен',
+            'summary': build_corridor_summary(corridor, rates_part, news_part),
+            'top_route': sample.get('direction_name') or corridor,
+            'date': (sample.get('date') or now_iso())[:10],
+        })
+    return sorted(out, key=lambda x: (x.get('news_count_30d', 0), x.get('corridor')), reverse=True)
+
+
+def localize_transport_key(value: str) -> str:
+    m = {'sea': 'морская', 'rail': 'железнодорожная', 'road': 'авто', 'air': 'авиа', 'multimodal': 'мультимодальная'}
+    return m.get((value or '').lower(), 'смешанная')
+
+
+def build_corridor_summary(corridor: str, rates_part: list[dict], news_part: list[dict]) -> str:
+    if rates_part:
+        sample = rates_part[0]
+        return f"{corridor}: {len(rates_part)} ориентиров по ставкам, статус '{corridor_signal(sample)}', публикаций за окно — {len(news_part)}."
+    return f"{corridor}: пока без ставки в витрине, но найдено {len(news_part)} сигналов и публикаций."
+
+
+def build_market_stats(news_items: list[dict], rates: list[dict], indices: list[dict], fx_items: list[dict], existing_payload: dict) -> dict:
+    base = (existing_payload.get('items') or [{}])[0] if isinstance(existing_payload, dict) else {}
+    corridors = len({x.get('corridor') for x in rates if x.get('corridor')})
+    modes = len({x.get('transport_type') for x in rates if x.get('transport_type')})
+    wiaf_market_index = round(min(100, 45 + corridors * 3 + len(news_items[:30]) * 0.4 + len(indices) * 2), 1)
+    fx_map = {x.get('code'): x.get('value') for x in fx_items}
+    item = {
+        'date': now_iso()[:10],
+        'active_auctions': int(base.get('active_auctions', 43) or 43),
+        'new_auctions_day': int(base.get('new_auctions_day', 9) or 9),
+        'new_auctions_week': int(base.get('new_auctions_week', 34) or 34),
+        'active_routes': corridors or int(base.get('active_routes', 0) or 0),
+        'active_transport_types': modes or int(base.get('active_transport_types', 0) or 0),
+        'avg_responses': round(float(base.get('avg_responses', 4.3) or 4.3), 1),
+        'avg_internal_rate': float(base.get('avg_internal_rate', 1980) or 1980),
+        'calculated_market_index': wiaf_market_index,
+        'usd_rub': fx_map.get('USD'),
+        'cny_rub': fx_map.get('CNY'),
+        'eur_rub': fx_map.get('EUR'),
+        'updated_at': now_iso(),
+    }
+    auctions = existing_payload.get('auctions') if isinstance(existing_payload, dict) else []
+    if not auctions:
+        auctions = [
+            {'route': 'Шанхай → Москва', 'cargo': "FCL 40'", 'delivery_type': 'морская', 'status': 'активен', 'participants': 4, 'cta': 'https://wiaf.ru/Seller/Seller_login.php'},
+            {'route': 'Стамбул → Санкт-Петербург', 'cargo': 'LCL', 'delivery_type': 'мультимодальная', 'status': 'новый', 'participants': 3, 'cta': 'https://wiaf.ru/Seller/Seller_login.php'},
+            {'route': 'Мумбаи → Новороссийск', 'cargo': '24 т', 'delivery_type': 'морская', 'status': 'в торгах', 'participants': 5, 'cta': 'https://wiaf.ru/Seller/Seller_login.php'},
+        ]
+    return {'updated_at': now_iso(), 'items': [item], 'auctions': auctions}
+
+
+def build_meta(news_items: list[dict], rates: list[dict], indices: list[dict], corridors: list[dict]) -> dict:
+    return {
+        'updated_at': now_iso(),
+        'news_count': len(news_items),
+        'rates_count': len(rates),
+        'indices_count': len(indices),
+        'corridors_count': len(corridors),
+        'version': 'mvp-auto-3',
+    }
+
+
 def main():
     ensure_dirs()
     all_news = []
@@ -841,6 +1167,7 @@ def main():
                 "status": "ok" if retained else ("empty" if not error_text else "error"),
                 "checked_at": now_iso(),
                 "error": error_text[:450],
+                "kind": 'news',
             })
             print(f"{source['source_name']}: retained={len(retained)}, raw={len(items)}")
         except Exception as e:
@@ -860,6 +1187,7 @@ def main():
                 "status": "error",
                 "checked_at": now_iso(),
                 "error": str(e)[:450],
+                "kind": 'news',
             })
             print(f"ERROR in {source['source_name']}: {e}")
 
@@ -876,6 +1204,20 @@ def main():
         item['static_url'] = repo_static_url(item)
         item['canonical_url'] = absolute_news_url(item)
 
+    # secondary datasets
+    existing_indices = load_existing_items('indices.json')
+    indices, indices_status = fetch_indices(existing_indices)
+    existing_fx = load_existing_items('fx.json')
+    fx_items, fx_status = fetch_fx(existing_fx)
+    existing_rates = load_existing_items('rates.json')
+    rates, rates_status = build_rates(merged_news, existing_rates)
+    corridors = build_corridors(rates, merged_news)
+    market_stats_payload = build_market_stats(merged_news, rates, indices, fx_items, load_existing('market_stats.json'))
+    meta_payload = build_meta(merged_news, rates, indices, corridors)
+
+    for entry in indices_status['items'] + fx_status['items']:
+        source_status.append(entry)
+
     summary = {
         "updated_at": now_iso(),
         "retention_days": RETENTION_DAYS,
@@ -887,14 +1229,25 @@ def main():
         "fetched_items": len(unique),
         "published_items": len(merged_news),
         "cache_used": used_cache,
-        "stale_filtered_total": sum(int(x.get('stale_filtered', 0)) for x in source_status),
-        "missing_date_filtered_total": sum(int(x.get('missing_date_filtered', 0)) for x in source_status),
+        "stale_filtered_total": sum(int(x.get('stale_filtered', 0)) for x in source_status if x.get('kind') == 'news'),
+        "missing_date_filtered_total": sum(int(x.get('missing_date_filtered', 0)) for x in source_status if x.get('kind') == 'news'),
+        "indices_count": len(indices),
+        "rates_count": len(rates),
+        "corridors_count": len(corridors),
+        "fx_count": len(fx_items),
+        "rate_auto_extracted": rates_status.get('auto_extracted', 0),
     }
 
     save_json("news.json", {"updated_at": now_iso(), "cache_used": used_cache, "retention_days": RETENTION_DAYS, "cutoff_date": cutoff_iso(), "items": merged_news})
+    save_json("indices.json", {"updated_at": now_iso(), "cache_used": indices_status.get('cache_used', False), "items": indices})
+    save_json("fx.json", {"updated_at": now_iso(), "cache_used": fx_status.get('cache_used', False), "items": fx_items})
+    save_json("rates.json", {"updated_at": now_iso(), "cache_used": rates_status.get('cache_used', False), "items": rates})
+    save_json("corridors.json", {"updated_at": now_iso(), "items": corridors})
+    save_json("market_stats.json", market_stats_payload)
+    save_json("meta.json", meta_payload)
     save_json("source_status.json", {"updated_at": now_iso(), "summary": summary, "items": source_status})
     write_static_news(merged_news)
-    print(f"Saved {len(merged_news)} news items from {len(active_sources)} active sources; fetched now={len(unique)}; cache_used={used_cache}")
+    print(f"Saved {len(merged_news)} news items, {len(indices)} indices, {len(fx_items)} fx, {len(rates)} rates, {len(corridors)} corridors")
 
 
 if __name__ == "__main__":

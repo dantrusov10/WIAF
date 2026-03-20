@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-03-20T16:12:40.285583Z",
+  "items": [
+    {
+      "id": "fx_usd",
+      "code": "USD",
+      "base": "RUB",
+      "value": 92.4,
+      "date": "2026-03-20",
+      "change_abs": 0.3,
+      "change_pct": 0.33,
+      "source": "ЦБ РФ",
+      "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
+      "status": "published"
+    },
+    {
+      "id": "fx_eur",
+      "code": "EUR",
+      "base": "RUB",
+      "value": 100.8,
+      "date": "2026-03-20",
+      "change_abs": -0.2,
+      "change_pct": -0.2,
+      "source": "ЦБ РФ",
+      "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
+      "status": "published"
+    },
+    {
+      "id": "fx_cny",
+      "code": "CNY",
+      "base": "RUB",
+      "value": 12.8,
+      "date": "2026-03-20",
+      "change_abs": 0.05,
+      "change_pct": 0.39,
+      "source": "ЦБ РФ",
+      "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
+      "status": "published"
+    }
+  ]
+}

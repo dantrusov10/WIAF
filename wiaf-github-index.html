@@ -139,12 +139,10 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-directions" onclick="goTo('directions')">Направления</button>
       <button class="nav-item" id="nav-auctions" onclick="goTo('auctions')">Аукционы</button>
       <button class="nav-item" id="nav-blog" onclick="openBlogPage()">Блог</button>
-      <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
       <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
       <button class="nav-item" id="nav-forwarder" onclick="goTo('forwarder')">Экспедитору</button>
       <button class="nav-item" id="nav-about" onclick="goTo('about')">О платформе</button>
-      <button class="nav-item" onclick="openExternal('https://wiaf.ru/BUYER/pravila2-2-2.php')">Правила экспедитора</button>
       <button class="nav-item" id="nav-contacts" onclick="goTo('contacts')">Контакты</button>
     </nav>
     <button class="btn-nav" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Войти</button>
@@ -394,29 +392,6 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
-<div class="page" id="page-analytics">
-  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Аналитика</span></div></div>
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="section-eyebrow">Аналитика</div><h2>Статус источников, покрытие и активность витрины</h2></div>
-        <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Расширенный доступ</button>
-      </div>
-      <div class="grid-4" id="analytics-kpis" style="margin-bottom:20px"></div>
-      <div class="grid-2">
-        <div class="panel">
-          <div class="section-eyebrow">Состояние источников</div>
-          <div class="list" id="analytics-sources"></div>
-        </div>
-        <div class="panel">
-          <div class="section-eyebrow">Что видно в публичной витрине</div>
-          <div class="list" id="analytics-highlights"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
 <div class="page" id="page-importer">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Для импортёров</span></div></div>
   <section class="section">
@@ -581,7 +556,6 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
           <a onclick="goTo('indices')">Ставки и индексы</a>
           <a onclick="goTo('directions')">Направления</a>
           <a onclick="openBlogPage()">Блог</a>
-          <a onclick="goTo('analytics')">Аналитика</a>
         </div>
       </div>
       <div>
@@ -608,7 +582,6 @@ const ROUTE_META = {
   directions: { title: 'Направления — WIAF' },
   auctions: { title: 'Витрина аукционов — WIAF' },
   blog: { title: 'Блог — WIAF' },
-  analytics: { title: 'Аналитика — WIAF' },
   importer: { title: 'Для импортёров — WIAF' },
   forwarder: { title: 'Для экспедиторов — WIAF' },
   about: { title: 'О платформе — WIAF' },
@@ -632,7 +605,7 @@ function goTo(page){
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-let APP_STATE = { news: [], rates: [], indices: [], stats: [], auctions: [], sourceStatus: {} };
+let APP_STATE = { news: [], rates: [], indices: [], stats: [], auctions: [], sourceStatus: {}, fx: [], corridors: [] };
 const APP_CONFIG = window.WIAF_CONFIG || {};
 const REPO_BASE = location.hostname.endsWith('github.io') ? `/${location.pathname.split('/').filter(Boolean)[0] || 'WIAF'}` : '';
 const LOCAL_DATA_BASE = APP_CONFIG.localBase
@@ -815,57 +788,53 @@ function goToArticle(id){
 }
 
 async function loadData(){
-  const [newsRes, ratesRes, indicesRes, statsRes, sourceStatusRes] = await Promise.allSettled([
-    fetchJson(resolveDataUrl('news')),
-    fetchJson(resolveDataUrl('rates')),
-    fetchJson(resolveDataUrl('indices')),
-    fetchJson(resolveDataUrl('market_stats')),
-    fetchJson(resolveDataUrl('source_status'))
+  const [newsData, ratesData, indicesData, statsData, sourceStatusData, fxData, corridorsData] = await Promise.all([
+    fetchJson(resolveDataUrl('news')).catch(()=>({items:[]})),
+    fetchJson(resolveDataUrl('rates')).catch(()=>({items:[]})),
+    fetchJson(resolveDataUrl('indices')).catch(()=>({items:[]})),
+    fetchJson(resolveDataUrl('market_stats')).catch(()=>({items:[], auctions:[]})),
+    fetchJson(resolveDataUrl('source_status')).catch(()=>({items:[]})),
+    fetchJson(resolveDataUrl('fx')).catch(()=>({items:[]})),
+    fetchJson(resolveDataUrl('corridors')).catch(()=>({items:[]})),
   ]);
-
-  const newsData = newsRes.status === 'fulfilled' ? newsRes.value : {items: []};
-  const ratesData = ratesRes.status === 'fulfilled' ? ratesRes.value : {items: []};
-  const indicesData = indicesRes.status === 'fulfilled' ? indicesRes.value : {items: []};
-  const statsData = statsRes.status === 'fulfilled' ? statsRes.value : {items: [], auctions: []};
-  const sourceStatusData = sourceStatusRes.status === 'fulfilled' ? sourceStatusRes.value : {items: []};
-
   const news = sortNewsByDate(normalizeItems(newsData));
-  const rates = normalizeItems(ratesData);
-  const indices = normalizeItems(indicesData);
+  const rates = normalizeItems(ratesData).sort((a,b)=>new Date(`${b.date || '1970-01-01'}T00:00:00`)-new Date(`${a.date || '1970-01-01'}T00:00:00`));
+  const indices = normalizeItems(indicesData).sort((a,b)=>new Date(`${b.date || '1970-01-01'}T00:00:00`)-new Date(`${a.date || '1970-01-01'}T00:00:00`));
   const stats = normalizeItems(statsData);
   const auctions = Array.isArray(statsData?.auctions) ? statsData.auctions : [];
-
-  APP_STATE = { news, rates, indices, stats, auctions, sourceStatus: sourceStatusData };
-
-  renderHome(news, rates, indices, stats, auctions);
-  renderMarket(stats, indices);
-  renderIndices(indices, rates);
-  renderDirections(rates, news);
-  renderAuctions(auctions);
+  const fx = normalizeItems(fxData);
+  const corridors = normalizeItems(corridorsData);
+  APP_STATE = { news, rates, indices, stats, auctions, sourceStatus: sourceStatusData, fx, corridors };
+  renderHome(news, rates, indices, stats, auctions, corridors, fx);
+  renderMarket(stats, indices, news, corridors, fx);
+  renderIndices(indices, rates, fx, corridors);
+  renderDirections(rates, news, corridors);
+  renderAuctions(auctions, corridors, news);
   renderBlog(news);
-  renderAnalytics(news, sourceStatusData);
 }
 
-function renderHome(news, rates, indices, statsItems, auctions){
-  const latestStats = statsItems[0] || {active_auctions: 42, new_auctions_day: 8, active_routes: 27, avg_responses: 4.3};
+function renderHome(news, rates, indices, statsItems, auctions, corridors, fx){
+  const latestStats = statsItems[0] || {active_auctions: 42, new_auctions_day: 8, active_routes: 27, avg_responses: 4.3, calculated_market_index: 71.4};
+  const usd = (fx || []).find(x => x.code==='USD');
   const statsEl = document.getElementById('hero-market-stats');
-  if (statsEl) statsEl.innerHTML = `
-    <div class="market-item"><span>Активные аукционы</span><strong>${latestStats.active_auctions || 0}</strong></div>
-    <div class="market-item"><span>Новых за сутки</span><strong>${latestStats.new_auctions_day || 0}</strong></div>
-    <div class="market-item"><span>Направлений</span><strong>${latestStats.active_routes || 0}</strong></div>
-    <div class="market-item"><span>Средний отклик</span><strong>${latestStats.avg_responses || 0}</strong></div>`;
+  if (statsEl) statsEl.innerHTML = [
+    ['Активные аукционы', latestStats.active_auctions || 0],
+    ['Коридоров в рынке', (corridors || []).length || latestStats.active_routes || 0],
+    ['USD/RUB', usd?.value ? Number(usd.value).toFixed(2) : '—'],
+    ['Индекс WIAF', latestStats.calculated_market_index || '—'],
+  ].map(x => `<div class="market-item"><span>${x[0]}</span><strong>${x[1]}</strong></div>`).join('');
 
   const kpis = [
-    {label:'Индекс рынка', value:(latestStats.calculated_market_index || 71.4), delta:'+ к динамике'},
-    {label:'Активные направления', value:latestStats.active_routes || rates.length || 0, delta:'по витрине'},
+    {label:'Индекс рынка', value:(latestStats.calculated_market_index || 71.4), delta:'по внутренней модели'},
+    {label:'Активные коридоры', value:(corridors || []).length || latestStats.active_routes || 0, delta:'по витрине'},
     {label:'Публикаций в витрине', value:news.length, delta:'новости и сигналы'},
-    {label:'Индексных точек', value:indices.length, delta:'рыночные индикаторы'}
+    {label:'Индексных точек', value:indices.length + (fx || []).length, delta:'индексы и валюты'}
   ];
   const kpiEl = document.getElementById('home-kpis');
   if (kpiEl) kpiEl.innerHTML = kpis.map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value">${k.value}</div><div class="kpi-delta up">${k.delta}</div></div>`).join('');
 
   const routesEl = document.getElementById('home-routes');
-  if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date || ''}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
+  if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${corridorLabel(r)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">${localizeTransport(r.transport_type)} · ${formatDateRu(r.date || '')}</div><div class="small muted">Сигнал: ${r.signal || rateSignal(r)}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
 
   const newsEl = document.getElementById('home-news');
   if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => renderNewsArticle(n, true)).join('') || '<div class="empty-note">Новости скоро появятся.</div>';
@@ -876,12 +845,13 @@ function renderHome(news, rates, indices, statsItems, auctions){
 }
 
 let marketChart;
-function renderMarket(statsItems, indices){
+function renderMarket(statsItems, indices, news, corridors, fx){
   const latest = statsItems[0] || {};
+  const usd = (fx || []).find(x => x.code==='USD');
   const cards = [
     ['Активные аукционы', latest.active_auctions || 42, 'живые торги'],
-    ['Новые за неделю', latest.new_auctions_week || 31, 'динамика спроса'],
-    ['Средний отклик', latest.avg_responses || 4.3, 'конкуренция'],
+    ['Коридоров в витрине', (corridors || []).length || latest.active_routes || 0, 'покрытие рынка'],
+    ['USD/RUB', usd?.value ? Number(usd.value).toFixed(2) : '—', 'валютный фон'],
     ['Рыночный индекс', latest.calculated_market_index || 71.4, 'агрегированный показатель']
   ];
   const panels = document.getElementById('market-panels');
@@ -889,15 +859,15 @@ function renderMarket(statsItems, indices){
   const ctx = document.getElementById('marketChart');
   if(!ctx) return;
   if(marketChart) marketChart.destroy();
-  const labels = indices.map(i => i.date).slice(-6);
-  const values = indices.map(i => i.value).slice(-6);
-  marketChart = new Chart(ctx, {type:'line', data:{labels, datasets:[{label:'Индекс', data: values, borderWidth:2, tension:.25}]}, options:{responsive:true, maintainAspectRatio:false}});
+  const labels = indices.map(i => i.index_name || i.code || 'индекс').slice(0,6);
+  const values = indices.map(i => Number(i.value || 0)).slice(0,6);
+  marketChart = new Chart(ctx, {type:'bar', data:{labels, datasets:[{label:'Текущее значение', data: values, borderWidth:1}]}, options:{responsive:true, maintainAspectRatio:false}});
 }
 
-function renderIndices(indices, rates){
+function renderIndices(indices, rates, fx, corridorData){
   const cardsEl = document.getElementById('indices-cards');
-  const sortedIndices = [...indices].sort((a,b)=>new Date(`${b.date || '1970-01-01'}T00:00:00`)-new Date(`${a.date || '1970-01-01'}T00:00:00`));
-  if (cardsEl) cardsEl.innerHTML = sortedIndices.slice(0,4).map(i => {
+  const displayIndices = [...indices, ...(fx || []).map(x => ({index_name:`${x.code}/RUB`, value:x.value, date:x.date, source:x.source, change_pct:x.change_pct}))];
+  if (cardsEl) cardsEl.innerHTML = displayIndices.slice(0,8).map(i => {
     const trend = Number(i.change_pct || 0);
     return `<div class="panel"><div class="section-eyebrow">${i.index_name}</div><div class="metric">${Number(i.value || 0).toLocaleString('ru-RU')}</div><div class="small ${trend >= 0 ? 'up':'dn'}">${trend >=0 ? '+' : ''}${trend.toFixed(1)}%</div><div class="muted small">${formatDateRu(i.date || '')} · ${i.source || 'источник уточняется'}</div></div>`;
   }).join('') || '<div class="empty-note">Индексы скоро появятся.</div>';
@@ -906,7 +876,7 @@ function renderIndices(indices, rates){
   if (sourceMap) sourceMap.innerHTML = sourceMapHtml();
 
   const types = ['all', ...new Set(rates.map(r => localizeTransport(r.transport_type)))];
-  const corridors = ['all', ...new Set(rates.map(r => corridorLabel(r)))];
+  const corridorFilters = ['all', ...new Set(rates.map(r => corridorLabel(r)))];
   const filterBox = document.getElementById('rates-filters');
   let currentType = 'all';
   let currentCorridor = 'all';
@@ -914,57 +884,34 @@ function renderIndices(indices, rates){
   function drawFilters(){
     if (!filterBox) return;
     const typeChips = types.map(t => `<button class="filter-chip ${t===currentType?'active':''}" data-type="${t}">${t==='all'?'Все сценарии':t}</button>`).join('');
-    const corridorChips = corridors.map(c => `<button class="filter-chip ${c===currentCorridor?'active':''}" data-corridor="${c}">${c==='all'?'Все коридоры':c}</button>`).join('');
+    const corridorChips = corridorFilters.map(c => `<button class="filter-chip ${c===currentCorridor?'active':''}" data-corridor="${c}">${c==='all'?'Все коридоры':c}</button>`).join('');
     filterBox.innerHTML = typeChips + corridorChips;
   }
-
-  function sortedRates(){
-    return [...rates].sort((a,b)=>new Date(`${b.date || b.published_at || '1970-01-01'}T00:00:00`)-new Date(`${a.date || a.published_at || '1970-01-01'}T00:00:00`));
-  }
-
   function filteredRates(){
-    return sortedRates().filter(r => {
-      return (currentType === 'all' || localizeTransport(r.transport_type)===currentType)
-        && (currentCorridor === 'all' || corridorLabel(r)===currentCorridor);
-    });
+    return [...rates].filter(r => (currentType === 'all' || localizeTransport(r.transport_type)===currentType) && (currentCorridor === 'all' || corridorLabel(r)===currentCorridor));
   }
-
   function drawRows(){
     const rows = filteredRates().map(r => {
-      const signal = rateSignal(r);
-      return `<tr>
-        <td><strong>${corridorLabel(r)}</strong><br><span class="muted small">${r.direction_name}</span></td>
-        <td>${localizeTransport(r.transport_type)}<br><span class="muted small">${r.unit || 'ориентир'}</span></td>
-        <td>${r.source || 'WIAF'}</td>
-        <td>${rangeLabel(r)}</td>
-        <td>${formatTrendCell(r)}</td>
-        <td><span class="badge ${signalClass(signal)}">${signal}</span></td>
-        <td>${normalizeExactness(r.exactness)}</td>
-        <td>${formatDateRu(r.date || r.published_at || '')}</td>
-      </tr>`;
+      const signal = r.signal || rateSignal(r);
+      return `<tr><td><strong>${corridorLabel(r)}</strong><br><span class="muted small">${r.direction_name}</span></td><td>${localizeTransport(r.transport_type)}<br><span class="muted small">${r.unit || 'ориентир'}</span></td><td>${r.source || 'WIAF'}</td><td>${rangeLabel(r)}</td><td>${formatTrendCell(r)}</td><td><span class="badge ${signalClass(signal)}">${signal}</span></td><td>${normalizeExactness(r.exactness)}</td><td>${formatDateRu(r.date || r.published_at || '')}</td></tr>`;
     }).join('');
     const table = document.getElementById('rates-table');
     if (table) table.innerHTML = rows || '<tr><td colspan="8">Нет данных</td></tr>';
   }
-
   function drawCorridors(){
     const grid = document.getElementById('corridor-grid');
     if (!grid) return;
     const grouped = new Map();
-    filteredRates().forEach(r => {
-      const key = corridorLabel(r);
-      if (!grouped.has(key)) grouped.set(key, []);
-      grouped.get(key).push(r);
-    });
+    filteredRates().forEach(r => { const key = corridorLabel(r); if (!grouped.has(key)) grouped.set(key, []); grouped.get(key).push(r); });
     const cards = [...grouped.entries()].slice(0,6).map(([name, items]) => {
       const top = items[0];
-      const signal = rateSignal(top);
+      const corridorMeta = (corridorData || []).find(c => c.corridor===name);
+      const signal = top.signal || rateSignal(top);
       const scenarioSet = [...new Set(items.map(x => localizeTransport(x.transport_type)))].slice(0,3).join(' / ');
-      return `<div class="route-card"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div class="badge">${name}</div><div class="badge ${signalClass(signal)}">${signal}</div></div><div class="route-title">${top.direction_name}</div><div class="small muted">${scenarioSet || 'сценарии уточняются'}</div><div class="price">${formatMoney(top.value, top.currency, top.unit)}</div><div class="small muted">Коридор: ${rangeLabel(top)}</div><div class="small muted">Тренд 7/30: ${formatTrendCell(top).replace('<br>',' · ')}</div><div class="small muted">Точность: ${normalizeExactness(top.exactness)}</div></div>`;
+      return `<div class="route-card"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div class="badge">${name}</div><div class="badge ${signalClass(signal)}">${signal}</div></div><div class="route-title">${top.direction_name}</div><div class="small muted">${scenarioSet || 'сценарии уточняются'}</div><div class="price">${formatMoney(top.value, top.currency, top.unit)}</div><div class="small muted">Коридор: ${rangeLabel(top)}</div><div class="small muted">Тренд 7/30: ${formatTrendCell(top).replace('<br>',' · ')}</div><div class="small muted">${corridorMeta?.summary || 'Контекст коридора уточняется.'}</div></div>`;
     });
     grid.innerHTML = cards.join('') || '<div class="empty-note">Коридоры скоро появятся.</div>';
   }
-
   function drawScenarios(){
     const grid = document.getElementById('scenario-grid');
     if (!grid) return;
@@ -973,45 +920,38 @@ function renderIndices(indices, rates){
       const items = rates.filter(r => localizeTransport(r.transport_type)===name);
       const sample = items[0];
       const label = sample ? corridorLabel(sample) : 'коридоры уточняются';
-      return `<div class="panel"><div class="section-eyebrow">${name}</div><div class="metric">${items.length || 0}</div><div class="small muted">маршрутов в витрине</div><div class="small muted" style="margin-top:10px">${sample ? `Фокус: ${label}. Источники: индексы, публикации операторов и WIAF auction intelligence.` : 'Добавьте ставки по этому сценарию в JSON или Google Sheet.'}</div></div>`;
+      return `<div class="panel"><div class="section-eyebrow">${name}</div><div class="metric">${items.length || 0}</div><div class="small muted">маршрутов в витрине</div><div class="small muted" style="margin-top:10px">${sample ? `Фокус: ${label}. Источники: индексы, публикации операторов и рыночные сигналы.` : 'Данные по сценарию скоро появятся.'}</div></div>`;
     }).join('');
   }
-
-  drawFilters();
-  drawRows();
-  drawCorridors();
-  drawScenarios();
-  if (filterBox) filterBox.onclick = (e)=>{
-    const typeBtn = e.target.closest('[data-type]');
-    const corridorBtn = e.target.closest('[data-corridor]');
-    if (typeBtn) currentType = typeBtn.dataset.type;
-    if (corridorBtn) currentCorridor = corridorBtn.dataset.corridor;
-    drawFilters();
-    drawRows();
-    drawCorridors();
-  };
+  drawFilters(); drawRows(); drawCorridors(); drawScenarios();
+  if (filterBox) filterBox.onclick = (e) => { const typeBtn = e.target.closest('[data-type]'); const corridorBtn = e.target.closest('[data-corridor]'); if (typeBtn) currentType = typeBtn.dataset.type; if (corridorBtn) currentCorridor = corridorBtn.dataset.corridor; drawFilters(); drawRows(); drawCorridors(); };
 }
 
-function renderDirections(rates, news){
-  const unique = [];
-  const seen = new Set();
+function renderDirections(rates, news, corridors){
+  const unique = []; const seen = new Set();
   for(const r of rates){ if(!seen.has(r.direction_name)){ seen.add(r.direction_name); unique.push(r); } }
   const grid = document.getElementById('directions-grid');
   if (!grid) return;
+  const corridorMap = new Map((corridors || []).map(c => [c.corridor, c]));
   grid.innerHTML = unique.map(r => {
-    const related = news.find(n => String(n.region || '').includes('RU')) || news[0];
-    return `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${r.min_value || r.value}–${r.max_value || r.value} ${r.currency}</div><div class="small muted">Особенности маршрута: ${r.note || 'контроль сроков, сезонность и перегрузка узлов.'}</div><div class="small muted">Связанный сигнал: ${related ? safeText(related.title) : 'сигнал скоро появится'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Зарегистрироваться</button></div>`;
+    const related = news.find(n => (n.title || '').toLowerCase().includes((r.corridor || '').toLowerCase())) || news[0];
+    const corridorCard = corridorMap.get(r.corridor || corridorLabel(r));
+    return `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${r.min_value || r.value}–${r.max_value || r.value} ${r.currency}</div><div class="small muted">Особенности маршрута: ${r.note || 'контроль сроков, сезонность и перегрузка узлов.'}</div><div class="small muted">Статус коридора: ${corridorCard ? corridorCard.status : rateSignal(r)}</div><div class="small muted">Связанный сигнал: ${related ? safeText(related.title) : 'сигнал скоро появится'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Зарегистрироваться</button></div>`;
   }).join('') || '<div class="empty-note">Направления скоро появятся.</div>';
 }
 
-function renderAuctions(auctions){
+function renderAuctions(auctions, corridors, news){
   window.MARKET_AUCTIONS = auctions.length ? auctions : [
     {route:'Шанхай → Москва', cargo:"FCL 40'", delivery_type:'морская', status:'активен', participants:4, cta:'https://wiaf.ru/Seller/Seller_login.php'},
     {route:'Стамбул → Санкт-Петербург', cargo:'LCL', delivery_type:'мультимодальная', status:'новый', participants:3, cta:'https://wiaf.ru/Seller/Seller_login.php'},
     {route:'Мумбаи → Новороссийск', cargo:'24 т', delivery_type:'морская', status:'в торгах', participants:5, cta:'https://wiaf.ru/Seller/Seller_login.php'}
   ];
   const grid = document.getElementById('auctions-grid');
-  if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
+  if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => {
+    const signal = (corridors || []).find(c => (a.route || '').toLowerCase().includes((c.corridor || '').toLowerCase()));
+    const related = (news || [])[0];
+    return `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><div class="small muted">Коридор: ${signal ? signal.corridor : 'рынок'}</div><div class="small muted">Фон: ${related ? safeText(related.title).slice(0,80) : 'сигналы уточняются'}</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`;
+  }).join('');
 }
 
 function renderBlog(news){
@@ -1051,31 +991,6 @@ function renderBlog(news){
   [searchEl, sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('input', draw));
   [sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('change', draw));
   draw();
-}
-
-function renderAnalytics(news, sourceStatusData){
-  const items = Array.isArray(sourceStatusData?.items) ? sourceStatusData.items : [];
-  const ok = items.filter(i => i.status === 'ok');
-  const errors = items.filter(i => i.status === 'error');
-  const fetched = ok.reduce((sum, i) => sum + Number(i.items_count || 0), 0);
-  const kpis = document.getElementById('analytics-kpis');
-  if(kpis) kpis.innerHTML = [
-    ['Активных источников', items.length],
-    ['Успешных проверок', ok.length],
-    ['Ошибок', errors.length],
-    ['Материалов в витрине', news.length]
-  ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div><div class="small muted">${x[0] === 'Успешных проверок' ? `получено записей: ${fetched}` : '&nbsp;'}</div></div>`).join('');
-
-  const srcList = document.getElementById('analytics-sources');
-  if(srcList) srcList.innerHTML = items.slice(0,10).map(i => `<div class="list-item">• <strong>${i.source_name}</strong>: ${i.status === 'ok' ? 'работает' : i.status === 'empty' ? 'пусто' : 'ошибка'}${i.items_count ? ` · ${i.items_count} материалов` : ''}${i.error ? ` · ${safeText(i.error).slice(0,120)}` : ''}</div>`).join('') || '<div class="empty-note">Статус источников пока не загружен.</div>';
-
-  const hi = document.getElementById('analytics-highlights');
-  if(hi) hi.innerHTML = [
-    `• Последнее обновление источников: ${sourceStatusData?.updated_at || '—'}`,
-    `• Материалов в публичном блоге: ${news.length}`,
-    `• Основные источники: ${ok.slice(0,4).map(i => i.source_name).join(', ') || 'данные уточняются'}`,
-    `• Лента не обнуляется, если новый прогон не нашёл материалов.`
-  ].map(s => `<div class="list-item">${s}</div>`).join('');
 }
 
 window.addEventListener('DOMContentLoaded', () => {
