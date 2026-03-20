@@ -1,35 +1,85 @@
 name: Update market data
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
-  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
+      - name: Debug start
+        run: |
+          echo "Workflow started"
+          pwd
+          ls -la
+
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Debug after checkout
+        run: |
+          echo "After checkout"
+          pwd
+          ls -la
+          find . -maxdepth 3 -type f | sort
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
+
+      - name: Check Python
+        run: |
+          python --version
+          pip --version
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install requests beautifulsoup4 feedparser
+
+      - name: Ensure folders exist
+        run: |
+          mkdir -p public/data
+          mkdir -p scripts
+          ls -la public || true
+          ls -la public/data || true
+          ls -la scripts || true
+
+      - name: Check parser file
+        run: |
+          if [ -f scripts/fetch_market_data.py ]; then
+            echo "Parser exists"
+            cat scripts/fetch_market_data.py
+          else
+            echo "ERROR: scripts/fetch_market_data.py not found"
+            exit 1
+          fi
 
       - name: Run parser
         run: |
           python scripts/fetch_market_data.py
 
-      - name: Commit and push
+      - name: Show generated files
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          ls -la public/data
+          for f in public/data/*.json; do
+            echo "FILE: $f"
+            cat "$f"
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
           git add public/data/*.json
-          git commit -m "auto update data" || echo "no changes"
+          git diff --cached --quiet || git commit -m "auto update data"
           git push
