@@ -139,13 +139,11 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-directions" onclick="goTo('directions')">Направления</button>
       <button class="nav-item" id="nav-auctions" onclick="goTo('auctions')">Аукционы</button>
       <button class="nav-item" id="nav-blog" onclick="openBlogPage()">Блог</button>
-      <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
-      <div class="nav-divider"></div>
+            <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
       <button class="nav-item" id="nav-forwarder" onclick="goTo('forwarder')">Экспедитору</button>
       <button class="nav-item" id="nav-about" onclick="goTo('about')">О платформе</button>
-      <button class="nav-item" onclick="openExternal('https://wiaf.ru/BUYER/pravila2-2-2.php')">Правила экспедитора</button>
-      <button class="nav-item" id="nav-contacts" onclick="goTo('contacts')">Контакты</button>
+            <button class="nav-item" id="nav-contacts" onclick="goTo('contacts')">Контакты</button>
     </nav>
     <button class="btn-nav" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Войти</button>
   </div>
@@ -232,12 +230,13 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
+
 <div class="page" id="page-market">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Рынок</span></div></div>
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Рынок</div><h2>Сигналы, статистика, активность</h2></div>
+        <div><div class="section-eyebrow">Рынок</div><h2>Сигналы, индикаторы и картина рынка</h2></div>
         <button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Войти в терминал</button>
       </div>
       <div class="grid-4" id="market-panels"></div>
@@ -247,32 +246,53 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
     <div class="wrap grid-2">
       <div class="chart-shell"><canvas id="marketChart"></canvas></div>
       <div class="panel">
-        <div class="section-eyebrow">Публичная витрина рынка</div>
-        <h2 style="font-size:1.4rem;margin-bottom:12px">Как использовать витрину WIAF</h2>
-        <p class="muted">Открытая часть платформы помогает быстро понять рынок: увидеть активность, ориентиры по ставкам, новости и механику торгов до входа в закрытый кабинет.</p>
+        <div class="section-eyebrow">Что такое лист «Рынок»</div>
+        <h2 style="font-size:1.4rem;margin-bottom:12px">Главная обзорная витрина WIAF</h2>
+        <p class="muted">Раздел нужен, чтобы в одном экране показать, насколько рынок активен прямо сейчас: где растет число аукционов, какие направления перегреты, что меняется по ставкам и какие новости действительно влияют на стоимость и сроки международной доставки.</p>
         <div class="list">
-          <div class="list-item">• Публичные новости, сигналы и изменения в логистике</div>
-          <div class="list-item">• Ориентиры по ставкам на ключевых направлениях</div>
-          <div class="list-item">• Индексы и агрегированная динамика рынка</div>
-          <div class="list-item">• Показатели активности аукционов и спроса</div>
+          <div class="list-item">• Индекс активности аукционов: количество новых лотов, среднее число участников, глубина торгов.</div>
+          <div class="list-item">• Индекс рынка WIAF: собственный агрегат из новостей, ставок и аукционной активности.</div>
+          <div class="list-item">• Сигналы риска: перегрузка портов, изменения регуляторики, ограничения, погодные факторы.</div>
+          <div class="list-item">• Сигналы возможностей: новые сервисы, дополнительные мощности, альтернативные коридоры.</div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+
 <div class="page" id="page-indices">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Ставки и индексы</span></div></div>
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Индексы и ставки</div><h2>Агрегированные рыночные данные</h2></div>
-        <button class="btn btn-outline" onclick="goTo('analytics')">Пояснить динамику</button>
+        <div><div class="section-eyebrow">Ставки и индексы</div><h2>Ориентиры рынка и собственные индикаторы WIAF</h2></div>
+        <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Запросить доступ</button>
       </div>
       <div class="grid-4" id="indices-cards"></div>
     </div>
   </section>
   <section class="section section-alt">
+    <div class="wrap grid-2" style="margin-bottom:22px">
+      <div class="panel">
+        <div class="section-eyebrow">Откуда брать данные</div>
+        <div class="list">
+          <div class="list-item">• Публичные индексы морского фрахта: SCFI, CCFI, WCI, FBX.</div>
+          <div class="list-item">• Публикации операторов, линий, терминалов и отраслевых СМИ.</div>
+          <div class="list-item">• Внутренняя аукционная статистика WIAF: число лотов, участников и динамика ставок.</div>
+          <div class="list-item">• Валютные и топливные ориентиры как фон для расчёта ценовых коридоров.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-eyebrow">Как сделать раздел богаче</div>
+        <div class="list">
+          <div class="list-item">• Коридоры: Китай, Турция, Индия, ОАЭ, Казахстан, ЮВА.</div>
+          <div class="list-item">• Разделение на FCL, LCL, FTL, авиа, ЖД и мультимодальные сценарии.</div>
+          <div class="list-item">• Диапазон, тренд за 7/30 дней и уровень точности по каждой ставке.</div>
+          <div class="list-item">• Плашки «перегрет / стабилен / окно возможностей» по каждому направлению.</div>
+        </div>
+      </div>
+    </div>
     <div class="wrap">
       <div class="filter-bar" id="rates-filters"></div>
       <div class="table-wrap">
@@ -285,28 +305,74 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
+
 <div class="page" id="page-directions">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Направления</span></div></div>
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Маршруты</div><h2>Ключевые направления рынка</h2></div>
-        <p class="section-note">По каждому направлению показываются ориентиры по ставке, тип перевозки, особенности маршрута и переход к регистрации.</p>
+        <div><div class="section-eyebrow">Направления</div><h2>Живые коридоры, сценарии и ориентиры по доставке</h2></div>
+        <p class="section-note">Раздел помогает быстро понять, что происходит на конкретном направлении: ставка, способ доставки, ограничения, новостной фон и CTA на регистрацию.</p>
       </div>
       <div class="grid-3" id="directions-grid"></div>
     </div>
   </section>
+  <section class="section section-alt">
+    <div class="wrap grid-2">
+      <div class="panel">
+        <div class="section-eyebrow">Что должно быть в карточке направления</div>
+        <div class="list">
+          <div class="list-item">• Базовый тариф и диапазон отклонения.</div>
+          <div class="list-item">• Средний срок доставки и чувствительность к задержкам.</div>
+          <div class="list-item">• Вид перевозки и оптимальный сценарий для импортёра.</div>
+          <div class="list-item">• 1–2 связанных сигнала рынка именно по этому коридору.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-eyebrow">Как оживлять раздел</div>
+        <div class="list">
+          <div class="list-item">• Отдельные подстраницы под SEO: «Китай — Москва FCL», «Турция — СПб LCL».</div>
+          <div class="list-item">• Статусы маршрутов: стабильно / перегружено / растёт / окно возможностей.</div>
+          <div class="list-item">• Новостной фон, связанный именно с этим направлением.</div>
+          <div class="list-item">• Переход в аукцион или регистрацию прямо из карточки направления.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
 
 <div class="page" id="page-auctions">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Аукционы</span></div></div>
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Витрина аукционов</div><h2>Реальные сделки без раскрытия чувствительных данных</h2></div>
+        <div><div class="section-eyebrow">Аукционы</div><h2>Логика торгов, активные лоты и прозрачная механика входа</h2></div>
         <button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Создать аукцион</button>
       </div>
       <div class="grid-3" id="auctions-grid"></div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="wrap grid-2">
+      <div class="panel">
+        <div class="section-eyebrow">Что показывать публично</div>
+        <div class="list">
+          <div class="list-item">• Маршрут, тип груза, формат перевозки, количество участников.</div>
+          <div class="list-item">• Статус лота: новый, активен, завершается, архив.</div>
+          <div class="list-item">• Общую активность без раскрытия названия импортёра и ставок участников.</div>
+          <div class="list-item">• Класс лота: FCL, LCL, FTL, сборка, проектная логистика.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-eyebrow">Как сделать раздел разнообразнее</div>
+        <div class="list">
+          <div class="list-item">• Выделять топ-лоты недели и маршруты с наибольшим интересом.</div>
+          <div class="list-item">• История активности: сколько было торгов по направлению за 30 дней.</div>
+          <div class="list-item">• FAQ по механике: 5 ставок, 60 минут, победитель — минимальная цена.</div>
+          <div class="list-item">• Отдельные сценарии для импортёра и экспедитора с разными CTA.</div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -327,29 +393,6 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       </div>
       <div class="grid-4" id="blog-stats" style="margin-bottom:20px"></div>
       <div class="grid-3" id="blog-grid"></div>
-    </div>
-  </section>
-</div>
-
-<div class="page" id="page-analytics">
-  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Аналитика</span></div></div>
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="section-eyebrow">Аналитика</div><h2>Статус источников, покрытие и активность витрины</h2></div>
-        <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Расширенный доступ</button>
-      </div>
-      <div class="grid-4" id="analytics-kpis" style="margin-bottom:20px"></div>
-      <div class="grid-2">
-        <div class="panel">
-          <div class="section-eyebrow">Состояние источников</div>
-          <div class="list" id="analytics-sources"></div>
-        </div>
-        <div class="panel">
-          <div class="section-eyebrow">Что видно в публичной витрине</div>
-          <div class="list" id="analytics-highlights"></div>
-        </div>
-      </div>
     </div>
   </section>
 </div>
@@ -422,23 +465,47 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
+
 <div class="page" id="page-about">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>О платформе</span></div></div>
   <section class="section">
     <div class="wrap grid-2">
       <div class="panel">
-        <div class="section-eyebrow">О проекте</div>
-        <h2 style="font-size:1.8rem;margin-bottom:12px">Не просто сайт компании</h2>
-        <p class="muted">WIAF — это платформа торгов на международную логистику. Публичная часть показывает рынок, правила и механику сервиса, а рабочая часть открывается после входа или регистрации.</p>
+        <div class="section-eyebrow">О платформе</div>
+        <h2 style="font-size:1.8rem;margin-bottom:12px">WIAF — вход в рынок международной логистики, а не просто витрина компании</h2>
+        <p class="muted">WIAF — это открытый терминал рынка международной логистики, где до регистрации можно увидеть ставки, индикаторы, сигналы, направления и активность аукционов. Публичная часть помогает быстро собрать контекст и понять, что происходит по ключевым коридорам, а рабочая часть открывается после входа или регистрации.</p>
+        <p class="muted">Для импортёра это инструмент снижения стоимости перевозки и способ быстро выйти в торги. Для экспедитора — доступ к новому потоку лотов и клиентов. Для команды закупок и логистики — рыночный терминал с понятными ориентирами.</p>
       </div>
       <div class="panel">
-        <div class="section-eyebrow">Важные материалы</div>
+        <div class="section-eyebrow">Что есть в открытой части</div>
         <div class="list">
-          <div class="list-item">• О платформе</div>
-          <div class="list-item">• Правила импортёра</div>
-          <div class="list-item">• Правила экспедитора</div>
-          <div class="list-item">• Вход в кабинет</div>
-          <div class="list-item">• Регистрация на площадке</div>
+          <div class="list-item">• Блог и сигналы рынка по международной логистике.</div>
+          <div class="list-item">• Ориентиры ставок и рыночные индексы по основным коридорам.</div>
+          <div class="list-item">• Направления и сценарии доставки с привязкой к новостному фону.</div>
+          <div class="list-item">• Ограниченная витрина аукционов без раскрытия чувствительных данных.</div>
+          <div class="list-item">• Страницы для импортёров и экспедиторов с правилами и CTA на вход.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="wrap grid-2">
+      <div class="panel">
+        <div class="section-eyebrow">Как устроен продукт</div>
+        <div class="list">
+          <div class="list-item">1. Публичная витрина собирает рынок: новости, ставки, направления и аукционную активность.</div>
+          <div class="list-item">2. После входа пользователь попадает в рабочее пространство импортёра или экспедитора.</div>
+          <div class="list-item">3. Внутри кабинета запускаются аукционы, шаблоны лотов и участие в торгах.</div>
+          <div class="list-item">4. Дальше платформа может развиваться в сторону прогнозов, скоринга и персональных рекомендаций.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-eyebrow">Для кого WIAF</div>
+        <div class="list">
+          <div class="list-item">• Импортёры, которым нужен прозрачный инструмент снижения логистических затрат.</div>
+          <div class="list-item">• Экспедиторы, которым нужен поток лотов и быстрый доступ к торгам.</div>
+          <div class="list-item">• Команды закупок и логистики, которым нужна быстрая рыночная картина.</div>
+          <div class="list-item">• Руководители, которым важно видеть контекст рынка до коммерческого контакта.</div>
         </div>
       </div>
     </div>
@@ -518,7 +585,6 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
           <a onclick="goTo('indices')">Ставки и индексы</a>
           <a onclick="goTo('directions')">Направления</a>
           <a onclick="openBlogPage()">Блог</a>
-          <a onclick="goTo('analytics')">Аналитика</a>
         </div>
       </div>
       <div>
@@ -545,7 +611,6 @@ const ROUTE_META = {
   directions: { title: 'Направления — WIAF' },
   auctions: { title: 'Витрина аукционов — WIAF' },
   blog: { title: 'Блог — WIAF' },
-  analytics: { title: 'Аналитика — WIAF' },
   importer: { title: 'Для импортёров — WIAF' },
   forwarder: { title: 'Для экспедиторов — WIAF' },
   about: { title: 'О платформе — WIAF' },
@@ -722,7 +787,6 @@ async function loadData(){
   renderDirections(rates, news);
   renderAuctions(auctions);
   renderBlog(news);
-  renderAnalytics(news, sourceStatusData);
 }
 
 function renderHome(news, rates, indices, statsItems, auctions){
@@ -755,39 +819,44 @@ function renderHome(news, rates, indices, statsItems, auctions){
 }
 
 let marketChart;
+
 function renderMarket(statsItems, indices){
   const latest = statsItems[0] || {};
   const cards = [
-    ['Активные аукционы', latest.active_auctions || 42, 'живые торги'],
-    ['Новые за неделю', latest.new_auctions_week || 31, 'динамика спроса'],
-    ['Средний отклик', latest.avg_responses || 4.3, 'конкуренция'],
-    ['Рыночный индекс', latest.calculated_market_index || 71.4, 'агрегированный показатель']
+    ['Индекс рынка WIAF', latest.calculated_market_index || 71.4, 'агрегат новостей, ставок и аукционов'],
+    ['Активные аукционы', latest.active_auctions || 42, 'открытые и новые лоты'],
+    ['Средний отклик', latest.avg_responses || 4.3, 'среднее число участников на лот'],
+    ['Активные направления', latest.active_routes || 27, 'маршруты с текущими ориентирами']
   ];
   const panels = document.getElementById('market-panels');
   if (panels) panels.innerHTML = cards.map(c => `<div class="panel"><div class="section-eyebrow">${c[0]}</div><div class="metric">${c[1]}</div><div class="muted small">${c[2]}</div></div>`).join('');
   const ctx = document.getElementById('marketChart');
   if(!ctx) return;
   if(marketChart) marketChart.destroy();
-  const labels = indices.map(i => i.date).slice(-6);
-  const values = indices.map(i => i.value).slice(-6);
-  marketChart = new Chart(ctx, {type:'line', data:{labels, datasets:[{label:'Индекс', data: values, borderWidth:2, tension:.25}]}, options:{responsive:true, maintainAspectRatio:false}});
+  const labels = indices.map(i => formatDateRu(i.date)).slice(-8);
+  const values = indices.map(i => Number(i.value || 0)).slice(-8);
+  marketChart = new Chart(ctx, {type:'line', data:{labels, datasets:[{label:'Индекс WIAF / рыночный ориентир', data: values, borderWidth:2, tension:.25}]}, options:{responsive:true, maintainAspectRatio:false}});
 }
+
+
 
 function renderIndices(indices, rates){
   const cardsEl = document.getElementById('indices-cards');
-  if (cardsEl) cardsEl.innerHTML = indices.slice(0,4).map(i => `<div class="panel"><div class="section-eyebrow">${i.index_name}</div><div class="metric">${Number(i.value || 0).toLocaleString('ru-RU')}</div><div class="small ${(i.change_pct || 0) >= 0 ? 'up':'dn'}">${(i.change_pct || 0) >=0 ? '+' : ''}${i.change_pct || 0}%</div><div class="muted small">${i.date || ''}</div></div>`).join('') || '<div class="empty-note">Индексы скоро появятся.</div>';
+  if (cardsEl) cardsEl.innerHTML = indices.slice(0,6).map(i => `<div class="panel"><div class="section-eyebrow">${i.index_name}</div><div class="metric">${Number(i.value || 0).toLocaleString('ru-RU')}</div><div class="small ${(i.change_pct || 0) >= 0 ? 'up':'dn'}">${(i.change_pct || 0) >=0 ? '+' : ''}${i.change_pct || 0}%</div><div class="muted small">${formatDateRu(i.date || '')}</div><div class="small muted">${i.description || i.source || 'рыночный ориентир'}</div></div>`).join('') || '<div class="empty-note">Индексы скоро появятся.</div>';
   const types = ['all', ...new Set(rates.map(r => localizeTransport(r.transport_type)))];
   const filterBox = document.getElementById('rates-filters');
   let current = 'all';
   function drawFilters(){ if (filterBox) filterBox.innerHTML = types.map(t => `<button class="filter-chip ${t===current?'active':''}" data-type="${t}">${t==='all'?'Все типы':t}</button>`).join(''); }
   function drawRows(){
-    const rows = rates.filter(r => current==='all' || localizeTransport(r.transport_type)===current).map(r => `<tr><td>${r.direction_name}</td><td>${localizeTransport(r.transport_type)}</td><td>${r.source || 'WIAF'}</td><td>${formatMoney(r.value, r.currency, r.unit)}</td><td>${r.date || ''}</td><td>${r.exactness || 'ориентир'}</td></tr>`).join('');
+    const rows = rates.filter(r => current==='all' || localizeTransport(r.transport_type)===current).map(r => `<tr><td>${r.direction_name}</td><td>${localizeTransport(r.transport_type)}</td><td>${r.source || 'WIAF'}</td><td>${formatMoney(r.value, r.currency, r.unit)}</td><td>${formatDateRu(r.date || '')}</td><td>${r.exactness || 'ориентир'}</td></tr>`).join('');
     const table = document.getElementById('rates-table');
     if (table) table.innerHTML = rows || '<tr><td colspan="6">Нет данных</td></tr>';
   }
   drawFilters(); drawRows();
   if (filterBox) filterBox.onclick = (e)=>{ const btn=e.target.closest('[data-type]'); if(!btn) return; current=btn.dataset.type; drawFilters(); drawRows(); };
 }
+
+
 
 function renderDirections(rates, news){
   const unique = [];
@@ -796,20 +865,24 @@ function renderDirections(rates, news){
   const grid = document.getElementById('directions-grid');
   if (!grid) return;
   grid.innerHTML = unique.map(r => {
-    const related = news.find(n => String(n.region || '').includes('RU')) || news[0];
-    return `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${r.min_value || r.value}–${r.max_value || r.value} ${r.currency}</div><div class="small muted">Особенности маршрута: ${r.note || 'контроль сроков, сезонность и перегрузка узлов.'}</div><div class="small muted">Связанный сигнал: ${related ? safeText(related.title) : 'сигнал скоро появится'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Зарегистрироваться</button></div>`;
+    const related = news.find(n => localizeTransport(n.transport_type) === localizeTransport(r.transport_type)) || news[0];
+    const status = Number(r.max_value || r.value) > Number(r.value || 0) * 1.1 ? 'волатильно' : 'стабильно';
+    return `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${Number(r.min_value || r.value).toLocaleString('ru-RU')}–${Number(r.max_value || r.value).toLocaleString('ru-RU')} ${r.currency}</div><div class="small muted">Срок: ${r.transit_time || 'ориентир зависит от порта/перехода'}</div><div class="small muted">Статус коридора: ${status}</div><div class="small muted">Сигнал рынка: ${related ? safeText(related.title) : 'сигнал скоро появится'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Открыть сценарий</button></div>`;
   }).join('') || '<div class="empty-note">Направления скоро появятся.</div>';
 }
 
+
+
 function renderAuctions(auctions){
   window.MARKET_AUCTIONS = auctions.length ? auctions : [
-    {route:'Шанхай → Москва', cargo:"FCL 40'", delivery_type:'морская', status:'активен', participants:4, cta:'https://wiaf.ru/Seller/Seller_login.php'},
-    {route:'Стамбул → Санкт-Петербург', cargo:'LCL', delivery_type:'мультимодальная', status:'новый', participants:3, cta:'https://wiaf.ru/Seller/Seller_login.php'},
-    {route:'Мумбаи → Новороссийск', cargo:'24 т', delivery_type:'морская', status:'в торгах', participants:5, cta:'https://wiaf.ru/Seller/Seller_login.php'}
+    {route:'Шанхай → Москва', cargo:"FCL 40'", delivery_type:'морская', status:'активен', participants:4, cta:'https://wiaf.ru/Seller/Seller_login.php', timing:'60 минут', notes:'торги на понижение'},
+    {route:'Стамбул → Санкт-Петербург', cargo:'LCL', delivery_type:'мультимодальная', status:'новый', participants:3, cta:'https://wiaf.ru/Seller/Seller_login.php', timing:'60 минут', notes:'регулярные небольшие партии'},
+    {route:'Мумбаи → Новороссийск', cargo:'24 т', delivery_type:'морская', status:'в торгах', participants:5, cta:'https://wiaf.ru/Seller/Seller_login.php', timing:'60 минут', notes:'высокая конкуренция'}
   ];
   const grid = document.getElementById('auctions-grid');
-  if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
+  if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника · ${a.timing || '60 минут'}</div><div class="small muted">${a.notes || 'торги на понижение ставки'}</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
 }
+
 
 function renderBlog(news){
   const searchEl = document.getElementById('blog-search');
@@ -850,30 +923,7 @@ function renderBlog(news){
   draw();
 }
 
-function renderAnalytics(news, sourceStatusData){
-  const items = Array.isArray(sourceStatusData?.items) ? sourceStatusData.items : [];
-  const ok = items.filter(i => i.status === 'ok');
-  const errors = items.filter(i => i.status === 'error');
-  const fetched = ok.reduce((sum, i) => sum + Number(i.items_count || 0), 0);
-  const kpis = document.getElementById('analytics-kpis');
-  if(kpis) kpis.innerHTML = [
-    ['Активных источников', items.length],
-    ['Успешных проверок', ok.length],
-    ['Ошибок', errors.length],
-    ['Материалов в витрине', news.length]
-  ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div><div class="small muted">${x[0] === 'Успешных проверок' ? `получено записей: ${fetched}` : '&nbsp;'}</div></div>`).join('');
 
-  const srcList = document.getElementById('analytics-sources');
-  if(srcList) srcList.innerHTML = items.slice(0,10).map(i => `<div class="list-item">• <strong>${i.source_name}</strong>: ${i.status === 'ok' ? 'работает' : i.status === 'empty' ? 'пусто' : 'ошибка'}${i.items_count ? ` · ${i.items_count} материалов` : ''}${i.error ? ` · ${safeText(i.error).slice(0,120)}` : ''}</div>`).join('') || '<div class="empty-note">Статус источников пока не загружен.</div>';
-
-  const hi = document.getElementById('analytics-highlights');
-  if(hi) hi.innerHTML = [
-    `• Последнее обновление источников: ${sourceStatusData?.updated_at || '—'}`,
-    `• Материалов в публичном блоге: ${news.length}`,
-    `• Основные источники: ${ok.slice(0,4).map(i => i.source_name).join(', ') || 'данные уточняются'}`,
-    `• Лента не обнуляется, если новый прогон не нашёл материалов.`
-  ].map(s => `<div class="list-item">${s}</div>`).join('');
-}
 
 window.addEventListener('DOMContentLoaded', () => {
   try { lucide.createIcons(); } catch(e) { console.warn(e); }
