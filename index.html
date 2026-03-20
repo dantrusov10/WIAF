@@ -108,12 +108,21 @@ nav{display:flex;gap:2px;flex-wrap:wrap;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--border);background:var(--surface2)}
 .route-card,.news-card,.auction-card,.persona-card{background:#fff;border:1px solid var(--border);padding:22px;display:flex;flex-direction:column;gap:12px}
 .route-title,.news-card h3,.auction-route,.persona-card h3{font-family:'Unbounded',sans-serif;font-size:1rem;line-height:1.25}
+.news-card{min-height:100%;justify-content:flex-start;box-shadow:0 10px 22px rgba(13,15,20,.04)}
+.news-card h3 a:hover{color:var(--blue-mid)}
+.news-snippet{color:var(--muted);font-size:.95rem;line-height:1.65;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;min-height:7.8em}
+.news-meta{margin-top:auto;padding-top:8px;border-top:1px solid var(--surface2);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.source-pill{display:inline-flex;align-items:center;padding:4px 9px;border:1px solid var(--border);background:var(--surface2);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
 .price{font-family:'Unbounded',sans-serif;font-size:1.5rem}
 .small{font-size:.84rem}
 .list{display:grid;gap:10px;margin-top:10px}.list-item{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.95rem}
 footer{background:var(--ink);color:#fff;padding:34px 0;margin-top:0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}.footer-title{font-family:'Unbounded',sans-serif;font-size:.86rem;margin-bottom:12px}.footer-links{display:grid;gap:8px;color:rgba(255,255,255,.7);font-size:.92rem}.footer-bottom{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.85rem}
 .breadcrumb{background:var(--ink2);padding:11px 32px;color:rgba(255,255,255,.65);font-size:.78rem}.bc-inner{max-width:1280px;margin:0 auto;display:flex;gap:8px;align-items:center}.bc-item{cursor:pointer}.bc-item:hover{color:var(--accent)}
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.filter-chip{padding:10px 14px;border:1px solid var(--border);background:#fff;cursor:pointer;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}.filter-chip.active{background:var(--blue-mid);border-color:var(--blue-mid);color:#fff}
+.blog-toolbar{display:grid;grid-template-columns:1.2fr repeat(3, minmax(0, .7fr));gap:12px;margin-bottom:20px}
+.blog-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.blog-stat{background:#fff;border:1px solid var(--border);padding:16px}
+.blog-stat strong{display:block;font-family:'Unbounded',sans-serif;font-size:1.4rem;line-height:1.1;margin-top:8px}
 .chart-shell{background:#fff;border:1px solid var(--border);padding:20px;height:360px}
 input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border);font:inherit;background:#fff}textarea{min-height:140px;resize:vertical}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.form-note{font-size:.82rem;color:var(--muted)}
 .market-mini{display:grid;gap:14px}.market-item{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}.market-item:last-child{border-bottom:none;padding-bottom:0}
@@ -134,6 +143,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-directions" onclick="goTo('directions')">Направления</button>
       <button class="nav-item" id="nav-auctions" onclick="goTo('auctions')">Аукционы</button>
       <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
+      <button class="nav-item" id="nav-blog" onclick="goTo('blog')">Блог</button>
       <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
       <button class="nav-item" id="nav-forwarder" onclick="goTo('forwarder')">Экспедитору</button>
@@ -299,10 +309,30 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Аналитика</div><h2>Новости, обзоры, рыночные сигналы</h2></div>
-        <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Расширенный доступ</button>
+        <div><div class="section-eyebrow">Аналитика</div><h2>Новости, обзоры, рыночные сигналы</h2><p class="section-note">Публичная лента сейчас собирается из открытых отраслевых источников: Logirus и PortNews. Англоязычные публикации отключены из основного потока.</p></div>
+        <button class="btn btn-outline" onclick="goTo('blog')">Открыть весь блог</button>
       </div>
       <div class="grid-3" id="analytics-grid"></div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-blog">
+  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Блог</span></div></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="section-eyebrow">Блог</div><h2>Все статьи, сигналы и обзоры</h2><p class="section-note">Здесь хранится вся открытая лента публикаций WIAF. Можно отфильтровать статьи по источнику, категории и типу перевозки.</p></div>
+        <button class="btn btn-outline" onclick="goTo('analytics')">Вернуться к аналитике</button>
+      </div>
+      <div class="blog-summary" id="blog-summary"></div>
+      <div class="blog-toolbar">
+        <input id="blog-search" type="search" placeholder="Поиск по заголовку или описанию">
+        <select id="blog-filter-source"><option value="all">Все источники</option></select>
+        <select id="blog-filter-category"><option value="all">Все темы</option></select>
+        <select id="blog-filter-transport"><option value="all">Все типы перевозки</option></select>
+      </div>
+      <div class="grid-3" id="blog-grid"></div>
     </div>
   </section>
 </div>
@@ -467,6 +497,7 @@ const ROUTE_META = {
   directions: { title: 'Направления — WIAF' },
   auctions: { title: 'Витрина аукционов — WIAF' },
   analytics: { title: 'Аналитика — WIAF' },
+  blog: { title: 'Блог — WIAF' },
   importer: { title: 'Для импортёров — WIAF' },
   forwarder: { title: 'Для экспедиторов — WIAF' },
   about: { title: 'О платформе — WIAF' },
@@ -521,8 +552,18 @@ function localizeTransport(v='unknown'){
   return map[String(v).toLowerCase()] || v;
 }
 function localizeCategory(v='news'){
-  const map = {news:'новости', analytics:'аналитика', rates:'ставки', ports:'порты', tender:'тендер', signal:'сигнал'};
+  const map = {news:'новости', analytics:'аналитика', rates:'ставки', ports:'порты', tender:'тендер', signal:'сигнал', rail:'железная дорога'};
   return map[String(v).toLowerCase()] || v;
+}
+function sourceLabel(v=''){ return safeText(v || 'Источник'); }
+function normalizeNews(news){
+  const items = (news || []).filter(n => n && (n.title || n.snippet)).map(n => ({...n, snippet: safeText(n.snippet || n.summary || ''), title: safeText(n.title || ''), region: n.region || '', source: sourceLabel(n.source)}));
+  const ru = items.filter(n => String(n.region).toUpperCase() === 'RU' || /logirus|portnews/i.test(String(n.source)));
+  return (ru.length ? ru : items).sort((a,b) => String(b.date || '').localeCompare(String(a.date || '')));
+}
+function renderNewsCard(n){
+  const dateLabel = n.date ? new Date(n.date).toLocaleDateString('ru-RU') : '';
+  return `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="news-snippet">${safeText(n.snippet).slice(0, 240)}</p><div class="news-meta"><span class="source-pill">${sourceLabel(n.source)}</span><span>${dateLabel}</span></div></article>`;
 }
 
 async function loadData(){
@@ -538,7 +579,7 @@ async function loadData(){
   const indicesData = indicesRes.status === 'fulfilled' ? indicesRes.value : {items: []};
   const statsData = statsRes.status === 'fulfilled' ? statsRes.value : {items: [], auctions: []};
 
-  const news = normalizeItems(newsData);
+  const news = normalizeNews(normalizeItems(newsData));
   const rates = normalizeItems(ratesData);
   const indices = normalizeItems(indicesData);
   const stats = normalizeItems(statsData);
@@ -550,6 +591,7 @@ async function loadData(){
   renderDirections(rates, news);
   renderAuctions(auctions);
   renderAnalytics(news);
+  renderBlog(news);
 }
 
 function renderHome(news, rates, indices, statsItems, auctions){
@@ -574,7 +616,7 @@ function renderHome(news, rates, indices, statsItems, auctions){
   if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date || ''}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
 
   const newsEl = document.getElementById('home-news');
-  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 180)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''}</div></article>`).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
+  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(renderNewsCard).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
 
   const auctionsEl = document.getElementById('home-auctions');
   const list = auctions && auctions.length ? auctions : window.MARKET_AUCTIONS || [];
@@ -640,7 +682,45 @@ function renderAuctions(auctions){
 
 function renderAnalytics(news){
   const grid = document.getElementById('analytics-grid');
-  if (grid) grid.innerHTML = news.slice(0,9).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 220)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''} · ${localizeTransport(n.transport_type || 'unknown')}</div></article>`).join('') || '<div class="empty-note">Аналитика скоро появится.</div>';
+  if (grid) grid.innerHTML = news.slice(0,6).map(renderNewsCard).join('') || '<div class="empty-note">Аналитика скоро появится.</div>';
+}
+
+function renderBlog(news){
+  const summary = document.getElementById('blog-summary');
+  const grid = document.getElementById('blog-grid');
+  const search = document.getElementById('blog-search');
+  const sourceSel = document.getElementById('blog-filter-source');
+  const categorySel = document.getElementById('blog-filter-category');
+  const transportSel = document.getElementById('blog-filter-transport');
+  if (!grid || !summary) return;
+  const sources = ['all', ...new Set(news.map(n => sourceLabel(n.source)).filter(Boolean))];
+  const categories = ['all', ...new Set(news.map(n => localizeCategory(n.category)).filter(Boolean))];
+  const transports = ['all', ...new Set(news.map(n => localizeTransport(n.transport_type || 'unknown')).filter(Boolean))];
+  if (sourceSel) sourceSel.innerHTML = sources.map(v => `<option value="${v}">${v === 'all' ? 'Все источники' : v}</option>`).join('');
+  if (categorySel) categorySel.innerHTML = categories.map(v => `<option value="${v}">${v === 'all' ? 'Все темы' : v}</option>`).join('');
+  if (transportSel) transportSel.innerHTML = transports.map(v => `<option value="${v}">${v === 'all' ? 'Все типы перевозки' : v}</option>`).join('');
+  summary.innerHTML = `
+    <div class="blog-stat"><div class="small muted">Всего публикаций</div><strong>${news.length}</strong></div>
+    <div class="blog-stat"><div class="small muted">Источников</div><strong>${Math.max(sources.length - 1, 0)}</strong></div>
+    <div class="blog-stat"><div class="small muted">Тем</div><strong>${Math.max(categories.length - 1, 0)}</strong></div>
+    <div class="blog-stat"><div class="small muted">Типов перевозки</div><strong>${Math.max(transports.length - 1, 0)}</strong></div>`;
+  const draw = () => {
+    const q = (search?.value || '').toLowerCase().trim();
+    const src = sourceSel?.value || 'all';
+    const cat = categorySel?.value || 'all';
+    const tr = transportSel?.value || 'all';
+    const filtered = news.filter(n => {
+      const blob = `${n.title} ${n.snippet}`.toLowerCase();
+      return (!q || blob.includes(q))
+        && (src === 'all' || sourceLabel(n.source) === src)
+        && (cat === 'all' || localizeCategory(n.category) === cat)
+        && (tr === 'all' || localizeTransport(n.transport_type || 'unknown') === tr);
+    });
+    grid.innerHTML = filtered.map(renderNewsCard).join('') || '<div class="empty-note">По выбранным фильтрам публикаций пока нет.</div>';
+  };
+  [search, sourceSel, categorySel, transportSel].forEach(el => el && el.addEventListener('input', draw));
+  [sourceSel, categorySel, transportSel].forEach(el => el && el.addEventListener('change', draw));
+  draw();
 }
 
 window.addEventListener('DOMContentLoaded', () => {
