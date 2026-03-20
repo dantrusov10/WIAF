@@ -7,11 +7,18 @@
       "new_auctions_day": 9,
       "new_auctions_week": 34,
       "active_routes": 27,
-      "active_transport_types": 4,
+      "active_transport_types": 5,
       "avg_responses": 4.3,
       "avg_internal_rate": 1980,
       "calculated_market_index": 71.4,
-      "updated_at": "2026-03-20T10:30:00Z"
+      "risk_flags": [
+        "перегрузка портовых окон",
+        "рост ставок на морских сервисах"
+      ],
+      "opportunity_flags": [
+        "альтернативные жд-коридоры",
+        "рост интереса к Турции и Индии"
+      ]
     }
   ],
   "auctions": [
@@ -21,6 +28,8 @@
       "delivery_type": "морская",
       "status": "активен",
       "participants": 4,
+      "timing": "60 минут",
+      "notes": "торги на понижение",
       "cta": "https://wiaf.ru/Seller/Seller_login.php"
     },
     {
@@ -29,6 +38,8 @@
       "delivery_type": "мультимодальная",
       "status": "новый",
       "participants": 3,
+      "timing": "60 минут",
+      "notes": "регулярные небольшие партии",
       "cta": "https://wiaf.ru/Seller/Seller_login.php"
     },
     {
@@ -37,6 +48,28 @@
       "delivery_type": "морская",
       "status": "в торгах",
       "participants": 5,
+      "timing": "60 минут",
+      "notes": "высокая конкуренция",
+      "cta": "https://wiaf.ru/Seller/Seller_login.php"
+    },
+    {
+      "route": "Шэньчжэнь → Екатеринбург",
+      "cargo": "FEU",
+      "delivery_type": "железнодорожная",
+      "status": "готовится",
+      "participants": 2,
+      "timing": "60 минут",
+      "notes": "быстрый коридор",
+      "cta": "https://wiaf.ru/Seller/Seller_login.php"
+    },
+    {
+      "route": "Дубай → Москва",
+      "cargo": "сборный груз",
+      "delivery_type": "авиа",
+      "status": "архив",
+      "participants": 6,
+      "timing": "60 минут",
+      "notes": "срочная поставка",
       "cta": "https://wiaf.ru/Seller/Seller_login.php"
     }
   ]

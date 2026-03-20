@@ -34,6 +34,16 @@ RUS_MONTHS = {
     'июля': '07', 'августа': '08', 'сентября': '09', 'октября': '10', 'ноября': '11', 'декабря': '12'
 }
 
+LOGISTICS_INCLUDE = [
+    "логист", "перевоз", "экспед", "контейнер", "порт", "терминал", "склад", "фрахт", "судоход", "коридор",
+    "транзит", "вэд", "импорт", "экспорт", "тамож", "жд", "поезд", "вагон", "linehaul", "freight",
+    "shipping", "container", "port", "rail", "truck", "warehouse", "cargo", "vessel", "liner", "terminal"
+]
+LOGISTICS_EXCLUDE = [
+    "спорт", "футбол", "хоккей", "кино", "музык", "концерт", "погода", "гороскоп", "знаменит",
+    "мода", "рецепт", "туризм", "шоубиз", "смартфон", "гаджет", "кулинар"
+]
+
 
 def ensure_dirs():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -97,55 +107,32 @@ def parse_date(value: str) -> str:
     raw = normalize_text(str(value))
     if not raw:
         return ""
-
-    # Discard obviously non-date strings early
-    if len(raw) > 120 and not re.search(r'\d', raw):
-        return ""
-
-    now = datetime.now(timezone.utc)
-    candidates: list[tuple[str, dict]] = []
-
-    iso_match = re.search(r'(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?(?:[+-]\d{2}:?\d{2}|Z)?)', raw)
-    if iso_match:
-        candidates.append((iso_match.group(1), {"dayfirst": False, "yearfirst": True}))
-
-    for match in re.findall(r'\b\d{2}\.\d{2}\.\d{4}(?:\s+\d{2}:\d{2}(?::\d{2})?)?\b', raw):
-        candidates.append((match, {"dayfirst": True, "yearfirst": False}))
-
-    for match in re.findall(r'\b\d{4}-\d{2}-\d{2}(?:[ T]\d{2}:\d{2}(?::\d{2})?)?\b', raw):
-        candidates.append((match, {"dayfirst": False, "yearfirst": True}))
-
-    ru_norm = russian_month_normalize(raw)
-    if ru_norm != raw and re.search(r'\d', ru_norm):
-        candidates.append((ru_norm, {"dayfirst": True, "yearfirst": False}))
-
-    candidates.append((raw, {"dayfirst": True, "yearfirst": False}))
-
-    seen = set()
-    for candidate, opts in candidates:
-        key = (candidate, tuple(sorted(opts.items())))
-        if key in seen:
-            continue
-        seen.add(key)
+    candidates = [raw, russian_month_normalize(raw)]
+    m = re.search(r'(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?(?:[+-]\d{2}:?\d{2}|Z)?)', raw)
+    if m:
+        candidates.insert(0, m.group(1))
+    m = re.search(r'(\d{2}[./]\d{2}[./]\d{4}(?:\s+\d{2}:\d{2}(?::\d{2})?)?)', raw)
+    if m:
+        candidates.insert(0, m.group(1).replace('/', '.'))
+    for candidate in candidates:
         try:
-            parsed = date_parser.parse(candidate, fuzzy=False, **opts)
+            parsed = date_parser.parse(candidate, dayfirst=True, fuzzy=True)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            else:
+                parsed = parsed.astimezone(timezone.utc)
+            return parsed.replace(microsecond=0).isoformat()
         except Exception:
-            try:
-                parsed = parsedate_to_datetime(candidate)
-            except Exception:
-                continue
-        if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
-        else:
-            parsed = parsed.astimezone(timezone.utc)
-
-        # Reject obviously broken dates
-        if parsed.year < 2020:
-            continue
-        if parsed > now + timedelta(days=7):
-            continue
-
-        return parsed.replace(microsecond=0).isoformat()
+            pass
+        try:
+            parsed = parsedate_to_datetime(candidate)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            else:
+                parsed = parsed.astimezone(timezone.utc)
+            return parsed.replace(microsecond=0).isoformat()
+        except Exception:
+            pass
     return ""
 
 
@@ -213,6 +200,18 @@ def category_by_text(text: str, default_category: str) -> str:
     if any(word in t for word in ["мультимод", "transit", "corridor", "коридор"]):
         return "multimodal"
     return default_category or "news"
+
+
+def seems_logistics_relevant(text: str, source: dict | None = None) -> bool:
+    txt = (text or '').lower()
+    if not txt:
+        return False
+    source = source or {}
+    include = [x.lower() for x in (source.get('focus_keywords') or [])] or LOGISTICS_INCLUDE
+    exclude = [x.lower() for x in (source.get('exclude_keywords') or [])] + LOGISTICS_EXCLUDE
+    positive = sum(1 for kw in include if kw and kw in txt)
+    negative = sum(1 for kw in exclude if kw and kw in txt)
+    return positive >= 1 and negative == 0
 
 
 def transport_by_text(text: str) -> str:
@@ -288,6 +287,8 @@ def item_from_fields(source: dict, title: str, link: str, snippet: str = "", pub
     snippet = normalize_text(snippet)
     if not title or not link or link.startswith("javascript:"):
         return None
+    if not seems_logistics_relevant(f"{title} {snippet} {content_preview} {link}", source):
+        return None
     item_hash = make_hash(source["source_name"], title, link)
     category = category_by_text(f"{title} {snippet} {content_preview}", source.get("category_default", "news"))
     slug = f"{source['source_id']}-{slugify(title)[:48]}-{item_hash[:6]}"
@@ -342,9 +343,8 @@ def article_detail_extract(source: dict, url: str) -> dict:
         'meta[property="article:published_time"]',
         'meta[name="article:published_time"]',
         'meta[itemprop="datePublished"]',
-        'meta[property="og:updated_time"]',
         'time[datetime]',
-        'time[itemprop="datePublished"]',
+        'meta[property="og:updated_time"]',
     ]:
         node = soup.select_one(sel)
         if not node:
@@ -352,23 +352,17 @@ def article_detail_extract(source: dict, url: str) -> dict:
         content = node.get('content') or node.get('datetime') or node.get_text(' ', strip=True)
         if content:
             date_candidates.append(content)
-
-    for script in soup.select('script[type="application/ld+json"]')[:6]:
-        raw = script.string or script.get_text(' ', strip=True)
-        if not raw:
-            continue
-        try:
-            payload = json.loads(raw)
-        except Exception:
-            continue
-        nodes = payload if isinstance(payload, list) else [payload]
-        for node in nodes:
-            if not isinstance(node, dict):
-                continue
-            for key in ('datePublished', 'dateCreated', 'dateModified', 'uploadDate'):
-                if node.get(key):
-                    date_candidates.append(str(node.get(key)))
-
+    if not date_candidates:
+        page_text = normalize_text(soup.get_text(' ', strip=True))[:4000]
+        for pattern in [
+            r'\b\d{2}[./]\d{2}[./]\d{4}(?:\s+\d{2}:\d{2})?\b',
+            r'\b\d{4}-\d{2}-\d{2}(?:[ T]\d{2}:\d{2}(?::\d{2})?)?\b',
+            r'\b\d{1,2}\s+(?:января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря)\s+\d{4}(?:\s+\d{2}:\d{2})?\b',
+        ]:
+            m = re.search(pattern, page_text, flags=re.IGNORECASE)
+            if m:
+                date_candidates.append(m.group(0))
+                break
     for dc in date_candidates:
         published_at = parse_date(dc)
         if published_at:
@@ -617,15 +611,16 @@ def static_css() -> str:
         '.lead{font-size:1.08rem;color:#23334e}.article-content{display:grid;gap:14px;color:#23334e}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:var(--accent);color:var(--ink);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.btn-outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}'
         '.kicker{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.section{padding:10px 0 46px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.section-head h2{font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.1;margin:0}.muted{color:var(--muted)}'
         '.filters{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.filters input,.filters select{padding:12px 14px;border:1px solid var(--border);background:#fff;font:inherit}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}.stat{padding:18px}.stat b{display:block;font-size:1.8rem;margin-top:8px}'
-        '.footer{background:var(--ink);color:#fff;padding:34px 0;margin-top:30px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}.footer-title{font-family:Arial,sans-serif;font-size:.86rem;margin-bottom:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.footer-links{display:grid;gap:8px;color:rgba(255,255,255,.7);font-size:.92rem}.footer-bottom{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.85rem}@media(max-width:960px){.news-grid,.stats,.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.news-grid,.stats,.footer-grid{grid-template-columns:1fr}.header-inner,.wrap{padding:0 18px}.header-inner{height:auto;align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}}'
+        '.footer{background:var(--ink);color:#fff;padding:24px 0;margin-top:30px}.footer p{color:rgba(255,255,255,.68)}@media(max-width:960px){.news-grid,.stats{grid-template-columns:1fr 1fr}}@media(max-width:640px){.news-grid,.stats{grid-template-columns:1fr}.header-inner,.wrap{padding:0 18px}.header-inner{height:auto;align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}}'
     )
+
 
 
 
 
 def main_header(prefix: str = '', active: str = '') -> str:
     def cls(name: str) -> str:
-        return f'nav-item active' if active == name else 'nav-item'
+        return 'nav-item active' if active == name else 'nav-item'
     return (
         f'<header><div class="header-inner">'
         f'<a class="logo" href="{prefix}index.html">WI<span class="logo-dot">AF</span></a>'
@@ -636,12 +631,10 @@ def main_header(prefix: str = '', active: str = '') -> str:
         f'<a class="{cls("directions")}" href="{prefix}index.html#directions">Направления</a>'
         f'<a class="{cls("auctions")}" href="{prefix}index.html#auctions">Аукционы</a>'
         f'<a class="{cls("blog")}" href="{prefix}blog.html">Блог</a>'
-        f'<a class="{cls("analytics")}" href="{prefix}index.html#analytics">Аналитика</a>'
         f'<div class="nav-divider"></div>'
         f'<a class="{cls("importer")}" href="{prefix}index.html#importer">Импортёру</a>'
         f'<a class="{cls("forwarder")}" href="{prefix}index.html#forwarder">Экспедитору</a>'
         f'<a class="{cls("about")}" href="{prefix}index.html#about">О платформе</a>'
-        f'<a class="nav-item" href="https://wiaf.ru/BUYER/pravila2-2-2.php">Правила экспедитора</a>'
         f'<a class="{cls("contacts")}" href="{prefix}index.html#contacts">Контакты</a>'
         f'</nav>'
         f'<a class="btn-nav" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
@@ -649,28 +642,16 @@ def main_header(prefix: str = '', active: str = '') -> str:
     )
 
 
-def shared_footer(prefix: str = '') -> str:
+def footer_html(prefix: str = '') -> str:
     return (
-        '<footer class="footer"><div class="wrap">'
-        '<div class="footer-grid">'
-        '<div><div class="footer-title">WIAF</div><div class="footer-links">'
-        '<div>Открытая веб-платформа в формате терминала рынка логистики, которая даёт полезные данные до регистрации и входа в кабинет.</div>'
-        '</div></div>'
-        '<div><div class="footer-title">Разделы</div><div class="footer-links">'
-        f'<a href="{prefix}index.html#market">Рынок</a>'
-        f'<a href="{prefix}index.html#indices">Ставки и индексы</a>'
-        f'<a href="{prefix}blog.html">Блог</a>'
-        f'<a href="{prefix}index.html#contacts">Контакты</a>'
-        '</div></div>'
-        '<div><div class="footer-title">Вход</div><div class="footer-links">'
-        '<a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
-        '<a href="https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php">Импортёр</a>'
-        '<a href="https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php">Экспедитор</a>'
-        '</div></div>'
-        '</div>'
-        '<div class="footer-bottom"><span>© WIAF</span><span>Терминал рынка международной логистики</span></div>'
-        '</div></footer>'
+        f'<footer class="footer"><div class="wrap">'
+        f'<div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px">'
+        f'<div><div style="font-weight:800;font-size:1.2rem;margin-bottom:10px">WIAF</div><p>WIAF — терминал рынка международной логистики: новости, ставки, индикаторы, направления и аукционы до входа в закрытый кабинет.</p></div>'
+        f'<div><div style="font-weight:700;margin-bottom:10px">Разделы</div><p><a href="{prefix}index.html#market">Рынок</a><br><a href="{prefix}index.html#indices">Ставки и индексы</a><br><a href="{prefix}index.html#directions">Направления</a><br><a href="{prefix}blog.html">Блог</a></p></div>'
+        f'<div><div style="font-weight:700;margin-bottom:10px">Доступ</div><p><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a><br><a href="https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php">Импортёру</a><br><a href="https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php">Экспедитору</a></p></div>'
+        f'</div><p style="margin-top:18px">© 2026 WIAF · info@wiaf.ru · +7 906 700-01-80</p></div></footer>'
     )
+
 
 def build_article_html(item: dict, related: list[dict]) -> str:
     title = escape(item.get('title') or 'Материал WIAF')
@@ -754,7 +735,7 @@ def build_article_html(item: dict, related: list[dict]) -> str:
     <div class="news-grid">{related_html}</div>
   </section>
 </main>
-{shared_footer("../")}
+{footer_html("../")}
 </body></html>'''
 
 
@@ -822,7 +803,7 @@ def build_blog_html(items: list[dict]) -> str:
   <div class="filters"><input id="search" type="search" placeholder="Поиск по заголовкам и описанию"><select id="source"><option value="all">Все источники</option>{options_source}</select><select id="category"><option value="all">Все темы</option>{options_cat}</select></div>
   <div class="news-grid" id="grid">{''.join(cards) if cards else '<div class="panel" style="padding:18px">Материалы появятся после ближайшего обновления.</div>'}</div>
 </main>
-{shared_footer("")}
+{footer_html("")}
 <script>
 const q=document.getElementById('search'),s=document.getElementById('source'),c=document.getElementById('category'),cards=[...document.querySelectorAll('#grid .news-card')];
 function apply(){{const v=(q.value||'').toLowerCase().trim(),sv=s.value,cv=c.value;cards.forEach(card=>{{const txt=card.innerText.toLowerCase();const ok=(!v||txt.includes(v))&&(sv==='all'||card.dataset.source===sv)&&(cv==='all'||card.dataset.category===cv);card.style.display=ok?'':'none';}});}}
