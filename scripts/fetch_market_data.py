@@ -705,7 +705,11 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 
 
 def build_blog_html(items: list[dict]) -> str:
-    items = sorted(items, key=lambda x: (sort_key_date(x.get('published_at') or x.get('date')), x.get('priority', 0)), reverse=True)
+    items = sorted(
+        items,
+        key=lambda x: (sort_key_date(x.get('published_at') or x.get('date')), x.get('priority', 0)),
+        reverse=True,
+    )
     cards = []
     for item in items[:120]:
         title = escape(item.get('title') or 'Материал')
@@ -714,20 +718,35 @@ def build_blog_html(items: list[dict]) -> str:
         category = escape(item.get('category_ru') or localize_category(item.get('category')))
         source = escape(item.get('source') or 'Источник')
         transport = escape(item.get('transport_type') or 'смешанная')
-        item_id = item.get("id") or item.get("slug") or ""
-image_url = item.get("image_url") or ""
+        article_id = escape(item.get('id') or item.get('slug') or '')
+        image_url = escape(item.get('image_url') or '')
 
-if image_url:
-    image = (
-        '<a class="news-media" href="index.html#article:{}">'
-        '<img src="{}" alt="{}"></a>'
-    ).format(
-        escape(item_id),
-        escape(image_url),
-        escape(title)
-    )
-else:
-    image = ""
+        if image_url:
+            image = (
+                '<a class="news-media" href="index.html#article:{}">'
+                '<img src="{}" alt="{}"></a>'
+            ).format(article_id, image_url, title)
+        else:
+            image = ''
+
+        card_html = (
+            '<article class="news-card" data-source="{source}" data-category="{category}">{image}'
+            '<div class="meta"><span class="badge">{category}</span><span>{date}</span></div>'
+            '<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="index.html#article:{article_id}">{title}</a></h3>'
+            '<div class="muted">{snippet}</div>'
+            '<div class="meta"><span>{source}</span><span>{transport}</span></div></article>'
+        ).format(
+            source=source,
+            category=category,
+            image=image,
+            date=date,
+            article_id=article_id,
+            title=title,
+            snippet=snippet,
+            transport=transport,
+        )
+        cards.append(card_html)
+
     sources = sorted({(x.get('source') or '') for x in items if x.get('source')})
     categories = sorted({(x.get('category_ru') or localize_category(x.get('category'))) for x in items})
     options_source = ''.join(f'<option>{escape(v)}</option>' for v in sources)
@@ -743,7 +762,7 @@ else:
 </head>
 <body>
 {main_header('', 'blog')}
-<section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF: материалы за последние 12 месяцев, фильтрация по источнику и теме. Каждая карточка ведет на отдельную SEO-страницу материала.</p></div></section>
+<section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF: материалы за последние 12 месяцев, фильтрация по источнику и теме. Каждая карточка ведет на внутреннюю страницу материала.</p></div></section>
 <main class="wrap section">
   <div class="stats"><div class="stat">Материалов<b>{len(items)}</b></div><div class="stat">Источников<b>{len(sources)}</b></div><div class="stat">Тем<b>{len(categories)}</b></div><div class="stat">Период<b>12 мес.</b></div></div>
   <div class="filters"><input id="search" type="search" placeholder="Поиск по заголовкам и описанию"><select id="source"><option value="all">Все источники</option>{options_source}</select><select id="category"><option value="all">Все темы</option>{options_cat}</select></div>
