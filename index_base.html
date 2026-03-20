@@ -122,6 +122,7 @@ footer{background:var(--ink);color:#fff;padding:34px 0;margin-top:0}.footer-grid
 input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border);font:inherit;background:#fff}textarea{min-height:140px;resize:vertical}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.form-note{font-size:.82rem;color:var(--muted)}
 .market-mini{display:grid;gap:14px}.market-item{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}.market-item:last-child{border-bottom:none;padding-bottom:0}
 .empty-note{padding:18px;border:1px dashed var(--border);color:var(--muted);font-size:.9rem}
+.article-shell{background:#fff;border:1px solid var(--border);padding:28px;display:grid;gap:18px}.article-meta-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.article-title{font-size:2.1rem;line-height:1.1}.article-submeta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.95rem}.article-image-wrap{border:1px solid var(--border);overflow:hidden;background:var(--surface2)}.article-image-wrap img{width:100%;max-height:520px;object-fit:cover;display:block}.article-lead{font-size:1.05rem;line-height:1.7;color:#24344f}.article-content{display:grid;gap:14px;color:#24344f;line-height:1.8}.article-content p{margin:0}.article-actions{display:flex;gap:12px;flex-wrap:wrap}.news-link-btn{background:none;border:none;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer}.news-link-btn:hover{text-decoration:underline}
 @media (max-width: 1080px){.hero-content,.grid-2,.grid-3,.grid-4,.footer-grid,.form-grid{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}}
 @media (max-width: 640px){.wrap,.header-inner{padding:0 18px}.hero{padding-top:48px}.kpi-grid{grid-template-columns:1fr}.breadcrumb{padding:10px 18px}.btn{width:100%;justify-content:center}.hero-actions{flex-direction:column}}
 </style>
@@ -467,6 +468,36 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
+<div class="page" id="page-article">
+  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span class="bc-item" onclick="goTo('blog')">Блог</span><span>›</span><span id="article-breadcrumb-title">Материал</span></div></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="article-shell">
+        <div class="article-meta-top">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <span class="badge" id="article-category">новости</span>
+            <span class="badge" id="article-transport">смешанная</span>
+          </div>
+          <div class="small muted" id="article-date">—</div>
+        </div>
+        <h1 class="article-title" id="article-title">Материал рынка</h1>
+        <div class="article-submeta">
+          <span id="article-source">Источник</span>
+          <span>•</span>
+          <span id="article-freshness">—</span>
+        </div>
+        <div class="article-image-wrap" id="article-image-wrap" style="display:none"><img id="article-image" alt="Материал" /></div>
+        <div class="article-lead" id="article-lead"></div>
+        <div class="article-content" id="article-content"></div>
+        <div class="article-actions">
+          <button class="btn btn-accent" id="article-original-btn">Читать в оригинале</button>
+          <button class="btn btn-outline" onclick="goTo('blog')">Назад в блог</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -512,7 +543,8 @@ const ROUTE_META = {
   importer: { title: 'Для импортёров — WIAF' },
   forwarder: { title: 'Для экспедиторов — WIAF' },
   about: { title: 'О платформе — WIAF' },
-  contacts: { title: 'Контакты — WIAF' }
+  contacts: { title: 'Контакты — WIAF' },
+  article: { title: 'Материал — WIAF' }
 };
 
 function openExternal(url){ window.location.href = url; }
@@ -526,6 +558,7 @@ function goTo(page){
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
+let APP_STATE = { news: [], rates: [], indices: [], stats: [], auctions: [], sourceStatus: {} };
 const APP_CONFIG = window.WIAF_CONFIG || {};
 const REPO_BASE = location.hostname.endsWith('github.io') ? `/${location.pathname.split('/').filter(Boolean)[0] || 'WIAF'}` : '';
 const LOCAL_DATA_BASE = APP_CONFIG.localBase
@@ -563,8 +596,12 @@ function formatDateRu(value=''){
   const norm = String(value).includes('T') ? value : `${value}T00:00:00`;
   const d = new Date(norm);
   if (Number.isNaN(d.getTime())) return String(value);
-  return d.toLocaleDateString('ru-RU', {day:'2-digit', month:'2-digit', year:'numeric'});
+  const hasTime = String(value).includes('T') && !/T00:00(:00)?/.test(String(value));
+  return hasTime
+    ? d.toLocaleString('ru-RU', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'})
+    : d.toLocaleDateString('ru-RU', {day:'2-digit', month:'2-digit', year:'numeric'});
 }
+
 function sortNewsByDate(items=[]){
   return [...items].sort((a,b)=>{
     const da = new Date((a.date||a.published_at||'1970-01-01') + ((a.date||a.published_at||'').includes('T')?'':'T00:00:00')).getTime() || 0;
@@ -589,17 +626,56 @@ function localizeCategory(v='news'){
 }
 function renderNewsArticle(n, compact=false){
   const title = safeText(n.title);
-  const snippet = safeText(n.content_preview || n.snippet || '').slice(0, compact ? 140 : 220);
-  const date = formatDateRu(n.date || n.published_at || '');
+  const snippet = safeText(n.content_preview || n.snippet || '').slice(0, compact ? 160 : 260);
+  const date = formatDateRu(n.published_at || n.date || '');
   const category = localizeCategory(n.category_ru || n.category);
   const transport = localizeTransport(n.transport_type || 'unknown');
+  const open = `goToArticle(\"${n.id || ''}\")`;
   return `<article class="news-card">
-    ${n.image_url ? `<a class="news-media" href="${n.link || '#'}" target="_blank" rel="noopener"><img src="${n.image_url}" alt="${title}" loading="lazy"></a>` : ''}
+    ${n.image_url ? `<button class="news-link-btn news-media" onclick='${open}'><img src="${n.image_url}" alt="${title}" loading="lazy"></button>` : ''}
     <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="badge">${category}</div><div class="small muted">${transport}</div></div>
-    <h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${title}</a></h3>
+    <h3><button class="news-link-btn" onclick='${open}'>${title}</button></h3>
     <p class="muted small">${snippet}</p>
-    <div class="news-meta"><span>${n.source || 'Источник'}</span><span>${date}</span></div>
+    <div class="news-meta"><span>${n.source || 'Источник'}</span><span>${date || 'Дата уточняется'}</span></div>
   </article>`;
+}
+
+function byId(items, id){ return (items || []).find(x => x.id === id || x.slug === id); }
+
+function articleParagraphs(item){
+  const raw = safeText(item.content_preview || item.snippet || '');
+  if(!raw) return ['Описание скоро появится.'];
+  const parts = raw.split(/(?<=[.!?])\s+(?=[А-ЯA-Z0-9])/).filter(Boolean);
+  const out=[]; let buf='';
+  parts.forEach(p => {
+    if((buf + ' ' + p).trim().length > 420){ if(buf) out.push(buf.trim()); buf = p; }
+    else { buf += ' ' + p; }
+  });
+  if(buf.trim()) out.push(buf.trim());
+  return out.slice(0, 8);
+}
+
+function goToArticle(id){
+  const item = byId(APP_STATE.news, id);
+  if(!item) return goTo('blog');
+  const title = safeText(item.title || 'Материал');
+  document.getElementById('article-breadcrumb-title').textContent = title.length > 80 ? `${title.slice(0,77)}…` : title;
+  document.getElementById('article-title').textContent = title;
+  document.getElementById('article-category').textContent = localizeCategory(item.category_ru || item.category);
+  document.getElementById('article-transport').textContent = localizeTransport(item.transport_type || 'unknown');
+  document.getElementById('article-date').textContent = formatDateRu(item.published_at || item.date || '') || 'Дата уточняется';
+  document.getElementById('article-source').textContent = item.source || 'Источник';
+  document.getElementById('article-freshness').textContent = ({fresh:'свежее', recent:'за последнюю неделю', archive:'архив'})[item.freshness] || 'материал';
+  document.getElementById('article-lead').textContent = safeText(item.snippet || item.content_preview || '');
+  document.getElementById('article-content').innerHTML = articleParagraphs(item).map(p => `<p>${p}</p>`).join('');
+  const imgWrap = document.getElementById('article-image-wrap');
+  const img = document.getElementById('article-image');
+  if(item.image_url){ img.src = item.image_url; img.alt = title; imgWrap.style.display = ''; } else { imgWrap.style.display = 'none'; }
+  const btn = document.getElementById('article-original-btn');
+  btn.onclick = () => openExternal(item.link || '#');
+  document.title = `${title} — WIAF`;
+  goTo('article');
+  history.replaceState({}, '', `#article:${encodeURIComponent(item.id || id)}`);
 }
 
 async function loadData(){
@@ -622,6 +698,8 @@ async function loadData(){
   const indices = normalizeItems(indicesData);
   const stats = normalizeItems(statsData);
   const auctions = Array.isArray(statsData?.auctions) ? statsData.auctions : [];
+
+  APP_STATE = { news, rates, indices, stats, auctions, sourceStatus: sourceStatusData };
 
   renderHome(news, rates, indices, stats, auctions);
   renderMarket(stats, indices);
@@ -654,7 +732,7 @@ function renderHome(news, rates, indices, statsItems, auctions){
   if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date || ''}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
 
   const newsEl = document.getElementById('home-news');
-  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => renderNewsArticle(n, true)).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
+  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => renderNewsArticle(n, true)).join('') || '<div class="empty-note">Новости скоро появятся.</div>';
 
   const auctionsEl = document.getElementById('home-auctions');
   const list = auctions && auctions.length ? auctions : window.MARKET_AUCTIONS || [];
@@ -784,9 +862,14 @@ function renderAnalytics(news, sourceStatusData){
 
 window.addEventListener('DOMContentLoaded', () => {
   try { lucide.createIcons(); } catch(e) { console.warn(e); }
-  const route = (window.location.hash || '#home').replace('#','');
+  const rawHash = (window.location.hash || '#home').replace('#','');
+  const isArticle = rawHash.startsWith('article:');
+  const route = isArticle ? 'article' : rawHash;
+  const articleId = isArticle ? decodeURIComponent(rawHash.split(':').slice(1).join(':')) : '';
   goTo(ROUTE_META[route] ? route : 'home');
-  loadData().catch(err => console.error('loadData error', err));
+  loadData().then(() => {
+    if(route === 'article' && articleId) goToArticle(articleId);
+  }).catch(err => console.error('loadData error', err));
 });
 </script>
 </body>
