@@ -578,7 +578,7 @@ def static_css() -> str:
         'a{text-decoration:none;color:inherit}.wrap{max-width:1280px;margin:0 auto;padding:0 32px}'
         'header{background:var(--ink);position:sticky;top:0;z-index:50;border-bottom:2px solid var(--accent)}.header-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:70px;display:flex;justify-content:space-between;align-items:center;gap:16px}'
         '.logo{font-family:Arial,sans-serif;font-weight:800;font-size:1.9rem;color:#fff;letter-spacing:.04em}.logo-dot,.logo span{color:var(--accent)}'
-        'nav{display:flex;gap:2px;flex-wrap:wrap;align-items:center}.nav-item{background:none;border:none;color:rgba(255,255,255,.72);padding:10px 12px;cursor:pointer;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.nav-item:hover{color:#fff}.nav-divider{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 4px}'
+        'nav{display:flex;gap:2px;flex-wrap:wrap;align-items:center}.nav-item{background:none;border:none;color:rgba(255,255,255,.65);padding:10px 12px;cursor:pointer;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600}.nav-item:hover,.nav-item.active{color:#fff}.nav-divider{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 4px}.btn-nav{background:var(--accent);color:var(--ink);padding:10px 18px;border:none;font-weight:700;cursor:pointer;text-transform:uppercase;font-size:.78rem}'
         '.hero{padding:26px 0 14px;background:#fff;border-bottom:1px solid var(--border)}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:8px}'
         '.hero h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:0 0 10px;font-weight:800}.hero p{max-width:820px;color:#42526b}'
         '.article-shell,.panel,.news-card,.stat{background:#fff;border:1px solid var(--border)}.article-shell{padding:28px;margin:28px 0 44px}.news-card{padding:18px;display:flex;flex-direction:column;gap:12px;height:100%}'
@@ -593,21 +593,29 @@ def static_css() -> str:
 
 
 
-def main_header(prefix: str = '') -> str:
+def main_header(prefix: str = '', active: str = '') -> str:
+    def cls(name: str) -> str:
+        return f'nav-item active' if active == name else 'nav-item'
     return (
         f'<header><div class="header-inner">'
         f'<a class="logo" href="{prefix}index.html">WI<span class="logo-dot">AF</span></a>'
         f'<nav>'
-        f'<a class="nav-item" href="{prefix}index.html#home">Главная</a>'
-        f'<a class="nav-item" href="{prefix}index.html#market">Рынок</a>'
-        f'<a class="nav-item" href="{prefix}index.html#indices">Ставки и индексы</a>'
-        f'<a class="nav-item" href="{prefix}index.html#directions">Направления</a>'
-        f'<a class="nav-item" href="{prefix}index.html#auctions">Аукционы</a>'
-        f'<a class="nav-item" href="{prefix}index.html#analytics">Аналитика</a>'
+        f'<a class="{cls("home")}" href="{prefix}index.html#home">Главная</a>'
+        f'<a class="{cls("market")}" href="{prefix}index.html#market">Рынок</a>'
+        f'<a class="{cls("indices")}" href="{prefix}index.html#indices">Ставки и индексы</a>'
+        f'<a class="{cls("directions")}" href="{prefix}index.html#directions">Направления</a>'
+        f'<a class="{cls("auctions")}" href="{prefix}index.html#auctions">Аукционы</a>'
+        f'<a class="{cls("blog")}" href="{prefix}blog.html">Блог</a>'
+        f'<a class="{cls("analytics")}" href="{prefix}index.html#analytics">Аналитика</a>'
         f'<div class="nav-divider"></div>'
-        f'<a class="nav-item" href="{prefix}blog.html">Блог</a>'
-        f'<a class="nav-item" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
-        f'</nav></div></header>'
+        f'<a class="{cls("importer")}" href="{prefix}index.html#importer">Импортёру</a>'
+        f'<a class="{cls("forwarder")}" href="{prefix}index.html#forwarder">Экспедитору</a>'
+        f'<a class="{cls("about")}" href="{prefix}index.html#about">О платформе</a>'
+        f'<a class="nav-item" href="https://wiaf.ru/BUYER/pravila2-2-2.php">Правила экспедитора</a>'
+        f'<a class="{cls("contacts")}" href="{prefix}index.html#contacts">Контакты</a>'
+        f'</nav>'
+        f'<a class="btn-nav" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
+        f'</div></header>'
     )
 
 def build_article_html(item: dict, related: list[dict]) -> str:
@@ -625,12 +633,21 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 
     related_cards = []
     for r in related[:3]:
-        rel_img = f'<a class="news-media" href="../index.html#article:{escape(r.get('id') or r.get('slug') or '')}"><img src="{escape(r.get("image_url") or "")}" alt="{escape(r.get("title") or "Материал")}"></a>' if r.get('image_url') else ''
+        related_id = escape(r.get("id") or r.get("slug") or "")
+        related_title = escape(r.get("title") or "Материал")
+        related_image = escape(r.get("image_url") or "")
+        related_category = escape(r.get("category_ru") or localize_category(r.get("category")))
+        related_date = escape(display_date(r.get("published_at") or r.get("date") or ""))
+        related_preview = escape((r.get("snippet") or r.get("content_preview") or "")[:160])
+        rel_img = (
+            f'<a class="news-media" href="../index.html#article:{related_id}">'
+            f'<img src="{related_image}" alt="{related_title}"></a>'
+        ) if r.get("image_url") else ''
         related_cards.append(
             f'<article class="news-card">{rel_img}'
-            f'<div class="meta"><span class="badge">{escape(r.get("category_ru") or localize_category(r.get("category")))}</span><span>{escape(display_date(r.get("published_at") or r.get("date") or ""))}</span></div>'
-            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="../index.html#article:{escape(r.get('id') or r.get('slug') or '')}">{escape(r.get("title") or "Материал")}</a></h3>'
-            f'<div class="muted">{escape((r.get("snippet") or r.get("content_preview") or "")[:160])}</div></article>'
+            f'<div class="meta"><span class="badge">{related_category}</span><span>{related_date}</span></div>'
+            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="../index.html#article:{related_id}">{related_title}</a></h3>'
+            f'<div class="muted">{related_preview}</div></article>'
         )
     related_html = ''.join(related_cards) if related_cards else '<div class="panel" style="padding:18px">Связанные материалы появятся после следующего обновления.</div>'
 
@@ -668,7 +685,7 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 <script type="application/ld+json">{ld_json}</script>
 </head>
 <body>
-{main_header('../')}
+{main_header('../', 'blog')}
 <section class="hero"><div class="wrap"><div class="eyebrow">Новости и сигналы рынка</div><h1>{title}</h1><p>{description}</p></div></section>
 <main class="wrap">
   <article class="article-shell">
@@ -718,7 +735,7 @@ def build_blog_html(items: list[dict]) -> str:
 <style>{static_css()}</style>
 </head>
 <body>
-{main_header('')}
+{main_header('', 'blog')}
 <section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF: материалы за последние 12 месяцев, фильтрация по источнику и теме. Каждая карточка ведет на отдельную SEO-страницу материала.</p></div></section>
 <main class="wrap section">
   <div class="stats"><div class="stat">Материалов<b>{len(items)}</b></div><div class="stat">Источников<b>{len(sources)}</b></div><div class="stat">Тем<b>{len(categories)}</b></div><div class="stat">Период<b>12 мес.</b></div></div>
