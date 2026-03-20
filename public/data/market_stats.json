@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-03-20T10:30:00Z",
+  "items": [
+    {
+      "date": "2026-03-20",
+      "active_auctions": 43,
+      "new_auctions_day": 9,
+      "new_auctions_week": 34,
+      "active_routes": 27,
+      "active_transport_types": 4,
+      "avg_responses": 4.3,
+      "avg_internal_rate": 1980,
+      "calculated_market_index": 71.4,
+      "updated_at": "2026-03-20T10:30:00Z"
+    }
+  ],
+  "auctions": [
+    {
+      "route": "Шанхай → Москва",
+      "cargo": "FCL 40'",
+      "delivery_type": "морская",
+      "status": "активен",
+      "participants": 4,
+      "cta": "https://wiaf.ru/Seller/Seller_login.php"
+    },
+    {
+      "route": "Стамбул → Санкт-Петербург",
+      "cargo": "LCL",
+      "delivery_type": "мультимодальная",
+      "status": "новый",
+      "participants": 3,
+      "cta": "https://wiaf.ru/Seller/Seller_login.php"
+    },
+    {
+      "route": "Мумбаи → Новороссийск",
+      "cargo": "24 т",
+      "delivery_type": "морская",
+      "status": "в торгах",
+      "participants": 5,
+      "cta": "https://wiaf.ru/Seller/Seller_login.php"
+    }
+  ]
+}
