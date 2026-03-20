@@ -1,0 +1,83 @@
+{
+  "updated_at": "2026-03-20T10:30:00Z",
+  "items": [
+    {
+      "id": "news_001",
+      "date": "2026-03-20",
+      "source": "Logirus",
+      "title": "Контейнерный рынок Азии сохраняет высокую волатильность",
+      "snippet": "Сезонное перераспределение грузопотоков влияет на морские сервисы и ставки по базовым маршрутам в РФ.",
+      "link": "https://example.com/logirus-1",
+      "image_url": "",
+      "category": "analytics",
+      "transport_type": "sea",
+      "region": "RU",
+      "freshness": "fresh"
+    },
+    {
+      "id": "news_002",
+      "date": "2026-03-19",
+      "source": "PortNews",
+      "title": "Порты юга России увеличивают обработку контейнеров",
+      "snippet": "Рост оборота усиливает интерес к маршрутам через Новороссийск и связанным мультимодальным цепочкам.",
+      "link": "https://example.com/portnews-1",
+      "image_url": "",
+      "category": "ports",
+      "transport_type": "sea",
+      "region": "RU",
+      "freshness": "fresh"
+    },
+    {
+      "id": "news_003",
+      "date": "2026-03-18",
+      "source": "FreightWaves",
+      "title": "Спрос на импортные цепочки смещается в сторону более гибких контрактов",
+      "snippet": "Компании активнее сравнивают рынок и используют аукционные сценарии вместо длинных переговоров.",
+      "link": "https://example.com/fw-1",
+      "image_url": "",
+      "category": "news",
+      "transport_type": "multimodal",
+      "region": "INT",
+      "freshness": "recent"
+    },
+    {
+      "id": "news_004",
+      "date": "2026-03-17",
+      "source": "SeaNews",
+      "title": "Маршрут Китай — Москва остаётся одним из самых просматриваемых",
+      "snippet": "Участники рынка оценивают баланс скорости, ставки и стабильности по наиболее частым направлениям.",
+      "link": "https://example.com/sea-1",
+      "image_url": "",
+      "category": "routes",
+      "transport_type": "sea",
+      "region": "RU",
+      "freshness": "recent"
+    },
+    {
+      "id": "news_005",
+      "date": "2026-03-16",
+      "source": "InfraNews",
+      "title": "Инфраструктурные ограничения усиливают роль предварительного сравнения ставок",
+      "snippet": "Прозрачная рыночная витрина до авторизации становится отдельным фактором доверия для клиентов.",
+      "link": "https://example.com/infra-1",
+      "image_url": "",
+      "category": "infrastructure",
+      "transport_type": "rail",
+      "region": "RU",
+      "freshness": "recent"
+    },
+    {
+      "id": "news_006",
+      "date": "2026-03-15",
+      "source": "Splash247",
+      "title": "Мировой фрахт в фазе локальных корректировок по направлениям Восток — Запад",
+      "snippet": "Рынок адаптируется к изменению спроса и емкости, что делает краткосрочные обзоры особенно востребованными.",
+      "link": "https://example.com/splash-1",
+      "image_url": "",
+      "category": "rates",
+      "transport_type": "sea",
+      "region": "INT",
+      "freshness": "recent"
+    }
+  ]
+}

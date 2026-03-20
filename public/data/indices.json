@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-03-20T10:30:00Z",
+  "items": [
+    {
+      "id": "idx_001",
+      "source": "SCFI",
+      "index_name": "SCFI",
+      "date": "2026-03-20",
+      "value": 2043.8,
+      "unit": "index_points",
+      "change_abs": 18.2,
+      "change_pct": 0.9,
+      "status": "published"
+    },
+    {
+      "id": "idx_002",
+      "source": "WIAF",
+      "index_name": "WIAF Market Index",
+      "date": "2026-03-20",
+      "value": 71.4,
+      "unit": "points",
+      "change_abs": 2.0,
+      "change_pct": 2.8,
+      "status": "published"
+    },
+    {
+      "id": "idx_003",
+      "source": "FBX Summary",
+      "index_name": "FBX Asia-EU Summary",
+      "date": "2026-03-20",
+      "value": 1856.0,
+      "unit": "index_points",
+      "change_abs": -22.0,
+      "change_pct": -1.2,
+      "status": "published"
+    },
+    {
+      "id": "idx_004",
+      "source": "WIAF",
+      "index_name": "Auction Activity",
+      "date": "2026-03-20",
+      "value": 43.0,
+      "unit": "lots",
+      "change_abs": 5.0,
+      "change_pct": 13.2,
+      "status": "published"
+    }
+  ]
+}
