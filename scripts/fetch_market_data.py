@@ -38,6 +38,8 @@ RUS_MONTHS = {
 def ensure_dirs():
     os.makedirs(DATA_DIR, exist_ok=True)
     os.makedirs(NEWS_DIR, exist_ok=True)
+    with open(os.path.join(BASE_DIR, '.nojekyll'), 'w', encoding='utf-8') as f:
+        f.write('')
 
 
 def now_iso():
@@ -237,8 +239,21 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
+CYR_MAP = {
+    'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'e','ж':'zh','з':'z','и':'i','й':'y',
+    'к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f',
+    'х':'h','ц':'ts','ч':'ch','ш':'sh','щ':'sch','ъ':'','ы':'y','ь':'','э':'e','ю':'yu','я':'ya'
+}
+
+def translit_ru(text: str) -> str:
+    out = []
+    for ch in (text or '').lower():
+        out.append(CYR_MAP.get(ch, ch))
+    return ''.join(out)
+
 def slugify(text: str) -> str:
-    cleaned = re.sub(r'[^a-zA-Zа-яА-Я0-9\s-]', '', text or '').strip().lower()
+    base = translit_ru(text or '')
+    cleaned = re.sub(r'[^a-z0-9\s-]', '', base).strip().lower()
     cleaned = re.sub(r'\s+', '-', cleaned)
     cleaned = re.sub(r'-+', '-', cleaned).strip('-')
     return cleaned[:80] or 'news'
