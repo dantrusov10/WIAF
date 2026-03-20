@@ -35,7 +35,7 @@ SOURCES = [
         "fetch_method": "rss",
         "list_url": "https://www.freightwaves.com/news/feed",
         "category_default": "analytics",
-        "enabled": True,
+        "enabled": False,
         "refresh_hours": 12,
     }
 ]

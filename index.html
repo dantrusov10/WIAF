@@ -136,8 +136,9 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
       <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
-      <button class="nav-item" id="nav-forwarder" onclick="goTo('forwarder')">Правила экспедитора</button>
+      <button class="nav-item" id="nav-forwarder" onclick="goTo('forwarder')">Экспедитору</button>
       <button class="nav-item" id="nav-about" onclick="goTo('about')">О платформе</button>
+      <button class="nav-item" onclick="openExternal('https://wiaf.ru/BUYER/pravila2-2-2.php')">Правила экспедитора</button>
       <button class="nav-item" id="nav-contacts" onclick="goTo('contacts')">Контакты</button>
     </nav>
     <button class="btn-nav" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Войти</button>
@@ -149,17 +150,18 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
     <div class="hero-grid"></div>
     <div class="wrap hero-content">
       <div>
-        <div class="hero-tag">Открытая часть WIAF · терминал рынка международной логистики</div>
+        <div class="hero-tag">Открытая часть терминала рынка международной логистики</div>
         <h1>Терминал рынка международной логистики</h1>
         <h2>Ставки, аукционы, аналитика, сигналы рынка</h2>
-        <p class="hero-desc">Обновлённая открытая витрина WIAF показывает, что рынок живой: есть направления, индексы, новости, ограниченная витрина аукционов и быстрый переход в рабочий кабинет импортёра или экспедитора.</p>
+        <p class="hero-desc">WIAF показывает рынок международной логистики в понятном формате: ставки, индексы, сигналы, направления и активность аукционов. Дальше пользователь переходит в рабочий кабинет импортёра или экспедитора.</p>
         <div class="hero-actions">
           <button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Регистрация импортёра</button>
           <button class="btn btn-ghost" onclick="openExternal('https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php')">Регистрация экспедитора</button>
           <button class="btn btn-primary" onclick="goTo('market')">Смотреть рынок</button>
-        <div class="hero-links" style="margin-top:14px; display:flex; gap:14px; flex-wrap:wrap;">
-          <a class="small muted" href="https://wiaf.ru/Seller/pravila1-1-1.php" target="_blank" rel="noopener">Правила импортёра</a>
-          <a class="small muted" href="https://wiaf.ru/BUYER/pravila2-2-2.php" target="_blank" rel="noopener">Правила экспедитора</a>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:.84rem;color:rgba(255,255,255,.7)">
+          <a href="https://wiaf.ru/Seller/pravila1-1-1.php" target="_blank" rel="noopener">Правила импортёра</a>
+          <a href="https://wiaf.ru/BUYER/pravila2-2-2.php" target="_blank" rel="noopener">Правила экспедитора</a>
         </div>
       </div>
       <div class="hero-card">
@@ -228,14 +230,14 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
     <div class="wrap grid-2">
       <div class="chart-shell"><canvas id="marketChart"></canvas></div>
       <div class="panel">
-        <div class="section-eyebrow">Источники и логика данных</div>
-        <h2 style="font-size:1.4rem;margin-bottom:12px">Как формируется публичная витрина</h2>
-        <p class="muted">По ТЗ данные на старте можно тянуть через Python-парсер, Google Sheets, JSON-файлы в репозитории и GitHub Actions, чтобы фронт оставался статическим .</p>
+        <div class="section-eyebrow">Публичная витрина рынка</div>
+        <h2 style="font-size:1.4rem;margin-bottom:12px">Как использовать витрину WIAF</h2>
+        <p class="muted">Открытая часть платформы помогает быстро понять рынок: увидеть активность, ориентиры по ставкам, новости и механику торгов до входа в закрытый кабинет.</p>
         <div class="list">
-          <div class="list-item">• public/data/news.json — материалы и рыночные сигналы</div>
-          <div class="list-item">• public/data/rates.json — ставки по направлениям</div>
-          <div class="list-item">• public/data/indices.json — агрегированные индексы</div>
-          <div class="list-item">• public/data/market_stats.json — счётчики витрины рынка</div>
+          <div class="list-item">• Публичные новости, сигналы и изменения в логистике</div>
+          <div class="list-item">• Ориентиры по ставкам на ключевых направлениях</div>
+          <div class="list-item">• Индексы и агрегированная динамика рынка</div>
+          <div class="list-item">• Показатели активности аукционов и спроса</div>
         </div>
       </div>
     </div>
@@ -271,8 +273,8 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Маршруты</div><h2>Направления международной логистики</h2></div>
-        <p class="section-note">По каждому направлению витрина показывает ориентир по ставке, тип перевозки, комментарий по маршруту и переход к регистрации для участия в торгах.</p>
+        <div><div class="section-eyebrow">Маршруты</div><h2>Ключевые направления рынка</h2></div>
+        <p class="section-note">По каждому направлению показываются ориентиры по ставке, тип перевозки, особенности маршрута и переход к регистрации.</p>
       </div>
       <div class="grid-3" id="directions-grid"></div>
     </div>
@@ -306,70 +308,68 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
 </div>
 
 <div class="page" id="page-importer">
-  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Правила импортёра</span></div></div>
+  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Для импортёров</span></div></div>
   <section class="section">
     <div class="wrap grid-2">
       <div class="persona-card">
-        <div class="section-eyebrow">Импортёру</div>
+        <div class="section-eyebrow">Для импортёра</div>
         <h3>12 моментов в помощь импортёру</h3>
         <div class="list">
-          <div class="list-item">• Импортёр может пользоваться площадкой бесплатно и без договора.</div>
+          <div class="list-item">• Пользование площадкой бесплатно и без договора.</div>
           <div class="list-item">• Импортёр получает наименьшую стоимость международной перевозки.</div>
-          <div class="list-item">• В тендерах участвуют только резиденты РФ — ЮЛ и ИП.</div>
-          <div class="list-item">• Аукционы на международную перевозку формируются быстро и интуитивно.</div>
-          <div class="list-item">• Минимальное время на заполнение формы для создания аукциона.</div>
-          <div class="list-item">• Можно использовать шаблоны для похожих аукционов.</div>
-          <div class="list-item">• Импортёр видит только свои размещённые аукционы.</div>
-          <div class="list-item">• Аукционы размещаются минимум за 2 суток до торгов.</div>
-          <div class="list-item">• Импортёр не видит экспедиторов и других импортёров.</div>
-          <div class="list-item">• Контакт экспедитора открывается только победителю.</div>
-          <div class="list-item">• Площадка помогает снизить затраты на международную логистику.</div>
-          <div class="list-item">• Важно заполнять форму точно: неточности повышают стоимость перевозки.</div>
+          <div class="list-item">• В тендерах участвуют только резиденты РФ: ЮЛ и ИП.</div>
+          <div class="list-item">• Аукцион можно сформировать быстро и без лишних шагов.</div>
+          <div class="list-item">• Есть шаблоны для похожих аукционов и повторных маршрутов.</div>
+          <div class="list-item">• Импортёр видит только свои аукционы и не видит других участников рынка.</div>
+          <div class="list-item">• Контакт экспедитора раскрывается только победителю торгов.</div>
         </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
           <button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Регистрация импортёра</button>
-          <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/pravila1-1-1.php')">Официальные правила</button>
+          <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/pravila1-1-1.php')">Правила импортёра</button>
         </div>
       </div>
       <div class="panel">
-        <div class="section-eyebrow">Преимущества</div>
-        <h2 style="font-size:1.8rem;margin-bottom:12px">Экономия, прозрачность, быстрый запуск аукциона</h2>
-        <p class="muted">Для импортёра площадка бесплатна. Это способ снизить затраты на международную логистику и получить рыночную цену за счёт конкуренции экспедиторов.</p>
+        <div class="section-eyebrow">Как это работает</div>
+        <div class="list">
+          <div class="list-item">1. Импортёр самостоятельно формирует и размещает аукцион на площадке.</div>
+          <div class="list-item">2. Аукцион размещается не менее чем за 2 суток до торгов.</div>
+          <div class="list-item">3. Форма должна быть заполнена точно: неточность может повысить стоимость перевозки.</div>
+          <div class="list-item">4. После победы экспедитора импортёр получает контакт и заключает договор перевозки.</div>
+        </div>
       </div>
     </div>
   </section>
 </div>
 
 <div class="page" id="page-forwarder">
-  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Правила экспедитора</span></div></div>
+  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Для экспедиторов</span></div></div>
   <section class="section">
     <div class="wrap grid-2">
       <div class="persona-card">
-        <div class="section-eyebrow">Экспедитору</div>
-        <h3>12 шагов к победе</h3>
+        <div class="section-eyebrow">Для экспедитора</div>
+        <h3>12 шагов к победе на площадке</h3>
         <div class="list">
-          <div class="list-item">• Аукционы проходят как торги на понижение ставки.</div>
-          <div class="list-item">• Торги длятся 60 минут в реальном времени по Москве.</div>
-          <div class="list-item">• Экспедитор может сделать не более 5 ставок на каждом аукционе.</div>
-          <div class="list-item">• Побеждает участник с наименьшей ставкой.</div>
-          <div class="list-item">• Импортёр обязан заключить договор перевозки с победителем.</div>
+          <div class="list-item">• Торги проходят на понижение ставки и длятся 60 минут по московскому времени.</div>
+          <div class="list-item">• На каждом аукционе экспедитор может сделать не более 5 ставок.</div>
+          <div class="list-item">• Побеждает участник, предложивший наименьшую ставку.</div>
           <div class="list-item">• Экспедитор не видит конкурентов и импортёра.</div>
-          <div class="list-item">• Контакт импортёра открывается только победителю.</div>
-          <div class="list-item">• Для участия нужен договор комиссии с площадкой.</div>
-          <div class="list-item">• Документы и акты направляются по ЭДО.</div>
-          <div class="list-item">• Комиссия взимается только с победителя торгов.</div>
-          <div class="list-item">• Комиссия: 1% от победной ставки, но не более 5000 ₽.</div>
-          <div class="list-item">• Торги проходят в USD, комиссия считается в RUB по курсу ЦБ РФ на дату торгов.</div>
+          <div class="list-item">• Контакт импортёра раскрывается только победителю.</div>
+          <div class="list-item">• Комиссия площадки — 1% от победной ставки, но не более 5000 ₽.</div>
+          <div class="list-item">• Торги проходят в USD, а комиссия считается в RUB по ЦБ РФ на дату торгов.</div>
         </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
           <button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php')">Регистрация экспедитора</button>
-          <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/BUYER/pravila2-2-2.php')">Официальные правила</button>
+          <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/BUYER/pravila2-2-2.php')">Правила экспедитора</button>
         </div>
       </div>
       <div class="panel">
-        <div class="section-eyebrow">Преимущества</div>
-        <h2 style="font-size:1.8rem;margin-bottom:12px">Поток клиентов и больше заказов на перевозку</h2>
-        <p class="muted">Для экспедитора площадка — это расширение клиентского потока и увеличение количества заказов на международную перевозку. В общую задачу могут входить страхование и таможенное оформление.</p>
+        <div class="section-eyebrow">Что получает экспедитор</div>
+        <div class="list">
+          <div class="list-item">1. Поток клиентов и расширение количества заказов на международную перевозку.</div>
+          <div class="list-item">2. Возможность включать в задачу страхование груза и таможенное оформление.</div>
+          <div class="list-item">3. Заключение договора комиссии с площадкой и работа по ЭДО.</div>
+          <div class="list-item">4. Комиссия взимается только с победителя торгов.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -382,16 +382,16 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <div class="panel">
         <div class="section-eyebrow">О проекте</div>
         <h2 style="font-size:1.8rem;margin-bottom:12px">Не просто сайт компании</h2>
-        <p class="muted">Это открытая витрина рынка WIAF: снаружи она показывает аналитику и активность по международной логистике, а внутри переводит участника в рабочее пространство и сделки.</p>
+        <p class="muted">WIAF — это платформа торгов на международную логистику. Публичная часть показывает рынок, правила и механику сервиса, а рабочая часть открывается после входа или регистрации.</p>
       </div>
       <div class="panel">
-        <div class="section-eyebrow">Публичные разделы</div>
+        <div class="section-eyebrow">Важные материалы</div>
         <div class="list">
-          <div class="list-item">• Правила импортёра и экспедитора</div>
-          <div class="list-item">• Как работает сервис</div>
-          <div class="list-item">• FAQ</div>
-          <div class="list-item">• Политика конфиденциальности</div>
-          <div class="list-item">• Пользовательское соглашение</div>
+          <div class="list-item">• О платформе</div>
+          <div class="list-item">• Правила импортёра</div>
+          <div class="list-item">• Правила экспедитора</div>
+          <div class="list-item">• Вход в кабинет</div>
+          <div class="list-item">• Регистрация на площадке</div>
         </div>
       </div>
     </div>
@@ -420,8 +420,8 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
         </div>
         <div style="margin-top:16px"><select><option>Вопрос по регистрации</option><option>Технический вопрос</option><option>Вопрос по аукциону</option><option>Другое</option></select></div>
         <div style="margin-top:16px"><textarea placeholder="Опишите вопрос"></textarea></div>
-        <div style="margin-top:16px"><button class="btn btn-primary btn-full" onclick="alert('Форма в MVP пока демонстрационная. Подключите Formspree или Apps Script endpoint.')">Отправить</button></div>
-        <div class="form-note" style="margin-top:12px">Для статического хостинга форму лучше подключить через внешний обработчик или Apps Script.</div>
+        <div style="margin-top:16px"><button class="btn btn-primary btn-full" onclick="window.location.href='mailto:info@wiaf.ru'">Отправить</button></div>
+        <div class="form-note" style="margin-top:12px">Для быстрых вопросов можно написать на info@wiaf.ru или перейти в рабочий кабинет.</div>
       </div>
     </div>
   </section>
@@ -485,7 +485,10 @@ function goTo(page){
 }
 
 const APP_CONFIG = window.WIAF_CONFIG || {};
-const LOCAL_DATA_BASE = APP_CONFIG.localBase || './public/data';
+const REPO_BASE = location.hostname.endsWith('github.io') ? `/${location.pathname.split('/').filter(Boolean)[0] || 'WIAF'}` : '';
+const LOCAL_DATA_BASE = APP_CONFIG.localBase
+  ? (APP_CONFIG.localBase.startsWith('./') && REPO_BASE ? `${REPO_BASE}${APP_CONFIG.localBase.slice(1)}` : APP_CONFIG.localBase)
+  : `${REPO_BASE}/public/data`;
 const SHEET_API_BASE = APP_CONFIG.sheetApiBase || '';
 const SHEET_ENDPOINTS = APP_CONFIG.sheetEndpoints || {};
 
@@ -500,54 +503,82 @@ function resolveDataUrl(entity){
 }
 
 async function fetchJson(path){
-  const res = await fetch(path);
+  const res = await fetch(path, {cache:'no-store'});
   if(!res.ok) throw new Error(path + ' not loaded');
   return res.json();
 }
 
-
-function stripHtml(text=''){ return String(text).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim(); }
-function transportLabel(v=''){ const map={sea:'Морская',rail:'Ж/д',road:'Авто',air:'Авиа',multimodal:'Мультимодальная',unknown:'Смешанная'}; return map[v] || v || 'Смешанная'; }
-function safeSet(id, html){ const el=document.getElementById(id); if(el) el.innerHTML=html; }
-
-function formatMoney(v, c='USD', u=''){ return `${Number(v).toLocaleString('ru-RU')} ${c}${u ? ' / ' + u : ''}`; }
-function trendBadge(v){ return `<span class="badge">${v >= 0 ? '▲' : '▼'} ${Math.abs(v)}%</span>`; }
-
-async function loadData(){
-  const fallback = {items: []};
-  const entities = ['news','rates','indices','market_stats'];
-  const results = await Promise.allSettled(entities.map(e => fetchJson(resolveDataUrl(e))));
-  const [news, rates, indices, stats] = results.map(r => r.status === 'fulfilled' ? r.value : fallback);
-  try { renderHome(news.items || [], rates.items || [], indices.items || [], stats.items || []); } catch(e){ console.error('renderHome', e); }
-  try { renderMarket(stats.items || [], indices.items || []); } catch(e){ console.error('renderMarket', e); }
-  try { renderIndices(indices.items || [], rates.items || []); } catch(e){ console.error('renderIndices', e); }
-  try { renderDirections(rates.items || [], news.items || []); } catch(e){ console.error('renderDirections', e); }
-  try { renderAuctions(stats.auctions || []); } catch(e){ console.error('renderAuctions', e); }
-  try { renderAnalytics(news.items || []); } catch(e){ console.error('renderAnalytics', e); }
+function normalizeItems(data){
+  if (Array.isArray(data)) return data;
+  if (data && Array.isArray(data.items)) return data.items;
+  return [];
 }
 
-function renderHome(news, rates, indices, statsItems){
+function formatMoney(v, c='USD', u=''){ return `${Number(v || 0).toLocaleString('ru-RU')} ${c}${u ? ' / ' + u : ''}`; }
+function safeText(value=''){ return String(value || '').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
+function localizeTransport(v='unknown'){
+  const map = {sea:'морская', ocean:'морская', rail:'железнодорожная', road:'авто', truck:'авто', air:'авиа', multimodal:'мультимодальная', unknown:'смешанная'};
+  return map[String(v).toLowerCase()] || v;
+}
+function localizeCategory(v='news'){
+  const map = {news:'новости', analytics:'аналитика', rates:'ставки', ports:'порты', tender:'тендер', signal:'сигнал'};
+  return map[String(v).toLowerCase()] || v;
+}
+
+async function loadData(){
+  const [newsRes, ratesRes, indicesRes, statsRes] = await Promise.allSettled([
+    fetchJson(resolveDataUrl('news')),
+    fetchJson(resolveDataUrl('rates')),
+    fetchJson(resolveDataUrl('indices')),
+    fetchJson(resolveDataUrl('market_stats'))
+  ]);
+
+  const newsData = newsRes.status === 'fulfilled' ? newsRes.value : {items: []};
+  const ratesData = ratesRes.status === 'fulfilled' ? ratesRes.value : {items: []};
+  const indicesData = indicesRes.status === 'fulfilled' ? indicesRes.value : {items: []};
+  const statsData = statsRes.status === 'fulfilled' ? statsRes.value : {items: [], auctions: []};
+
+  const news = normalizeItems(newsData);
+  const rates = normalizeItems(ratesData);
+  const indices = normalizeItems(indicesData);
+  const stats = normalizeItems(statsData);
+  const auctions = Array.isArray(statsData?.auctions) ? statsData.auctions : [];
+
+  renderHome(news, rates, indices, stats, auctions);
+  renderMarket(stats, indices);
+  renderIndices(indices, rates);
+  renderDirections(rates, news);
+  renderAuctions(auctions);
+  renderAnalytics(news);
+}
+
+function renderHome(news, rates, indices, statsItems, auctions){
   const latestStats = statsItems[0] || {active_auctions: 42, new_auctions_day: 8, active_routes: 27, avg_responses: 4.3};
-  document.getElementById('hero-market-stats').innerHTML = `
-    <div class="market-item"><span>Активные аукционы</span><strong>${latestStats.active_auctions}</strong></div>
-    <div class="market-item"><span>Новых за сутки</span><strong>${latestStats.new_auctions_day}</strong></div>
-    <div class="market-item"><span>Направлений</span><strong>${latestStats.active_routes}</strong></div>
-    <div class="market-item"><span>Средний отклик</span><strong>${latestStats.avg_responses}</strong></div>`;
+  const statsEl = document.getElementById('hero-market-stats');
+  if (statsEl) statsEl.innerHTML = `
+    <div class="market-item"><span>Активные аукционы</span><strong>${latestStats.active_auctions || 0}</strong></div>
+    <div class="market-item"><span>Новых за сутки</span><strong>${latestStats.new_auctions_day || 0}</strong></div>
+    <div class="market-item"><span>Направлений</span><strong>${latestStats.active_routes || 0}</strong></div>
+    <div class="market-item"><span>Средний отклик</span><strong>${latestStats.avg_responses || 0}</strong></div>`;
 
   const kpis = [
-    {label:'Индекс рынка', value:(latestStats.calculated_market_index || 71.4), delta:'+2.8% к неделе'},
-    {label:'Активные направления', value:latestStats.active_routes || 27, delta:'+4 маршрута'},
-    {label:'Публикаций в витрине', value:news.length, delta:'обновляемая лента рынка'},
-    {label:'Индексных точек', value:indices.length, delta:'внешние и внутренние'}
+    {label:'Индекс рынка', value:(latestStats.calculated_market_index || 71.4), delta:'+ к динамике'},
+    {label:'Активные направления', value:latestStats.active_routes || rates.length || 0, delta:'по витрине'},
+    {label:'Публикаций в витрине', value:news.length, delta:'новости и сигналы'},
+    {label:'Индексных точек', value:indices.length, delta:'рыночные индикаторы'}
   ];
-  document.getElementById('home-kpis').innerHTML = kpis.map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value">${k.value}</div><div class="kpi-delta up">${k.delta}</div></div>`).join('');
+  const kpiEl = document.getElementById('home-kpis');
+  if (kpiEl) kpiEl.innerHTML = kpis.map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value">${k.value}</div><div class="kpi-delta up">${k.delta}</div></div>`).join('');
 
-  const topRoutes = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${transportLabel(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть страницу направления</button></div>`).join('');
-  document.getElementById('home-routes').innerHTML = topRoutes || '<div class="empty-note">Нет данных по направлениям</div>';
+  const routesEl = document.getElementById('home-routes');
+  if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date || ''}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
 
-  document.getElementById('home-news').innerHTML = news.slice(0,3).map(n => `<article class="news-card"><div class="badge">${transportLabel(n.transport_type)}</div><h3><a href="${n.link}" target="_blank" rel="noopener">${n.title}</a></h3><p class="muted small">${stripHtml(n.snippet || '').slice(0, 180)}</p><div class="small muted">${n.source} · ${n.date}</div></article>`).join('');
+  const newsEl = document.getElementById('home-news');
+  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 180)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''}</div></article>`).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
 
-  document.getElementById('home-auctions').innerHTML = (window.MARKET_AUCTIONS || []).slice(0,3).map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="price">${a.participants} участника</div><button class="btn btn-accent" onclick="openExternal('${a.cta}')">Смотреть детали после входа</button></div>`).join('');
+  const auctionsEl = document.getElementById('home-auctions');
+  const list = auctions && auctions.length ? auctions : window.MARKET_AUCTIONS || [];
+  if (auctionsEl) auctionsEl.innerHTML = list.slice(0,3).map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="price">${a.participants} участника</div><button class="btn btn-accent" onclick="openExternal('${a.cta}')">Смотреть детали после входа</button></div>`).join('') || '<div class="empty-note">Аукционы скоро появятся.</div>';
 }
 
 let marketChart;
@@ -557,9 +588,10 @@ function renderMarket(statsItems, indices){
     ['Активные аукционы', latest.active_auctions || 42, 'живые торги'],
     ['Новые за неделю', latest.new_auctions_week || 31, 'динамика спроса'],
     ['Средний отклик', latest.avg_responses || 4.3, 'конкуренция'],
-    ['Рыночный индекс', latest.calculated_market_index || 71.4, 'внутренний агрегат']
+    ['Рыночный индекс', latest.calculated_market_index || 71.4, 'агрегированный показатель']
   ];
-  document.getElementById('market-panels').innerHTML = cards.map(c => `<div class="panel"><div class="section-eyebrow">${c[0]}</div><div class="metric">${c[1]}</div><div class="muted small">${c[2]}</div></div>`).join('');
+  const panels = document.getElementById('market-panels');
+  if (panels) panels.innerHTML = cards.map(c => `<div class="panel"><div class="section-eyebrow">${c[0]}</div><div class="metric">${c[1]}</div><div class="muted small">${c[2]}</div></div>`).join('');
   const ctx = document.getElementById('marketChart');
   if(!ctx) return;
   if(marketChart) marketChart.destroy();
@@ -569,47 +601,53 @@ function renderMarket(statsItems, indices){
 }
 
 function renderIndices(indices, rates){
-  document.getElementById('indices-cards').innerHTML = indices.slice(0,4).map(i => `<div class="panel"><div class="section-eyebrow">${i.index_name}</div><div class="metric">${Number(i.value).toLocaleString('ru-RU')}</div><div class="small ${i.change_pct >= 0 ? 'up':'dn'}">${i.change_pct >=0 ? '+' : ''}${i.change_pct}%</div><div class="muted small">${i.date}</div></div>`).join('');
-  const types = ['all', ...new Set(rates.map(r => r.transport_type))];
+  const cardsEl = document.getElementById('indices-cards');
+  if (cardsEl) cardsEl.innerHTML = indices.slice(0,4).map(i => `<div class="panel"><div class="section-eyebrow">${i.index_name}</div><div class="metric">${Number(i.value || 0).toLocaleString('ru-RU')}</div><div class="small ${(i.change_pct || 0) >= 0 ? 'up':'dn'}">${(i.change_pct || 0) >=0 ? '+' : ''}${i.change_pct || 0}%</div><div class="muted small">${i.date || ''}</div></div>`).join('') || '<div class="empty-note">Индексы скоро появятся.</div>';
+  const types = ['all', ...new Set(rates.map(r => localizeTransport(r.transport_type)))];
   const filterBox = document.getElementById('rates-filters');
   let current = 'all';
-  function drawFilters(){ filterBox.innerHTML = types.map(t => `<button class="filter-chip ${t===current?'active':''}" data-type="${t}">${t==='all'?'Все типы':t}</button>`).join(''); }
+  function drawFilters(){ if (filterBox) filterBox.innerHTML = types.map(t => `<button class="filter-chip ${t===current?'active':''}" data-type="${t}">${t==='all'?'Все типы':t}</button>`).join(''); }
   function drawRows(){
-    const rows = rates.filter(r => current==='all' || r.transport_type===current).map(r => `<tr><td>${r.direction_name}</td><td>${transportLabel(r.transport_type)}</td><td>${r.source}</td><td>${formatMoney(r.value, r.currency, r.unit)}</td><td>${r.date}</td><td>${r.exactness}</td></tr>`).join('');
-    document.getElementById('rates-table').innerHTML = rows || '<tr><td colspan="6">Нет данных</td></tr>';
+    const rows = rates.filter(r => current==='all' || localizeTransport(r.transport_type)===current).map(r => `<tr><td>${r.direction_name}</td><td>${localizeTransport(r.transport_type)}</td><td>${r.source || 'WIAF'}</td><td>${formatMoney(r.value, r.currency, r.unit)}</td><td>${r.date || ''}</td><td>${r.exactness || 'ориентир'}</td></tr>`).join('');
+    const table = document.getElementById('rates-table');
+    if (table) table.innerHTML = rows || '<tr><td colspan="6">Нет данных</td></tr>';
   }
   drawFilters(); drawRows();
-  filterBox.onclick = (e)=>{ const btn=e.target.closest('[data-type]'); if(!btn) return; current=btn.dataset.type; drawFilters(); drawRows(); };
+  if (filterBox) filterBox.onclick = (e)=>{ const btn=e.target.closest('[data-type]'); if(!btn) return; current=btn.dataset.type; drawFilters(); drawRows(); };
 }
 
 function renderDirections(rates, news){
   const unique = [];
   const seen = new Set();
   for(const r of rates){ if(!seen.has(r.direction_name)){ seen.add(r.direction_name); unique.push(r); } }
-  document.getElementById('directions-grid').innerHTML = unique.map(r => {
-    const related = news.find(n => (n.region || '').includes('RU'));
-    return `<div class="route-card"><div class="badge">${transportLabel(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${r.min_value || r.value}–${r.max_value || r.value} ${r.currency}</div><div class="small muted">Особенности маршрута: ${r.note || 'контроль сроков, сезонность и перегрузка узлов.'}</div><div class="small muted">Связанный сигнал: ${related ? related.title : 'Следите за аналитикой и новостями по маршруту на витрине WIAF.'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Зарегистрироваться</button></div>`;
-  }).join('');
+  const grid = document.getElementById('directions-grid');
+  if (!grid) return;
+  grid.innerHTML = unique.map(r => {
+    const related = news.find(n => String(n.region || '').includes('RU')) || news[0];
+    return `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Диапазон: ${r.min_value || r.value}–${r.max_value || r.value} ${r.currency}</div><div class="small muted">Особенности маршрута: ${r.note || 'контроль сроков, сезонность и перегрузка узлов.'}</div><div class="small muted">Связанный сигнал: ${related ? safeText(related.title) : 'сигнал скоро появится'}</div><button class="btn btn-accent" onclick="openExternal('https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php')">Зарегистрироваться</button></div>`;
+  }).join('') || '<div class="empty-note">Направления скоро появятся.</div>';
 }
 
 function renderAuctions(auctions){
   window.MARKET_AUCTIONS = auctions.length ? auctions : [
-    {route:'Шанхай → Москва', cargo:'FCL 40\'', delivery_type:'морская', status:'активен', participants:4, cta:'https://wiaf.ru/Seller/Seller_login.php'},
+    {route:'Шанхай → Москва', cargo:"FCL 40'", delivery_type:'морская', status:'активен', participants:4, cta:'https://wiaf.ru/Seller/Seller_login.php'},
     {route:'Стамбул → Санкт-Петербург', cargo:'LCL', delivery_type:'мультимодальная', status:'новый', participants:3, cta:'https://wiaf.ru/Seller/Seller_login.php'},
-    {route:'Мумбаи → Новороссийск', cargo:'20 т', delivery_type:'морская', status:'в торгах', participants:5, cta:'https://wiaf.ru/Seller/Seller_login.php'}
+    {route:'Мумбаи → Новороссийск', cargo:'24 т', delivery_type:'морская', status:'в торгах', participants:5, cta:'https://wiaf.ru/Seller/Seller_login.php'}
   ];
-  document.getElementById('auctions-grid').innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
+  const grid = document.getElementById('auctions-grid');
+  if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
 }
 
 function renderAnalytics(news){
-  document.getElementById('analytics-grid').innerHTML = news.map(n => `<article class="news-card"><div class="badge">${transportLabel(n.transport_type)}</div><h3><a href="${n.link}" target="_blank" rel="noopener">${n.title}</a></h3><p class="muted small">${stripHtml(n.snippet || '').slice(0, 180)}</p><div class="small muted">${n.source} · ${n.date} · ${n.transport_type}</div></article>`).join('');
+  const grid = document.getElementById('analytics-grid');
+  if (grid) grid.innerHTML = news.slice(0,9).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 220)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''} · ${localizeTransport(n.transport_type || 'unknown')}</div></article>`).join('') || '<div class="empty-note">Аналитика скоро появится.</div>';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  lucide.createIcons();
+  try { lucide.createIcons(); } catch(e) { console.warn(e); }
   const route = (window.location.hash || '#home').replace('#','');
   goTo(ROUTE_META[route] ? route : 'home');
-  loadData();
+  loadData().catch(err => console.error('loadData error', err));
 });
 </script>
 </body>

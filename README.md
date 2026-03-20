@@ -1,24 +1,14 @@
 # WIAF
 
-Обновлённый репозиторий для статического MVP терминала рынка.
+Статический публичный фронт терминала рынка международной логистики.
 
-## Что внутри
+Что внутри:
+- index.html — основная публичная витрина
+- public/data/*.json — данные для главной, ставок, индексов и новостей
+- .github/workflows/update-data.yml — автообновление news.json
+- scripts/ — Python-парсер открытых источников
 
-- `index.html` — витрина сайта
-- `public/data/*.json` — локальные данные для быстрого запуска
-- `public/config.js` — переключение между локальными JSON и Google Sheets API
-- `.github/workflows/update-data.yml` — автозапуск парсера через GitHub Actions
-- `scripts/` — Python-парсер и настройки источников
-- `google-apps-script/api.gs` — API для Google Sheets
-
-## Как включить Google Sheets
-
-1. Открой `google-apps-script/api.gs`
-2. Вставь код в Apps Script, привязанный к таблице
-3. Задеплой как Web App
-4. В `public/config.js` вставь URL в `sheetApiBase`
-5. Перезалей сайт
-
-## Локальный режим
-
-Пока `sheetApiBase` пустой, сайт использует `public/data/*.json`.
+Важные ссылки:
+- Вход: https://wiaf.ru/Seller/Seller_login.php
+- Правила импортёра: https://wiaf.ru/Seller/pravila1-1-1.php
+- Правила экспедитора: https://wiaf.ru/BUYER/pravila2-2-2.php
