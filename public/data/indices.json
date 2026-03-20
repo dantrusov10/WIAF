@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20T16:45:56+00:00",
+  "updated_at": "2026-03-20T16:54:56+00:00",
   "cache_used": false,
   "items": [
     {
@@ -20,8 +20,8 @@
       "date": "2026-03-20",
       "value": 2001.0,
       "unit": "index_points",
-      "change_abs": 706.6,
-      "change_pct": 54.59,
+      "change_abs": 0.0,
+      "change_pct": 0.0,
       "status": "published",
       "source_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
