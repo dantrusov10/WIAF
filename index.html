@@ -636,7 +636,7 @@ function localizeCategory(v='news'){
   return map[key] || 'новости';
 }
 function articleHref(n){
-  return repoPath(n.static_url || `news/${n.slug || n.id || 'article'}.html`);
+  return `index.html#article:${encodeURIComponent(n.id || n.slug || 'article')}`;
 }
 
 function renderNewsArticle(n, compact=false){
