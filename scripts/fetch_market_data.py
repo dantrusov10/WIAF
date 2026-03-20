@@ -575,10 +575,10 @@ def static_css() -> str:
     return (
         ':root{--ink:#0d0f14;--surface:#f5f3ef;--surface2:#eceae4;--accent:#e8a020;--blue:#2451a0;--muted:#6b7280;--border:#d8d3ca}'
         '*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--surface);color:var(--ink);line-height:1.65}'
-        'a{text-decoration:none;color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}'
-        'header{background:var(--ink);border-bottom:2px solid var(--accent)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}'
-        '.logo{font-weight:800;font-size:1.9rem;color:#fff;letter-spacing:.04em}.logo span{color:var(--accent)}'
-        '.header-links{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.72);font-size:.95rem}.header-links a:hover{color:#fff}'
+        'a{text-decoration:none;color:inherit}.wrap{max-width:1280px;margin:0 auto;padding:0 32px}'
+        'header{background:var(--ink);position:sticky;top:0;z-index:50;border-bottom:2px solid var(--accent)}.header-inner{max-width:1280px;margin:0 auto;padding:0 32px;height:70px;display:flex;justify-content:space-between;align-items:center;gap:16px}'
+        '.logo{font-family:Arial,sans-serif;font-weight:800;font-size:1.9rem;color:#fff;letter-spacing:.04em}.logo-dot,.logo span{color:var(--accent)}'
+        'nav{display:flex;gap:2px;flex-wrap:wrap;align-items:center}.nav-item{background:none;border:none;color:rgba(255,255,255,.72);padding:10px 12px;cursor:pointer;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}.nav-item:hover{color:#fff}.nav-divider{width:1px;height:18px;background:rgba(255,255,255,.15);margin:0 4px}'
         '.hero{padding:26px 0 14px;background:#fff;border-bottom:1px solid var(--border)}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:8px}'
         '.hero h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:0 0 10px;font-weight:800}.hero p{max-width:820px;color:#42526b}'
         '.article-shell,.panel,.news-card,.stat{background:#fff;border:1px solid var(--border)}.article-shell{padding:28px;margin:28px 0 44px}.news-card{padding:18px;display:flex;flex-direction:column;gap:12px;height:100%}'
@@ -587,9 +587,28 @@ def static_css() -> str:
         '.lead{font-size:1.08rem;color:#23334e}.article-content{display:grid;gap:14px;color:#23334e}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:var(--accent);color:var(--ink);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.btn-outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}'
         '.kicker{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.section{padding:10px 0 46px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.section-head h2{font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.1;margin:0}.muted{color:var(--muted)}'
         '.filters{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.filters input,.filters select{padding:12px 14px;border:1px solid var(--border);background:#fff;font:inherit}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}.stat{padding:18px}.stat b{display:block;font-size:1.8rem;margin-top:8px}'
-        '.footer{background:var(--ink);color:#fff;padding:24px 0;margin-top:30px}.footer p{color:rgba(255,255,255,.68)}@media(max-width:960px){.news-grid,.stats{grid-template-columns:1fr 1fr}}@media(max-width:640px){.news-grid,.stats{grid-template-columns:1fr}.header-inner{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column}}'
+        '.footer{background:var(--ink);color:#fff;padding:24px 0;margin-top:30px}.footer p{color:rgba(255,255,255,.68)}@media(max-width:960px){.news-grid,.stats{grid-template-columns:1fr 1fr}}@media(max-width:640px){.news-grid,.stats{grid-template-columns:1fr}.header-inner,.wrap{padding:0 18px}.header-inner{height:auto;align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}}'
     )
 
+
+
+
+def main_header(prefix: str = '') -> str:
+    return (
+        f'<header><div class="header-inner">'
+        f'<a class="logo" href="{prefix}index.html">WI<span class="logo-dot">AF</span></a>'
+        f'<nav>'
+        f'<a class="nav-item" href="{prefix}index.html#home">Главная</a>'
+        f'<a class="nav-item" href="{prefix}index.html#market">Рынок</a>'
+        f'<a class="nav-item" href="{prefix}index.html#indices">Ставки и индексы</a>'
+        f'<a class="nav-item" href="{prefix}index.html#directions">Направления</a>'
+        f'<a class="nav-item" href="{prefix}index.html#auctions">Аукционы</a>'
+        f'<a class="nav-item" href="{prefix}index.html#analytics">Аналитика</a>'
+        f'<div class="nav-divider"></div>'
+        f'<a class="nav-item" href="{prefix}blog.html">Блог</a>'
+        f'<a class="nav-item" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
+        f'</nav></div></header>'
+    )
 
 def build_article_html(item: dict, related: list[dict]) -> str:
     title = escape(item.get('title') or 'Материал WIAF')
@@ -606,11 +625,11 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 
     related_cards = []
     for r in related[:3]:
-        rel_img = f'<a class="news-media" href="{escape(os.path.basename(repo_static_url(r)))}"><img src="{escape(r.get("image_url") or "")}" alt="{escape(r.get("title") or "Материал")}"></a>' if r.get('image_url') else ''
+        rel_img = f'<a class="news-media" href="../index.html#article:{escape(r.get('id') or r.get('slug') or '')}"><img src="{escape(r.get("image_url") or "")}" alt="{escape(r.get("title") or "Материал")}"></a>' if r.get('image_url') else ''
         related_cards.append(
             f'<article class="news-card">{rel_img}'
             f'<div class="meta"><span class="badge">{escape(r.get("category_ru") or localize_category(r.get("category")))}</span><span>{escape(display_date(r.get("published_at") or r.get("date") or ""))}</span></div>'
-            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="{escape(os.path.basename(repo_static_url(r)))}">{escape(r.get("title") or "Материал")}</a></h3>'
+            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="../index.html#article:{escape(r.get('id') or r.get('slug') or '')}">{escape(r.get("title") or "Материал")}</a></h3>'
             f'<div class="muted">{escape((r.get("snippet") or r.get("content_preview") or "")[:160])}</div></article>'
         )
     related_html = ''.join(related_cards) if related_cards else '<div class="panel" style="padding:18px">Связанные материалы появятся после следующего обновления.</div>'
@@ -649,7 +668,7 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 <script type="application/ld+json">{ld_json}</script>
 </head>
 <body>
-<header><div class="wrap header-inner"><a class="logo" href="../index.html">WI<span>AF</span></a><div class="header-links"><a href="../index.html">Главная</a><a href="../blog.html">Блог</a><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a></div></div></header>
+{main_header('../')}
 <section class="hero"><div class="wrap"><div class="eyebrow">Новости и сигналы рынка</div><h1>{title}</h1><p>{description}</p></div></section>
 <main class="wrap">
   <article class="article-shell">
@@ -669,6 +688,7 @@ def build_article_html(item: dict, related: list[dict]) -> str:
 
 
 def build_blog_html(items: list[dict]) -> str:
+    items = sorted(items, key=lambda x: (sort_key_date(x.get('published_at') or x.get('date')), x.get('priority', 0)), reverse=True)
     cards = []
     for item in items[:120]:
         title = escape(item.get('title') or 'Материал')
@@ -677,11 +697,11 @@ def build_blog_html(items: list[dict]) -> str:
         category = escape(item.get('category_ru') or localize_category(item.get('category')))
         source = escape(item.get('source') or 'Источник')
         transport = escape(item.get('transport_type') or 'смешанная')
-        image = f'<a class="news-media" href="{escape(repo_static_url(item))}"><img src="{escape(item.get("image_url") or "")}" alt="{title}"></a>' if item.get('image_url') else ''
+        image = f'<a class="news-media" href="index.html#article:{escape(item.get('id') or item.get('slug') or '')}"><img src="{escape(item.get("image_url") or "")}" alt="{title}"></a>' if item.get('image_url') else ''
         cards.append(
             f'<article class="news-card" data-source="{source}" data-category="{category}">{image}'
             f'<div class="meta"><span class="badge">{category}</span><span>{date}</span></div>'
-            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="{escape(repo_static_url(item))}">{title}</a></h3>'
+            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="index.html#article:{escape(item.get('id') or item.get('slug') or '')}">{title}</a></h3>'
             f'<div class="muted">{snippet}</div><div class="meta"><span>{source}</span><span>{transport}</span></div></article>'
         )
     sources = sorted({(x.get('source') or '') for x in items if x.get('source')})
@@ -698,7 +718,7 @@ def build_blog_html(items: list[dict]) -> str:
 <style>{static_css()}</style>
 </head>
 <body>
-<header><div class="wrap header-inner"><a class="logo" href="index.html">WI<span>AF</span></a><div class="header-links"><a href="index.html">Главная</a><a href="blog.html">Блог</a><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a></div></div></header>
+{main_header('')}
 <section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF: материалы за последние 12 месяцев, фильтрация по источнику и теме. Каждая карточка ведет на отдельную SEO-страницу материала.</p></div></section>
 <main class="wrap section">
   <div class="stats"><div class="stat">Материалов<b>{len(items)}</b></div><div class="stat">Источников<b>{len(sources)}</b></div><div class="stat">Тем<b>{len(categories)}</b></div><div class="stat">Период<b>12 мес.</b></div></div>
