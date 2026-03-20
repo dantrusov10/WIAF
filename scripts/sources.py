@@ -37,6 +37,5 @@ SOURCES = [
         "category_default": "analytics",
         "enabled": True,
         "refresh_hours": 12,
-        "fallback_only": True,
     }
 ]

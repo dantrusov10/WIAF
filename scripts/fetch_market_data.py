@@ -28,8 +28,6 @@ def now_iso():
 def normalize_text(value: str) -> str:
     if not value:
         return ""
-    value = re.sub(r"<[^>]+>", " ", value)
-    value = value.replace("&nbsp;", " ")
     return re.sub(r"\s+", " ", value).strip()
 
 
@@ -62,14 +60,14 @@ def category_by_text(text: str, default_category: str) -> str:
 
 def transport_by_text(text: str) -> str:
     t = (text or "").lower()
-    if any(word in t for word in ["multimodal", "мультимод"]):
-        return "multimodal"
     if any(word in t for word in ["container", "мор", "sea", "vessel", "port", "feu", "teu"]):
         return "sea"
     if any(word in t for word in ["rail", "жд", "railway", "train"]):
         return "rail"
     if any(word in t for word in ["truck", "авто", "road"]):
         return "road"
+    if any(word in t for word in ["multimodal", "мультимод"]):
+        return "multimodal"
     return "unknown"
 
 
@@ -97,13 +95,11 @@ def fetch_html(url: str) -> str:
 def fetch_rss_items(source: dict) -> list[dict]:
     feed = feedparser.parse(source["list_url"])
     items = []
-    for entry in feed.entries[:40]:
+    for entry in feed.entries[:30]:
         title = normalize_text(getattr(entry, "title", ""))
         link = getattr(entry, "link", "")
         snippet = normalize_text(getattr(entry, "summary", "") or getattr(entry, "description", ""))
         published_at = parse_date(getattr(entry, "published", "") or getattr(entry, "updated", ""))
-        if not title or not link:
-            continue
         item_hash = make_hash(source["source_name"], title, link)
         items.append({
             "id": f"news_{item_hash[:12]}",
@@ -135,7 +131,7 @@ def fetch_html_items(source: dict) -> list[dict]:
     html = fetch_html(source["list_url"])
     soup = BeautifulSoup(html, "lxml")
     items = []
-    for node in soup.select(source.get("article_selector", "article"))[:40]:
+    for node in soup.select(source.get("article_selector", "article"))[:30]:
         title_node = pick_first(node, source.get("title_selector", "h2, h3"))
         link_node = pick_first(node, source.get("link_selector", "a"))
         date_node = pick_first(node, source.get("date_selector", "time"))
@@ -172,45 +168,28 @@ def save_json(filename: str, payload: dict):
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
-def collect_news():
-    ru_items = []
-    fallback_items = []
+def main():
+    all_news = []
     for source in SOURCES:
         if not source.get("enabled"):
             continue
         try:
             items = fetch_rss_items(source) if source["fetch_method"] == "rss" else fetch_html_items(source)
-            if source.get("country") == "RU":
-                ru_items.extend(items)
-            elif source.get("fallback_only"):
-                fallback_items.extend(items)
-            else:
-                ru_items.extend(items)
+            all_news.extend(items)
             print(f"{source['source_name']}: {len(items)}")
         except Exception as e:
             print(f"ERROR in {source['source_name']}: {e}")
 
-    combined = ru_items if ru_items else fallback_items
-    if ru_items and fallback_items:
-        combined.extend(fallback_items[:10])
-
     unique = []
     seen = set()
-    for item in sorted(combined, key=lambda x: (x.get('region') != 'RU', x.get('date', '')), reverse=False):
+    for item in sorted(all_news, key=lambda x: x.get('date', ''), reverse=True):
         if item['hash'] in seen:
             continue
         seen.add(item['hash'])
         unique.append(item)
 
-    unique.sort(key=lambda x: (x.get('region') != 'RU', x.get('date', '')), reverse=False)
-    unique = sorted(unique, key=lambda x: x.get('date', ''), reverse=True)
-    return unique[:120]
-
-
-def main():
-    items = collect_news()
-    save_json("news.json", {"updated_at": now_iso(), "items": items})
-    print(f"Saved {len(items)} news items")
+    save_json("news.json", {"updated_at": now_iso(), "items": unique[:200]})
+    print(f"Saved {len(unique)} news items")
 
 
 if __name__ == "__main__":
