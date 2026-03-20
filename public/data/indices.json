@@ -3,57 +3,69 @@
   "items": [
     {
       "id": "idx_001",
-      "source": "SCFI",
-      "index_name": "SCFI China Export",
+      "source": "Shanghai Shipping Exchange",
+      "index_name": "SCFI",
       "date": "2026-03-20",
       "value": 2043.8,
+      "unit": "index_points",
+      "change_abs": 18.2,
       "change_pct": 0.9,
-      "description": "Базовый ориентир экспортного контейнерного рынка Китая."
+      "status": "published"
     },
     {
       "id": "idx_002",
-      "source": "WIAF",
-      "index_name": "WIAF Market Index",
+      "source": "China Shipping Exchange",
+      "index_name": "CCFI",
       "date": "2026-03-20",
-      "value": 71.4,
-      "change_pct": 2.8,
-      "description": "Собственный индекс WIAF: новости, ставки и активность аукционов."
+      "value": 1294.4,
+      "unit": "index_points",
+      "change_abs": 9.1,
+      "change_pct": 0.7,
+      "status": "published"
     },
     {
       "id": "idx_003",
-      "source": "FBX",
-      "index_name": "FBX Asia–Europe",
+      "source": "Drewry",
+      "index_name": "WCI",
       "date": "2026-03-20",
-      "value": 1856.0,
-      "change_pct": -1.2,
-      "description": "Сводный внешний ориентир по азиатско-европейскому коридору."
+      "value": 3186.0,
+      "unit": "usd_per_forty_ft",
+      "change_abs": -64.0,
+      "change_pct": -2.0,
+      "status": "published"
     },
     {
       "id": "idx_004",
-      "source": "WCI",
-      "index_name": "Drewry WCI Composite",
+      "source": "Freightos",
+      "index_name": "FBX Asia-EU",
       "date": "2026-03-20",
-      "value": 3521.0,
-      "change_pct": 3.4,
-      "description": "Индекс спотовых контейнерных ставок на глобальных морских маршрутах."
+      "value": 1856.0,
+      "unit": "index_points",
+      "change_abs": -22.0,
+      "change_pct": -1.2,
+      "status": "published"
     },
     {
       "id": "idx_005",
       "source": "WIAF",
-      "index_name": "Auction Activity Index",
+      "index_name": "WIAF Market Index",
       "date": "2026-03-20",
-      "value": 43.0,
-      "change_pct": 13.2,
-      "description": "Внутренний индекс активности аукционов и конкуренции в торгах."
+      "value": 71.4,
+      "unit": "points",
+      "change_abs": 2.0,
+      "change_pct": 2.8,
+      "status": "published"
     },
     {
       "id": "idx_006",
-      "source": "FX",
-      "index_name": "USD/RUB logistics background",
+      "source": "WIAF",
+      "index_name": "Auction Activity",
       "date": "2026-03-20",
-      "value": 91.8,
-      "change_pct": 0.7,
-      "description": "Валютный фон для расчёта ориентиров и комиссий по торгам."
+      "value": 43.0,
+      "unit": "lots",
+      "change_abs": 5.0,
+      "change_pct": 13.2,
+      "status": "published"
     }
   ]
 }

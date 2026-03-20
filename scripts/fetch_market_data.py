@@ -34,16 +34,6 @@ RUS_MONTHS = {
     'июля': '07', 'августа': '08', 'сентября': '09', 'октября': '10', 'ноября': '11', 'декабря': '12'
 }
 
-LOGISTICS_INCLUDE = [
-    "логист", "перевоз", "экспед", "контейнер", "порт", "терминал", "склад", "фрахт", "судоход", "коридор",
-    "транзит", "вэд", "импорт", "экспорт", "тамож", "жд", "поезд", "вагон", "linehaul", "freight",
-    "shipping", "container", "port", "rail", "truck", "warehouse", "cargo", "vessel", "liner", "terminal"
-]
-LOGISTICS_EXCLUDE = [
-    "спорт", "футбол", "хоккей", "кино", "музык", "концерт", "погода", "гороскоп", "знаменит",
-    "мода", "рецепт", "туризм", "шоубиз", "смартфон", "гаджет", "кулинар"
-]
-
 
 def ensure_dirs():
     os.makedirs(DATA_DIR, exist_ok=True)
@@ -202,18 +192,6 @@ def category_by_text(text: str, default_category: str) -> str:
     return default_category or "news"
 
 
-def seems_logistics_relevant(text: str, source: dict | None = None) -> bool:
-    txt = (text or '').lower()
-    if not txt:
-        return False
-    source = source or {}
-    include = [x.lower() for x in (source.get('focus_keywords') or [])] or LOGISTICS_INCLUDE
-    exclude = [x.lower() for x in (source.get('exclude_keywords') or [])] + LOGISTICS_EXCLUDE
-    positive = sum(1 for kw in include if kw and kw in txt)
-    negative = sum(1 for kw in exclude if kw and kw in txt)
-    return positive >= 1 and negative == 0
-
-
 def transport_by_text(text: str) -> str:
     t = (text or "").lower()
     if any(word in t for word in ["container", "мор", "sea", "vessel", "port", "feu", "teu", "линия", "судно"]):
@@ -286,8 +264,6 @@ def item_from_fields(source: dict, title: str, link: str, snippet: str = "", pub
     link = (link or "").strip()
     snippet = normalize_text(snippet)
     if not title or not link or link.startswith("javascript:"):
-        return None
-    if not seems_logistics_relevant(f"{title} {snippet} {content_preview} {link}", source):
         return None
     item_hash = make_hash(source["source_name"], title, link)
     category = category_by_text(f"{title} {snippet} {content_preview}", source.get("category_default", "news"))
@@ -617,10 +593,9 @@ def static_css() -> str:
 
 
 
-
 def main_header(prefix: str = '', active: str = '') -> str:
     def cls(name: str) -> str:
-        return 'nav-item active' if active == name else 'nav-item'
+        return f'nav-item active' if active == name else 'nav-item'
     return (
         f'<header><div class="header-inner">'
         f'<a class="logo" href="{prefix}index.html">WI<span class="logo-dot">AF</span></a>'
@@ -631,27 +606,17 @@ def main_header(prefix: str = '', active: str = '') -> str:
         f'<a class="{cls("directions")}" href="{prefix}index.html#directions">Направления</a>'
         f'<a class="{cls("auctions")}" href="{prefix}index.html#auctions">Аукционы</a>'
         f'<a class="{cls("blog")}" href="{prefix}blog.html">Блог</a>'
+        f'<a class="{cls("analytics")}" href="{prefix}index.html#analytics">Аналитика</a>'
         f'<div class="nav-divider"></div>'
         f'<a class="{cls("importer")}" href="{prefix}index.html#importer">Импортёру</a>'
         f'<a class="{cls("forwarder")}" href="{prefix}index.html#forwarder">Экспедитору</a>'
         f'<a class="{cls("about")}" href="{prefix}index.html#about">О платформе</a>'
+        f'<a class="nav-item" href="https://wiaf.ru/BUYER/pravila2-2-2.php">Правила экспедитора</a>'
         f'<a class="{cls("contacts")}" href="{prefix}index.html#contacts">Контакты</a>'
         f'</nav>'
         f'<a class="btn-nav" href="https://wiaf.ru/Seller/Seller_login.php">Войти</a>'
         f'</div></header>'
     )
-
-
-def footer_html(prefix: str = '') -> str:
-    return (
-        f'<footer class="footer"><div class="wrap">'
-        f'<div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px">'
-        f'<div><div style="font-weight:800;font-size:1.2rem;margin-bottom:10px">WIAF</div><p>WIAF — терминал рынка международной логистики: новости, ставки, индикаторы, направления и аукционы до входа в закрытый кабинет.</p></div>'
-        f'<div><div style="font-weight:700;margin-bottom:10px">Разделы</div><p><a href="{prefix}index.html#market">Рынок</a><br><a href="{prefix}index.html#indices">Ставки и индексы</a><br><a href="{prefix}index.html#directions">Направления</a><br><a href="{prefix}blog.html">Блог</a></p></div>'
-        f'<div><div style="font-weight:700;margin-bottom:10px">Доступ</div><p><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a><br><a href="https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php">Импортёру</a><br><a href="https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php">Экспедитору</a></p></div>'
-        f'</div><p style="margin-top:18px">© 2026 WIAF · info@wiaf.ru · +7 906 700-01-80</p></div></footer>'
-    )
-
 
 def build_article_html(item: dict, related: list[dict]) -> str:
     title = escape(item.get('title') or 'Материал WIAF')
@@ -735,7 +700,7 @@ def build_article_html(item: dict, related: list[dict]) -> str:
     <div class="news-grid">{related_html}</div>
   </section>
 </main>
-{footer_html("../")}
+<footer class="footer"><div class="wrap"><p>WIAF — терминал рынка международной логистики. Новости, сигналы, ставки и аукционы.</p></div></footer>
 </body></html>'''
 
 
@@ -803,7 +768,7 @@ def build_blog_html(items: list[dict]) -> str:
   <div class="filters"><input id="search" type="search" placeholder="Поиск по заголовкам и описанию"><select id="source"><option value="all">Все источники</option>{options_source}</select><select id="category"><option value="all">Все темы</option>{options_cat}</select></div>
   <div class="news-grid" id="grid">{''.join(cards) if cards else '<div class="panel" style="padding:18px">Материалы появятся после ближайшего обновления.</div>'}</div>
 </main>
-{footer_html("")}
+<footer class="footer"><div class="wrap"><p>WIAF — терминал рынка международной логистики. Блог обновляется автоматически.</p></div></footer>
 <script>
 const q=document.getElementById('search'),s=document.getElementById('source'),c=document.getElementById('category'),cards=[...document.querySelectorAll('#grid .news-card')];
 function apply(){{const v=(q.value||'').toLowerCase().trim(),sv=s.value,cv=c.value;cards.forEach(card=>{{const txt=card.innerText.toLowerCase();const ok=(!v||txt.includes(v))&&(sv==='all'||card.dataset.source===sv)&&(cv==='all'||card.dataset.category===cv);card.style.display=ok?'':'none';}});}}
