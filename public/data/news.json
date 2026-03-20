@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20T11:24:54+00:00",
+  "updated_at": "2026-03-20T11:35:35+00:00",
   "cache_used": false,
   "items": [
     {
@@ -1187,7 +1187,7 @@
       "status": "published"
     },
     {
-      "id": "news_0a4f324ed777",
+      "id": "news_fef128a43a75",
       "source": "PortNews",
       "source_id": "portnews",
       "source_group": "ports_media",
@@ -1195,17 +1195,17 @@
       "priority": 95,
       "date": "",
       "published_at": "",
-      "title": "РЕКЛАМА ООО «ТОЧКА А» ИНН 2536333326 ERID: 2W5zFHheKUM",
+      "title": "РЕКЛАМА ООО Медиа-группа \"ПортНьюс\" ИНН 7841028303 ERID: 2W5zFJXXnC1",
       "snippet": "",
-      "content_preview": "РЕКЛАМА ООО «ТОЧКА А» ИНН 2536333326 ERID: 2W5zFHheKUM",
-      "link": "https://portnews.ru/b/?action=click&banner_id=10117&place_id=107&erid=2W5zFHheKUM",
+      "content_preview": "РЕКЛАМА ООО Медиа-группа \"ПортНьюс\" ИНН 7841028303 ERID: 2W5zFJXXnC1",
+      "link": "https://portnews.ru/b/?action=click&banner_id=10111&place_id=107&erid=2W5zFJXXnC1",
       "image_url": "",
       "category": "ports",
       "category_ru": "порты",
       "transport_type": "unknown",
       "region": "RU",
       "freshness": "unknown",
-      "hash": "0a4f324ed777ba37664ca04a12e8ea42",
+      "hash": "fef128a43a752450de4cc0e12cb4cef4",
       "status": "published"
     },
     {
@@ -1319,6 +1319,28 @@
       "status": "published"
     },
     {
+      "id": "news_88738f797afb",
+      "source": "PortNews",
+      "source_id": "portnews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 95,
+      "date": "",
+      "published_at": "",
+      "title": "Минтранс: Суммарная мощность речных портов с выходом к СМП составляет 31,1 млн тонн",
+      "snippet": "",
+      "content_preview": "Минтранс: Суммарная мощность речных портов с выходом к СМП составляет 31,1 млн тонн",
+      "link": "https://portnews.ru/news/389288/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "unknown",
+      "region": "RU",
+      "freshness": "unknown",
+      "hash": "88738f797afb6f241659dd15d02cbc20",
+      "status": "published"
+    },
+    {
       "id": "news_995472480b58",
       "source": "PortNews",
       "source_id": "portnews",
@@ -1338,6 +1360,28 @@
       "region": "RU",
       "freshness": "unknown",
       "hash": "995472480b58ec5fc20ac8ddbb053026",
+      "status": "published"
+    },
+    {
+      "id": "news_0a4f324ed777",
+      "source": "PortNews",
+      "source_id": "portnews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 95,
+      "date": "",
+      "published_at": "",
+      "title": "РЕКЛАМА ООО «ТОЧКА А» ИНН 2536333326 ERID: 2W5zFHheKUM",
+      "snippet": "",
+      "content_preview": "РЕКЛАМА ООО «ТОЧКА А» ИНН 2536333326 ERID: 2W5zFHheKUM",
+      "link": "https://portnews.ru/b/?action=click&banner_id=10117&place_id=107&erid=2W5zFHheKUM",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "unknown",
+      "region": "RU",
+      "freshness": "unknown",
+      "hash": "0a4f324ed777ba37664ca04a12e8ea42",
       "status": "published"
     },
     {
