@@ -714,13 +714,20 @@ def build_blog_html(items: list[dict]) -> str:
         category = escape(item.get('category_ru') or localize_category(item.get('category')))
         source = escape(item.get('source') or 'Источник')
         transport = escape(item.get('transport_type') or 'смешанная')
-        image = f'<a class="news-media" href="index.html#article:{escape(item.get('id') or item.get('slug') or '')}"><img src="{escape(item.get("image_url") or "")}" alt="{title}"></a>' if item.get('image_url') else ''
-        cards.append(
-            f'<article class="news-card" data-source="{source}" data-category="{category}">{image}'
-            f'<div class="meta"><span class="badge">{category}</span><span>{date}</span></div>'
-            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="index.html#article:{escape(item.get('id') or item.get('slug') or '')}">{title}</a></h3>'
-            f'<div class="muted">{snippet}</div><div class="meta"><span>{source}</span><span>{transport}</span></div></article>'
-        )
+        item_id = item.get("id") or item.get("slug") or ""
+image_url = item.get("image_url") or ""
+
+if image_url:
+    image = (
+        '<a class="news-media" href="index.html#article:{}">'
+        '<img src="{}" alt="{}"></a>'
+    ).format(
+        escape(item_id),
+        escape(image_url),
+        escape(title)
+    )
+else:
+    image = ""
     sources = sorted({(x.get('source') or '') for x in items if x.get('source')})
     categories = sorted({(x.get('category_ru') or localize_category(x.get('category'))) for x in items})
     options_source = ''.join(f'<option>{escape(v)}</option>' for v in sources)
