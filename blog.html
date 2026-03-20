@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог WIAF — новости и сигналы рынка</title>
+<meta name="description" content="Блог WIAF: новости, сигналы и статьи рынка международной логистики за последние 12 месяцев.">
+<link rel="canonical" href="https://wiaf.ru/blog.html">
+<style>
+:root{--ink:#0d0f14;--surface:#f5f3ef;--surface2:#eceae4;--accent:#e8a020;--border:#d8d3ca;--muted:#6b7280;--blue:#2451a0}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--surface);color:var(--ink)}a{text-decoration:none;color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}header{background:var(--ink);border-bottom:2px solid var(--accent)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.logo{font-weight:800;font-size:1.9rem;color:#fff}.logo span{color:var(--accent)}.header-links{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.72)}.hero{padding:28px 0 14px;background:#fff;border-bottom:1px solid var(--border)}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:8px}.hero h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:0 0 10px}.hero p{max-width:800px;color:#42526b}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.filters input,.filters select{padding:12px 14px;border:1px solid var(--border);background:#fff;font:inherit}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:24px 0 48px}.card{background:#fff;border:1px solid var(--border);padding:18px;display:flex;flex-direction:column;gap:12px}.media{aspect-ratio:16/9;border:1px solid var(--border);overflow:hidden;background:var(--surface2)}.media img{width:100%;height:100%;object-fit:cover}.badge{display:inline-flex;padding:7px 12px;border:1px solid var(--border);background:var(--surface2);font-size:.74rem;text-transform:uppercase}.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}.footer{background:var(--ink);color:#fff;padding:24px 0}.empty{padding:18px;border:1px dashed var(--border);color:var(--muted)}@media(max-width:960px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.grid{grid-template-columns:1fr}.header-inner{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap header-inner"><a class="logo" href="index.html">WI<span>AF</span></a><div class="header-links"><a href="index.html">Главная</a><a href="blog.html">Блог</a><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF. После ближайшего прогона парсера эта страница обновится автоматически и будет вести на отдельные SEO-страницы материалов.</p></div></section>
+<main class="wrap">
+  <div class="filters"><input id="search" type="search" placeholder="Поиск"><select id="source"><option value="all">Все источники</option></select><select id="category"><option value="all">Все темы</option></select></div>
+  <div id="grid" class="grid"><div class="empty">Идет загрузка материалов…</div></div>
+</main>
+<footer class="footer"><div class="wrap">WIAF — терминал рынка международной логистики.</div></footer>
+<script>
+const REPO_BASE = location.hostname.endsWith('github.io') ? `/${location.pathname.split('/').filter(Boolean)[0] || 'WIAF'}` : '';
+const DATA_URL = `${REPO_BASE}/public/data/news.json?v=${Date.now()}`;
+function safe(v=''){return String(v||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim()}
+function fmt(v=''){if(!v)return 'Дата уточняется'; const d=new Date(v.includes('T')?v:`${v}T00:00:00`); return Number.isNaN(d.getTime())?v:d.toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}
+function href(item){return `${REPO_BASE}/${item.static_url || `news/${item.slug || item.id}.html`}`}
+fetch(DATA_URL,{cache:'no-store'}).then(r=>r.json()).then(data=>{
+  const items=Array.isArray(data.items)?data.items:[];
+  const source=document.getElementById('source'); const category=document.getElementById('category');
+  source.innerHTML='<option value="all">Все источники</option>'+ [...new Set(items.map(x=>x.source).filter(Boolean))].map(v=>`<option>${v}</option>`).join('');
+  category.innerHTML='<option value="all">Все темы</option>'+ [...new Set(items.map(x=>x.category_ru||x.category).filter(Boolean))].map(v=>`<option>${v}</option>`).join('');
+  const search=document.getElementById('search'); const grid=document.getElementById('grid');
+  function draw(){const q=(search.value||'').toLowerCase().trim(); const sv=source.value; const cv=category.value; const filtered=items.filter(i=>{const hay=`${i.title||''} ${i.snippet||''}`.toLowerCase(); return (!q||hay.includes(q))&&(sv==='all'||i.source===sv)&&(cv==='all'||(i.category_ru||i.category)===cv)}); grid.innerHTML=filtered.map(i=>`<article class="card">${i.image_url?`<a class="media" href="${href(i)}"><img src="${i.image_url}" alt="${safe(i.title)}"></a>`:''}<div class="meta"><span class="badge">${safe(i.category_ru||i.category||'новости')}</span><span>${fmt(i.published_at||i.date||'')}</span></div><h3><a href="${href(i)}">${safe(i.title)}</a></h3><div class="meta"><span>${safe(i.source||'Источник')}</span><span>${safe(i.transport_type||'смешанная')}</span></div><p>${safe(i.snippet||i.content_preview||'').slice(0,180)}</p></article>`).join('') || '<div class="empty">Материалов пока нет.</div>'}
+  [search,source,category].forEach(el=>el.addEventListener('input',draw)); [source,category].forEach(el=>el.addEventListener('change',draw)); draw();
+}).catch(()=>{document.getElementById('grid').innerHTML='<div class="empty">Не удалось загрузить новости.</div>'});
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
-
 import os
 import re
 import json
 import hashlib
+from html import escape
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
 from email.utils import parsedate_to_datetime
@@ -16,8 +16,10 @@ from sources import SOURCES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "public", "data")
+NEWS_DIR = os.path.join(BASE_DIR, "news")
+SITE_URL = "https://wiaf.ru"
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; WIAFBot/1.2; +https://wiaf.ru)",
+    "User-Agent": "Mozilla/5.0 (compatible; WIAFBot/1.3; +https://wiaf.ru)",
     "Accept-Language": "ru,en;q=0.8",
 }
 TIMEOUT = 20
@@ -33,8 +35,9 @@ RUS_MONTHS = {
 }
 
 
-def ensure_data_dir():
+def ensure_dirs():
     os.makedirs(DATA_DIR, exist_ok=True)
+    os.makedirs(NEWS_DIR, exist_ok=True)
 
 
 def now_iso():
@@ -61,7 +64,7 @@ def load_existing(filename: str) -> dict:
 
 
 def save_json(filename: str, payload: dict):
-    ensure_data_dir()
+    ensure_dirs()
     with open(os.path.join(DATA_DIR, filename), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
@@ -93,15 +96,12 @@ def parse_date(value: str) -> str:
     if not raw:
         return ""
     candidates = [raw, russian_month_normalize(raw)]
-
-    # common explicit numeric patterns first
     m = re.search(r'(\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?(?:[+-]\d{2}:?\d{2}|Z)?)', raw)
     if m:
         candidates.insert(0, m.group(1))
     m = re.search(r'(\d{2}[./]\d{2}[./]\d{4}(?:\s+\d{2}:\d{2}(?::\d{2})?)?)', raw)
     if m:
         candidates.insert(0, m.group(1).replace('/', '.'))
-
     for candidate in candidates:
         try:
             parsed = date_parser.parse(candidate, dayfirst=True, fuzzy=True)
@@ -152,6 +152,7 @@ def localize_category(category: str) -> str:
     mapping = {
         "news": "новости",
         "analytics": "аналитика",
+        "analysis": "аналитика",
         "rates": "ставки",
         "ports": "порты",
         "rail": "железная дорога",
@@ -165,7 +166,7 @@ def localize_category(category: str) -> str:
         "multimodal": "мультимодальная логистика",
         "market": "рынок",
     }
-    return mapping.get(category or "news", "новости")
+    return mapping.get((category or "news").lower(), "новости")
 
 
 def category_by_text(text: str, default_category: str) -> str:
@@ -192,16 +193,16 @@ def category_by_text(text: str, default_category: str) -> str:
 def transport_by_text(text: str) -> str:
     t = (text or "").lower()
     if any(word in t for word in ["container", "мор", "sea", "vessel", "port", "feu", "teu", "линия", "судно"]):
-        return "sea"
+        return "морская"
     if any(word in t for word in ["rail", "жд", "railway", "train", "вагон", "ржд"]):
-        return "rail"
+        return "железнодорожная"
     if any(word in t for word in ["truck", "авто", "road", "грузов"]):
-        return "road"
+        return "авто"
     if any(word in t for word in ["air", "авиа", "cargo terminal"]):
-        return "air"
+        return "авиа"
     if any(word in t for word in ["multimodal", "мультимод"]):
-        return "multimodal"
-    return "unknown"
+        return "мультимодальная"
+    return "смешанная"
 
 
 def freshness_label(date_str: str) -> str:
@@ -236,6 +237,13 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
+def slugify(text: str) -> str:
+    cleaned = re.sub(r'[^a-zA-Zа-яА-Я0-9\s-]', '', text or '').strip().lower()
+    cleaned = re.sub(r'\s+', '-', cleaned)
+    cleaned = re.sub(r'-+', '-', cleaned).strip('-')
+    return cleaned[:80] or 'news'
+
+
 def item_from_fields(source: dict, title: str, link: str, snippet: str = "", published_at: str = "", image_url: str = "", content_preview: str = "") -> dict | None:
     title = normalize_text(title)
     link = (link or "").strip()
@@ -244,9 +252,10 @@ def item_from_fields(source: dict, title: str, link: str, snippet: str = "", pub
         return None
     item_hash = make_hash(source["source_name"], title, link)
     category = category_by_text(f"{title} {snippet} {content_preview}", source.get("category_default", "news"))
+    slug = f"{source['source_id']}-{slugify(title)[:48]}-{item_hash[:6]}"
     return {
         "id": f"news_{item_hash[:12]}",
-        "slug": f"{source['source_id']}-{item_hash[:10]}",
+        "slug": slug,
         "source": source["source_name"],
         "source_id": source["source_id"],
         "source_group": source.get("source_group", "other"),
@@ -256,7 +265,7 @@ def item_from_fields(source: dict, title: str, link: str, snippet: str = "", pub
         "published_at": published_at,
         "title": title,
         "snippet": snippet[:500],
-        "content_preview": normalize_text(content_preview or snippet)[:2500],
+        "content_preview": normalize_text(content_preview or snippet)[:5000],
         "link": link,
         "image_url": (image_url or "").strip(),
         "category": category,
@@ -330,7 +339,7 @@ def article_detail_extract(source: dict, url: str) -> dict:
                 content_parts.append(txt)
         if content_parts:
             break
-    content_preview = ' '.join(content_parts)[:3500] if content_parts else ''
+    content_preview = ' '.join(content_parts)[:5000] if content_parts else ''
     if not summary:
         summary = content_preview[:420]
     return {
@@ -338,7 +347,7 @@ def article_detail_extract(source: dict, url: str) -> dict:
         'image_url': image_url,
         'published_at': published_at,
         'snippet': summary[:500],
-        'content_preview': content_preview[:3500],
+        'content_preview': content_preview[:5000],
     }
 
 
@@ -418,9 +427,7 @@ def extract_generic_links(soup: BeautifulSoup, source: dict, base_url: str) -> l
     for a in soup.select("a[href]"):
         href = urljoin(base_url, a.get("href", ""))
         title = normalize_text(a.get_text(" ", strip=True))
-        if not title or len(title) < 25:
-            continue
-        if href in seen:
+        if not title or len(title) < 25 or href in seen:
             continue
         lower = href.lower()
         if not any(token in lower for token in ["news", "press", "article", "novost", "media", "post", "/ru/news", "/news/"]):
@@ -466,7 +473,7 @@ def fetch_html_items(source: dict, url: str | None = None) -> list[dict]:
     return items
 
 
-def fetch_source_items(source: dict) -> tuple[list[dict], str, str]:
+def fetch_source_items(source: dict):
     candidates = [(source.get("fetch_method", "rss"), source.get("list_url", ""))]
     for fallback in source.get("fallbacks", []):
         candidates.append((fallback.get("fetch_method", source.get("fetch_method", "html")), fallback.get("list_url", "")))
@@ -477,7 +484,6 @@ def fetch_source_items(source: dict) -> tuple[list[dict], str, str]:
         try:
             items = fetch_rss_items(source, url) if method == "rss" else fetch_html_items(source, url)
             if items:
-                # enrich recent top items from article detail page
                 enriched = []
                 for idx, item in enumerate(items[:MAX_ITEMS_PER_SOURCE]):
                     if idx < ARTICLE_DETAIL_FETCH_LIMIT or idx < MIN_DETAIL_FETCH_PER_SOURCE:
@@ -489,7 +495,7 @@ def fetch_source_items(source: dict) -> tuple[list[dict], str, str]:
     return [], candidates[0][0], candidates[0][1], " | ".join(errors)
 
 
-def merge_with_existing(new_items: list[dict]) -> tuple[list[dict], bool]:
+def merge_with_existing(new_items: list[dict]):
     existing_payload = load_existing("news.json")
     existing_items = existing_payload.get("items", []) if isinstance(existing_payload, dict) else []
     existing_items = [x for x in existing_items if within_retention(x.get('published_at') or x.get('date', ''))]
@@ -507,8 +513,216 @@ def merge_with_existing(new_items: list[dict]) -> tuple[list[dict], bool]:
     return merged[:MAX_FINAL_ITEMS], used_cache
 
 
+def display_date(value: str) -> str:
+    if not value:
+        return "Дата уточняется"
+    try:
+        dt = datetime.fromisoformat(value.replace('Z', '+00:00'))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.astimezone(timezone.utc)
+        return dt.strftime('%d.%m.%Y, %H:%M')
+    except Exception:
+        return value
+
+
+def article_paragraphs(item: dict) -> list[str]:
+    raw = normalize_text(item.get('content_preview') or item.get('snippet') or '')
+    if not raw:
+        return []
+    parts = re.split(r'(?<=[.!?])\s+(?=[А-ЯA-Z0-9])', raw)
+    out, buf = [], ''
+    for p in [x.strip() for x in parts if x.strip()]:
+        if len((buf + ' ' + p).strip()) > 460:
+            if buf.strip():
+                out.append(buf.strip())
+            buf = p
+        else:
+            buf = (buf + ' ' + p).strip()
+    if buf.strip():
+        out.append(buf.strip())
+    return out[:10]
+
+
+def repo_static_url(item: dict) -> str:
+    return f"news/{item.get('slug') or item.get('id')}.html"
+
+
+def article_page_path(item: dict) -> str:
+    return os.path.join(BASE_DIR, repo_static_url(item))
+
+
+def absolute_news_url(item: dict) -> str:
+    return f"{SITE_URL}/{repo_static_url(item)}"
+
+
+def static_css() -> str:
+    return (
+        ':root{--ink:#0d0f14;--surface:#f5f3ef;--surface2:#eceae4;--accent:#e8a020;--blue:#2451a0;--muted:#6b7280;--border:#d8d3ca}'
+        '*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--surface);color:var(--ink);line-height:1.65}'
+        'a{text-decoration:none;color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}'
+        'header{background:var(--ink);border-bottom:2px solid var(--accent)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}'
+        '.logo{font-weight:800;font-size:1.9rem;color:#fff;letter-spacing:.04em}.logo span{color:var(--accent)}'
+        '.header-links{display:flex;gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.72);font-size:.95rem}.header-links a:hover{color:#fff}'
+        '.hero{padding:26px 0 14px;background:#fff;border-bottom:1px solid var(--border)}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:8px}'
+        '.hero h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin:0 0 10px;font-weight:800}.hero p{max-width:820px;color:#42526b}'
+        '.article-shell,.panel,.news-card,.stat{background:#fff;border:1px solid var(--border)}.article-shell{padding:28px;margin:28px 0 44px}.news-card{padding:18px;display:flex;flex-direction:column;gap:12px;height:100%}'
+        '.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news-media{aspect-ratio:16/9;border:1px solid var(--border);overflow:hidden;background:var(--surface2)}.news-media img{width:100%;height:100%;object-fit:cover;display:block}'
+        '.badge{display:inline-flex;padding:7px 12px;border:1px solid var(--border);background:var(--surface2);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em}.meta{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}'
+        '.lead{font-size:1.08rem;color:#23334e}.article-content{display:grid;gap:14px;color:#23334e}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;background:var(--accent);color:var(--ink);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.btn-outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}'
+        '.kicker{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.section{padding:10px 0 46px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:18px}.section-head h2{font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.1;margin:0}.muted{color:var(--muted)}'
+        '.filters{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.filters input,.filters select{padding:12px 14px;border:1px solid var(--border);background:#fff;font:inherit}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}.stat{padding:18px}.stat b{display:block;font-size:1.8rem;margin-top:8px}'
+        '.footer{background:var(--ink);color:#fff;padding:24px 0;margin-top:30px}.footer p{color:rgba(255,255,255,.68)}@media(max-width:960px){.news-grid,.stats{grid-template-columns:1fr 1fr}}@media(max-width:640px){.news-grid,.stats{grid-template-columns:1fr}.header-inner{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column}}'
+    )
+
+
+def build_article_html(item: dict, related: list[dict]) -> str:
+    title = escape(item.get('title') or 'Материал WIAF')
+    description = escape((item.get('snippet') or item.get('content_preview') or item.get('title') or '')[:220])
+    image_url = escape(item.get('image_url') or '')
+    canonical = absolute_news_url(item)
+    date_iso = item.get('published_at') or item.get('date') or ''
+    date_human = display_date(date_iso)
+    paragraphs = article_paragraphs(item) or ['Полный разбор и контекст доступны в оригинальном материале источника.']
+    category = escape(item.get('category_ru') or localize_category(item.get('category')))
+    source = escape(item.get('source') or 'WIAF')
+    original = escape(item.get('link') or SITE_URL)
+    lead = escape(item.get('snippet') or item.get('content_preview') or '')
+
+    related_cards = []
+    for r in related[:3]:
+        rel_img = f'<a class="news-media" href="{escape(os.path.basename(repo_static_url(r)))}"><img src="{escape(r.get("image_url") or "")}" alt="{escape(r.get("title") or "Материал")}"></a>' if r.get('image_url') else ''
+        related_cards.append(
+            f'<article class="news-card">{rel_img}'
+            f'<div class="meta"><span class="badge">{escape(r.get("category_ru") or localize_category(r.get("category")))}</span><span>{escape(display_date(r.get("published_at") or r.get("date") or ""))}</span></div>'
+            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="{escape(os.path.basename(repo_static_url(r)))}">{escape(r.get("title") or "Материал")}</a></h3>'
+            f'<div class="muted">{escape((r.get("snippet") or r.get("content_preview") or "")[:160])}</div></article>'
+        )
+    related_html = ''.join(related_cards) if related_cards else '<div class="panel" style="padding:18px">Связанные материалы появятся после следующего обновления.</div>'
+
+    ld_json = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": item.get('title') or 'Материал WIAF',
+        "datePublished": date_iso,
+        "dateModified": date_iso,
+        "author": {"@type": "Organization", "name": item.get('source') or 'WIAF'},
+        "publisher": {"@type": "Organization", "name": "WIAF"},
+        "mainEntityOfPage": canonical,
+        "description": (item.get('snippet') or item.get('content_preview') or '')[:220],
+    }, ensure_ascii=False)
+
+    og_image = f'<meta property="og:image" content="{image_url}">' if image_url else ''
+    image_block = f'<div class="news-media"><img src="{image_url}" alt="{title}"></div>' if image_url else ''
+    paragraphs_html = ''.join(f'<p>{escape(p)}</p>' for p in paragraphs)
+
+    return f'''<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title} — WIAF</title>
+<meta name="description" content="{description}">
+<link rel="canonical" href="{canonical}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title} — WIAF">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{canonical}">
+{og_image}
+<meta name="twitter:card" content="summary_large_image">
+<style>{static_css()}</style>
+<script type="application/ld+json">{ld_json}</script>
+</head>
+<body>
+<header><div class="wrap header-inner"><a class="logo" href="../index.html">WI<span>AF</span></a><div class="header-links"><a href="../index.html">Главная</a><a href="../blog.html">Блог</a><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Новости и сигналы рынка</div><h1>{title}</h1><p>{description}</p></div></section>
+<main class="wrap">
+  <article class="article-shell">
+    <div class="kicker"><div style="display:flex;gap:10px;flex-wrap:wrap"><span class="badge">{category}</span><span class="badge">{escape(item.get('transport_type') or 'смешанная')}</span></div><div class="muted">{escape(date_human)} · {source}</div></div>
+    {image_block}
+    <div class="lead">{lead}</div>
+    <div class="article-content">{paragraphs_html}</div>
+    <div class="actions"><a class="btn" href="{original}" target="_blank" rel="noopener">Читать в оригинале</a><a class="btn btn-outline" href="../blog.html">Назад в блог</a></div>
+  </article>
+  <section class="section">
+    <div class="section-head"><div><div class="eyebrow">Еще материалы</div><h2>Похожие новости и сигналы</h2></div></div>
+    <div class="news-grid">{related_html}</div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><p>WIAF — терминал рынка международной логистики. Новости, сигналы, ставки и аукционы.</p></div></footer>
+</body></html>'''
+
+
+def build_blog_html(items: list[dict]) -> str:
+    cards = []
+    for item in items[:120]:
+        title = escape(item.get('title') or 'Материал')
+        snippet = escape((item.get('snippet') or item.get('content_preview') or '')[:180])
+        date = escape(display_date(item.get('published_at') or item.get('date') or ''))
+        category = escape(item.get('category_ru') or localize_category(item.get('category')))
+        source = escape(item.get('source') or 'Источник')
+        transport = escape(item.get('transport_type') or 'смешанная')
+        image = f'<a class="news-media" href="{escape(repo_static_url(item))}"><img src="{escape(item.get("image_url") or "")}" alt="{title}"></a>' if item.get('image_url') else ''
+        cards.append(
+            f'<article class="news-card" data-source="{source}" data-category="{category}">{image}'
+            f'<div class="meta"><span class="badge">{category}</span><span>{date}</span></div>'
+            f'<h3 style="margin:0;font-size:1.1rem;line-height:1.2"><a href="{escape(repo_static_url(item))}">{title}</a></h3>'
+            f'<div class="muted">{snippet}</div><div class="meta"><span>{source}</span><span>{transport}</span></div></article>'
+        )
+    sources = sorted({(x.get('source') or '') for x in items if x.get('source')})
+    categories = sorted({(x.get('category_ru') or localize_category(x.get('category'))) for x in items})
+    options_source = ''.join(f'<option>{escape(v)}</option>' for v in sources)
+    options_cat = ''.join(f'<option>{escape(v)}</option>' for v in categories)
+    return f'''<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог WIAF — новости и сигналы рынка</title>
+<meta name="description" content="Блог WIAF: статические новости и сигналы рынка международной логистики за последние 12 месяцев.">
+<link rel="canonical" href="{SITE_URL}/blog.html">
+<style>{static_css()}</style>
+</head>
+<body>
+<header><div class="wrap header-inner"><a class="logo" href="index.html">WI<span>AF</span></a><div class="header-links"><a href="index.html">Главная</a><a href="blog.html">Блог</a><a href="https://wiaf.ru/Seller/Seller_login.php">Войти</a></div></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Блог и сигналы</div><h1>Все новости, сигналы и статьи рынка</h1><p>Статическая витрина публикаций WIAF: материалы за последние 12 месяцев, фильтрация по источнику и теме. Каждая карточка ведет на отдельную SEO-страницу материала.</p></div></section>
+<main class="wrap section">
+  <div class="stats"><div class="stat">Материалов<b>{len(items)}</b></div><div class="stat">Источников<b>{len(sources)}</b></div><div class="stat">Тем<b>{len(categories)}</b></div><div class="stat">Период<b>12 мес.</b></div></div>
+  <div class="filters"><input id="search" type="search" placeholder="Поиск по заголовкам и описанию"><select id="source"><option value="all">Все источники</option>{options_source}</select><select id="category"><option value="all">Все темы</option>{options_cat}</select></div>
+  <div class="news-grid" id="grid">{''.join(cards) if cards else '<div class="panel" style="padding:18px">Материалы появятся после ближайшего обновления.</div>'}</div>
+</main>
+<footer class="footer"><div class="wrap"><p>WIAF — терминал рынка международной логистики. Блог обновляется автоматически.</p></div></footer>
+<script>
+const q=document.getElementById('search'),s=document.getElementById('source'),c=document.getElementById('category'),cards=[...document.querySelectorAll('#grid .news-card')];
+function apply(){{const v=(q.value||'').toLowerCase().trim(),sv=s.value,cv=c.value;cards.forEach(card=>{{const txt=card.innerText.toLowerCase();const ok=(!v||txt.includes(v))&&(sv==='all'||card.dataset.source===sv)&&(cv==='all'||card.dataset.category===cv);card.style.display=ok?'':'none';}});}}
+[q,s,c].forEach(el=>el&&el.addEventListener('input',apply));[s,c].forEach(el=>el&&el.addEventListener('change',apply));
+</script>
+</body></html>'''
+
+
+def write_static_news(items: list[dict]):
+    ensure_dirs()
+    for filename in os.listdir(NEWS_DIR):
+        if filename.endswith('.html') or filename.endswith('.xml'):
+            try:
+                os.remove(os.path.join(NEWS_DIR, filename))
+            except Exception:
+                pass
+    for item in items:
+        related = [x for x in items if x.get('id') != item.get('id') and x.get('category') == item.get('category')][:3]
+        with open(article_page_path(item), 'w', encoding='utf-8') as f:
+            f.write(build_article_html(item, related))
+    with open(os.path.join(BASE_DIR, 'blog.html'), 'w', encoding='utf-8') as f:
+        f.write(build_blog_html(items))
+    sitemap_items = ''.join(
+        f'<url><loc>{escape(absolute_news_url(item))}</loc><lastmod>{escape((item.get("published_at") or item.get("date") or now_iso())[:19])}</lastmod></url>'
+        for item in items[:500]
+    )
+    with open(os.path.join(NEWS_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemap_items}</urlset>')
+
+
 def main():
-    ensure_data_dir()
+    ensure_dirs()
     all_news = []
     source_status = []
     active_sources = sorted(
@@ -518,9 +732,6 @@ def main():
     )
 
     for source in active_sources:
-        error_text = ""
-        used_method = source.get("fetch_method", "")
-        used_url = source.get("list_url", "")
         try:
             items, used_method, used_url, error_text = fetch_source_items(source)
             retained = []
@@ -553,7 +764,7 @@ def main():
                 "checked_at": now_iso(),
                 "error": error_text[:450],
             })
-            print(f"{source['source_name']}: retained={len(retained)}, raw={len(items)}, stale={stale_count}, missing_date={missing_date_count}")
+            print(f"{source['source_name']}: retained={len(retained)}, raw={len(items)}")
         except Exception as e:
             source_status.append({
                 "source_id": source["source_id"],
@@ -574,8 +785,7 @@ def main():
             })
             print(f"ERROR in {source['source_name']}: {e}")
 
-    unique = []
-    seen = set()
+    unique, seen = [], set()
     for item in sorted(all_news, key=lambda x: (sort_key_date(x.get('published_at') or x.get('date')), x.get('priority', 0)), reverse=True):
         key = item.get('hash')
         if key in seen:
@@ -584,6 +794,10 @@ def main():
         unique.append(item)
 
     merged_news, used_cache = merge_with_existing(unique)
+    for item in merged_news:
+        item['static_url'] = repo_static_url(item)
+        item['canonical_url'] = absolute_news_url(item)
+
     summary = {
         "updated_at": now_iso(),
         "retention_days": RETENTION_DAYS,
@@ -601,6 +815,7 @@ def main():
 
     save_json("news.json", {"updated_at": now_iso(), "cache_used": used_cache, "retention_days": RETENTION_DAYS, "cutoff_date": cutoff_iso(), "items": merged_news})
     save_json("source_status.json", {"updated_at": now_iso(), "summary": summary, "items": source_status})
+    write_static_news(merged_news)
     print(f"Saved {len(merged_news)} news items from {len(active_sources)} active sources; fetched now={len(unique)}; cache_used={used_cache}")
 
 

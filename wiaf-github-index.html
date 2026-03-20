@@ -138,7 +138,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-indices" onclick="goTo('indices')">Ставки и индексы</button>
       <button class="nav-item" id="nav-directions" onclick="goTo('directions')">Направления</button>
       <button class="nav-item" id="nav-auctions" onclick="goTo('auctions')">Аукционы</button>
-      <button class="nav-item" id="nav-blog" onclick="goTo('blog')">Блог</button>
+      <button class="nav-item" id="nav-blog" onclick="openBlogPage()">Блог</button>
       <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
       <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
@@ -206,22 +206,28 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 
   <section class="section">
-    <div class="wrap grid-2">
-      <div>
-        <div class="section-head" style="margin-bottom:18px;align-items:center">
-          <div>
-            <div class="section-eyebrow">Новости и сигналы</div>
-            <h2>Последние новости и сигналы рынка</h2>
-          </div>
-          <button class="btn btn-outline" onclick="goTo('blog')">Весь блог</button>
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:18px;align-items:center">
+        <div>
+          <div class="section-eyebrow">Новости и сигналы</div>
+          <h2>Последние новости и сигналы рынка</h2>
         </div>
-        <div class="grid-3" id="home-news"></div>
+        <button class="btn btn-outline" onclick="openBlogPage()">Весь блог</button>
       </div>
-      <div>
-        <div class="section-eyebrow">Ограниченная витрина аукционов</div>
-        <h2 style="margin-bottom:18px">Текущая активность аукционов</h2>
-        <div class="grid-3" id="home-auctions"></div>
+      <div class="grid-3" id="home-news"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:18px;align-items:center">
+        <div>
+          <div class="section-eyebrow">Ограниченная витрина аукционов</div>
+          <h2>Текущая активность аукционов</h2>
+        </div>
+        <button class="btn btn-outline" onclick="goTo('auctions')">Все аукционы</button>
       </div>
+      <div class="grid-3" id="home-auctions"></div>
     </div>
   </section>
 </div>
@@ -491,7 +497,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
         <div class="article-content" id="article-content"></div>
         <div class="article-actions">
           <button class="btn btn-accent" id="article-original-btn">Читать в оригинале</button>
-          <button class="btn btn-outline" onclick="goTo('blog')">Назад в блог</button>
+          <button class="btn btn-outline" onclick="openBlogPage()">Назад в блог</button>
         </div>
       </div>
     </div>
@@ -511,7 +517,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
           <a onclick="goTo('market')">Рынок</a>
           <a onclick="goTo('indices')">Ставки и индексы</a>
           <a onclick="goTo('directions')">Направления</a>
-          <a onclick="goTo('blog')">Блог</a>
+          <a onclick="openBlogPage()">Блог</a>
           <a onclick="goTo('analytics')">Аналитика</a>
         </div>
       </div>
@@ -547,7 +553,12 @@ const ROUTE_META = {
   article: { title: 'Материал — WIAF' }
 };
 
+function repoPath(path){
+  const clean = String(path || '').replace(/^\/+/, '');
+  return REPO_BASE ? `${REPO_BASE}/${clean}` : `/${clean}`;
+}
 function openExternal(url){ window.location.href = url; }
+function openBlogPage(){ window.location.href = repoPath('blog.html'); }
 function goTo(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelector(`#page-${page}`)?.classList.add('active');
@@ -624,17 +635,21 @@ function localizeCategory(v='news'){
   };
   return map[key] || 'новости';
 }
+function articleHref(n){
+  return repoPath(n.static_url || `news/${n.slug || n.id || 'article'}.html`);
+}
+
 function renderNewsArticle(n, compact=false){
   const title = safeText(n.title);
   const snippet = safeText(n.content_preview || n.snippet || '').slice(0, compact ? 160 : 260);
   const date = formatDateRu(n.published_at || n.date || '');
   const category = localizeCategory(n.category_ru || n.category);
   const transport = localizeTransport(n.transport_type || 'unknown');
-  const open = `goToArticle(\"${n.id || ''}\")`;
+  const href = articleHref(n);
   return `<article class="news-card">
-    ${n.image_url ? `<button class="news-link-btn news-media" onclick='${open}'><img src="${n.image_url}" alt="${title}" loading="lazy"></button>` : ''}
+    ${n.image_url ? `<a class="news-media" href="${href}"><img src="${n.image_url}" alt="${title}" loading="lazy"></a>` : ''}
     <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="badge">${category}</div><div class="small muted">${transport}</div></div>
-    <h3><button class="news-link-btn" onclick='${open}'>${title}</button></h3>
+    <h3><a href="${href}">${title}</a></h3>
     <p class="muted small">${snippet}</p>
     <div class="news-meta"><span>${n.source || 'Источник'}</span><span>${date || 'Дата уточняется'}</span></div>
   </article>`;
