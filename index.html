@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.383.0/umd/lucide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="./public/config.js"></script>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -466,8 +467,23 @@ function goTo(page){
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
+const APP_CONFIG = window.WIAF_CONFIG || {};
+const LOCAL_DATA_BASE = APP_CONFIG.localBase || './public/data';
+const SHEET_API_BASE = APP_CONFIG.sheetApiBase || '';
+const SHEET_ENDPOINTS = APP_CONFIG.sheetEndpoints || {};
+
+function resolveDataUrl(entity){
+  const direct = SHEET_ENDPOINTS[entity];
+  if (direct) return direct;
+  if (SHEET_API_BASE) {
+    const base = SHEET_API_BASE.replace(/\/$/, '');
+    return `${base}?entity=${encodeURIComponent(entity)}&ts=${Date.now()}`;
+  }
+  return `${LOCAL_DATA_BASE}/${entity}.json?v=${Date.now()}`;
+}
+
 async function fetchJson(path){
-  const res = await fetch(path + '?v=' + Date.now());
+  const res = await fetch(path);
   if(!res.ok) throw new Error(path + ' not loaded');
   return res.json();
 }
@@ -478,10 +494,10 @@ function trendBadge(v){ return `<span class="badge">${v >= 0 ? '▲' : '▼'} ${
 async function loadData(){
   try {
     const [news, rates, indices, stats] = await Promise.all([
-      fetchJson('./public/data/news.json'),
-      fetchJson('./public/data/rates.json'),
-      fetchJson('./public/data/indices.json'),
-      fetchJson('./public/data/market_stats.json')
+      fetchJson(resolveDataUrl('news')),
+      fetchJson(resolveDataUrl('rates')),
+      fetchJson(resolveDataUrl('indices')),
+      fetchJson(resolveDataUrl('market_stats'))
     ]);
 
     renderHome(news.items, rates.items, indices.items, stats.items || []);

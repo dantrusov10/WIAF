@@ -1,28 +1,24 @@
-# WIAF — updated MVP
+# WIAF
 
-Обновлённый статический репозиторий под многостраничный терминал рынка.
+Обновлённый репозиторий для статического MVP терминала рынка.
 
-## Что добавлено
-- Яндекс.Метрика `108163869`
-- новые разделы: рынок, ставки и индексы, направления, аукционы, аналитика, страницы для импортёра и экспедитора
-- кликабельные CTA на реальные URL входа и регистрации
-- загрузка данных из `public/data/*.json`
-- базовый Python-парсер и GitHub Actions по расписанию
-- заготовка Apps Script API
+## Что внутри
 
-## Основные внешние ссылки
-- Вход: `https://wiaf.ru/Seller/Seller_login.php`
-- Регистрация импортёра: `https://wiaf.ru/Seller/Captcha/Seller_ca_OOO.php`
-- Регистрация экспедитора: `https://wiaf.ru/BUYER/Captcha/Buyer_ca_OOO.php`
+- `index.html` — витрина сайта
+- `public/data/*.json` — локальные данные для быстрого запуска
+- `public/config.js` — переключение между локальными JSON и Google Sheets API
+- `.github/workflows/update-data.yml` — автозапуск парсера через GitHub Actions
+- `scripts/` — Python-парсер и настройки источников
+- `google-apps-script/api.gs` — API для Google Sheets
 
-## Структура
-- `index.html` — основной фронт
-- `public/data/` — JSON-данные для витрины
-- `scripts/` — парсер и источники
-- `.github/workflows/update-data.yml` — автообновление данных
-- `google-apps-script/api.gs` — JSON endpoint из Google Sheets
+## Как включить Google Sheets
 
-## Дальше
-1. Подменить тестовые JSON на реальные выгрузки.
-2. Настроить секреты GitHub, если будете писать обратно в Sheets.
-3. Разбить SPA на отдельные HTML/маршруты, если пойдёте в полноценную SEO-структуру на Next.js/Astro.
+1. Открой `google-apps-script/api.gs`
+2. Вставь код в Apps Script, привязанный к таблице
+3. Задеплой как Web App
+4. В `public/config.js` вставь URL в `sheetApiBase`
+5. Перезалей сайт
+
+## Локальный режим
+
+Пока `sheetApiBase` пустой, сайт использует `public/data/*.json`.
