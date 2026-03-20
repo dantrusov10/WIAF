@@ -107,6 +107,10 @@ nav{display:flex;gap:2px;flex-wrap:wrap;align-items:center}
 .table-wrap{overflow:auto;border:1px solid var(--border);background:#fff}.data-table{width:100%;border-collapse:collapse;min-width:720px}.data-table th,.data-table td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;font-size:.92rem}.data-table th{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);background:var(--surface2)}
 .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--border);background:var(--surface2)}
 .route-card,.news-card,.auction-card,.persona-card{background:#fff;border:1px solid var(--border);padding:22px;display:flex;flex-direction:column;gap:12px}
+.news-card{height:100%}
+.news-media{aspect-ratio:16/9;overflow:hidden;border:1px solid var(--border);background:var(--surface2);margin:-2px -2px 2px;border-radius:2px}
+.news-media img{width:100%;height:100%;object-fit:cover;display:block}
+.news-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
 .route-title,.news-card h3,.auction-route,.persona-card h3{font-family:'Unbounded',sans-serif;font-size:1rem;line-height:1.25}
 .price{font-family:'Unbounded',sans-serif;font-size:1.5rem}
 .small{font-size:.84rem}
@@ -554,13 +558,48 @@ function normalizeItems(data){
 
 function formatMoney(v, c='USD', u=''){ return `${Number(v || 0).toLocaleString('ru-RU')} ${c}${u ? ' / ' + u : ''}`; }
 function safeText(value=''){ return String(value || '').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(); }
+function formatDateRu(value=''){
+  if(!value) return '';
+  const norm = String(value).includes('T') ? value : `${value}T00:00:00`;
+  const d = new Date(norm);
+  if (Number.isNaN(d.getTime())) return String(value);
+  return d.toLocaleDateString('ru-RU', {day:'2-digit', month:'2-digit', year:'numeric'});
+}
+function sortNewsByDate(items=[]){
+  return [...items].sort((a,b)=>{
+    const da = new Date((a.date||a.published_at||'1970-01-01') + ((a.date||a.published_at||'').includes('T')?'':'T00:00:00')).getTime() || 0;
+    const db = new Date((b.date||b.published_at||'1970-01-01') + ((b.date||b.published_at||'').includes('T')?'':'T00:00:00')).getTime() || 0;
+    return db - da;
+  });
+}
 function localizeTransport(v='unknown'){
-  const map = {sea:'морская', ocean:'морская', rail:'железнодорожная', road:'авто', truck:'авто', air:'авиа', multimodal:'мультимодальная', unknown:'смешанная'};
-  return map[String(v).toLowerCase()] || v;
+  const map = {sea:'морская', ocean:'морская', rail:'железнодорожная', road:'авто', truck:'авто', air:'авиа', multimodal:'мультимодальная', unknown:'смешанная', mixed:'смешанная'};
+  return map[String(v).toLowerCase()] || 'смешанная';
 }
 function localizeCategory(v='news'){
-  const map = {news:'новости', analytics:'аналитика', rates:'ставки', ports:'порты', tender:'тендер', signal:'сигнал'};
-  return map[String(v).toLowerCase()] || v;
+  const key = String(v||'news').toLowerCase();
+  const map = {
+    news:'новости', analytics:'аналитика', analysis:'аналитика', rates:'ставки', rate:'ставки', pricing:'ставки',
+    ports:'порты', port:'порты', rail:'железная дорога', railway:'железная дорога', road:'автологистика',
+    regulation:'регулирование', customs:'таможня', sanctions:'ограничения', restrictions:'ограничения',
+    operator_news:'новости операторов', infrastructure:'инфраструктура', sea:'морская логистика',
+    multimodal:'мультимодальная логистика', tender:'тендер', signal:'сигнал', market:'рынок'
+  };
+  return map[key] || 'новости';
+}
+function renderNewsArticle(n, compact=false){
+  const title = safeText(n.title);
+  const snippet = safeText(n.content_preview || n.snippet || '').slice(0, compact ? 140 : 220);
+  const date = formatDateRu(n.date || n.published_at || '');
+  const category = localizeCategory(n.category_ru || n.category);
+  const transport = localizeTransport(n.transport_type || 'unknown');
+  return `<article class="news-card">
+    ${n.image_url ? `<a class="news-media" href="${n.link || '#'}" target="_blank" rel="noopener"><img src="${n.image_url}" alt="${title}" loading="lazy"></a>` : ''}
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="badge">${category}</div><div class="small muted">${transport}</div></div>
+    <h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${title}</a></h3>
+    <p class="muted small">${snippet}</p>
+    <div class="news-meta"><span>${n.source || 'Источник'}</span><span>${date}</span></div>
+  </article>`;
 }
 
 async function loadData(){
@@ -578,7 +617,7 @@ async function loadData(){
   const statsData = statsRes.status === 'fulfilled' ? statsRes.value : {items: [], auctions: []};
   const sourceStatusData = sourceStatusRes.status === 'fulfilled' ? sourceStatusRes.value : {items: []};
 
-  const news = normalizeItems(newsData);
+  const news = sortNewsByDate(normalizeItems(newsData));
   const rates = normalizeItems(ratesData);
   const indices = normalizeItems(indicesData);
   const stats = normalizeItems(statsData);
@@ -615,7 +654,7 @@ function renderHome(news, rates, indices, statsItems, auctions){
   if (routesEl) routesEl.innerHTML = rates.slice(0,3).map(r => `<div class="route-card"><div class="badge">${localizeTransport(r.transport_type)}</div><div class="route-title">${r.direction_name}</div><div class="price">${formatMoney(r.value, r.currency, r.unit)}</div><div class="small muted">Источник: ${r.source || 'WIAF'} · ${r.date || ''}</div><button class="btn btn-outline" onclick="goTo('directions')">Открыть направление</button></div>`).join('') || '<div class="empty-note">Данные по направлениям скоро появятся.</div>';
 
   const newsEl = document.getElementById('home-news');
-  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 180)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''}</div></article>`).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
+  if (newsEl) newsEl.innerHTML = news.slice(0,3).map(n => renderNewsArticle(n, true)).join('') || '<div class="empty-note">Новости загружаются. Проверьте обновлённый news.json.</div>';
 
   const auctionsEl = document.getElementById('home-auctions');
   const list = auctions && auctions.length ? auctions : window.MARKET_AUCTIONS || [];
@@ -711,7 +750,7 @@ function renderBlog(news){
       ['Тем', new Set(filtered.map(n => localizeCategory(n.category || 'news'))).size],
       ['Типов перевозки', new Set(filtered.map(n => localizeTransport(n.transport_type || 'unknown'))).size]
     ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div></div>`).join('');
-    grid.innerHTML = filtered.map(n => `<article class="news-card"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="badge">${localizeCategory(n.category)}</div><div class="small muted">${localizeTransport(n.transport_type || 'unknown')}</div></div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 220)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''}</div></article>`).join('') || '<div class="empty-note">В блоге пока нет материалов. После следующего прогона парсера карточки появятся здесь автоматически.</div>';
+    grid.innerHTML = filtered.map(n => renderNewsArticle(n)).join('') || '<div class="empty-note">В блоге пока нет материалов. После следующего прогона парсера карточки появятся здесь автоматически.</div>';
   }
   [searchEl, sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('input', draw));
   [sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('change', draw));
@@ -732,7 +771,7 @@ function renderAnalytics(news, sourceStatusData){
   ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div><div class="small muted">${x[0] === 'Успешных проверок' ? `получено записей: ${fetched}` : '&nbsp;'}</div></div>`).join('');
 
   const srcList = document.getElementById('analytics-sources');
-  if(srcList) srcList.innerHTML = items.slice(0,10).map(i => `<div class="list-item">• <strong>${i.source_name}</strong>: ${i.status === 'ok' ? 'ok' : 'error'}${i.items_count ? ` · ${i.items_count} материалов` : ''}${i.error ? ` · ${safeText(i.error).slice(0,120)}` : ''}</div>`).join('') || '<div class="empty-note">Статус источников пока не загружен.</div>';
+  if(srcList) srcList.innerHTML = items.slice(0,10).map(i => `<div class="list-item">• <strong>${i.source_name}</strong>: ${i.status === 'ok' ? 'работает' : i.status === 'empty' ? 'пусто' : 'ошибка'}${i.items_count ? ` · ${i.items_count} материалов` : ''}${i.error ? ` · ${safeText(i.error).slice(0,120)}` : ''}</div>`).join('') || '<div class="empty-note">Статус источников пока не загружен.</div>';
 
   const hi = document.getElementById('analytics-highlights');
   if(hi) hi.innerHTML = [
