@@ -133,6 +133,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
       <button class="nav-item" id="nav-indices" onclick="goTo('indices')">Ставки и индексы</button>
       <button class="nav-item" id="nav-directions" onclick="goTo('directions')">Направления</button>
       <button class="nav-item" id="nav-auctions" onclick="goTo('auctions')">Аукционы</button>
+      <button class="nav-item" id="nav-blog" onclick="goTo('blog')">Блог</button>
       <button class="nav-item" id="nav-analytics" onclick="goTo('analytics')">Аналитика</button>
       <div class="nav-divider"></div>
       <button class="nav-item" id="nav-importer" onclick="goTo('importer')">Импортёру</button>
@@ -202,8 +203,13 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   <section class="section">
     <div class="wrap grid-2">
       <div>
-        <div class="section-eyebrow">Новости и сигналы</div>
-        <h2 style="margin-bottom:18px">Последние новости и сигналы рынка</h2>
+        <div class="section-head" style="margin-bottom:18px;align-items:center">
+          <div>
+            <div class="section-eyebrow">Новости и сигналы</div>
+            <h2>Последние новости и сигналы рынка</h2>
+          </div>
+          <button class="btn btn-outline" onclick="goTo('blog')">Весь блог</button>
+        </div>
         <div class="grid-3" id="home-news"></div>
       </div>
       <div>
@@ -294,15 +300,45 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
   </section>
 </div>
 
+<div class="page" id="page-blog">
+  <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Блог</span></div></div>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="section-eyebrow">Блог и сигналы</div><h2>Все статьи, новости и сигналы рынка</h2></div>
+        <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Войти в терминал</button>
+      </div>
+      <div class="filter-bar">
+        <input id="blog-search" type="search" placeholder="Поиск по заголовкам и описанию" style="max-width:360px" />
+        <select id="blog-source" style="max-width:220px"><option value="all">Все источники</option></select>
+        <select id="blog-category" style="max-width:220px"><option value="all">Все темы</option></select>
+        <select id="blog-transport" style="max-width:220px"><option value="all">Все типы перевозки</option></select>
+      </div>
+      <div class="grid-4" id="blog-stats" style="margin-bottom:20px"></div>
+      <div class="grid-3" id="blog-grid"></div>
+    </div>
+  </section>
+</div>
+
 <div class="page" id="page-analytics">
   <div class="breadcrumb"><div class="bc-inner"><span class="bc-item" onclick="goTo('home')">Главная</span><span>›</span><span>Аналитика</span></div></div>
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div><div class="section-eyebrow">Аналитика</div><h2>Новости, обзоры, рыночные сигналы</h2></div>
+        <div><div class="section-eyebrow">Аналитика</div><h2>Статус источников, покрытие и активность витрины</h2></div>
         <button class="btn btn-outline" onclick="openExternal('https://wiaf.ru/Seller/Seller_login.php')">Расширенный доступ</button>
       </div>
-      <div class="grid-3" id="analytics-grid"></div>
+      <div class="grid-4" id="analytics-kpis" style="margin-bottom:20px"></div>
+      <div class="grid-2">
+        <div class="panel">
+          <div class="section-eyebrow">Состояние источников</div>
+          <div class="list" id="analytics-sources"></div>
+        </div>
+        <div class="panel">
+          <div class="section-eyebrow">Что видно в публичной витрине</div>
+          <div class="list" id="analytics-highlights"></div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -440,6 +476,7 @@ input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--border
           <a onclick="goTo('market')">Рынок</a>
           <a onclick="goTo('indices')">Ставки и индексы</a>
           <a onclick="goTo('directions')">Направления</a>
+          <a onclick="goTo('blog')">Блог</a>
           <a onclick="goTo('analytics')">Аналитика</a>
         </div>
       </div>
@@ -466,6 +503,7 @@ const ROUTE_META = {
   indices: { title: 'Ставки и индексы — WIAF' },
   directions: { title: 'Направления — WIAF' },
   auctions: { title: 'Витрина аукционов — WIAF' },
+  blog: { title: 'Блог — WIAF' },
   analytics: { title: 'Аналитика — WIAF' },
   importer: { title: 'Для импортёров — WIAF' },
   forwarder: { title: 'Для экспедиторов — WIAF' },
@@ -526,17 +564,19 @@ function localizeCategory(v='news'){
 }
 
 async function loadData(){
-  const [newsRes, ratesRes, indicesRes, statsRes] = await Promise.allSettled([
+  const [newsRes, ratesRes, indicesRes, statsRes, sourceStatusRes] = await Promise.allSettled([
     fetchJson(resolveDataUrl('news')),
     fetchJson(resolveDataUrl('rates')),
     fetchJson(resolveDataUrl('indices')),
-    fetchJson(resolveDataUrl('market_stats'))
+    fetchJson(resolveDataUrl('market_stats')),
+    fetchJson(resolveDataUrl('source_status'))
   ]);
 
   const newsData = newsRes.status === 'fulfilled' ? newsRes.value : {items: []};
   const ratesData = ratesRes.status === 'fulfilled' ? ratesRes.value : {items: []};
   const indicesData = indicesRes.status === 'fulfilled' ? indicesRes.value : {items: []};
   const statsData = statsRes.status === 'fulfilled' ? statsRes.value : {items: [], auctions: []};
+  const sourceStatusData = sourceStatusRes.status === 'fulfilled' ? sourceStatusRes.value : {items: []};
 
   const news = normalizeItems(newsData);
   const rates = normalizeItems(ratesData);
@@ -549,7 +589,8 @@ async function loadData(){
   renderIndices(indices, rates);
   renderDirections(rates, news);
   renderAuctions(auctions);
-  renderAnalytics(news);
+  renderBlog(news);
+  renderAnalytics(news, sourceStatusData);
 }
 
 function renderHome(news, rates, indices, statsItems, auctions){
@@ -638,9 +679,68 @@ function renderAuctions(auctions){
   if (grid) grid.innerHTML = window.MARKET_AUCTIONS.map(a => `<div class="auction-card"><div class="badge">${a.status}</div><div class="auction-route">${a.route}</div><div class="small muted">${a.cargo} · ${a.delivery_type}</div><div class="metric">${a.participants}</div><div class="small muted">участника / интерес к лоту</div><button class="btn btn-outline" onclick="openExternal('${a.cta}')">Детали после входа</button></div>`).join('');
 }
 
-function renderAnalytics(news){
-  const grid = document.getElementById('analytics-grid');
-  if (grid) grid.innerHTML = news.slice(0,9).map(n => `<article class="news-card"><div class="badge">${localizeCategory(n.category)}</div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 220)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''} · ${localizeTransport(n.transport_type || 'unknown')}</div></article>`).join('') || '<div class="empty-note">Аналитика скоро появится.</div>';
+function renderBlog(news){
+  const searchEl = document.getElementById('blog-search');
+  const sourceEl = document.getElementById('blog-source');
+  const categoryEl = document.getElementById('blog-category');
+  const transportEl = document.getElementById('blog-transport');
+  const grid = document.getElementById('blog-grid');
+  const stats = document.getElementById('blog-stats');
+  if(!grid) return;
+  const sources = ['all', ...new Set(news.map(n => n.source).filter(Boolean))];
+  const categories = ['all', ...new Set(news.map(n => localizeCategory(n.category || 'news')).filter(Boolean))];
+  const transports = ['all', ...new Set(news.map(n => localizeTransport(n.transport_type || 'unknown')).filter(Boolean))];
+  if(sourceEl) sourceEl.innerHTML = sources.map(v => `<option value="${v}">${v === 'all' ? 'Все источники' : v}</option>`).join('');
+  if(categoryEl) categoryEl.innerHTML = categories.map(v => `<option value="${v}">${v === 'all' ? 'Все темы' : v}</option>`).join('');
+  if(transportEl) transportEl.innerHTML = transports.map(v => `<option value="${v}">${v === 'all' ? 'Все типы перевозки' : v}</option>`).join('');
+  function draw(){
+    const q = (searchEl?.value || '').toLowerCase().trim();
+    const source = sourceEl?.value || 'all';
+    const category = categoryEl?.value || 'all';
+    const transport = transportEl?.value || 'all';
+    const filtered = news.filter(n => {
+      const hay = `${n.title || ''} ${n.snippet || ''}`.toLowerCase();
+      return (!q || hay.includes(q))
+        && (source === 'all' || (n.source || '') === source)
+        && (category === 'all' || localizeCategory(n.category || 'news') === category)
+        && (transport === 'all' || localizeTransport(n.transport_type || 'unknown') === transport);
+    });
+    if(stats) stats.innerHTML = [
+      ['Материалов', filtered.length],
+      ['Источников', new Set(filtered.map(n => n.source).filter(Boolean)).size],
+      ['Тем', new Set(filtered.map(n => localizeCategory(n.category || 'news'))).size],
+      ['Типов перевозки', new Set(filtered.map(n => localizeTransport(n.transport_type || 'unknown'))).size]
+    ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div></div>`).join('');
+    grid.innerHTML = filtered.map(n => `<article class="news-card"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="badge">${localizeCategory(n.category)}</div><div class="small muted">${localizeTransport(n.transport_type || 'unknown')}</div></div><h3><a href="${n.link || '#'}" target="_blank" rel="noopener">${safeText(n.title)}</a></h3><p class="muted small">${safeText(n.snippet).slice(0, 220)}</p><div class="small muted">${n.source || 'Источник'} · ${n.date || ''}</div></article>`).join('') || '<div class="empty-note">В блоге пока нет материалов. После следующего прогона парсера карточки появятся здесь автоматически.</div>';
+  }
+  [searchEl, sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('input', draw));
+  [sourceEl, categoryEl, transportEl].forEach(el => el && el.addEventListener('change', draw));
+  draw();
+}
+
+function renderAnalytics(news, sourceStatusData){
+  const items = Array.isArray(sourceStatusData?.items) ? sourceStatusData.items : [];
+  const ok = items.filter(i => i.status === 'ok');
+  const errors = items.filter(i => i.status === 'error');
+  const fetched = ok.reduce((sum, i) => sum + Number(i.items_count || 0), 0);
+  const kpis = document.getElementById('analytics-kpis');
+  if(kpis) kpis.innerHTML = [
+    ['Активных источников', items.length],
+    ['Успешных проверок', ok.length],
+    ['Ошибок', errors.length],
+    ['Материалов в витрине', news.length]
+  ].map(x => `<div class="panel"><div class="section-eyebrow">${x[0]}</div><div class="metric">${x[1]}</div><div class="small muted">${x[0] === 'Успешных проверок' ? `получено записей: ${fetched}` : '&nbsp;'}</div></div>`).join('');
+
+  const srcList = document.getElementById('analytics-sources');
+  if(srcList) srcList.innerHTML = items.slice(0,10).map(i => `<div class="list-item">• <strong>${i.source_name}</strong>: ${i.status === 'ok' ? 'ok' : 'error'}${i.items_count ? ` · ${i.items_count} материалов` : ''}${i.error ? ` · ${safeText(i.error).slice(0,120)}` : ''}</div>`).join('') || '<div class="empty-note">Статус источников пока не загружен.</div>';
+
+  const hi = document.getElementById('analytics-highlights');
+  if(hi) hi.innerHTML = [
+    `• Последнее обновление источников: ${sourceStatusData?.updated_at || '—'}`,
+    `• Материалов в публичном блоге: ${news.length}`,
+    `• Основные источники: ${ok.slice(0,4).map(i => i.source_name).join(', ') || 'данные уточняются'}`,
+    `• Лента не обнуляется, если новый прогон не нашёл материалов.`
+  ].map(s => `<div class="list-item">${s}</div>`).join('');
 }
 
 window.addEventListener('DOMContentLoaded', () => {
