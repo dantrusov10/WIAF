@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-21T20:34:08+00:00",
+  "updated_at": "2026-03-21T21:32:08+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-21T20:34:08+00:00",
+  "cutoff_date": "2025-03-21T21:32:08+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1560,6 +1560,31 @@
       "status": "published",
       "static_url": "news/delo-ruskon-obespechit-multimodalnyy-servis-dlya-oper-c93801.html",
       "canonical_url": "https://wiaf.ru/news/delo-ruskon-obespechit-multimodalnyy-servis-dlya-oper-c93801.html"
+    },
+    {
+      "id": "news_1a073ea9e27b",
+      "slug": "rzd_partner-kitayskaya-new-shipping-line-planiruet-vypolnit--1a073e",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-03-16T12:58:22+00:00",
+      "published_at": "2026-03-16T12:58:22+00:00",
+      "title": "Китайская New Shipping Line планирует выполнить до 20 рейсов по Севморпути в 2026 году",
+      "snippet": "От 15 до 20 рейсов судов с грузами отправит в 2026 году по Северному морскому пути компания New Shipping Line (КНР).",
+      "content_preview": "Китайская New Shipping Line планирует выполнить до 20 рейсов по Севморпути в 2026 году",
+      "link": "https://www.rzd-partner.ru/wate-transport/news/kitayskaya-new-shipping-line-planiruet-vypolnit-do-20-reysov-po-sevmorputi-v-2026-godu/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "1a073ea9e27b17187b15f0a4b9fb600b",
+      "status": "published",
+      "static_url": "news/rzd_partner-kitayskaya-new-shipping-line-planiruet-vypolnit--1a073e.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-kitayskaya-new-shipping-line-planiruet-vypolnit--1a073e.html"
     },
     {
       "id": "news_2ad121e2181b",
