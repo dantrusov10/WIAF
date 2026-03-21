@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-21T07:38:27+00:00",
+  "updated_at": "2026-03-21T08:41:29+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-21T07:38:27+00:00",
+  "cutoff_date": "2025-03-21T08:41:29+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -591,7 +591,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "8e03d3c9b9afa617c8e7f397d4d68057",
       "status": "published",
       "static_url": "news/portnews-mazut-protiv-biotopliva-kto-kogo-8e03d3.html",
