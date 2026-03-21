@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-21T06:53:49+00:00",
+  "updated_at": "2026-03-21T07:38:27+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-21T06:53:49+00:00",
+  "cutoff_date": "2025-03-21T07:38:27+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1405,7 +1405,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "ee04aace244aba52097940e592a15fcf",
       "status": "published",
       "static_url": "news/rzd_partner-ekspert-eksportnye-otgruzki-uglya-na-seti-rzhd-v-ee04aa.html",
