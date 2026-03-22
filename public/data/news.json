@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-22T02:37:38+00:00",
+  "updated_at": "2026-03-22T04:58:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-22T02:37:38+00:00",
+  "cutoff_date": "2025-03-22T04:58:14+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1360,6 +1360,31 @@
       "status": "published",
       "static_url": "news/infranews-neco-line-zapustila-novyy-morskoy-servis-mezhdu--2168e1.html",
       "canonical_url": "https://wiaf.ru/news/infranews-neco-line-zapustila-novyy-morskoy-servis-mezhdu--2168e1.html"
+    },
+    {
+      "id": "news_3b33fa69bfe1",
+      "slug": "rzd_partner-rzhd-zavershat-remont-vokzala-v-smolenske-k-kont-3b33fa",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-03-17T12:46:40+00:00",
+      "published_at": "2026-03-17T12:46:40+00:00",
+      "title": "РЖД завершат ремонт вокзала в Смоленске к концу лета 2026 года",
+      "snippet": "ОАО «РЖД» намерено завершить ремонт вокзального комплекса в Смоленске к концу лета 2026 года. Об этом сообщили в холдинге.",
+      "content_preview": "РЖД завершат ремонт вокзала в Смоленске к концу лета 2026 года",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/rzhd-zavershat-remont-vokzala-v-smolenske-k-kontsu-leta-2026-goda/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "3b33fa69bfe19ed6f56fbdd28a77f21e",
+      "status": "published",
+      "static_url": "news/rzd_partner-rzhd-zavershat-remont-vokzala-v-smolenske-k-kont-3b33fa.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-rzhd-zavershat-remont-vokzala-v-smolenske-k-kont-3b33fa.html"
     },
     {
       "id": "news_1fd699844128",
