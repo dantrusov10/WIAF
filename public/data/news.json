@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-22T14:34:03+00:00",
+  "updated_at": "2026-03-22T15:33:13+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-22T14:34:03+00:00",
+  "cutoff_date": "2025-03-22T15:33:13+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -248,7 +248,7 @@
       "category_ru": "ставки",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "7c20acb140961d0a4bd24b89491bedf3",
       "status": "published",
       "static_url": "news/rzd_partner-kitay-vpervye-prevysil-evropu-po-postavkam-avtom-7c20ac.html",
