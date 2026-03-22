@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-22T07:47:18+00:00",
+  "updated_at": "2026-03-22T08:42:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-22T07:47:18+00:00",
+  "cutoff_date": "2025-03-22T08:42:14+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -178,6 +178,31 @@
       "status": "published",
       "static_url": "news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html",
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
+    },
+    {
+      "id": "news_66773b2ae8ca",
+      "slug": "rzd_partner-zheleznodorozhnuyu-magistral-kitay-kirgiziya-uzb-66773b",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-03-22T07:42:30+00:00",
+      "published_at": "2026-03-22T07:42:30+00:00",
+      "title": "Железнодорожную магистраль Китай — Киргизия — Узбекистан планируют завершить к 2030 году",
+      "snippet": "Строительство железной дороги, соединяющей Китай, Киргизию и Узбекистан, предполагается завершить к 2030 году. Об этом сообщил президент Киргизской Республики Садыр Жапаров.",
+      "content_preview": "Железнодорожную магистраль Китай — Киргизия — Узбекистан планируют завершить к 2030 году",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/zheleznodorozhnuyu-magistral-kitay-kirgiziya-uzbekistan-planiruyut-zavershit-k-2030-godu/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "66773b2ae8ca18eec8e3efa0c010236e",
+      "status": "published",
+      "static_url": "news/rzd_partner-zheleznodorozhnuyu-magistral-kitay-kirgiziya-uzb-66773b.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-zheleznodorozhnuyu-magistral-kitay-kirgiziya-uzb-66773b.html"
     },
     {
       "id": "news_8980ed232472",
