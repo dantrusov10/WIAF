@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-22T11:30:39+00:00",
+  "updated_at": "2026-03-22T13:01:33+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-22T11:30:39+00:00",
+  "cutoff_date": "2025-03-22T13:01:33+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -423,7 +423,7 @@
       "category_ru": "порты",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "af0292f8e8d98fc387949184b34a6344",
       "status": "published",
       "static_url": "news/rzd_partner-v-kazahstane-s-23-marta-vvodyatsya-sezonnye-ogra-af0292.html",
@@ -448,7 +448,7 @@
       "category_ru": "автологистика",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "0ee0c4ceaa28611cf7a8d9a6784ea5e6",
       "status": "published",
       "static_url": "news/rzd_partner-stroitelnye-raboty-na-trasse-sochi-dzhubga-vreme-0ee0c4.html",
