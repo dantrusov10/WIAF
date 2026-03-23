@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-23T15:02:12+00:00",
+  "updated_at": "2026-03-23T16:13:15+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-23T15:02:12+00:00",
+  "cutoff_date": "2025-03-23T16:13:15+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -478,6 +478,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-tranzit-aziya-evropa-mozhet-stat-dopolnitelnoy-g-010d3f.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-tranzit-aziya-evropa-mozhet-stat-dopolnitelnoy-g-010d3f.html"
+    },
+    {
+      "id": "news_46bce15ce281",
+      "slug": "logirus-ekspert-bez-ravnyh-usloviy-s-kitayskimi-perevozc-46bce1",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-23T00:00:00+00:00",
+      "published_at": "2026-03-23T00:00:00+00:00",
+      "title": "Эксперт: без равных условий с китайскими перевозчиками льготный лизинг на тягачи не даст нужного эффекта",
+      "snippet": "Минтранс рассчитывает усилить позиции российских перевозчиков на международных направлениях. Однако в Delko указывают на главного конкурента – китайские компании, которые получают более дешевую технику и лучшее финансирование",
+      "content_preview": "Эксперт: без равных условий с китайскими перевозчиками льготный лизинг на тягачи не даст нужного эффекта",
+      "link": "https://logirus.ru/news/transport/ekspert_bez_ravnykh_usloviy_s_kitayskimi_perevozchikami_lgotnyy_lizing_na_tyagachi_ne_dast_nuzhnogo.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "46bce15ce2818504792a69bde6cd29ae",
+      "status": "published",
+      "static_url": "news/logirus-ekspert-bez-ravnyh-usloviy-s-kitayskimi-perevozc-46bce1.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-ekspert-bez-ravnyh-usloviy-s-kitayskimi-perevozc-46bce1.html"
     },
     {
       "id": "news_0a3f91c9cefb",
