@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-23T21:43:47+00:00",
+  "updated_at": "2026-03-23T22:39:24+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-23T21:43:47+00:00",
+  "cutoff_date": "2025-03-23T22:39:24+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -390,12 +390,12 @@
       "date": "2026-03-23T07:30:15+00:00",
       "published_at": "2026-03-23T07:30:15+00:00",
       "title": "Автоматизация оформления накладных на порожние вагоны: практический опыт «МЦ-Сервис Инжиниринг»",
-      "snippet": "Статьи и новости на транспортную тематику.",
+      "snippet": "Автоматизация оформления накладных на порожние вагоны: практический опыт «МЦ-Сервис Инжиниринг» . Логистика. РЖД-Партнер",
       "content_preview": "Автоматизация оформления накладных на порожние вагоны: практический опыт «МЦ-Сервис Инжиниринг»",
       "link": "https://www.rzd-partner.ru/logistics/news/avtomatizatsiya-oformleniya-nakladnykh-na-porozhnie-vagony-prakticheskiy-opyt-mts-servis-inzhiniring/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/0dd/qx8cprxfigwv2lyhup7y7v1h7xzo7rfl/Var.-3.jpg",
-      "category": "ports",
-      "category_ru": "порты",
+      "category": "rail",
+      "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
       "freshness": "fresh",
