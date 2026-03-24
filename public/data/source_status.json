@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-03-24T09:01:13+00:00",
+  "updated_at": "2026-03-24T10:05:41+00:00",
   "summary": {
-    "updated_at": "2026-03-24T09:01:13+00:00",
+    "updated_at": "2026-03-24T10:05:41+00:00",
     "retention_days": 365,
-    "cutoff_date": "2025-03-24T09:01:13+00:00",
+    "cutoff_date": "2025-03-24T10:05:41+00:00",
     "active_sources": 10,
-    "successful_sources": 8,
+    "successful_sources": 9,
     "empty_sources": 3,
     "error_sources": 1,
     "fetched_items": 57,
-    "published_items": 149,
+    "published_items": 153,
     "cache_used": false,
     "stale_filtered_total": 3,
     "missing_date_filtered_total": 78,
@@ -34,7 +34,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 9,
       "status": "ok",
-      "checked_at": "2026-03-24T08:57:48+00:00",
+      "checked_at": "2026-03-24T10:02:43+00:00",
       "error": "",
       "kind": "news"
     },
@@ -52,7 +52,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 12,
       "status": "ok",
-      "checked_at": "2026-03-24T08:58:42+00:00",
+      "checked_at": "2026-03-24T10:03:24+00:00",
       "error": "",
       "kind": "news"
     },
@@ -70,7 +70,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-03-24T08:59:06+00:00",
+      "checked_at": "2026-03-24T10:03:38+00:00",
       "error": "",
       "kind": "news"
     },
@@ -88,7 +88,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 9,
       "status": "ok",
-      "checked_at": "2026-03-24T08:59:32+00:00",
+      "checked_at": "2026-03-24T10:03:51+00:00",
       "error": "",
       "kind": "news"
     },
@@ -106,7 +106,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-03-24T09:00:01+00:00",
+      "checked_at": "2026-03-24T10:04:24+00:00",
       "error": "",
       "kind": "news"
     },
@@ -124,7 +124,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 19,
       "status": "empty",
-      "checked_at": "2026-03-24T09:00:14+00:00",
+      "checked_at": "2026-03-24T10:04:39+00:00",
       "error": "",
       "kind": "news"
     },
@@ -142,8 +142,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-03-24T09:00:35+00:00",
-      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7f790e1b0690>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
+      "checked_at": "2026-03-24T10:04:59+00:00",
+      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7f3407aa5050>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
       "kind": "news"
     },
     {
@@ -160,7 +160,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "empty",
-      "checked_at": "2026-03-24T09:01:02+00:00",
+      "checked_at": "2026-03-24T10:05:28+00:00",
       "error": "",
       "kind": "news"
     },
@@ -178,7 +178,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "ok",
-      "checked_at": "2026-03-24T09:01:05+00:00",
+      "checked_at": "2026-03-24T10:05:31+00:00",
       "error": "",
       "kind": "news"
     },
@@ -196,7 +196,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "empty",
-      "checked_at": "2026-03-24T09:01:07+00:00",
+      "checked_at": "2026-03-24T10:05:32+00:00",
       "error": "",
       "kind": "news"
     },
@@ -206,7 +206,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-03-24T09:01:10+00:00",
+      "checked_at": "2026-03-24T10:05:35+00:00",
       "error": "index value not found",
       "used_url": "https://en.sse.net.cn/indices/scfinew.jsp"
     },
@@ -214,10 +214,10 @@
       "source_id": "ccfi",
       "source_name": "CCFI",
       "kind": "index",
-      "status": "cache",
+      "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-03-24T09:01:10+00:00",
-      "error": "HTTPSConnectionPool(host='en.sse.net.cn', port=443): Max retries exceeded with url: /indices/ccfinew.jsp (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1016)')))",
+      "checked_at": "2026-03-24T10:05:39+00:00",
+      "error": "",
       "used_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
     {
@@ -226,7 +226,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-03-24T09:01:12+00:00",
+      "checked_at": "2026-03-24T10:05:40+00:00",
       "error": "index value not found",
       "used_url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
     },
@@ -236,7 +236,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-03-24T09:01:12+00:00",
+      "checked_at": "2026-03-24T10:05:40+00:00",
       "error": "",
       "used_url": "https://fbx.freightos.com/"
     },
@@ -246,7 +246,7 @@
       "kind": "fx",
       "status": "ok",
       "items_count": 3,
-      "checked_at": "2026-03-24T09:01:13+00:00",
+      "checked_at": "2026-03-24T10:05:41+00:00",
       "error": "",
       "used_url": "https://www.cbr.ru/scripts/XML_daily.asp"
     }
