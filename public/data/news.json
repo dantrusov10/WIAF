@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-24T15:04:28+00:00",
+  "updated_at": "2026-03-24T17:06:25+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-24T15:04:28+00:00",
+  "cutoff_date": "2025-03-24T17:06:25+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -903,6 +903,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-kompleks-izmeneniy-v-pdd-mintrans-podgotovit-k-l-995ade.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-kompleks-izmeneniy-v-pdd-mintrans-podgotovit-k-l-995ade.html"
+    },
+    {
+      "id": "news_f4c3731e067e",
+      "slug": "logirus-diktatura-frahta-sinokor-i-msc-skupayut-vlcc-cht-f4c373",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-24T00:00:00+00:00",
+      "published_at": "2026-03-24T00:00:00+00:00",
+      "title": "Диктатура фрахта: Sinokor и MSC скупают VLCC, чтобы диктовать ставки фрахта",
+      "snippet": "С декабря 2025 года две компании потратили $6,7 млрд на 76 супертанкеров, сконцентрировав 8% мирового флота VLCC. Аналитики называют эту стратегию беспрецедентной",
+      "content_preview": "Диктатура фрахта: Sinokor и MSC скупают VLCC, чтобы диктовать ставки фрахта",
+      "link": "https://logirus.ru/news/global_logistics/diktatura_frakhta_sinokor_i_msc_skupayut_vlcc_chtoby_diktovat_stavki_frakhta.html",
+      "image_url": "",
+      "category": "rates",
+      "category_ru": "ставки",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "f4c3731e067eeb962710b5f7091f53cc",
+      "status": "published",
+      "static_url": "news/logirus-diktatura-frahta-sinokor-i-msc-skupayut-vlcc-cht-f4c373.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-diktatura-frahta-sinokor-i-msc-skupayut-vlcc-cht-f4c373.html"
     },
     {
       "id": "news_58834f13ee0f",
