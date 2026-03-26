@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-26T20:42:37+00:00",
+  "updated_at": "2026-03-26T21:38:21+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-26T20:42:37+00:00",
+  "cutoff_date": "2025-03-26T21:38:21+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3003,6 +3003,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-tranzit-aziya-evropa-mozhet-stat-dopolnitelnoy-g-010d3f.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-tranzit-aziya-evropa-mozhet-stat-dopolnitelnoy-g-010d3f.html"
+    },
+    {
+      "id": "news_a111627a7862",
+      "slug": "logirus-iran-perevel-tranzit-cherez-ormuzskiy-proliv-na--a11162",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-23T00:00:00+00:00",
+      "published_at": "2026-03-23T00:00:00+00:00",
+      "title": "Иран перевел транзит через Ормузский пролив на «ручное управление»",
+      "snippet": "КСИР требует от судовладельцев поименные списки экипажа, коносаменты и индивидуальное одобрение каждого рейса",
+      "content_preview": "Иран перевел транзит через Ормузский пролив на «ручное управление»",
+      "link": "https://logirus.ru/news/global_logistics/iran_perevel_tranzit_cherez_ormuzskiy_proliv_na_ruchnoe_upravlenie.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "a111627a78629a4b6eb5171fc9a59691",
+      "status": "published",
+      "static_url": "news/logirus-iran-perevel-tranzit-cherez-ormuzskiy-proliv-na--a11162.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-iran-perevel-tranzit-cherez-ormuzskiy-proliv-na--a11162.html"
     },
     {
       "id": "news_40c8d1790138",
