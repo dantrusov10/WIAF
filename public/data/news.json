@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-26T02:42:14+00:00",
+  "updated_at": "2026-03-26T05:12:56+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-26T02:42:14+00:00",
+  "cutoff_date": "2025-03-26T05:12:56+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -178,6 +178,31 @@
       "status": "published",
       "static_url": "news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html",
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
+    },
+    {
+      "id": "news_caf8390204da",
+      "slug": "logirus-toplivo-postavili-v-shag-birzha-snizila-potolok--caf839",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-26T00:00:00+00:00",
+      "published_at": "2026-03-26T00:00:00+00:00",
+      "title": "Топливо поставили в шаг: биржа снизила потолок роста цен в пять раз",
+      "snippet": "Вслед за ужесточением биржевых лимитов правительство обсуждает возврат запрета на экспорт бензина – решение может быть принято 27 марта на три месяца",
+      "content_preview": "Топливо поставили в шаг: биржа снизила потолок роста цен в пять раз",
+      "link": "https://logirus.ru/news/transport/toplivo_postavili_v_shag_birzha_snizila_potolok_rosta_tsen_v_pyat_raz.html",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "caf8390204da0384ab1acc697a8757e6",
+      "status": "published",
+      "static_url": "news/logirus-toplivo-postavili-v-shag-birzha-snizila-potolok--caf839.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-toplivo-postavili-v-shag-birzha-snizila-potolok--caf839.html"
     },
     {
       "id": "news_f4b2d00ca258",
@@ -2765,7 +2790,7 @@
       "date": "2026-03-20T11:56:31+00:00",
       "published_at": "2026-03-20T11:56:31+00:00",
       "title": "Росжелдор утвердил методику расчета потребности в грузовых вагонах",
-      "snippet": "Росжелдор утвердил методику расчета потребности в грузовых вагонах. ЖД Транспорт. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "Росжелдор утвердил методику расчета потребности в грузовых вагонах",
       "link": "https://www.rzd-partner.ru/zhd-transport/news/roszheldor-utverdil-metodiku-rascheta-potrebnosti-v-gruzovykh-vagonakh/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/1cd/2bsu5jpwldj0jf5jjs86cgu4chkl9rjq/2794030.jpg",
