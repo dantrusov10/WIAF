@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-27T21:41:44+00:00",
+  "updated_at": "2026-03-27T22:39:44+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-27T21:41:44+00:00",
+  "cutoff_date": "2025-03-27T22:39:44+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -178,6 +178,31 @@
       "status": "published",
       "static_url": "news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html",
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
+    },
+    {
+      "id": "news_dc05eef3e427",
+      "slug": "logirus-vozvrat-kak-novaya-norma-odezhdu-bolshe-ne-pokup-dc05ee",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-28T00:00:00+00:00",
+      "published_at": "2026-03-28T00:00:00+00:00",
+      "title": "Возврат как новая норма: одежду больше не покупают, ее «арендуют» через маркетплейсы",
+      "snippet": "Каждый возврат генерирует повторную обработку и потерю товарного вида, а расходы маркетплейсы перекладывают на продавцов, превращая управление обратным потоком в главный фактор рентабельности",
+      "content_preview": "Возврат как новая норма: одежду больше не покупают, ее «арендуют» через маркетплейсы",
+      "link": "https://logirus.ru/news/e-commerce/vozvrat_kak_novaya_norma_odezhdu_bolshe_ne_pokupayut_ee_arenduyut_cherez_marketpleysy.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "dc05eef3e427a2058b455a0560c90253",
+      "status": "published",
+      "static_url": "news/logirus-vozvrat-kak-novaya-norma-odezhdu-bolshe-ne-pokup-dc05ee.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-vozvrat-kak-novaya-norma-odezhdu-bolshe-ne-pokup-dc05ee.html"
     },
     {
       "id": "news_9c13453cf252",
