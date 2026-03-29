@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-29T21:39:01+00:00",
+  "updated_at": "2026-03-29T22:38:06+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-29T21:39:01+00:00",
+  "cutoff_date": "2025-03-29T22:38:06+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -178,6 +178,31 @@
       "status": "published",
       "static_url": "news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html",
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
+    },
+    {
+      "id": "news_edb1829fc3fc",
+      "slug": "logirus-aprelskiy-prays-list-perevozchiki-idut-va-bank-n-edb182",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-30T00:00:00+00:00",
+      "published_at": "2026-03-30T00:00:00+00:00",
+      "title": "Апрельский прайс-лист: перевозчики идут ва-банк на фоне истощения запасов топлива",
+      "snippet": "Дефицит бункерного топлива в Сингапуре и Китае, вызванный перебоями в Ормузском проливе, вынуждает перевозчиков применять экстренные топливные сборы и снижать скорость",
+      "content_preview": "Апрельский прайс-лист: перевозчики идут ва-банк на фоне истощения запасов топлива",
+      "link": "https://logirus.ru/news/global_logistics/aprelskiy_prays-list_perevozchiki_idut_va-bank_na_fone_istoshcheniya_zapasov_topliva.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "edb1829fc3fca9bc04df4bd7264539e2",
+      "status": "published",
+      "static_url": "news/logirus-aprelskiy-prays-list-perevozchiki-idut-va-bank-n-edb182.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-aprelskiy-prays-list-perevozchiki-idut-va-bank-n-edb182.html"
     },
     {
       "id": "news_dc05eef3e427",
