@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-29T13:06:32+00:00",
+  "updated_at": "2026-03-29T14:39:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-29T13:06:32+00:00",
+  "cutoff_date": "2025-03-29T14:39:36+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -273,7 +273,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "a9cd0cbd3a56be482b45260798ad6052",
       "status": "published",
       "static_url": "news/rzd_partner-rzhd-opublikovali-perechen-napravleniy-s-ogranic-a9cd0c.html",
@@ -298,7 +298,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "415afc3b84613167b1bcc21818862288",
       "status": "published",
       "static_url": "news/rzd_partner-ubytok-deutsche-bahn-po-itogam-2025-goda-vyros-d-415afc.html",
@@ -348,7 +348,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "e79465788303ab67d124ade24d24695d",
       "status": "published",
       "static_url": "news/rzd_partner-v-anape-k-nachalu-leta-otkroyut-plyazhi-e79465.html",
