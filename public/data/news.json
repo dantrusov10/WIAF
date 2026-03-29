@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-29T20:40:17+00:00",
+  "updated_at": "2026-03-29T21:39:01+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-29T20:40:17+00:00",
+  "cutoff_date": "2025-03-29T21:39:01+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -523,7 +523,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "006bda9bce02a85c14cdca9c21ce201d",
       "status": "published",
       "static_url": "news/rzd_partner-kyrgyzstan-moderniziruet-transportnuyu-infrastru-006bda.html",
