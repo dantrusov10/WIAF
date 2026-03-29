@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-29T14:39:36+00:00",
+  "updated_at": "2026-03-29T15:39:09+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-29T14:39:36+00:00",
+  "cutoff_date": "2025-03-29T15:39:09+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -248,7 +248,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "1c7340b2956cad5ed680c6504304f175",
       "status": "published",
       "static_url": "news/rzd_partner-erevan-rasschityvaet-na-rost-torgovli-v-eaes-pos-1c7340.html",
