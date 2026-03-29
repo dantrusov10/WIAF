@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-29T07:12:09+00:00",
+  "updated_at": "2026-03-29T08:48:30+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-29T07:12:09+00:00",
+  "cutoff_date": "2025-03-29T08:48:30+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4298,7 +4298,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "66773b2ae8ca18eec8e3efa0c010236e",
       "status": "published",
       "static_url": "news/rzd_partner-zheleznodorozhnuyu-magistral-kitay-kirgiziya-uzb-66773b.html",
