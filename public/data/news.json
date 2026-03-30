@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-30T20:58:16+00:00",
+  "updated_at": "2026-03-30T21:50:45+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-30T20:58:16+00:00",
+  "cutoff_date": "2025-03-30T21:50:45+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3573,7 +3573,7 @@
       "category_ru": "ставки",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "d105617591b40acff1b51f4cdc7af92a",
       "status": "published",
       "static_url": "news/rzd_partner-novaya-zheleznaya-doroga-kitay-kyrgyzstan-uzbeki-d10561.html",
@@ -3923,7 +3923,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "0e6ea67742c4b40e887bd1b33819afbe",
       "status": "published",
       "static_url": "news/rzd_partner-na-leningradskom-vokzale-v-moskve-izmenili-shemu-0e6ea6.html",
