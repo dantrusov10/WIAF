@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-30T09:20:23+00:00",
+  "updated_at": "2026-03-30T11:08:12+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-30T09:20:23+00:00",
+  "cutoff_date": "2025-03-30T11:08:12+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -353,6 +353,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-globalnyy-aviatsionnyy-krizis-na-fone-sobytiy-na-936b0f.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-globalnyy-aviatsionnyy-krizis-na-fone-sobytiy-na-936b0f.html"
+    },
+    {
+      "id": "news_dff6e7b8c1fd",
+      "slug": "logirus-nebo-trebuet-doplaty-strahovschiki-otchitalis-o--dff6e7",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-30T00:00:00+00:00",
+      "published_at": "2026-03-30T00:00:00+00:00",
+      "title": "Небо требует доплаты: страховщики отчитались о рекордном спросе на защиту от дронов",
+      "snippet": "За месяц продажи полисов с покрытием от БПЛА выросли кратно, доля таких договоров в Москве достигла 35%, а корпоративные выплаты превысили 1 млрд рублей",
+      "content_preview": "Небо требует доплаты: страховщики отчитались о рекордном спросе на защиту от дронов",
+      "link": "https://logirus.ru/news/infrastructure/nebo_trebuet_doplaty_strakhovshchiki_otchitalis_o_rekordnom_sprose_na_zashchitu_ot_dronov.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "dff6e7b8c1fd6f8a36b9cdaac41bd249",
+      "status": "published",
+      "static_url": "news/logirus-nebo-trebuet-doplaty-strahovschiki-otchitalis-o--dff6e7.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-nebo-trebuet-doplaty-strahovschiki-otchitalis-o--dff6e7.html"
     },
     {
       "id": "news_730c5f57a8e4",
