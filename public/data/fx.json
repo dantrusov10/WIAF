@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T15:09:30+00:00",
+  "updated_at": "2026-03-30T17:03:34+00:00",
   "cache_used": false,
   "items": [
     {
@@ -8,8 +8,8 @@
       "base": "RUB",
       "value": 81.2955,
       "date": "2026-03-31",
-      "change_abs": 0.1512,
-      "change_pct": 0.186,
+      "change_abs": 0.0,
+      "change_pct": 0.0,
       "source": "Central Bank of Russia",
       "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
       "status": "published"
@@ -20,8 +20,8 @@
       "base": "RUB",
       "value": 93.4369,
       "date": "2026-03-31",
-      "change_abs": 0.0122,
-      "change_pct": 0.013,
+      "change_abs": 0.0,
+      "change_pct": 0.0,
       "source": "Central Bank of Russia",
       "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
       "status": "published"
@@ -32,8 +32,8 @@
       "base": "RUB",
       "value": 11.7439,
       "date": "2026-03-31",
-      "change_abs": 0.0138,
-      "change_pct": 0.118,
+      "change_abs": 0.0,
+      "change_pct": 0.0,
       "source": "Central Bank of Russia",
       "source_url": "https://www.cbr.ru/scripts/XML_daily.asp",
       "status": "published"
