@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-31T17:04:27+00:00",
+  "updated_at": "2026-03-31T19:09:17+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-31T17:04:27+00:00",
+  "cutoff_date": "2025-03-31T19:09:17+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -903,6 +903,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-studenty-sozdali-nedoroguyu-sistemu-dostavki-lek-33439f.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-studenty-sozdali-nedoroguyu-sistemu-dostavki-lek-33439f.html"
+    },
+    {
+      "id": "news_128476dde805",
+      "slug": "logirus-kriptovalyuta-v-zagone-pravitelstvo-utverdilo-pr-128476",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-31T00:00:00+00:00",
+      "published_at": "2026-03-31T00:00:00+00:00",
+      "title": "Криптовалюта в загоне: правительство утвердило правила транзита крипты через границу",
+      "snippet": "Резиденты смогут покупать цифровую валюту с иностранных счетов и переводить ее через российских посредников за границу, но с обязательным уведомлением налоговой службы",
+      "content_preview": "Криптовалюта в загоне: правительство утвердило правила транзита крипты через границу",
+      "link": "https://logirus.ru/news/infrastructure/kriptovalyuta_v_zagone_pravitelstvo_utverdilo_pravila_tranzita_kripty_cherez_granitsu.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "128476dde80514998f7e037b0f27dadc",
+      "status": "published",
+      "static_url": "news/logirus-kriptovalyuta-v-zagone-pravitelstvo-utverdilo-pr-128476.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-kriptovalyuta-v-zagone-pravitelstvo-utverdilo-pr-128476.html"
     },
     {
       "id": "news_2d070d6c0020",
@@ -7373,24 +7398,6 @@
       "status": "published",
       "static_url": "news/news_e8a3bfdd80d8.html",
       "canonical_url": "https://wiaf.ru/news/news_e8a3bfdd80d8.html"
-    },
-    {
-      "id": "news_b439343908f3",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-18",
-      "title": "Dalilah’s Law plans to restrict foreign dispatchers and brokers",
-      "snippet": "<p>As the House Transportation and Infrastructure Committee advanced H.R. 5688, now known as Dalilah’s Law, on March 18, 2026 , the bill&#8217;s provisions targeting foreign entities in the freight ecosystem have drawn particular attention from carriers, brokers, and fraud-watchers. While much of the legislation focuses on Commercial Driver’s Licen",
-      "link": "https://www.freightwaves.com/news/dalilahs-law-plans-to-restrict-foreign-dispatchers-and-brokers",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "sea",
-      "region": "INT",
-      "freshness": "recent",
-      "hash": "b439343908f3e5d8e61ba287abbf96c6",
-      "status": "published",
-      "static_url": "news/news_b439343908f3.html",
-      "canonical_url": "https://wiaf.ru/news/news_b439343908f3.html"
     }
   ]
 }
