@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-30T23:41:55+00:00",
+  "updated_at": "2026-03-31T02:43:46+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-30T23:41:55+00:00",
+  "cutoff_date": "2025-03-31T02:43:46+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4273,7 +4273,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "67fae7e14133a927fb84f4a9153ca7cb",
       "status": "published",
       "static_url": "news/logirus-reestr-ekspeditorov-zavis-statusy-zayavleniy-vre-67fae7.html",
@@ -4473,7 +4473,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "1e4e8306ba48919ff162fa16f7717432",
       "status": "published",
       "static_url": "news/seanews-novyy-marshrut-cheboksary-habarovsk-1e4e83.html",
@@ -4498,7 +4498,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "b081888755cbbfe656333e2029cfdc1c",
       "status": "published",
       "static_url": "news/delo-gk-delo-i-vetnamskaya-vimc-podpisali-soglashenie-b08188.html",
