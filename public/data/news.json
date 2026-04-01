@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-01T13:44:44+00:00",
+  "updated_at": "2026-04-01T15:10:52+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-01T13:44:44+00:00",
+  "cutoff_date": "2025-04-01T15:10:52+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3873,7 +3873,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "f0294ffc8a6880c54d41bb6471351c00",
       "status": "published",
       "static_url": "news/rzd_partner-v-mintranse-ozvuchili-prognoz-godovoy-pogruzki-n-f0294f.html",
@@ -6948,6 +6948,31 @@
       "canonical_url": "https://wiaf.ru/news/portnews-mazut-protiv-biotopliva-kto-kogo-8e03d3.html"
     },
     {
+      "id": "news_11981df71498",
+      "slug": "logirus-delo-predlagaet-konteynerschikam-soyuz-11981d",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-19T00:00:00+00:00",
+      "published_at": "2026-03-19T00:00:00+00:00",
+      "title": "«Дело» предлагает «контейнерщикам» Союз",
+      "snippet": "Цель союза – превратить разрозненных игроков в единую команду для усиления позиций на внешних рынках и защиты интересов в глобальной конкуренции",
+      "content_preview": "«Дело» предлагает «контейнерщикам» Союз",
+      "link": "https://logirus.ru/news/transport/delo_predlagaet_konteynershchikam_soyuz.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "archive",
+      "hash": "11981df714983e3a444ea6a2a54d30ad",
+      "status": "published",
+      "static_url": "news/logirus-delo-predlagaet-konteynerschikam-soyuz-11981d.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-delo-predlagaet-konteynerschikam-soyuz-11981d.html"
+    },
+    {
       "id": "news_a10aa6a26fc2",
       "slug": "logirus-ekspert-bazovaya-stavka-strahovaniya-na-mtk-seve-a10aa6",
       "source": "Logirus",
@@ -7380,31 +7405,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-kakie-perevozochnye-dokumenty-mogut-oformlyatsya-3432ff.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-kakie-perevozochnye-dokumenty-mogut-oformlyatsya-3432ff.html"
-    },
-    {
-      "id": "news_d9c381871ce6",
-      "slug": "rzd_partner-v-strategiyu-sotsialno-ekonomicheskogo-razvitiya-d9c381",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-03-18T08:21:01+00:00",
-      "published_at": "2026-03-18T08:21:01+00:00",
-      "title": "В стратегию социально-экономического развития Якутии войдет проект строительства железной дороги до Магадана",
-      "snippet": "В настоящее время готовится новая редакция стратегии социально-экономического развития республики до 2036 года (первая фаза реализации документа охватывала период с 2018 по 2024 год). Она разрабатывается с учетом текущих реалий и федеральных стратегических документов, таких как программа развития Дальнего Востока и Арктики, а также концепция перехода к низкоуглеродному развитию, проинформировали в Госсобрании Якутии (Ил Тумэн).",
-      "content_preview": "В стратегию социально-экономического развития Якутии войдет проект строительства железной дороги до Магадана",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/v-strategiyu-sotsialno-ekonomicheskogo-razvitiya-yakutii-voydet-proekt-stroitelstva-zheleznoy-dorogi/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "archive",
-      "hash": "d9c381871ce61913eec8792555826856",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-strategiyu-sotsialno-ekonomicheskogo-razvitiya-d9c381.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-strategiyu-sotsialno-ekonomicheskogo-razvitiya-d9c381.html"
     }
   ]
 }
