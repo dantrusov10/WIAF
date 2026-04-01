@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-31T23:41:12+00:00",
+  "updated_at": "2026-04-01T02:55:52+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-03-31T23:41:12+00:00",
+  "cutoff_date": "2025-04-01T02:55:52+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1898,7 +1898,7 @@
       "category_ru": "новости операторов",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "470e6baef6fc6d9bfeb4f83724523c74",
       "status": "published",
       "static_url": "news/delo-gk-delo-soobschaet-o-kadrovyh-izmeneniyah-v-koma-470e6b.html",
@@ -4373,7 +4373,7 @@
       "category_ru": "автологистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "77e9ddbe9e3db2a0e3780f402a424f0d",
       "status": "published",
       "static_url": "news/seanews-pervaya-partiya-vetnamskih-avtomobiley-v-kazahst-77e9dd.html",
@@ -4398,7 +4398,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "4b8398ed74287d6f6f14dc76f24caa11",
       "status": "published",
       "static_url": "news/seanews-vetnamskaya-goskorporatsiya-podpisala-soglasheni-4b8398.html",
