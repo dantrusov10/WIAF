@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-01T07:29:15+00:00",
+  "updated_at": "2026-04-01T09:13:31+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-01T07:29:15+00:00",
+  "cutoff_date": "2025-04-01T09:13:31+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -178,6 +178,31 @@
       "status": "published",
       "static_url": "news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html",
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
+    },
+    {
+      "id": "news_f3f53553daa9",
+      "slug": "seanews-perspektivnoe-sudno-dlya-lokalizatsii-opasnyh-ob-f3f535",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-01T00:00:00+00:00",
+      "published_at": "2026-04-01T00:00:00+00:00",
+      "title": "Перспективное судно для локализации опасных объектов на морском дне — SeaNews",
+      "snippet": "",
+      "content_preview": "Перспективное судно для локализации опасных объектов на морском дне",
+      "link": "https://seanews.ru/2026/04/01/ru-perspektivnoe-sudno-dlja-lokalizacii-opasnyh-obektov-na-morskom-dne/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "f3f53553daa920955f0eb7fe1cb8896f",
+      "status": "published",
+      "static_url": "news/seanews-perspektivnoe-sudno-dlya-lokalizatsii-opasnyh-ob-f3f535.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-perspektivnoe-sudno-dlya-lokalizatsii-opasnyh-ob-f3f535.html"
     },
     {
       "id": "news_4fa2c0700aca",
@@ -7380,31 +7405,6 @@
       "status": "published",
       "static_url": "news/logirus-dengi-vpered-rynok-avtoperevozok-nachal-prevrasc-f79a48.html",
       "canonical_url": "https://wiaf.ru/news/logirus-dengi-vpered-rynok-avtoperevozok-nachal-prevrasc-f79a48.html"
-    },
-    {
-      "id": "news_fccb7c992ef9",
-      "slug": "seanews-s7-cargo-zapuskaet-elektronnye-avianakladnye-fccb7c",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-03-18T00:00:00+00:00",
-      "published_at": "2026-03-18T00:00:00+00:00",
-      "title": "S7 Cargo запускает электронные авианакладные — SeaNews",
-      "snippet": "",
-      "content_preview": "S7 Cargo запускает электронные авианакладные",
-      "link": "https://seanews.ru/2026/03/18/ru-s7-cargo-zapuskaet-jelektronnye-avianakladnye/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "archive",
-      "hash": "fccb7c992ef9bfef2a3ecf800e64125b",
-      "status": "published",
-      "static_url": "news/seanews-s7-cargo-zapuskaet-elektronnye-avianakladnye-fccb7c.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-s7-cargo-zapuskaet-elektronnye-avianakladnye-fccb7c.html"
     }
   ]
 }
