@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-02T11:52:44+00:00",
+  "updated_at": "2026-04-02T13:24:42+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-02T11:52:44+00:00",
+  "cutoff_date": "2025-04-02T13:24:42+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -203,6 +203,31 @@
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
+    },
+    {
+      "id": "news_a2a974b0393b",
+      "slug": "seanews-stoimost-stroitelstva-skladskoy-nedvizhimosti-v--a2a974",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-02T00:00:00+00:00",
+      "published_at": "2026-04-02T00:00:00+00:00",
+      "title": "Стоимость строительства складской недвижимости в ЦФО снизилась — SeaNews",
+      "snippet": "",
+      "content_preview": "Стоимость строительства складской недвижимости в ЦФО снизилась",
+      "link": "https://seanews.ru/2026/04/02/ru-stoimost-stroitelstva-skladskoj-nedvizhimosti-v-cfo-snizilas/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "a2a974b0393b76fac1029e6a4f601dbf",
+      "status": "published",
+      "static_url": "news/seanews-stoimost-stroitelstva-skladskoy-nedvizhimosti-v--a2a974.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-stoimost-stroitelstva-skladskoy-nedvizhimosti-v--a2a974.html"
     },
     {
       "id": "news_dfee34ba98f5",
@@ -3223,7 +3248,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "9c2412af7f1118ecebcfa5b4c7f91096",
       "status": "published",
       "static_url": "news/rzd_partner-novye-pravila-peremescheniya-porozhnih-vagonov-s-9c2412.html",
@@ -7415,24 +7440,6 @@
       "status": "published",
       "static_url": "news/news_cb81782c5f80.html",
       "canonical_url": "https://wiaf.ru/news/news_cb81782c5f80.html"
-    },
-    {
-      "id": "news_a5ce73944fdf",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-19",
-      "title": "FMCSA Final Rule and ‘Dalilah’s Law’ target CDL eligibility: What trucking needs to know",
-      "snippet": "<p>How the feds are tackling non-dom CDLs and English language proficiency.</p> <p>The post <a href=\"https://www.freightwaves.com/news/fmcsa-final-rule-and-dalilahs-law-target-cdl-eligibility-what-trucking-needs-to-know\">FMCSA Final Rule and ‘Dalilah’s Law’ target CDL eligibility: What trucking needs to know</a> appeared first on <a href=\"https://w",
-      "link": "https://www.freightwaves.com/news/fmcsa-final-rule-and-dalilahs-law-target-cdl-eligibility-what-trucking-needs-to-know",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "road",
-      "region": "INT",
-      "freshness": "fresh",
-      "hash": "a5ce73944fdfa33d6d1684966ad49684",
-      "status": "published",
-      "static_url": "news/news_a5ce73944fdf.html",
-      "canonical_url": "https://wiaf.ru/news/news_a5ce73944fdf.html"
     }
   ]
 }
