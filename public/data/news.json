@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-02T13:24:42+00:00",
+  "updated_at": "2026-04-02T15:02:52+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-02T13:24:42+00:00",
+  "cutoff_date": "2025-04-02T15:02:52+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -203,6 +203,31 @@
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
+    },
+    {
+      "id": "news_9551c0723004",
+      "slug": "seanews-pryamoy-zhd-servis-iz-kitaya-v-sankt-peterburg-9551c0",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-02T00:00:00+00:00",
+      "published_at": "2026-04-02T00:00:00+00:00",
+      "title": "Прямой жд сервис из Китая в Санкт-Петербург — SeaNews",
+      "snippet": "",
+      "content_preview": "Прямой жд сервис из Китая в Санкт-Петербург",
+      "link": "https://seanews.ru/2026/04/02/ru-prjamoj-zhd-servis-iz-kitaja-v-sankt-peterburg/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "9551c07230049ceab6cfe054f9e5d0ca",
+      "status": "published",
+      "static_url": "news/seanews-pryamoy-zhd-servis-iz-kitaya-v-sankt-peterburg-9551c0.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-pryamoy-zhd-servis-iz-kitaya-v-sankt-peterburg-9551c0.html"
     },
     {
       "id": "news_a2a974b0393b",
@@ -7422,24 +7447,6 @@
       "status": "published",
       "static_url": "news/news_aaa06b76091c.html",
       "canonical_url": "https://wiaf.ru/news/news_aaa06b76091c.html"
-    },
-    {
-      "id": "news_cb81782c5f80",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-19",
-      "title": "Startup cargo airline 7Air changes CEO after less than 1 year",
-      "snippet": "<p> All-cargo airline 7Air has named Ed Wegel as its new CEO seven months after the company began revenue service. </p> <p>The post <a href=\"https://www.freightwaves.com/news/startup-cargo-airline-7air-changes-ceo-after-7-months-of-service\">Startup cargo airline 7Air changes CEO after less than 1 year</a> appeared first on <a href=\"https://www.frei",
-      "link": "https://www.freightwaves.com/news/startup-cargo-airline-7air-changes-ceo-after-7-months-of-service",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "unknown",
-      "region": "INT",
-      "freshness": "fresh",
-      "hash": "cb81782c5f80f49155b00d867b88ffe1",
-      "status": "published",
-      "static_url": "news/news_cb81782c5f80.html",
-      "canonical_url": "https://wiaf.ru/news/news_cb81782c5f80.html"
     }
   ]
 }
