@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-02T19:04:30+00:00",
+  "updated_at": "2026-04-02T20:41:54+00:00",
   "summary": {
-    "updated_at": "2026-04-02T19:04:30+00:00",
+    "updated_at": "2026-04-02T20:41:54+00:00",
     "retention_days": 365,
-    "cutoff_date": "2025-04-02T19:04:30+00:00",
+    "cutoff_date": "2025-04-02T20:41:54+00:00",
     "active_sources": 10,
     "successful_sources": 8,
     "empty_sources": 3,
@@ -34,7 +34,7 @@
       "stale_filtered": 3,
       "missing_date_filtered": 10,
       "status": "ok",
-      "checked_at": "2026-04-02T19:01:44+00:00",
+      "checked_at": "2026-04-02T20:39:11+00:00",
       "error": "",
       "kind": "news"
     },
@@ -52,7 +52,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 12,
       "status": "ok",
-      "checked_at": "2026-04-02T19:02:29+00:00",
+      "checked_at": "2026-04-02T20:39:51+00:00",
       "error": "",
       "kind": "news"
     },
@@ -70,7 +70,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-04-02T19:02:45+00:00",
+      "checked_at": "2026-04-02T20:40:08+00:00",
       "error": "",
       "kind": "news"
     },
@@ -88,7 +88,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 9,
       "status": "ok",
-      "checked_at": "2026-04-02T19:02:58+00:00",
+      "checked_at": "2026-04-02T20:40:20+00:00",
       "error": "",
       "kind": "news"
     },
@@ -106,8 +106,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-02T19:03:18+00:00",
-      "error": "html:https://www.rzd-partner.ru/news/ -> HTTPSConnectionPool(host='www.rzd-partner.ru', port=443): Max retries exceeded with url: /news/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rzd-partner.ru', port=443) at 0x7ff51cb774d0>, 'Connection to www.rzd-partner.ru timed out. (connect timeout=20)'))",
+      "checked_at": "2026-04-02T20:40:40+00:00",
+      "error": "html:https://www.rzd-partner.ru/news/ -> HTTPSConnectionPool(host='www.rzd-partner.ru', port=443): Max retries exceeded with url: /news/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rzd-partner.ru', port=443) at 0x7fe523cf0110>, 'Connection to www.rzd-partner.ru timed out. (connect timeout=20)'))",
       "kind": "news"
     },
     {
@@ -124,7 +124,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 19,
       "status": "empty",
-      "checked_at": "2026-04-02T19:03:33+00:00",
+      "checked_at": "2026-04-02T20:40:55+00:00",
       "error": "",
       "kind": "news"
     },
@@ -142,8 +142,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-02T19:03:53+00:00",
-      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7ff51d020e10>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
+      "checked_at": "2026-04-02T20:41:19+00:00",
+      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7fe524114250>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
       "kind": "news"
     },
     {
@@ -160,7 +160,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "empty",
-      "checked_at": "2026-04-02T19:04:18+00:00",
+      "checked_at": "2026-04-02T20:41:43+00:00",
       "error": "",
       "kind": "news"
     },
@@ -178,7 +178,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "ok",
-      "checked_at": "2026-04-02T19:04:22+00:00",
+      "checked_at": "2026-04-02T20:41:47+00:00",
       "error": "",
       "kind": "news"
     },
@@ -196,7 +196,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "empty",
-      "checked_at": "2026-04-02T19:04:24+00:00",
+      "checked_at": "2026-04-02T20:41:49+00:00",
       "error": "",
       "kind": "news"
     },
@@ -206,7 +206,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-02T19:04:26+00:00",
+      "checked_at": "2026-04-02T20:41:50+00:00",
       "error": "index value not found",
       "used_url": "https://en.sse.net.cn/indices/scfinew.jsp"
     },
@@ -216,7 +216,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-02T19:04:28+00:00",
+      "checked_at": "2026-04-02T20:41:52+00:00",
       "error": "",
       "used_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
@@ -226,7 +226,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-02T19:04:29+00:00",
+      "checked_at": "2026-04-02T20:41:53+00:00",
       "error": "index value not found",
       "used_url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
     },
@@ -236,7 +236,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-02T19:04:29+00:00",
+      "checked_at": "2026-04-02T20:41:53+00:00",
       "error": "",
       "used_url": "https://fbx.freightos.com/"
     },
@@ -246,7 +246,7 @@
       "kind": "fx",
       "status": "ok",
       "items_count": 3,
-      "checked_at": "2026-04-02T19:04:30+00:00",
+      "checked_at": "2026-04-02T20:41:54+00:00",
       "error": "",
       "used_url": "https://www.cbr.ru/scripts/XML_daily.asp"
     }
