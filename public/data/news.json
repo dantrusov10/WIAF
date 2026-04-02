@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-01T23:42:42+00:00",
+  "updated_at": "2026-04-02T02:40:15+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-01T23:42:42+00:00",
+  "cutoff_date": "2025-04-02T02:40:15+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1048,7 +1048,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "128476dde80514998f7e037b0f27dadc",
       "status": "published",
       "static_url": "news/logirus-kriptovalyuta-v-zagone-pravitelstvo-utverdilo-pr-128476.html",
@@ -3723,7 +3723,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "023c3fb15bbc8f630b2ccf05bd62a908",
       "status": "published",
       "static_url": "news/seanews-vliyanie-situatsii-na-blizhnem-vostoke-na-zhd-ta-023c3f.html",
@@ -3748,7 +3748,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "4ef89ae35a2d1c7086b3e10872ed2c55",
       "status": "published",
       "static_url": "news/seanews-bespilotniki-mezhdu-rossiey-i-kitaem-4ef89a.html",
