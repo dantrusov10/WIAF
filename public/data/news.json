@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-03T21:40:14+00:00",
+  "updated_at": "2026-04-03T22:39:48+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-03T21:40:14+00:00",
+  "cutoff_date": "2025-04-03T22:39:48+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1598,7 +1598,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "d9c2d26402ca490a0426d4a577319b3a",
       "status": "published",
       "static_url": "news/rzd_partner-na-stantsii-kochenevo-v-novosibirskoy-oblasti-so-d9c2d2.html",
@@ -1723,7 +1723,7 @@
       "category_ru": "ставки",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "fb2baf11353b84837468540d9d53ba60",
       "status": "published",
       "static_url": "news/rzd_partner-stavki-na-tentovye-perevozki-iz-moskvy-snizilis--fb2baf.html",
@@ -1773,7 +1773,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "6f6be1d9a873bf4da48fff7b5fca59aa",
       "status": "published",
       "static_url": "news/rzd_partner-stroitelnye-gruzy-uhodyat-s-zheleznoy-dorogi-kak-6f6be1.html",
