@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-03T10:58:42+00:00",
+  "updated_at": "2026-04-03T11:44:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-03T10:58:42+00:00",
+  "cutoff_date": "2025-04-03T11:44:35+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -203,6 +203,31 @@
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
+    },
+    {
+      "id": "news_79c8237638e9",
+      "slug": "seanews-naznachen-zamrukovoditelya-fts-79c823",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-03T00:00:00+00:00",
+      "published_at": "2026-04-03T00:00:00+00:00",
+      "title": "Назначен замруководителя ФТС — SeaNews",
+      "snippet": "",
+      "content_preview": "Назначен замруководителя ФТС",
+      "link": "https://seanews.ru/2026/04/03/ru-naznachen-zamrukovoditelja-fts-2/",
+      "image_url": "",
+      "category": "regulation",
+      "category_ru": "регулирование",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "79c8237638e9e4cf3f33ccef8b0813c6",
+      "status": "published",
+      "static_url": "news/seanews-naznachen-zamrukovoditelya-fts-79c823.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-naznachen-zamrukovoditelya-fts-79c823.html"
     },
     {
       "id": "news_7a42101de2d7",
@@ -7450,24 +7475,6 @@
       "status": "published",
       "static_url": "news/news_c43423239bfc.html",
       "canonical_url": "https://wiaf.ru/news/news_c43423239bfc.html"
-    },
-    {
-      "id": "news_0d9c2003aa7b",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-19",
-      "title": "Diesel Just Hit $5 a Gallon and Linehaul Rates Have Not Moved Much. Here Is How to Fix That in Your Very Next Negotiation With a Broker.",
-      "snippet": "<p>One month ago the national average for diesel was $3.65 a gallon. As of this week, it is over $5.00. According to AAA, that is a 38% increase in roughly 30 days — the fastest one-month fuel price spike the trucking industry has experienced in years, driven by U.S. and Israeli airstrikes against Iran that [&#8230;]</p> <p>The post <a href=\"https:",
-      "link": "https://www.freightwaves.com/news/diesel-just-hit-5-a-gallon-and-linehaul-rates-have-not-moved-much-here-is-how-to-fix-that-in-your-very-next-negotiation-with-a-broker",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "road",
-      "region": "INT",
-      "freshness": "fresh",
-      "hash": "0d9c2003aa7b0149a553698a16e9fd1b",
-      "status": "published",
-      "static_url": "news/news_0d9c2003aa7b.html",
-      "canonical_url": "https://wiaf.ru/news/news_0d9c2003aa7b.html"
     }
   ]
 }
