@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-03T15:44:36+00:00",
+  "updated_at": "2026-04-03T16:48:06+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-03T15:44:36+00:00",
+  "cutoff_date": "2025-04-03T16:48:06+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -2448,7 +2448,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "9c13453cf2522dca58f49139daa06e61",
       "status": "published",
       "static_url": "news/portnews-sevmorput-i-konteynery-holodnaya-pravda-9c1345.html",
