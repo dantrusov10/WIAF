@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-03T13:13:28+00:00",
+  "updated_at": "2026-04-03T14:50:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-03T13:13:28+00:00",
+  "cutoff_date": "2025-04-03T14:50:36+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -203,6 +203,31 @@
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
+    },
+    {
+      "id": "news_a70211bf2efa",
+      "slug": "seanews-analiticheskiy-daydzhest-seanews-30-marta-3-apre-a70211",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-03T00:00:00+00:00",
+      "published_at": "2026-04-03T00:00:00+00:00",
+      "title": "Аналитический дайджест SeaNews, 30 марта — 3 апреля 2026 — SeaNews",
+      "snippet": "",
+      "content_preview": "Аналитический дайджест SeaNews, 30 марта — 3 апреля 2026",
+      "link": "https://seanews.ru/2026/04/03/ru-analiticheskij-dajdzhest-seanews-30-marta-3-aprelja-2026/",
+      "image_url": "",
+      "category": "analytics",
+      "category_ru": "аналитика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "a70211bf2efae1c8544af527ce9d384c",
+      "status": "published",
+      "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-30-marta-3-apre-a70211.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-analiticheskiy-daydzhest-seanews-30-marta-3-apre-a70211.html"
     },
     {
       "id": "news_79c8237638e9",
@@ -2448,7 +2473,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "a9cd0cbd3a56be482b45260798ad6052",
       "status": "published",
       "static_url": "news/rzd_partner-rzhd-opublikovali-perechen-napravleniy-s-ogranic-a9cd0c.html",
@@ -7457,24 +7482,6 @@
       "status": "published",
       "static_url": "news/news_467c8e7181dc.html",
       "canonical_url": "https://wiaf.ru/news/news_467c8e7181dc.html"
-    },
-    {
-      "id": "news_c43423239bfc",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-19",
-      "title": "Ohio jury awards $22.5 million in TQL pregnancy case",
-      "snippet": "<p>Lawsuit verdict: TQL hit with $22.5M verdict in pregnancy case.</p> <p>The post <a href=\"https://www.freightwaves.com/news/ohio-jury-awards-22-5-million-in-tql-pregnancy-case\">Ohio jury awards $22.5 million in TQL pregnancy case</a> appeared first on <a href=\"https://www.freightwaves.com\">FreightWaves</a>.</p>",
-      "link": "https://www.freightwaves.com/news/ohio-jury-awards-22-5-million-in-tql-pregnancy-case",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "unknown",
-      "region": "INT",
-      "freshness": "fresh",
-      "hash": "c43423239bfcb86791cd638f9d9278ac",
-      "status": "published",
-      "static_url": "news/news_c43423239bfc.html",
-      "canonical_url": "https://wiaf.ru/news/news_c43423239bfc.html"
     }
   ]
 }
