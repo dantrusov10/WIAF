@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-02T23:41:40+00:00",
+  "updated_at": "2026-04-03T02:41:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-02T23:41:40+00:00",
+  "cutoff_date": "2025-04-03T02:41:16+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3073,7 +3073,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "70cbe7f91c6ae2adf2d7c59a426dcb5d",
       "status": "published",
       "static_url": "news/seanews-perevozki-po-zhd-so-stranami-shos-rastut-70cbe7.html",
@@ -3098,7 +3098,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "a74d09deb6373671df7eaa2c4dc5655f",
       "status": "published",
       "static_url": "news/seanews-zavershena-rekonstruktsiya-shlyuzov-samarskogo-g-a74d09.html",
