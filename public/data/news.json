@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-03T14:50:36+00:00",
+  "updated_at": "2026-04-03T15:44:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-03T14:50:36+00:00",
+  "cutoff_date": "2025-04-03T15:44:36+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1228,6 +1228,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-studenty-sozdali-nedoroguyu-sistemu-dostavki-lek-33439f.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-studenty-sozdali-nedoroguyu-sistemu-dostavki-lek-33439f.html"
+    },
+    {
+      "id": "news_989fc202c18f",
+      "slug": "logirus-na-prohozhdenie-pogranperehodov-u-perevozchikov--989fc2",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-03-31T00:00:00+00:00",
+      "published_at": "2026-03-31T00:00:00+00:00",
+      "title": "На прохождение погранпереходов у перевозчиков уходит до 50% транзитного времени",
+      "snippet": "Водитель может ехать 9 часов, но средний суточный темп – 160–170 км. Остальное – очереди, контроль и потеря 1% стоимости груза за каждые сутки простоя",
+      "content_preview": "На прохождение погранпереходов у перевозчиков уходит до 50% транзитного времени",
+      "link": "https://logirus.ru/news/transport/na_prokhozhdenie_pogranperekhodov_u_perevozchikov_ukhodit_do_50_tranzitnogo_vremeni.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "989fc202c18f10eeb860be98f2ae7847",
+      "status": "published",
+      "static_url": "news/logirus-na-prohozhdenie-pogranperehodov-u-perevozchikov--989fc2.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-na-prohozhdenie-pogranperehodov-u-perevozchikov--989fc2.html"
     },
     {
       "id": "news_128476dde805",
@@ -7464,24 +7489,6 @@
       "status": "published",
       "static_url": "news/news_d368895a5585.html",
       "canonical_url": "https://wiaf.ru/news/news_d368895a5585.html"
-    },
-    {
-      "id": "news_467c8e7181dc",
-      "source": "FreightWaves",
-      "source_id": "freightwaves",
-      "date": "2026-03-19",
-      "title": "FedEx raises guidance again after strong earnings beat",
-      "snippet": "<p>FedEx delivered strong third-quarter results, buoyed by volume and yield growth and structural cost savings. </p> <p>The post <a href=\"https://www.freightwaves.com/news/fedex-raises-guidance-again-after-strong-earnings-beat\">FedEx raises guidance again after strong earnings beat</a> appeared first on <a href=\"https://www.freightwaves.com\">Freigh",
-      "link": "https://www.freightwaves.com/news/fedex-raises-guidance-again-after-strong-earnings-beat",
-      "image_url": "",
-      "category": "rates",
-      "transport_type": "unknown",
-      "region": "INT",
-      "freshness": "fresh",
-      "hash": "467c8e7181dc47f2f18df73a22d3329a",
-      "status": "published",
-      "static_url": "news/news_467c8e7181dc.html",
-      "canonical_url": "https://wiaf.ru/news/news_467c8e7181dc.html"
     }
   ]
 }
