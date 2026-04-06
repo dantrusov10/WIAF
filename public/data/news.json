@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-06T15:55:19+00:00",
+  "updated_at": "2026-04-06T16:57:25+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-06T15:55:19+00:00",
+  "cutoff_date": "2025-04-06T16:57:25+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -153,6 +153,31 @@
       "status": "published",
       "static_url": "news/logirus-kerosin-po-talonam-italiya-pervoy-v-es-vvela-lim-243f1b.html",
       "canonical_url": "https://wiaf.ru/news/logirus-kerosin-po-talonam-italiya-pervoy-v-es-vvela-lim-243f1b.html"
+    },
+    {
+      "id": "news_ed97358cf7d9",
+      "slug": "rzd_partner-import-novyh-legkovyh-avtomobiley-v-rf-v-marte-v-ed9735",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-06-04T15:00:22+00:00",
+      "published_at": "2026-06-04T15:00:22+00:00",
+      "title": "Импорт новых легковых автомобилей в РФ в марте вырос на 40%",
+      "snippet": "В марте 2026 года в Россию было ввезено 33,3 тыс. новых легковых автомобилей, что на 40% больше, чем годом ранее. Такие данные приводит аналитическое агентство «Автостат».",
+      "content_preview": "Импорт новых легковых автомобилей в РФ в марте вырос на 40%",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/import-novykh-legkovykh-avtomobiley-v-rf-v-marte-vyros-na-40/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "авто",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "ed97358cf7d91020a73ef10da82d4068",
+      "status": "published",
+      "static_url": "news/rzd_partner-import-novyh-legkovyh-avtomobiley-v-rf-v-marte-v-ed9735.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-import-novyh-legkovyh-avtomobiley-v-rf-v-marte-v-ed9735.html"
     },
     {
       "id": "news_5aabf602bfe7",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-pryamye-avtomobilnye-gruzoperevozki-s-kitaem-s-n-145415.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-pryamye-avtomobilnye-gruzoperevozki-s-kitaem-s-n-145415.html"
-    },
-    {
-      "id": "news_f8f4511451f9",
-      "slug": "rzd_partner-mery-po-ogranicheniyu-vozvrascheniya-globalnyh-k-f8f451",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-03-20T13:51:50+00:00",
-      "published_at": "2026-03-20T13:51:50+00:00",
-      "title": "Меры по ограничению возвращения глобальных контейнерных линий в РФ могут утвердить в 2026 году",
-      "snippet": "В России разрабатывается комплекс мер, направленных на ограничение возврата на рынок международных контейнерных линий, покинувших страну ранее. Как сообщил журналистам заместитель министра транспорта РФ Александр Пошивай, соответствующие решения могут быть утверждены уже в текущем году, передает Интерфакс.",
-      "content_preview": "Меры по ограничению возвращения глобальных контейнерных линий в РФ могут утвердить в 2026 году",
-      "link": "https://www.rzd-partner.ru/logistics/news/mery-po-ogranicheniyu-vozvrashcheniya-globalnykh-konteynernykh-liniy-v-rf-mogut-utverdit-v-2026-godu/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "f8f4511451f9328408107ab2550bb0c3",
-      "status": "published",
-      "static_url": "news/rzd_partner-mery-po-ogranicheniyu-vozvrascheniya-globalnyh-k-f8f451.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-mery-po-ogranicheniyu-vozvrascheniya-globalnyh-k-f8f451.html"
     }
   ]
 }
