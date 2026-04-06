@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-06T14:55:52+00:00",
+  "updated_at": "2026-04-06T15:55:19+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-06T14:55:52+00:00",
+  "cutoff_date": "2025-04-06T15:55:19+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -1028,6 +1028,31 @@
       "status": "published",
       "static_url": "news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-14-2026-7a4210.html",
       "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-14-2026-7a4210.html"
+    },
+    {
+      "id": "news_b2f5a6ece2f2",
+      "slug": "logirus-v-heyhe-testiruyut-bespilotnye-tyagachi-dlya-mos-b2f5a6",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-04-02T00:00:00+00:00",
+      "published_at": "2026-04-02T00:00:00+00:00",
+      "title": "В Хэйхэ тестируют беспилотные тягачи для моста через Амур",
+      "snippet": "Система распознает разметку под снегом и контролирует «мертвые зоны» в радиусе до 100 метров",
+      "content_preview": "В Хэйхэ тестируют беспилотные тягачи для моста через Амур",
+      "link": "https://logirus.ru/news/transport/v_kheykhe_testiruyut_bespilotnye_tyagachi_dlya_mosta_cherez_amur.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "b2f5a6ece2f278ba30c25bb87067ca8b",
+      "status": "published",
+      "static_url": "news/logirus-v-heyhe-testiruyut-bespilotnye-tyagachi-dlya-mos-b2f5a6.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-v-heyhe-testiruyut-bespilotnye-tyagachi-dlya-mos-b2f5a6.html"
     },
     {
       "id": "news_9551c0723004",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-mery-po-ogranicheniyu-vozvrascheniya-globalnyh-k-f8f451.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-mery-po-ogranicheniyu-vozvrascheniya-globalnyh-k-f8f451.html"
-    },
-    {
-      "id": "news_6764d70b2044",
-      "slug": "rzd_partner-v-yuzhnoy-osetii-postroyat-avtodorogu-k-vysokogo-6764d7",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-03-20T13:35:45+00:00",
-      "published_at": "2026-03-20T13:35:45+00:00",
-      "title": "В Южной Осетии построят автодорогу к высокогорным туристическим объектам",
-      "snippet": "В Южной Осетии в рамках российской инвестиционной программы на 2026–2028 годы планируется строительство высокогорной автодороги, которая обеспечит доступ туристов к объектам культурного наследия. Об этом сообщили ТАСС в министерстве строительства, архитектуры и ЖКХ республики.",
-      "content_preview": "В Южной Осетии построят автодорогу к высокогорным туристическим объектам",
-      "link": "https://www.rzd-partner.ru/auto/news/v-yuzhnoy-osetii-postroyat-avtodorogu-k-vysokogornym-turisticheskim-obektam/",
-      "image_url": "",
-      "category": "road",
-      "category_ru": "автологистика",
-      "transport_type": "авто",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "6764d70b2044272c2f5f8e5c4a99db24",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-yuzhnoy-osetii-postroyat-avtodorogu-k-vysokogo-6764d7.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-yuzhnoy-osetii-postroyat-avtodorogu-k-vysokogo-6764d7.html"
     }
   ]
 }
