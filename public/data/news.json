@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-06T17:53:45+00:00",
+  "updated_at": "2026-04-06T19:09:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-06T17:53:45+00:00",
+  "cutoff_date": "2025-04-06T19:09:14+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -290,13 +290,13 @@
       "date": "2026-06-04T14:09:11+00:00",
       "published_at": "2026-06-04T14:09:11+00:00",
       "title": "Правила, тарифы, изменения",
-      "snippet": "Статьи и новости на транспортную тематику.",
+      "snippet": "Правила, тарифы, изменения. ЖД Транспорт. РЖД-Партнер",
       "content_preview": "Правила, тарифы, изменения",
       "link": "https://www.rzd-partner.ru/zhd-transport/news/pravila-tarify-izmeneniya/",
       "image_url": "",
       "category": "ports",
       "category_ru": "порты",
-      "transport_type": "смешанная",
+      "transport_type": "железнодорожная",
       "region": "RU",
       "freshness": "fresh",
       "hash": "30dda807f403e4b1672b3b324d3db15c",
