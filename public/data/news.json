@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-08T17:10:01+00:00",
+  "updated_at": "2026-04-08T19:24:26+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-08T17:10:01+00:00",
+  "cutoff_date": "2025-04-08T19:24:26+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -53,6 +53,31 @@
       "status": "published",
       "static_url": "news/infranews-konteynernyy-otchet-po-itogam-2025-goda-12-yanva-c33667.html",
       "canonical_url": "https://wiaf.ru/news/infranews-konteynernyy-otchet-po-itogam-2025-goda-12-yanva-c33667.html"
+    },
+    {
+      "id": "news_60114611d327",
+      "slug": "logirus-ekspert-nuzhno-pochistit-nalogovye-preferentsii--601146",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-08-08T00:00:00+00:00",
+      "published_at": "2026-08-08T00:00:00+00:00",
+      "title": "Эксперт: нужно «почистить» налоговые преференции и перенастроить НДС под глубокую переработку",
+      "snippet": "В отраслях первичной переработки природных ресурсов – химии, металлургии, производстве кокса – налоговая нагрузка к выручке составляет всего 3-4%",
+      "content_preview": "Эксперт: нужно «почистить» налоговые преференции и перенастроить НДС под глубокую переработку",
+      "link": "https://logirus.ru/news/transport/ekspert_nuzhno_pochistit_nalogovye_preferentsii_i_perenastroit_nds_pod_glubokuyu_pererabotku.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "60114611d32761bc360eae19b999a299",
+      "status": "published",
+      "static_url": "news/logirus-ekspert-nuzhno-pochistit-nalogovye-preferentsii--601146.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-ekspert-nuzhno-pochistit-nalogovye-preferentsii--601146.html"
     },
     {
       "id": "news_8320c62cd710",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-kaliningradskoy-oblasti-rost-morskih-perevozok-c926a9.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-kaliningradskoy-oblasti-rost-morskih-perevozok-c926a9.html"
-    },
-    {
-      "id": "news_d105617591b4",
-      "slug": "rzd_partner-novaya-zheleznaya-doroga-kitay-kyrgyzstan-uzbeki-d10561",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-03-24T14:52:28+00:00",
-      "published_at": "2026-03-24T14:52:28+00:00",
-      "title": "Новая железная дорога Китай – Кыргызстан – Узбекистан сократит сроки доставки грузов на неделю",
-      "snippet": "Премьер-министр Кыргызстана Адылбек Касымалиев заявил о ходе реализации одного из крупнейших инфраструктурных проектов Центральной Азии – строительства железной дороги Китай – Кыргызстан – Узбекистан. По словам главы кабинета министров, новый маршрут позволит сократить сроки доставки грузов с Востока на Запад примерно на неделю, что станет важным шагом в развитии транспортного сообщения между регионами.",
-      "content_preview": "Новая железная дорога Китай – Кыргызстан – Узбекистан сократит сроки доставки грузов на неделю",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/novaya-zheleznaya-doroga-kitay-kyrgyzstan-uzbekistan-sokratit-sroki-dostavki-gruzov-na-nedelyu/",
-      "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "archive",
-      "hash": "d105617591b40acff1b51f4cdc7af92a",
-      "status": "published",
-      "static_url": "news/rzd_partner-novaya-zheleznaya-doroga-kitay-kyrgyzstan-uzbeki-d10561.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-novaya-zheleznaya-doroga-kitay-kyrgyzstan-uzbeki-d10561.html"
     }
   ]
 }
