@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-08T19:24:26+00:00",
+  "updated_at": "2026-04-08T20:52:42+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-08T19:24:26+00:00",
+  "cutoff_date": "2025-04-08T20:52:42+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -190,7 +190,7 @@
       "date": "2026-08-04T15:00:42+00:00",
       "published_at": "2026-08-04T15:00:42+00:00",
       "title": "Депутаты просят ФАС проверить цены на авиабилеты перед майскими праздниками",
-      "snippet": "Депутаты фракции «Новые люди» в Государственная дума направили обращение в ФАС России с просьбой проверить возможный рост цен на авиабилеты в преддверии майских праздников. Инициатором выступил вице-спикер Госдумы Владислав Даванков, письмо адресовано главе ведомства Максим Шаскольский.",
+      "snippet": "Депутаты фракции «Новые люди» в Государственной думе направили обращение в ФАС России с просьбой проверить возможный рост цен на авиабилеты в преддверии майских праздников. Инициатором выступил вице-спикер Госдумы Владислав Даванков, письмо адресовано главе ведомства Максиму Шаскольскому.",
       "content_preview": "Депутаты просят ФАС проверить цены на авиабилеты перед майскими праздниками",
       "link": "https://www.rzd-partner.ru/aviation/news/deputaty-prosyat-fas-proverit-tseny-na-aviabilety-pered-mayskimi-prazdnikami/",
       "image_url": "",
@@ -328,6 +328,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-dlya-posadki-v-poezd-po-biometrii-na-vremya-test-6a1c99.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-dlya-posadki-v-poezd-po-biometrii-na-vremya-test-6a1c99.html"
+    },
+    {
+      "id": "news_6796887144a1",
+      "slug": "rzd_partner-s-1-iyulya-2026-goda-v-kazahstane-vvodyatsya-zhe-679688",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-08-04T13:16:37+00:00",
+      "published_at": "2026-08-04T13:16:37+00:00",
+      "title": "С 1 июля 2026 года в Казахстане вводятся жесткие правила маркировки арендных самокатов",
+      "snippet": "Электросамокаты окончательно переходят в правовое поле – полный текст документа опубликован сайте профильного ведомства. В соответствии с приказом министра внутренних дел Республики Казахстан в стране вводятся жесткие правила маркировки и учета средств микромобильности, сдаваемых в аренду, причем в ведомстве отметили, что эти изменения наведут порядок на тротуарах и упростят идентификацию нарушителей. Новые правила разработаны в рамках реализации Закона «О дорожном движении» и вступают в силу с ",
+      "content_preview": "С 1 июля 2026 года в Казахстане вводятся жесткие правила маркировки арендных самокатов",
+      "link": "https://www.rzd-partner.ru/auto/news/s-1-iyulya-2026-goda-v-kazakhstane-vvodyatsya-zhyestkie-pravila-markirovki-arendnykh-samokatov/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "6796887144a14238d888527933590f72",
+      "status": "published",
+      "static_url": "news/rzd_partner-s-1-iyulya-2026-goda-v-kazahstane-vvodyatsya-zhe-679688.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-s-1-iyulya-2026-goda-v-kazahstane-vvodyatsya-zhe-679688.html"
     },
     {
       "id": "news_15334d201dcf",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-konteynerooborot-portov-dalnevostochnogo-basseyn-68084c.html",
       "canonical_url": "https://wiaf.ru/news/seanews-konteynerooborot-portov-dalnevostochnogo-basseyn-68084c.html"
-    },
-    {
-      "id": "news_c926a93eb987",
-      "slug": "rzd_partner-v-kaliningradskoy-oblasti-rost-morskih-perevozok-c926a9",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-03-24T15:00:45+00:00",
-      "published_at": "2026-03-24T15:00:45+00:00",
-      "title": "В Калининградской области рост морских перевозок ускорился на фоне ограничений ЕС",
-      "snippet": "Ограничения Евросоюза на транзит грузов в Калининградскую область стали стимулом для развития морского сообщения региона. Об этом губернатор Алексей Беспрозванных заявил на встрече с президентом РФ Владимиром Путиным.",
-      "content_preview": "В Калининградской области рост морских перевозок ускорился на фоне ограничений ЕС",
-      "link": "https://www.rzd-partner.ru/wate-transport/news/v-kaliningradskoy-oblasti-rost-morskikh-perevozok-uskorilsya-na-fone-ogranicheniy-es/",
-      "image_url": "",
-      "category": "road",
-      "category_ru": "автологистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "c926a93eb9871f6051c6ae77ddc07817",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-kaliningradskoy-oblasti-rost-morskih-perevozok-c926a9.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-kaliningradskoy-oblasti-rost-morskih-perevozok-c926a9.html"
     }
   ]
 }
