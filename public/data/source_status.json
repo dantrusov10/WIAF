@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-04-13T16:19:13+00:00",
+  "updated_at": "2026-04-13T18:08:16+00:00",
   "summary": {
-    "updated_at": "2026-04-13T16:19:13+00:00",
+    "updated_at": "2026-04-13T18:08:16+00:00",
     "retention_days": 365,
-    "cutoff_date": "2025-04-13T16:19:13+00:00",
+    "cutoff_date": "2025-04-13T18:08:16+00:00",
     "active_sources": 10,
     "successful_sources": 8,
     "empty_sources": 3,
     "error_sources": 2,
-    "fetched_items": 46,
+    "fetched_items": 45,
     "published_items": 300,
     "cache_used": false,
     "stale_filtered_total": 2,
-    "missing_date_filtered_total": 70,
+    "missing_date_filtered_total": 71,
     "indices_count": 7,
     "rates_count": 6,
     "corridors_count": 7,
@@ -34,7 +34,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-13T16:16:43+00:00",
+      "checked_at": "2026-04-13T18:05:29+00:00",
       "error": "rss:https://logirus.ru/rss.xml -> 403 Client Error: Forbidden for url: https://logirus.ru/rss.xml | html:https://logirus.ru/ -> 403 Client Error: Forbidden for url: https://logirus.ru/ | html:https://logirus.ru/news/ -> 403 Client Error: Forbidden for url: https://logirus.ru/news/",
       "kind": "news"
     },
@@ -52,7 +52,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 12,
       "status": "ok",
-      "checked_at": "2026-04-13T16:17:25+00:00",
+      "checked_at": "2026-04-13T18:06:17+00:00",
       "error": "",
       "kind": "news"
     },
@@ -70,7 +70,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-04-13T16:17:40+00:00",
+      "checked_at": "2026-04-13T18:06:33+00:00",
       "error": "",
       "kind": "news"
     },
@@ -83,12 +83,12 @@
       "enabled": true,
       "country": "RU",
       "language": "ru",
-      "items_count": 9,
+      "items_count": 8,
       "raw_items_count": 20,
       "stale_filtered": 1,
-      "missing_date_filtered": 10,
+      "missing_date_filtered": 11,
       "status": "ok",
-      "checked_at": "2026-04-13T16:17:54+00:00",
+      "checked_at": "2026-04-13T18:06:46+00:00",
       "error": "",
       "kind": "news"
     },
@@ -106,7 +106,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-04-13T16:18:04+00:00",
+      "checked_at": "2026-04-13T18:07:07+00:00",
       "error": "",
       "kind": "news"
     },
@@ -124,7 +124,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 19,
       "status": "empty",
-      "checked_at": "2026-04-13T16:18:18+00:00",
+      "checked_at": "2026-04-13T18:07:20+00:00",
       "error": "",
       "kind": "news"
     },
@@ -142,8 +142,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-13T16:18:39+00:00",
-      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7f2c0cdc3810>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
+      "checked_at": "2026-04-13T18:07:40+00:00",
+      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7fcb9ab3c450>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
       "kind": "news"
     },
     {
@@ -160,7 +160,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "empty",
-      "checked_at": "2026-04-13T16:19:01+00:00",
+      "checked_at": "2026-04-13T18:08:05+00:00",
       "error": "",
       "kind": "news"
     },
@@ -178,7 +178,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "ok",
-      "checked_at": "2026-04-13T16:19:05+00:00",
+      "checked_at": "2026-04-13T18:08:09+00:00",
       "error": "",
       "kind": "news"
     },
@@ -196,7 +196,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "empty",
-      "checked_at": "2026-04-13T16:19:07+00:00",
+      "checked_at": "2026-04-13T18:08:11+00:00",
       "error": "",
       "kind": "news"
     },
@@ -206,7 +206,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-13T16:19:09+00:00",
+      "checked_at": "2026-04-13T18:08:13+00:00",
       "error": "index value not found",
       "used_url": "https://en.sse.net.cn/indices/scfinew.jsp"
     },
@@ -216,7 +216,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-13T16:19:11+00:00",
+      "checked_at": "2026-04-13T18:08:14+00:00",
       "error": "",
       "used_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
@@ -226,7 +226,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-13T16:19:11+00:00",
+      "checked_at": "2026-04-13T18:08:15+00:00",
       "error": "index value not found",
       "used_url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
     },
@@ -236,7 +236,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-13T16:19:12+00:00",
+      "checked_at": "2026-04-13T18:08:16+00:00",
       "error": "",
       "used_url": "https://fbx.freightos.com/"
     },
@@ -246,7 +246,7 @@
       "kind": "fx",
       "status": "ok",
       "items_count": 3,
-      "checked_at": "2026-04-13T16:19:13+00:00",
+      "checked_at": "2026-04-13T18:08:16+00:00",
       "error": "",
       "used_url": "https://www.cbr.ru/scripts/XML_daily.asp"
     }
