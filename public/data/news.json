@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-14T15:19:42+00:00",
+  "updated_at": "2026-04-14T17:17:25+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-14T15:19:42+00:00",
+  "cutoff_date": "2025-04-14T17:17:25+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4430,6 +4430,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-avtomatizatsiya-raschetov-po-arende-vagonov-prak-f9de2c.html"
     },
     {
+      "id": "news_58640dd6cad0",
+      "slug": "logirus-kupil-v-kazahstane-plati-kak-vo-frantsii-tamozhn-58640d",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-04-14T00:00:00+00:00",
+      "published_at": "2026-04-14T00:00:00+00:00",
+      "title": "Купил в Казахстане, плати как во Франции: таможня начала преследовать «недружественное» происхождение",
+      "snippet": "С 2025 года таможня доначисляет пошлины до 35% на косметику и одежду, ввезенные из Казахстана и других стран ЕАЭС, если оригинальное производство находится во Франции или другой «недружественной» стране. Прежние разъяснения ФТС больше не работают, а судебная практика только начинает складываться",
+      "content_preview": "Купил в Казахстане, плати как во Франции: таможня начала преследовать «недружественное» происхождение",
+      "link": "https://logirus.ru/news/custom_and_ved/kupil_v_kazakhstane_plati_kak_vo_frantsii.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "58640dd6cad0d6568870986c116f4855",
+      "status": "published",
+      "static_url": "news/logirus-kupil-v-kazahstane-plati-kak-vo-frantsii-tamozhn-58640d.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-kupil-v-kazahstane-plati-kak-vo-frantsii-tamozhn-58640d.html"
+    },
+    {
       "id": "news_9005cf4f0ec8",
       "slug": "logirus-fns-i-siloviki-vzyali-sled-37-tysyach-polzovatel-9005cf",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-pervyy-v-mire-dvigatel-na-vodorode-dlya-krupnoto-851011.html",
       "canonical_url": "https://wiaf.ru/news/seanews-pervyy-v-mire-dvigatel-na-vodorode-dlya-krupnoto-851011.html"
-    },
-    {
-      "id": "news_ec897145aec2",
-      "slug": "seanews-bespilotnye-kamazy-vyshli-na-m-12-ec8971",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-03-31T00:00:00+00:00",
-      "published_at": "2026-03-31T00:00:00+00:00",
-      "title": "Беспилотные КАМАЗы вышли на М-12 — SeaNews",
-      "snippet": "",
-      "content_preview": "Беспилотные КАМАЗы вышли на М-12",
-      "link": "https://seanews.ru/2026/03/31/ru-bespilotnye-kamazy-vyshli-na-m-12/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "ec897145aec21c69c20e51d2f238e763",
-      "status": "published",
-      "static_url": "news/seanews-bespilotnye-kamazy-vyshli-na-m-12-ec8971.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-bespilotnye-kamazy-vyshli-na-m-12-ec8971.html"
     }
   ]
 }
