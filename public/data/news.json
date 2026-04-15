@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-15T17:11:31+00:00",
+  "updated_at": "2026-04-15T19:25:30+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-15T17:11:31+00:00",
+  "cutoff_date": "2025-04-15T19:25:30+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4505,6 +4505,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-gosdumu-vnesut-proekt-ob-obyazatelnom-soglasov-05ee54.html"
     },
     {
+      "id": "news_95aa0b5695e8",
+      "slug": "logirus-bolshe-44-tonn-ne-budet-mintrans-obnulil-nadezhd-95aa0b",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-04-15T00:00:00+00:00",
+      "published_at": "2026-04-15T00:00:00+00:00",
+      "title": "«Больше 44 тонн не будет». Минтранс обнулил надежды рынка на повышение предельной массы",
+      "snippet": "Повышение массы до 55 тонн потребовало бы дополнительных 700 млрд рублей в год только на федеральные трассы",
+      "content_preview": "«Больше 44 тонн не будет». Минтранс обнулил надежды рынка на повышение предельной массы",
+      "link": "https://logirus.ru/news/transport/bolshe_44_tonn_ne_budet_mintrans_obnulil_nadezhdy_rynka_na_povyshenie_predelnoy_massy.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "95aa0b5695e817626f81e3610ed34757",
+      "status": "published",
+      "static_url": "news/logirus-bolshe-44-tonn-ne-budet-mintrans-obnulil-nadezhd-95aa0b.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-bolshe-44-tonn-ne-budet-mintrans-obnulil-nadezhd-95aa0b.html"
+    },
+    {
       "id": "news_1b8b2c72f890",
       "slug": "logirus-ot-raznoboya-k-edinomu-oknu-mintrans-poobeschal--1b8b2c",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-vveden-v-ekspluatatsiyu-pervyy-etap-bagaevskogo--efd1c9.html",
       "canonical_url": "https://wiaf.ru/news/seanews-vveden-v-ekspluatatsiyu-pervyy-etap-bagaevskogo--efd1c9.html"
-    },
-    {
-      "id": "news_ec372630ea46",
-      "slug": "seanews-gk-delo-i-ao-otlk-era-podpisali-memorandum-o-sot-ec3726",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-04-01T00:00:00+00:00",
-      "published_at": "2026-04-01T00:00:00+00:00",
-      "title": "ГК «Дело» и АО «ОТЛК ЕРА» подписали меморандум о сотрудничестве — SeaNews",
-      "snippet": "",
-      "content_preview": "ГК «Дело» и АО «ОТЛК ЕРА» подписали меморандум о сотрудничестве",
-      "link": "https://seanews.ru/2026/04/01/ru-gk-delo-i-ao-otlk-era-podpisali-memorandum-o-sotrudnichestve/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "ec372630ea466b078d5c23928f669344",
-      "status": "published",
-      "static_url": "news/seanews-gk-delo-i-ao-otlk-era-podpisali-memorandum-o-sot-ec3726.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-gk-delo-i-ao-otlk-era-podpisali-memorandum-o-sot-ec3726.html"
     }
   ]
 }
