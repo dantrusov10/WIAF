@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-16T23:46:25+00:00",
+  "updated_at": "2026-04-17T02:54:26+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-16T23:46:25+00:00",
+  "cutoff_date": "2025-04-17T02:54:26+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -2437,8 +2437,8 @@
       "source_group": "operator",
       "lang": "ru",
       "priority": 76,
-      "date": "2026-07-16T00:00:00+00:00",
-      "published_at": "2026-07-16T00:00:00+00:00",
+      "date": "2026-07-17T00:00:00+00:00",
+      "published_at": "2026-07-17T00:00:00+00:00",
       "title": "При поддержке Глобал Портс открыты новые учебные мастерские в Находкинском колледже",
       "snippet": "",
       "content_preview": "",
@@ -5523,7 +5523,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "a0733d90b5d382a05e34d81ba144430c",
       "status": "published",
       "static_url": "news/logirus-platon-nauchilsya-dorisovyvat-kartu-i-eto-prines-a0733d.html",
