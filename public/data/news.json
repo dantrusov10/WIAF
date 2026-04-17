@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-17T20:53:54+00:00",
+  "updated_at": "2026-04-17T21:48:10+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-17T20:53:54+00:00",
+  "cutoff_date": "2025-04-17T21:48:10+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -7223,7 +7223,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "9b4b31bf29aeb5a65fe167859df4a615",
       "status": "published",
       "static_url": "news/rzd_partner-zakrytie-putey-v-roszheldor-9b4b31.html",
