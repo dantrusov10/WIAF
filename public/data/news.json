@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-18T07:16:19+00:00",
+  "updated_at": "2026-04-18T08:58:56+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-18T07:16:19+00:00",
+  "cutoff_date": "2025-04-18T08:58:56+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4848,7 +4848,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "b1e63df7b860515e8482b4650f4942e9",
       "status": "published",
       "static_url": "news/logirus-dostali-so-sklada-rospotrebnadzor-hochet-provery-b1e63d.html",
