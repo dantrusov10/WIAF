@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-18T09:56:11+00:00",
+  "updated_at": "2026-04-18T10:47:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-18T09:56:11+00:00",
+  "cutoff_date": "2025-04-18T10:47:36+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4498,7 +4498,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "9a660f655f8c47ef3635f96d2cfe7b52",
       "status": "published",
       "static_url": "news/portnews-dnouglublenie-opyt-bolshoy-chetverki-9a660f.html",
