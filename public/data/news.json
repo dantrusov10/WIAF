@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-18T14:45:37+00:00",
+  "updated_at": "2026-04-18T15:43:04+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-18T14:45:37+00:00",
+  "cutoff_date": "2025-04-18T15:43:04+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4173,7 +4173,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "e6df5b707c52a4fc1793967ad3dfebd5",
       "status": "published",
       "static_url": "news/rzd_partner-zheleznodorozhnye-perevozki-mezhdu-kazahstanom-i-e6df5b.html",
