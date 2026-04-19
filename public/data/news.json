@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-19T07:27:21+00:00",
+  "updated_at": "2026-04-19T09:01:25+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-19T07:27:21+00:00",
+  "cutoff_date": "2025-04-19T09:01:25+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3898,7 +3898,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "937fd0fe2390929dac0fdc0a5fa612cc",
       "status": "published",
       "static_url": "news/rzd_partner-vremya-istinnyh-romantikov-55-let-nazad-komsomol-937fd0.html",
