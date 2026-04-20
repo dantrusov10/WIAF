@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-20T03:21:12+00:00",
+  "updated_at": "2026-04-20T06:21:52+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-20T03:21:12+00:00",
+  "cutoff_date": "2025-04-20T06:21:52+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3880,6 +3880,31 @@
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
     },
     {
+      "id": "news_458f43234dbd",
+      "slug": "rzd_partner-murmanskie-porty-naraschivayut-perevalku-kaliya--458f43",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-04-20T06:03:46+00:00",
+      "published_at": "2026-04-20T06:03:46+00:00",
+      "title": "Мурманские порты наращивают перевалку калия на фоне снижения спроса на уголь",
+      "snippet": "Статьи и новости на транспортную тематику.",
+      "content_preview": "Мурманские порты наращивают перевалку калия на фоне снижения спроса на уголь",
+      "link": "https://www.rzd-partner.ru/logistics/news/murmanskie-porty-narashchivayut-perevalku-kaliya-na-fone-snizheniya-sprosa-na-ugol/",
+      "image_url": "https://www.rzd-partner.ru:443/upload/iblock/e33/2btuz79p605x4n6129tsjzp1ahxtt43m/PressFoto_21904027_Small.jpg",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "458f43234dbd83ccb52e4d9dcc41446f",
+      "status": "published",
+      "static_url": "news/rzd_partner-murmanskie-porty-naraschivayut-perevalku-kaliya--458f43.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-murmanskie-porty-naraschivayut-perevalku-kaliya--458f43.html"
+    },
+    {
       "id": "news_937fd0fe2390",
       "slug": "rzd_partner-vremya-istinnyh-romantikov-55-let-nazad-komsomol-937fd0",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-uzbekistan-vnedryaet-mehanizm-import-bondovyy-sk-4fe6d5.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-uzbekistan-vnedryaet-mehanizm-import-bondovyy-sk-4fe6d5.html"
-    },
-    {
-      "id": "news_54c263ab38bf",
-      "slug": "rzd_partner-kazahstan-nameren-uskorit-dostavku-gruzov-po-tra-54c263",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-04-13T08:40:34+00:00",
-      "published_at": "2026-04-13T08:40:34+00:00",
-      "title": "Казахстан намерен ускорить доставку грузов по Транскаспийскому маршруту",
-      "snippet": "Казахстанские власти прорабатывают меры по сокращению сроков перевозки грузов по Транскаспийскому международному транспортному маршруту (ТМТМ), в том числе за счет цифровой интеграции с Азербайджаном и Грузией. Об этом сообщили в пресс-службе правительства республики по итогам совещания по вопросам развития транзитно-транспортного потенциала, прошедшего под председательством премьер-министра Олжаса Бектенова.",
-      "content_preview": "Казахстан намерен ускорить доставку грузов по Транскаспийскому маршруту",
-      "link": "https://www.rzd-partner.ru/logistics/news/kazakhstan-nameren-uskorit-dostavku-gruzov-po-transkaspiyskomu-marshrutu/",
-      "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "54c263ab38bf73d5d2acf9e6a7002b71",
-      "status": "published",
-      "static_url": "news/rzd_partner-kazahstan-nameren-uskorit-dostavku-gruzov-po-tra-54c263.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-kazahstan-nameren-uskorit-dostavku-gruzov-po-tra-54c263.html"
     }
   ]
 }
