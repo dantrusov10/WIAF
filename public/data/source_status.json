@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-20T15:20:09+00:00",
+  "updated_at": "2026-04-20T17:09:43+00:00",
   "summary": {
-    "updated_at": "2026-04-20T15:20:09+00:00",
+    "updated_at": "2026-04-20T17:09:43+00:00",
     "retention_days": 365,
-    "cutoff_date": "2025-04-20T15:20:09+00:00",
+    "cutoff_date": "2025-04-20T17:09:43+00:00",
     "active_sources": 10,
     "successful_sources": 8,
     "empty_sources": 3,
@@ -34,7 +34,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-20T15:17:35+00:00",
+      "checked_at": "2026-04-20T17:07:14+00:00",
       "error": "rss:https://logirus.ru/rss.xml -> 403 Client Error: Forbidden for url: https://logirus.ru/rss.xml | html:https://logirus.ru/ -> 403 Client Error: Forbidden for url: https://logirus.ru/ | html:https://logirus.ru/news/ -> 403 Client Error: Forbidden for url: https://logirus.ru/news/",
       "kind": "news"
     },
@@ -52,7 +52,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 12,
       "status": "ok",
-      "checked_at": "2026-04-20T15:18:16+00:00",
+      "checked_at": "2026-04-20T17:07:55+00:00",
       "error": "",
       "kind": "news"
     },
@@ -70,7 +70,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-04-20T15:18:34+00:00",
+      "checked_at": "2026-04-20T17:08:11+00:00",
       "error": "",
       "kind": "news"
     },
@@ -88,7 +88,7 @@
       "stale_filtered": 1,
       "missing_date_filtered": 9,
       "status": "ok",
-      "checked_at": "2026-04-20T15:18:50+00:00",
+      "checked_at": "2026-04-20T17:08:27+00:00",
       "error": "",
       "kind": "news"
     },
@@ -106,7 +106,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 8,
       "status": "ok",
-      "checked_at": "2026-04-20T15:19:00+00:00",
+      "checked_at": "2026-04-20T17:08:36+00:00",
       "error": "",
       "kind": "news"
     },
@@ -124,7 +124,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 19,
       "status": "empty",
-      "checked_at": "2026-04-20T15:19:14+00:00",
+      "checked_at": "2026-04-20T17:08:50+00:00",
       "error": "",
       "kind": "news"
     },
@@ -142,8 +142,8 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "error",
-      "checked_at": "2026-04-20T15:19:35+00:00",
-      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7f5a434fbe50>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
+      "checked_at": "2026-04-20T17:09:11+00:00",
+      "error": "html:https://customs.gov.ru/ -> HTTPSConnectionPool(host='customs.gov.ru', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='customs.gov.ru', port=443) at 0x7fb37be93c50>, 'Connection to customs.gov.ru timed out. (connect timeout=20)'))",
       "kind": "news"
     },
     {
@@ -160,7 +160,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 13,
       "status": "empty",
-      "checked_at": "2026-04-20T15:19:56+00:00",
+      "checked_at": "2026-04-20T17:09:31+00:00",
       "error": "",
       "kind": "news"
     },
@@ -178,7 +178,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "ok",
-      "checked_at": "2026-04-20T15:20:01+00:00",
+      "checked_at": "2026-04-20T17:09:36+00:00",
       "error": "",
       "kind": "news"
     },
@@ -196,7 +196,7 @@
       "stale_filtered": 0,
       "missing_date_filtered": 0,
       "status": "empty",
-      "checked_at": "2026-04-20T15:20:02+00:00",
+      "checked_at": "2026-04-20T17:09:37+00:00",
       "error": "",
       "kind": "news"
     },
@@ -206,7 +206,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-20T15:20:04+00:00",
+      "checked_at": "2026-04-20T17:09:39+00:00",
       "error": "index value not found",
       "used_url": "https://en.sse.net.cn/indices/scfinew.jsp"
     },
@@ -216,7 +216,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-20T15:20:06+00:00",
+      "checked_at": "2026-04-20T17:09:41+00:00",
       "error": "",
       "used_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
@@ -226,7 +226,7 @@
       "kind": "index",
       "status": "cache",
       "items_count": 1,
-      "checked_at": "2026-04-20T15:20:07+00:00",
+      "checked_at": "2026-04-20T17:09:42+00:00",
       "error": "index value not found",
       "used_url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
     },
@@ -236,7 +236,7 @@
       "kind": "index",
       "status": "ok",
       "items_count": 1,
-      "checked_at": "2026-04-20T15:20:08+00:00",
+      "checked_at": "2026-04-20T17:09:42+00:00",
       "error": "",
       "used_url": "https://fbx.freightos.com/"
     },
@@ -246,7 +246,7 @@
       "kind": "fx",
       "status": "ok",
       "items_count": 3,
-      "checked_at": "2026-04-20T15:20:09+00:00",
+      "checked_at": "2026-04-20T17:09:43+00:00",
       "error": "",
       "used_url": "https://www.cbr.ru/scripts/XML_daily.asp"
     }
