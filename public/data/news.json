@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-20T17:09:43+00:00",
+  "updated_at": "2026-04-20T19:13:45+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-20T17:09:43+00:00",
+  "cutoff_date": "2025-04-20T19:13:45+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4015,13 +4015,13 @@
       "date": "2026-04-20T13:47:59+00:00",
       "published_at": "2026-04-20T13:47:59+00:00",
       "title": "Пломбы – в обязательном порядке",
-      "snippet": "Пломбы – в обязательном порядке. ЖД Транспорт. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "Пломбы – в обязательном порядке",
       "link": "https://www.rzd-partner.ru/zhd-transport/news/plomby-v-obyazatelnom-poryadke/",
       "image_url": "",
       "category": "ports",
       "category_ru": "порты",
-      "transport_type": "железнодорожная",
+      "transport_type": "смешанная",
       "region": "RU",
       "freshness": "fresh",
       "hash": "262d9d497cd19f69bc8d36f65d8726b6",
