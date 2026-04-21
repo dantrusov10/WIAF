@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-21T15:19:51+00:00",
+  "updated_at": "2026-04-21T17:09:30+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-21T15:19:51+00:00",
+  "cutoff_date": "2025-04-21T17:09:30+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4480,6 +4480,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-chislo-vydannyh-razresheniy-na-perevozku-gruzov--a19282.html"
     },
     {
+      "id": "news_9b0e3aceb862",
+      "slug": "logirus-patenty-goryat-shtabelery-edut-logistika-perekly-9b0e3a",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-04-21T00:00:00+00:00",
+      "published_at": "2026-04-21T00:00:00+00:00",
+      "title": "Патенты горят, штабелеры едут: логистика переключается на Африку и Азию",
+      "snippet": "За год с небольшим число сотрудников из Индии, Бангладеш и Вьетнама на складах выросло на 40%. К 2027 году спрос на них может увеличиться еще в полтора раза",
+      "content_preview": "Патенты горят, штабелеры едут: логистика переключается на Африку и Азию",
+      "link": "https://logirus.ru/news/warehouses/patenty_goryat_shtabelery_edut_logistika_pereklyuchaetsya_na_afriku_i_aziyu.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "9b0e3aceb8623651aacc87ade6f82dbc",
+      "status": "published",
+      "static_url": "news/logirus-patenty-goryat-shtabelery-edut-logistika-perekly-9b0e3a.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-patenty-goryat-shtabelery-edut-logistika-perekly-9b0e3a.html"
+    },
+    {
       "id": "news_f656f5d02bed",
       "slug": "logirus-region-imeet-znachenie-dispetcherizatsiya-i-svoy-f656f5",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-pervye-suda-s-karavanami-barzh-na-severnoy-dvine-ab751e.html",
       "canonical_url": "https://wiaf.ru/news/seanews-pervye-suda-s-karavanami-barzh-na-severnoy-dvine-ab751e.html"
-    },
-    {
-      "id": "news_9a003645e191",
-      "slug": "seanews-fesco-podderzhit-morskoe-obrazovanie-vo-vetname-9a0036",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-04-15T00:00:00+00:00",
-      "published_at": "2026-04-15T00:00:00+00:00",
-      "title": "FESCO поддержит морское образование во Вьетнаме — SeaNews",
-      "snippet": "",
-      "content_preview": "FESCO поддержит морское образование во Вьетнаме",
-      "link": "https://seanews.ru/2026/04/15/ru-fesco-podderzhit-morskoe-obrazovanie-vo-vetname/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "9a003645e19146face179c4578482118",
-      "status": "published",
-      "static_url": "news/seanews-fesco-podderzhit-morskoe-obrazovanie-vo-vetname-9a0036.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-fesco-podderzhit-morskoe-obrazovanie-vo-vetname-9a0036.html"
     }
   ]
 }
