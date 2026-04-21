@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-21T20:59:05+00:00",
+  "updated_at": "2026-04-21T21:55:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-21T20:59:05+00:00",
+  "cutoff_date": "2025-04-21T21:55:16+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3880,6 +3880,31 @@
       "canonical_url": "https://wiaf.ru/news/portnews-daydzhest-bunkernogo-rynka-tseny-e3ecb6.html"
     },
     {
+      "id": "news_04e604817aa7",
+      "slug": "logirus-nds-otpustyat-pod-zalog-tri-mesyatsa-bez-avansa--04e604",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-04-22T00:00:00+00:00",
+      "published_at": "2026-04-22T00:00:00+00:00",
+      "title": "НДС отпустят «под залог»: три месяца без аванса на таможне",
+      "snippet": "Отсрочку дадут только УЭО и системообразующим компаниям на ОСНО. Придется предоставить банковскую гарантию и разрешить таможне мониторить свои учетные системы",
+      "content_preview": "НДС отпустят «под залог»: три месяца без аванса на таможне",
+      "link": "https://logirus.ru/news/custom_and_ved/nds_otpustyat_pod_zalog_tri_mesyatsa_bez_avansa_na_tamozhne.html",
+      "image_url": "",
+      "category": "regulation",
+      "category_ru": "регулирование",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "04e604817aa7754bf86358c3b9bb273a",
+      "status": "published",
+      "static_url": "news/logirus-nds-otpustyat-pod-zalog-tri-mesyatsa-bez-avansa--04e604.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-nds-otpustyat-pod-zalog-tri-mesyatsa-bez-avansa--04e604.html"
+    },
+    {
       "id": "news_08e53af20f0e",
       "slug": "rzd_partner-fas-predupredila-o-nedopustimosti-rosta-tsen-pri-08e53a",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-kitay-edet-kazahstan-tormozit-zayavok-na-import--e5799b.html",
       "canonical_url": "https://wiaf.ru/news/logirus-kitay-edet-kazahstan-tormozit-zayavok-na-import--e5799b.html"
-    },
-    {
-      "id": "news_ab751e9ec9bd",
-      "slug": "seanews-pervye-suda-s-karavanami-barzh-na-severnoy-dvine-ab751e",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-04-15T00:00:00+00:00",
-      "published_at": "2026-04-15T00:00:00+00:00",
-      "title": "Первые суда с караванами барж на Северной Двине — SeaNews",
-      "snippet": "",
-      "content_preview": "Первые суда с караванами барж на Северной Двине",
-      "link": "https://seanews.ru/2026/04/15/ru-pervye-suda-s-karavanami-barzh-na-severnoj-dvine/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "ab751e9ec9bd9e6a964959fba9df9c63",
-      "status": "published",
-      "static_url": "news/seanews-pervye-suda-s-karavanami-barzh-na-severnoy-dvine-ab751e.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-pervye-suda-s-karavanami-barzh-na-severnoy-dvine-ab751e.html"
     }
   ]
 }
