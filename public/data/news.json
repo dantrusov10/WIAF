@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-21T21:55:16+00:00",
+  "updated_at": "2026-04-21T22:43:28+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-21T21:55:16+00:00",
+  "cutoff_date": "2025-04-21T22:43:28+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -5948,7 +5948,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "053811512c6bad371adbf2a959076031",
       "status": "published",
       "static_url": "news/rzd_partner-v-moskve-otkryli-novyy-gorodskoy-vokzal-moskva-s-053811.html",
@@ -6703,6 +6703,31 @@
       "status": "published",
       "static_url": "news/delo-rezultaty-operatsionnoy-deyatelnosti-global-port-780fa0.html",
       "canonical_url": "https://wiaf.ru/news/delo-rezultaty-operatsionnoy-deyatelnosti-global-port-780fa0.html"
+    },
+    {
+      "id": "news_fddd4f7f7ba1",
+      "slug": "rzd_partner-mediareyting-zheleznodorozhnyh-operatorov-i-kvar-fddd4f",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-04-15T15:00:32+00:00",
+      "published_at": "2026-04-15T15:00:32+00:00",
+      "title": "Медиарейтинг железнодорожных операторов I квартал 2026 года",
+      "snippet": "«Система мониторинга и анализа СМИ и соцмедиа СКАН-Интерфакс совместно с онлайн-порталом «РЖД Партнер» подготовили медиарейтинг железнодорожных операторов за I квартал 2026 года»",
+      "content_preview": "Медиарейтинг железнодорожных операторов I квартал 2026 года",
+      "link": "https://www.rzd-partner.ru/zhd-transport/comments/mediareyting-zheleznodorozhnykh-operatorov-i-kvartal-2026-goda/",
+      "image_url": "https://www.rzd-partner.ru:443/upload/iblock/ad3/f2kob53kfs20c8rhw1ecj5khnhhn7ony/1886161.jpg",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "fddd4f7f7ba1643e365546464fdbb98b",
+      "status": "published",
+      "static_url": "news/rzd_partner-mediareyting-zheleznodorozhnyh-operatorov-i-kvar-fddd4f.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-mediareyting-zheleznodorozhnyh-operatorov-i-kvar-fddd4f.html"
     },
     {
       "id": "news_ebed2793c6ef",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-united-airlines-hochet-obedinitsya-s-american-ai-70c5de.html",
       "canonical_url": "https://wiaf.ru/news/logirus-united-airlines-hochet-obedinitsya-s-american-ai-70c5de.html"
-    },
-    {
-      "id": "news_e5799b0692a5",
-      "slug": "logirus-kitay-edet-kazahstan-tormozit-zayavok-na-import--e5799b",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-04-15T00:00:00+00:00",
-      "published_at": "2026-04-15T00:00:00+00:00",
-      "title": "Китай едет, Казахстан тормозит: заявок на импорт стало больше, а тонн – меньше",
-      "snippet": "Отмена сертификатов из Киргизии привела к тому, что вместо одной 20-тонной фуры участники ВЭД отправляют несколько мелких грузов самолетами. Нормализация цепочек – не раньше июня-июля",
-      "content_preview": "Китай едет, Казахстан тормозит: заявок на импорт стало больше, а тонн – меньше",
-      "link": "https://logirus.ru/news/transport/kitay_edet_kazakhstan_tormozit_zayavok_na_import_stalo_bolshe.html",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "авто",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "e5799b0692a53812ab66dc18db083744",
-      "status": "published",
-      "static_url": "news/logirus-kitay-edet-kazahstan-tormozit-zayavok-na-import--e5799b.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-kitay-edet-kazahstan-tormozit-zayavok-na-import--e5799b.html"
     }
   ]
 }
