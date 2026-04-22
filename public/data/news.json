@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-22T21:01:30+00:00",
+  "updated_at": "2026-04-22T22:01:45+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-22T21:01:30+00:00",
+  "cutoff_date": "2025-04-22T22:01:45+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4080,6 +4080,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-gruzoperevozki-v-kazahstane-perehodyat-na-obyaza-6e1b8e.html"
     },
     {
+      "id": "news_cee5565b6a38",
+      "slug": "rzd_partner-v-arhangelskoy-oblasti-za-god-otremontirovali-22-cee556",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-04-22T11:10:33+00:00",
+      "published_at": "2026-04-22T11:10:33+00:00",
+      "title": "В Архангельской области за год отремонтировали 226 км дорог",
+      "snippet": "В Архангельской области по итогам прошлого года приведено в нормативное состояние более 220 км автомобильных дорог. Об этом сообщил губернатор региона Александр Цыбульский, представляя отчет о работе областного правительства.",
+      "content_preview": "В Архангельской области за год отремонтировали 226 км дорог",
+      "link": "https://www.rzd-partner.ru/auto/news/v-arkhangelskoy-oblasti-za-god-otremontirovali-226-km-dorog/",
+      "image_url": "",
+      "category": "road",
+      "category_ru": "автологистика",
+      "transport_type": "авто",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "cee5565b6a38513b33c9eac1f3291d0e",
+      "status": "published",
+      "static_url": "news/rzd_partner-v-arhangelskoy-oblasti-za-god-otremontirovali-22-cee556.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-arhangelskoy-oblasti-za-god-otremontirovali-22-cee556.html"
+    },
+    {
       "id": "news_1d5a1225a18c",
       "slug": "rzd_partner-v-yakutii-stroyat-obekty-energetiki-pod-rastusch-1d5a12",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-mintrans-rf-predlozhil-sokratit-perechen-sudovyh-ebed27.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-mintrans-rf-predlozhil-sokratit-perechen-sudovyh-ebed27.html"
-    },
-    {
-      "id": "news_3f173a973a86",
-      "slug": "rzd_partner-v-kitae-postroen-krupneyshiy-v-mire-konteynerovo-3f173a",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-04-15T14:12:55+00:00",
-      "published_at": "2026-04-15T14:12:55+00:00",
-      "title": "В Китае построен крупнейший в мире контейнеровоз с электрическим приводом",
-      "snippet": "Китайские судостроительные компании создали самый крупный в мире контейнеровоз, оснащенный электрической силовой установкой. Об этом сообщает издание «Цземянь».",
-      "content_preview": "В Китае построен крупнейший в мире контейнеровоз с электрическим приводом",
-      "link": "https://www.rzd-partner.ru/wate-transport/news/v-kitae-postroen-krupneyshiy-v-mire-konteynerovoz-s-elektricheskim-privodom/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "3f173a973a8644d2d787a7988562fc78",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-kitae-postroen-krupneyshiy-v-mire-konteynerovo-3f173a.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-kitae-postroen-krupneyshiy-v-mire-konteynerovo-3f173a.html"
     }
   ]
 }
