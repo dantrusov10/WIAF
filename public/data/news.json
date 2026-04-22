@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-21T23:40:56+00:00",
+  "updated_at": "2026-04-22T02:53:19+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-21T23:40:56+00:00",
+  "cutoff_date": "2025-04-22T02:53:19+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -2437,8 +2437,8 @@
       "source_group": "operator",
       "lang": "ru",
       "priority": 76,
-      "date": "2026-07-21T00:00:00+00:00",
-      "published_at": "2026-07-21T00:00:00+00:00",
+      "date": "2026-07-22T00:00:00+00:00",
+      "published_at": "2026-07-22T00:00:00+00:00",
       "title": "При поддержке Глобал Портс открыты новые учебные мастерские в Находкинском колледже",
       "snippet": "",
       "content_preview": "",
@@ -6173,7 +6173,7 @@
       "category_ru": "ставки",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "3f9e2c6186d1f4fa55a88a37d55ab834",
       "status": "published",
       "static_url": "news/rzd_partner-na-tvsz-sostoyalas-priemka-pervoy-partii-innovat-3f9e2c.html",
