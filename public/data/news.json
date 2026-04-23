@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-23T20:09:47+00:00",
+  "updated_at": "2026-04-23T21:53:26+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-23T20:09:47+00:00",
+  "cutoff_date": "2025-04-23T21:53:26+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6398,7 +6398,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "13f3978d3da33f5e92aa6eb8ccfdaf93",
       "status": "published",
       "static_url": "news/rzd_partner-oao-rzhd-vvodit-ponizhayuschiy-koeffitsient-na-p-13f397.html",
@@ -6798,7 +6798,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "98c19a18c6ca378917d073fe3914dcfd",
       "status": "published",
       "static_url": "news/rzd_partner-v-yakutii-hotyat-protyanut-zheleznuyu-dorogu-v-a-98c19a.html",
