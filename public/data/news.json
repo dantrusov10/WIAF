@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-23T23:53:09+00:00",
+  "updated_at": "2026-04-24T02:57:42+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-23T23:53:09+00:00",
+  "cutoff_date": "2025-04-24T02:57:42+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -2437,8 +2437,8 @@
       "source_group": "operator",
       "lang": "ru",
       "priority": 76,
-      "date": "2026-07-23T00:00:00+00:00",
-      "published_at": "2026-07-23T00:00:00+00:00",
+      "date": "2026-07-24T00:00:00+00:00",
+      "published_at": "2026-07-24T00:00:00+00:00",
       "title": "При поддержке Глобал Портс открыты новые учебные мастерские в Находкинском колледже",
       "snippet": "",
       "content_preview": "",
@@ -7273,7 +7273,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "2e0d063c2ebb41584b7968fd3334e2ba",
       "status": "published",
       "static_url": "news/delo-terminaly-transkonteynera-na-transsibe-v-marte-p-2e0d06.html",
