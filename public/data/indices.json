@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-25T23:44:58+00:00",
+  "updated_at": "2026-04-26T03:23:53+00:00",
   "cache_used": false,
   "items": [
     {
@@ -17,7 +17,7 @@
       "id": "idx_ccfi",
       "source": "Shanghai Shipping Exchange",
       "index_name": "CCFI",
-      "date": "2026-04-25",
+      "date": "2026-04-26",
       "value": 2001.0,
       "unit": "index_points",
       "change_abs": 0.0,
@@ -40,7 +40,7 @@
       "id": "idx_fbx",
       "source": "Freightos",
       "index_name": "FBX",
-      "date": "2026-04-25",
+      "date": "2026-04-26",
       "value": 127.0,
       "unit": "index_points",
       "change_abs": 0.0,
