@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-27T16:30:58+00:00",
+  "updated_at": "2026-04-27T18:08:40+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-27T16:30:58+00:00",
+  "cutoff_date": "2025-04-27T18:08:40+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4480,6 +4480,31 @@
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
     },
     {
+      "id": "news_4cc78003b856",
+      "slug": "seanews-ushel-iz-zhizni-vyacheslav-ruksha-4cc780",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-04-27T00:00:00+00:00",
+      "published_at": "2026-04-27T00:00:00+00:00",
+      "title": "Ушел из жизни Вячеслав Рукша — SeaNews",
+      "snippet": "",
+      "content_preview": "Ушел из жизни Вячеслав Рукша",
+      "link": "https://seanews.ru/2026/04/27/ru-ushel-iz-zhizni-vjacheslav-ruksha/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "4cc78003b856e78dcc5333662d38ac46",
+      "status": "published",
+      "static_url": "news/seanews-ushel-iz-zhizni-vyacheslav-ruksha-4cc780.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-ushel-iz-zhizni-vyacheslav-ruksha-4cc780.html"
+    },
+    {
       "id": "news_a8738b07ca8f",
       "slug": "seanews-na-plp-prishel-servis-iz-latinskoy-ameriki-a8738b",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-vagonnom-komplekse-prinimayutsya-mery-po-snizh-bf9840.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-vagonnom-komplekse-prinimayutsya-mery-po-snizh-bf9840.html"
-    },
-    {
-      "id": "news_ca578228bc92",
-      "slug": "rzd_partner-priem-zayavok-na-uchastie-v-torgah-po-prodazhe-r-ca5782",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-04-20T12:32:31+00:00",
-      "published_at": "2026-04-20T12:32:31+00:00",
-      "title": "Прием заявок на участие в торгах по продаже Рижского вокзала завершен",
-      "snippet": "Завершился этап подачи заявок на участие в аукционе по продаже Рижского вокзала в Москве. Как следует из опубликованного извещения, заявки принимались в период с 6 марта.",
-      "content_preview": "Прием заявок на участие в торгах по продаже Рижского вокзала завершен",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/priem-zayavok-na-uchastie-v-torgakh-po-prodazhe-rizhskogo-vokzala-zavershen/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "ca578228bc925c4e9e11087ad45f6bac",
-      "status": "published",
-      "static_url": "news/rzd_partner-priem-zayavok-na-uchastie-v-torgah-po-prodazhe-r-ca5782.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-priem-zayavok-na-uchastie-v-torgah-po-prodazhe-r-ca5782.html"
     }
   ]
 }
