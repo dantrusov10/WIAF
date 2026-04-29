@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-28T22:04:23+00:00",
+  "updated_at": "2026-04-29T00:00:20+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-28T22:04:23+00:00",
+  "cutoff_date": "2025-04-29T00:00:20+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -2437,8 +2437,8 @@
       "source_group": "operator",
       "lang": "ru",
       "priority": 76,
-      "date": "2026-07-28T00:00:00+00:00",
-      "published_at": "2026-07-28T00:00:00+00:00",
+      "date": "2026-07-29T00:00:00+00:00",
+      "published_at": "2026-07-29T00:00:00+00:00",
       "title": "При поддержке Глобал Портс открыты новые учебные мастерские в Находкинском колледже",
       "snippet": "",
       "content_preview": "",
@@ -7330,6 +7330,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-kabmin-prodlil-kvoty-na-eksport-udobreniy-do-kon-d97e01.html"
     },
     {
+      "id": "news_913c68e75295",
+      "slug": "rzd_partner-chislo-operatorskih-kompaniy-prisoedinivshihsya--913c68",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-04-22T07:11:37+00:00",
+      "published_at": "2026-04-22T07:11:37+00:00",
+      "title": "Число операторских компаний, присоединившихся к договору с РЖД по оптимизации использования вагонного парка, увеличилось до 63",
+      "snippet": "Число операторских компаний, присоединившихся к договору с РЖД по оптимизации использования вагонного парка, увеличилось до 63. ЖД Транспорт. РЖД-Партнер",
+      "content_preview": "Число операторских компаний, присоединившихся к договору с РЖД по оптимизации использования вагонного парка, увеличилось до 63",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/islo-operatorskikh-kompaniy-prisoedinivshikhsya-k-dogovoru-s-rzhd-po-optimizatsii-ispolzovaniya-vago/",
+      "image_url": "https://www.rzd-partner.ru:443/upload/iblock/7b2/php271zif0zgxx54a6sgw8e8m3grsgl3/2648900-_2_.jpg",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "913c68e75295f507c24794370055ddd6",
+      "status": "published",
+      "static_url": "news/rzd_partner-chislo-operatorskih-kompaniy-prisoedinivshihsya--913c68.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-chislo-operatorskih-kompaniy-prisoedinivshihsya--913c68.html"
+    },
+    {
       "id": "news_72aa4451b4a7",
       "slug": "rzd_partner-islo-operatorskih-kompaniy-prisoedinivshihsya-k--72aa44",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-kik-postoyannoe-predstavitelstvo-i-kontrol-tsen--78bf0a.html",
       "canonical_url": "https://wiaf.ru/news/logirus-kik-postoyannoe-predstavitelstvo-i-kontrol-tsen--78bf0a.html"
-    },
-    {
-      "id": "news_859c626094cc",
-      "slug": "logirus-prezumptsiya-originalnosti-zapret-kompensatsiy-i-859c62",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-04-22T00:00:00+00:00",
-      "published_at": "2026-04-22T00:00:00+00:00",
-      "title": "Презумпция оригинальности, запрет компенсаций и реестр ТПП: пакет инициатив для легализации параллельного импорта",
-      "snippet": "«Белый список» чистых цепочек поставок на базе ТПП, типовая экспертиза для подтверждения легальности и зеленый коридор для держателей заключений – ключевые меры пакета",
-      "content_preview": "Презумпция оригинальности, запрет компенсаций и реестр ТПП: пакет инициатив для легализации параллельного импорта",
-      "link": "https://logirus.ru/news/custom_and_ved/prezumptsiya_originalnosti_zapret_kompensatsiy_i_reestr_tpp_paket_initsiativ_dlya_legalizatsii.html",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "859c626094ccb14375a7741c86700226",
-      "status": "published",
-      "static_url": "news/logirus-prezumptsiya-originalnosti-zapret-kompensatsiy-i-859c62.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-prezumptsiya-originalnosti-zapret-kompensatsiy-i-859c62.html"
     }
   ]
 }
