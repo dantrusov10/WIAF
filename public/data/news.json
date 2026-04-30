@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-29T22:05:09+00:00",
+  "updated_at": "2026-04-30T00:01:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-29T22:05:09+00:00",
+  "cutoff_date": "2025-04-30T00:01:35+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -5848,7 +5848,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "044f7336ce479bfc90480fa215551455",
       "status": "published",
       "static_url": "news/delo-zernovoy-terminal-gk-delo-v-novorossiyske-nachin-044f73.html",
