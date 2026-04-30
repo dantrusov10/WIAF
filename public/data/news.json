@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-30T00:01:35+00:00",
+  "updated_at": "2026-04-30T03:59:17+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-04-30T00:01:35+00:00",
+  "cutoff_date": "2025-04-30T03:59:17+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -5498,7 +5498,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "6d2983b1425a0b91506515fe16b4d51b",
       "status": "published",
       "static_url": "news/logirus-kitayskiy-vagon-protiv-russkogo-avto-zapret-rosz-6d2983.html",
@@ -5523,7 +5523,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "6843215ff24c4f7ceddd6e4a7e04c5d2",
       "status": "published",
       "static_url": "news/logirus-bankovskie-dzhungli-dlya-ved-zaliv-minus-laos-i--684321.html",
