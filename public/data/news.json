@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-01T20:08:52+00:00",
+  "updated_at": "2026-05-01T21:58:39+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-01T20:08:52+00:00",
+  "cutoff_date": "2025-05-01T21:58:39+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6873,7 +6873,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "1ad02676256db48d18ddc24cf3d9bd60",
       "status": "published",
       "static_url": "news/rzd_partner-kitayskie-kompanii-zainteresovalis-proektom-tran-1ad026.html",
@@ -7023,7 +7023,7 @@
       "category_ru": "автологистика",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "a1be282751ca5fc2d1e5f2221cea0746",
       "status": "published",
       "static_url": "news/rzd_partner-v-habarovskom-krae-startuet-navigatsiya-i-otkryv-a1be28.html",
