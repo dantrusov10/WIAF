@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-02T05:44:46+00:00",
+  "updated_at": "2026-05-02T07:51:48+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-02T05:44:46+00:00",
+  "cutoff_date": "2025-05-02T07:51:48+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4698,7 +4698,7 @@
       "category_ru": "аналитика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c430b1410716064786ed099e219d501f",
       "status": "published",
       "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-27-30-aprelya-2-c430b1.html",
