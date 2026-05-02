@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-02T07:51:48+00:00",
+  "updated_at": "2026-05-02T09:13:22+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-02T07:51:48+00:00",
+  "cutoff_date": "2025-05-02T09:13:22+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4223,7 +4223,7 @@
       "category_ru": "порты",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "8a3bacff89713d98e5fa4b02e9bbbf78",
       "status": "published",
       "static_url": "news/portnews-intervyu-s-rukovoditelem-azovo-donskoy-basseynov-8a3bac.html",
