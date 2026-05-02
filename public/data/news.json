@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-02T15:53:39+00:00",
+  "updated_at": "2026-05-02T16:56:44+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-02T15:53:39+00:00",
+  "cutoff_date": "2025-05-02T16:56:44+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6915,13 +6915,13 @@
       "date": "2026-04-27T13:49:13+00:00",
       "published_at": "2026-04-27T13:49:13+00:00",
       "title": "Минтранс РФ разработал первый законопроект о транспортной политике",
-      "snippet": "Минтранс РФ разработал первый законопроект о транспортной политике. Логистика. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "Минтранс РФ разработал первый законопроект о транспортной политике",
       "link": "https://www.rzd-partner.ru/logistics/news/mintrans-rf-razrabotal-pervyy-zakonoproekt-o-transportnoy-politike/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/8be/hdghmmcsdsg8l8xk2dbddpyn3py671dh/PressFoto_21849838_Small-_2_.jpg",
       "category": "ports",
       "category_ru": "порты",
-      "transport_type": "железнодорожная",
+      "transport_type": "смешанная",
       "region": "RU",
       "freshness": "recent",
       "hash": "b3840517bcdf96c5013a4ab7606b865f",
