@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-02T16:56:44+00:00",
+  "updated_at": "2026-05-02T17:50:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-02T16:56:44+00:00",
+  "cutoff_date": "2025-05-02T17:50:16+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6840,13 +6840,13 @@
       "date": "2026-04-27T14:28:59+00:00",
       "published_at": "2026-04-27T14:28:59+00:00",
       "title": "Рынок автологистики ожидает разъяснений по реестру экспедиторов 30 апреля",
-      "snippet": "Рынок автологистики ожидает разъяснений по реестру экспедиторов 30 апреля. Логистика. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "Рынок автологистики ожидает разъяснений по реестру экспедиторов 30 апреля",
       "link": "https://www.rzd-partner.ru/logistics/news/rynok-avtologistiki-ozhidaet-razyasneniy-po-reestru-ekspeditorov-30-aprelya/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/435/ii5wpkxzt87x1d8my0g0paj1vlmc6u82/PressFoto_21848465_Small-_1_.jpg",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "железнодорожная",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "авто",
       "region": "RU",
       "freshness": "recent",
       "hash": "93557d99675537d657ce65656c9357bf",
