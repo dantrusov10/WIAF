@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-04T14:12:03+00:00",
+  "updated_at": "2026-05-04T16:51:57+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-04T14:12:03+00:00",
+  "cutoff_date": "2025-05-04T16:51:57+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6798,7 +6798,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "6c80ed4e3fddcc52dd505d9df09d1bf8",
       "status": "published",
       "static_url": "news/portnews-intervyu-s-rukovoditelem-severnoy-verfi-6c80ed.html",
