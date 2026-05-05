@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-04T23:59:28+00:00",
+  "updated_at": "2026-05-05T03:37:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-04T23:59:28+00:00",
+  "cutoff_date": "2025-05-05T03:37:16+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3837,8 +3837,8 @@
       "source_group": "industry_media",
       "lang": "ru",
       "priority": 100,
-      "date": "2026-05-04T00:00:00+00:00",
-      "published_at": "2026-05-04T00:00:00+00:00",
+      "date": "2026-05-05T00:00:00+00:00",
+      "published_at": "2026-05-05T00:00:00+00:00",
       "title": "Инструкция от Минфина: посылки с AliExpress пропустят без транзита — если не выезжать за ворота",
       "snippet": "Перемещать отправления от места ввоза до отдельного склада временного хранения можно будет без оформления транзита, но только в границах аэропорта или вплотную к нему",
       "content_preview": "Инструкция от Минфина: посылки с AliExpress пропустят без транзита — если не выезжать за ворота",
@@ -6823,7 +6823,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "044f7336ce479bfc90480fa215551455",
       "status": "published",
       "static_url": "news/delo-zernovoy-terminal-gk-delo-v-novorossiyske-nachin-044f73.html",
