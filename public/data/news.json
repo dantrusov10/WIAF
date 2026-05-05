@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-05T03:37:16+00:00",
+  "updated_at": "2026-05-05T06:22:27+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-05T03:37:16+00:00",
+  "cutoff_date": "2025-05-05T06:22:27+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3862,8 +3862,8 @@
       "source_group": "ports_media",
       "lang": "ru",
       "priority": 90,
-      "date": "2026-05-04T00:00:00+00:00",
-      "published_at": "2026-05-04T00:00:00+00:00",
+      "date": "2026-05-05T00:00:00+00:00",
+      "published_at": "2026-05-05T00:00:00+00:00",
       "title": "Интерактивная карта морских терминалов РФ — SeaNews",
       "snippet": "",
       "content_preview": "Интерактивная карта терминалов",
