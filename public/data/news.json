@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-05T22:05:33+00:00",
+  "updated_at": "2026-05-05T23:54:55+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-05T22:05:33+00:00",
+  "cutoff_date": "2025-05-05T23:54:55+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -3178,6 +3178,31 @@
       "status": "published",
       "static_url": "news/logirus-dogovory-perepisyvayut-gruzootpraviteli-dayut-pe-3c1ccf.html",
       "canonical_url": "https://wiaf.ru/news/logirus-dogovory-perepisyvayut-gruzootpraviteli-dayut-pe-3c1ccf.html"
+    },
+    {
+      "id": "news_1b44ea60fbd3",
+      "slug": "logirus-zolotoy-pasport-po-rossiyski-vezd-v-grazhdanstvo-1b44ea",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-06-05T00:00:00+00:00",
+      "published_at": "2026-06-05T00:00:00+00:00",
+      "title": "«Золотой паспорт» по-российски: въезд в гражданство подорожал в 14 раз",
+      "snippet": "Патент – с 1200 до 6000 рублей, ВНЖ – с 5000 до 30 000 рублей",
+      "content_preview": "«Золотой паспорт» по-российски: въезд в гражданство подорожал в 14 раз",
+      "link": "https://logirus.ru/news/transport/zolotoy_pasport_po-rossiyski_vezd_v_grazhdanstvo_podorozhal_v_14_raz.html",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "1b44ea60fbd38839bbcf2afb60c6d4b4",
+      "status": "published",
+      "static_url": "news/logirus-zolotoy-pasport-po-rossiyski-vezd-v-grazhdanstvo-1b44ea.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-zolotoy-pasport-po-rossiyski-vezd-v-grazhdanstvo-1b44ea.html"
     },
     {
       "id": "news_ed97358cf7d9",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-rynok-avtologistiki-ozhidaet-razyasneniy-po-rees-93557d.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-rynok-avtologistiki-ozhidaet-razyasneniy-po-rees-93557d.html"
-    },
-    {
-      "id": "news_1ad02676256d",
-      "slug": "rzd_partner-kitayskie-kompanii-zainteresovalis-proektom-tran-1ad026",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-04-27T14:17:15+00:00",
-      "published_at": "2026-04-27T14:17:15+00:00",
-      "title": "Китайские компании заинтересовались проектом транспортного коридора из КНР в Арктику через Якутию",
-      "snippet": "Китайский бизнес проявляет интерес к проекту международного транспортного коридора, который должен связать Китай с Арктикой через территорию Якутии. Об этом сообщил глава Республики Саха (Якутия) Айсен Николаев.",
-      "content_preview": "Китайские компании заинтересовались проектом транспортного коридора из КНР в Арктику через Якутию",
-      "link": "https://www.rzd-partner.ru/logistics/news/kitayskie-kompanii-zainteresovalis-proektom-transportnogo-koridora-iz-knr-v-arktiku-cherez-yakutiyu/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "archive",
-      "hash": "1ad02676256db48d18ddc24cf3d9bd60",
-      "status": "published",
-      "static_url": "news/rzd_partner-kitayskie-kompanii-zainteresovalis-proektom-tran-1ad026.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-kitayskie-kompanii-zainteresovalis-proektom-tran-1ad026.html"
     }
   ]
 }
