@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-05T18:15:56+00:00",
+  "updated_at": "2026-05-05T20:12:52+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-05T18:15:56+00:00",
+  "cutoff_date": "2025-05-05T20:12:52+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -4948,7 +4948,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "63af89d556eb64de1f3283bbc4f5ae9e",
       "status": "published",
       "static_url": "news/rzd_partner-novyy-port-na-chukotke-povliyaet-na-zagruzku-sev-63af89.html",
