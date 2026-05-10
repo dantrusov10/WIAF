@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-10T15:00:19+00:00",
+  "updated_at": "2026-05-10T16:03:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-10T15:00:19+00:00",
+  "cutoff_date": "2025-05-10T16:03:36+00:00",
   "items": [
     {
       "id": "news_2b8cfce1cd3d",
@@ -6890,13 +6890,13 @@
       "date": "2026-05-05T06:09:54+00:00",
       "published_at": "2026-05-05T06:09:54+00:00",
       "title": "На станции Забайкальск расширили «восточные ворота» для грузовых поездов",
-      "snippet": "На станции Забайкальск расширили «восточные ворота» для грузовых поездов. ЖД Транспорт. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "На станции Забайкальск расширили «восточные ворота» для грузовых поездов",
       "link": "https://www.rzd-partner.ru/zhd-transport/news/na-stantsii-zabaykalsk-rasshirili-vostochnye-vorota-dlya-gruzovykh-poezdov/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/ee6/q2osndzowzkhjqqzjo9htqpp9cnobcts/1820572.jpg",
       "category": "ports",
       "category_ru": "порты",
-      "transport_type": "железнодорожная",
+      "transport_type": "авто",
       "region": "RU",
       "freshness": "recent",
       "hash": "0949b48895b1f7cd54bebaa6804ee060",
