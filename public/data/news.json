@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-13T19:00:49+00:00",
+  "updated_at": "2026-05-13T20:52:15+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-13T19:00:49+00:00",
+  "cutoff_date": "2025-05-13T20:52:15+00:00",
   "items": [
     {
       "id": "news_f1a212a2d829",
@@ -6805,6 +6805,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-proizvoditeli-krytyh-vagonov-ukreplyayut-svoi-po-79c8d7.html"
     },
     {
+      "id": "news_44465231025b",
+      "slug": "rzd_partner-spros-na-skladskuyu-podrabotku-v-rossii-vyros-na-444652",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-05-13T14:04:05+00:00",
+      "published_at": "2026-05-13T14:04:05+00:00",
+      "title": "Спрос на складскую подработку в России вырос на 43% за март – апрель 2026 года",
+      "snippet": "Начало весны 2026 года оказалось горячей порой для складской логистики. По данным сервиса «Авито Подработка», в период с 1 марта по 20 апреля число предложений о подработке в сфере складов и хранилищ увеличилось на 43% по сравнению с аналогичным периодом прошлого года. Бизнес-заказчики активно привлекают исполнителей на гибкий формат занятости, и спрос на линейных специалистов продолжает расти.",
+      "content_preview": "Спрос на складскую подработку в России вырос на 43% за март – апрель 2026 года",
+      "link": "https://www.rzd-partner.ru/logistics/news/spros-na-skladskuyu-podrabotku-v-rossii-vyros-na-43-za-mart-aprel-2026-goda/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "44465231025b68465401141ea4aa67d8",
+      "status": "published",
+      "static_url": "news/rzd_partner-spros-na-skladskuyu-podrabotku-v-rossii-vyros-na-444652.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-spros-na-skladskuyu-podrabotku-v-rossii-vyros-na-444652.html"
+    },
+    {
       "id": "news_d1fadc1723e8",
       "slug": "rzd_partner-spros-na-skladskuyu-podrabotku-v-rossii-vyros-na-d1fadc",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-novyy-pretendent-na-verf-mangalia-ca3976.html",
       "canonical_url": "https://wiaf.ru/news/seanews-novyy-pretendent-na-verf-mangalia-ca3976.html"
-    },
-    {
-      "id": "news_f353d9671af6",
-      "slug": "seanews-otkryt-novosibirskiy-shlyuz-f353d9",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-05-07T00:00:00+00:00",
-      "published_at": "2026-05-07T00:00:00+00:00",
-      "title": "Открыт Новосибирский шлюз — SeaNews",
-      "snippet": "",
-      "content_preview": "Открыт Новосибирский шлюз",
-      "link": "https://seanews.ru/2026/05/07/ru-otkryt-novosibirskij-shljuz/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "f353d9671af6809b3e229f27fe61cfe0",
-      "status": "published",
-      "static_url": "news/seanews-otkryt-novosibirskiy-shlyuz-f353d9.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-otkryt-novosibirskiy-shlyuz-f353d9.html"
     }
   ]
 }
