@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T10:25:52+00:00",
+  "updated_at": "2026-05-14T12:30:50+00:00",
   "cache_used": false,
   "items": [
     {
@@ -41,10 +41,10 @@
       "source": "Freightos",
       "index_name": "FBX",
       "date": "2026-05-14",
-      "value": 127.0,
+      "value": 100.0,
       "unit": "index_points",
-      "change_abs": 0.0,
-      "change_pct": 0.0,
+      "change_abs": -27.0,
+      "change_pct": -21.26,
       "status": "published",
       "source_url": "https://fbx.freightos.com/"
     },
