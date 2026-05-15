@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-15T00:07:56+00:00",
+  "updated_at": "2026-05-15T04:55:59+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-15T00:07:56+00:00",
+  "cutoff_date": "2025-05-15T04:55:59+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6805,6 +6805,31 @@
       "canonical_url": "https://wiaf.ru/news/portnews-grafik-meropriyatiy-portnyus-2583e9.html"
     },
     {
+      "id": "news_bcfa3fa388fa",
+      "slug": "seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-20-2026-bcfa3f",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-05-15T00:00:00+00:00",
+      "published_at": "2026-05-15T00:00:00+00:00",
+      "title": "Фрахтовый рынок Дальнего Востока, неделя 20, 2026 — SeaNews",
+      "snippet": "",
+      "content_preview": "Фрахтовый рынок Дальнего Востока, неделя 20, 2026",
+      "link": "https://seanews.ru/2026/05/15/ru-frahtovyj-rynok-dalnego-vostoka-nedelja-20-2026/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "bcfa3fa388fa0f06ccbcf688d25bbf3a",
+      "status": "published",
+      "static_url": "news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-20-2026-bcfa3f.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-20-2026-bcfa3f.html"
+    },
+    {
       "id": "news_1ad4658ff576",
       "slug": "rzd_partner-soobschaem-podrobnosti-ormuz-pridal-smp-aktualno-1ad465",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-aprele-uchastkovaya-skorost-na-seti-rzhd-sosta-532348.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-aprele-uchastkovaya-skorost-na-seti-rzhd-sosta-532348.html"
-    },
-    {
-      "id": "news_037db5c84f13",
-      "slug": "rzd_partner-k-2040-godu-skladov-v-kazahstane-stanet-v-5-raz--037db5",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-05-13T12:00:49+00:00",
-      "published_at": "2026-05-13T12:00:49+00:00",
-      "title": "К 2040 году складов в Казахстане станет в 5 раз больше",
-      "snippet": "Казахстан по итогам 2025 года подтвердил статус одного из главных драйверов развития качественной складской недвижимости на всем евразийском пространстве. Общий объем предложения современных складских помещений в стране достиг 1,9 млн кв. метров, причем за год было введено в эксплуатацию 273 тыс. «квадратов».",
-      "content_preview": "К 2040 году складов в Казахстане станет в 5 раз больше",
-      "link": "https://www.rzd-partner.ru/logistics/news/k-2040-godu-skladov-v-kazakhstane-stanet-v-pyat-raz-bolshe/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "037db5c84f1303bb4e8638e8699fb41e",
-      "status": "published",
-      "static_url": "news/rzd_partner-k-2040-godu-skladov-v-kazahstane-stanet-v-5-raz--037db5.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-k-2040-godu-skladov-v-kazahstane-stanet-v-5-raz--037db5.html"
     }
   ]
 }
