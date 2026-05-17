@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-17T11:12:27+00:00",
+  "updated_at": "2026-05-17T13:30:09+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-17T11:12:27+00:00",
+  "cutoff_date": "2025-05-17T13:30:09+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6898,7 +6898,7 @@
       "category_ru": "ставки",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "5174a31d82c946d551f1584615c9a730",
       "status": "published",
       "static_url": "news/rzd_partner-kyrgyzstan-i-tadzhikistan-vpervye-primerili-etir-5174a3.html",
@@ -6948,7 +6948,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "d473a24c1816681c0642863c29ba0971",
       "status": "published",
       "static_url": "news/rzd_partner-rossiya-i-uzbekistan-gotovyat-tehniko-ekonomiche-d473a2.html",
