@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-17T13:30:09+00:00",
+  "updated_at": "2026-05-17T15:01:57+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-17T13:30:09+00:00",
+  "cutoff_date": "2025-05-17T15:01:57+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6823,7 +6823,7 @@
       "category_ru": "железная дорога",
       "transport_type": "авиа",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "8189c67c62dd9c8cfdca5affa35ff1b2",
       "status": "published",
       "static_url": "news/rzd_partner-ubytki-airbaltic-uvelichilis-do-70-mln-8189c6.html",
@@ -6848,7 +6848,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "66b83bf851b67d75020f1c1abcd0007a",
       "status": "published",
       "static_url": "news/rzd_partner-murmanskiy-balkernyy-terminal-vpervye-prinyal-su-66b83b.html",
@@ -6873,7 +6873,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "8cf6297c5df3196c3696d73b79c36e35",
       "status": "published",
       "static_url": "news/rzd_partner-dlya-vsm-sertifitsirovano-29-komponentov-8cf629.html",
