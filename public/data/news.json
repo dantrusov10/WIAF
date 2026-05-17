@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-17T09:11:14+00:00",
+  "updated_at": "2026-05-17T11:12:27+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-17T09:11:14+00:00",
+  "cutoff_date": "2025-05-17T11:12:27+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6973,7 +6973,7 @@
       "category_ru": "ставки",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "daef826168143c8c80e875dc36372faf",
       "status": "published",
       "static_url": "news/infranews-konteynerooborot-morskih-portov-rf-v-aprele-2026-daef82.html",
@@ -6998,7 +6998,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c4394df90da12ed4687a00ad700c67ea",
       "status": "published",
       "static_url": "news/rzd_partner-podkast-vremya-i-relsy-pochemu-tema-inflirovanny-c4394d.html",
