@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-22T17:57:26+00:00",
+  "updated_at": "2026-05-22T19:53:41+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-22T17:57:26+00:00",
+  "cutoff_date": "2025-05-22T19:53:41+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -7105,6 +7105,31 @@
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
     },
     {
+      "id": "news_605dc1272f05",
+      "slug": "seanews-analiticheskiy-daydzhest-seanews-18-22-maya-2026-605dc1",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-05-22T00:00:00+00:00",
+      "published_at": "2026-05-22T00:00:00+00:00",
+      "title": "Аналитический дайджест SeaNews, 18-22 мая 2026 — SeaNews",
+      "snippet": "",
+      "content_preview": "Аналитический дайджест SeaNews, 18-22 мая 2026",
+      "link": "https://seanews.ru/2026/05/22/ru-analiticheskij-dajdzhest-seanews-18-22-maja-2026/",
+      "image_url": "",
+      "category": "analytics",
+      "category_ru": "аналитика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "605dc1272f0547263ee63401aec59d68",
+      "status": "published",
+      "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-18-22-maya-2026-605dc1.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-analiticheskiy-daydzhest-seanews-18-22-maya-2026-605dc1.html"
+    },
+    {
       "id": "news_e87e7c9e6790",
       "slug": "seanews-podtverzhdeno-sootvetstvie-klassifikatsionnyh-pr-e87e7c",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-21-2026-71418c.html",
       "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-21-2026-71418c.html"
-    },
-    {
-      "id": "news_c171cf19db4e",
-      "slug": "rzd_partner-rizhskiy-aeroport-obsluzhil-2-mln-passazhirov-s--c171cf",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-05-20T14:31:14+00:00",
-      "published_at": "2026-05-20T14:31:14+00:00",
-      "title": "Рижский аэропорт обслужил 2 млн пассажиров с начала года",
-      "snippet": "В апреле 2026 года международный аэропорт Риги обслужил 584 тыс. пассажиров, что на 1% больше по сравнению с апрелем прошлого года, передает портал err.",
-      "content_preview": "Рижский аэропорт обслужил 2 млн пассажиров с начала года",
-      "link": "https://www.rzd-partner.ru/auto/news/rizhskiy-aeroport-obsluzhil-2-mln-passazhirov-s-nachala-goda/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "c171cf19db4e9794ec7fe463e2045f3f",
-      "status": "published",
-      "static_url": "news/rzd_partner-rizhskiy-aeroport-obsluzhil-2-mln-passazhirov-s--c171cf.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-rizhskiy-aeroport-obsluzhil-2-mln-passazhirov-s--c171cf.html"
     }
   ]
 }
