@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-24T07:26:02+00:00",
+  "updated_at": "2026-05-24T10:00:13+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-24T07:26:02+00:00",
+  "cutoff_date": "2025-05-24T10:00:13+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6948,7 +6948,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "6b44663cebe17906888150b38cdfa68d",
       "status": "published",
       "static_url": "news/rzd_partner-razvivat-pogranperehody-v-zabaykale-nuzhno-kompl-6b4466.html",
@@ -6973,7 +6973,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "bfe5b2470c97fe361f667a01ab18c0c4",
       "status": "published",
       "static_url": "news/rzd_partner-v-kazahstane-novye-konventsionnye-ogranicheniya-bfe5b2.html",
@@ -6998,7 +6998,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "b8a24e4d3495df879da96f5451a70e24",
       "status": "published",
       "static_url": "news/rzd_partner-v-habarovske-hotyat-reanimirovat-sudostroenie-b8a24e.html",
