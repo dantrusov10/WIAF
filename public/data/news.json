@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-24T10:00:13+00:00",
+  "updated_at": "2026-05-24T11:25:04+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-24T10:00:13+00:00",
+  "cutoff_date": "2025-05-24T11:25:04+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6898,7 +6898,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "7b18fec7c7b8c31749f73a903db6a858",
       "status": "published",
       "static_url": "news/rzd_partner-ekspert-vertolet-mi-2-esche-mozhet-posluzhit-gra-7b18fe.html",
@@ -6923,7 +6923,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "236c7326e51074003611c5123cf054c7",
       "status": "published",
       "static_url": "news/rzd_partner-vlasti-smolenskoy-oblasti-ischut-istochniki-fina-236c73.html",
