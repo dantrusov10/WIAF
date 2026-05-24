@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-24T13:44:47+00:00",
+  "updated_at": "2026-05-24T15:09:56+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-24T13:44:47+00:00",
+  "cutoff_date": "2025-05-24T15:09:56+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6798,7 +6798,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "bc31dbf6f971a7235c1220c2bebcc373",
       "status": "published",
       "static_url": "news/rzd_partner-v-arktike-stanut-privlekatelnee-investitsii-v-in-bc31db.html",
@@ -6823,7 +6823,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "497a06fdb62316c95e95e1f899ec258c",
       "status": "published",
       "static_url": "news/rzd_partner-aktualizirovannuyu-transportnuyu-strategiyu-ross-497a06.html",
