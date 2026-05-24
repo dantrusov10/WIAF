@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-24T11:25:04+00:00",
+  "updated_at": "2026-05-24T13:44:47+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-24T11:25:04+00:00",
+  "cutoff_date": "2025-05-24T13:44:47+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6848,7 +6848,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "e708f6484061f94a94f9e67ac0a4fafb",
       "status": "published",
       "static_url": "news/rzd_partner-otkrytie-kanatnoy-dorogi-mezhdu-blagoveschenskom-e708f6.html",
@@ -6873,7 +6873,7 @@
       "category_ru": "железная дорога",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "27c20538625d1af4002d1b33fa2a55ae",
       "status": "published",
       "static_url": "news/rzd_partner-v-eaes-sporyat-o-rasshirenii-natsionalnoy-ogovor-27c205.html",
@@ -7003,6 +7003,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-habarovske-hotyat-reanimirovat-sudostroenie-b8a24e.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-habarovske-hotyat-reanimirovat-sudostroenie-b8a24e.html"
+    },
+    {
+      "id": "news_7c78153a32d4",
+      "slug": "rzd_partner-posle-uhoda-tallink-s-linii-paldiski-kapelsher-v-7c7815",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-05-22T08:17:15+00:00",
+      "published_at": "2026-05-22T08:17:15+00:00",
+      "title": "После ухода Tallink с линии Палдиски-Капельшер в порту скапливаются длинные очереди грузовиков",
+      "snippet": "После снятия парома Superfast IX эстонской судоходной компании Tallink с линии Палдиски-Капельшер в порту Палдиски начали скапливаться длинные очереди грузовых автомобилей с грузами, отправляемыми из Эстонии в Скандинавию, поскольку единственное оставшееся на линии судно компании DFDS не может перевезти всех желающих. Как передает портал err, Tallink обещает через какое-то время найти для линии другое судно, а в DFDS считают привлечение дополнительного парома нерентабельным.",
+      "content_preview": "После ухода Tallink с линии Палдиски-Капельшер в порту скапливаются длинные очереди грузовиков",
+      "link": "https://www.rzd-partner.ru/wate-transport/news/posle-ukhoda-tallink-s-linii-paldiski-kapelsher-v-portu-skaplivayutsya-dlinnye-ocheredi-gruzovikov/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "7c78153a32d41ce397066a9c6322f4c6",
+      "status": "published",
+      "static_url": "news/rzd_partner-posle-uhoda-tallink-s-linii-paldiski-kapelsher-v-7c7815.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-posle-uhoda-tallink-s-linii-paldiski-kapelsher-v-7c7815.html"
     },
     {
       "id": "news_6099049be906",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-volzhskoe-parohodstvo-otkrylo-molodezhnuyu-navig-754d7f.html",
       "canonical_url": "https://wiaf.ru/news/seanews-volzhskoe-parohodstvo-otkrylo-molodezhnuyu-navig-754d7f.html"
-    },
-    {
-      "id": "news_71418c3abd15",
-      "slug": "seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-21-2026-71418c",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-05-21T00:00:00+00:00",
-      "published_at": "2026-05-21T00:00:00+00:00",
-      "title": "Фрахтовый рынок Дальнего Востока, неделя 21, 2026 — SeaNews",
-      "snippet": "",
-      "content_preview": "Фрахтовый рынок Дальнего Востока, неделя 21, 2026",
-      "link": "https://seanews.ru/2026/05/21/ru-frahtovyj-rynok-dalnego-vostoka-nedelja-21-2026/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "71418c3abd1514c2fb2619ad39a44e3b",
-      "status": "published",
-      "static_url": "news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-21-2026-71418c.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-dalnego-vostoka-nedelya-21-2026-71418c.html"
     }
   ]
 }
