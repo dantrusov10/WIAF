@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-31T11:04:06+00:00",
+  "updated_at": "2026-05-31T12:20:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-05-31T11:04:06+00:00",
+  "cutoff_date": "2025-05-31T12:20:14+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6998,7 +6998,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "466e00ff61d96e93c13d777090979455",
       "status": "published",
       "static_url": "news/rzd_partner-zavershaetsya-podgotovka-xx-mezhdunarodnoy-nauch-466e00.html",
@@ -7023,7 +7023,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "2c93d58c2802b0b36fa9934b5b2fe1b7",
       "status": "published",
       "static_url": "news/rzd_partner-mintrans-rf-rassmatrivaet-vvedenie-spetsznaka-dl-2c93d5.html",
