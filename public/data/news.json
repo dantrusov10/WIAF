@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-02T00:18:45+00:00",
+  "updated_at": "2026-06-02T05:55:31+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-02T00:18:45+00:00",
+  "cutoff_date": "2025-06-02T05:55:31+00:00",
   "items": [
     {
       "id": "news_24642213a98c",
@@ -6780,6 +6780,31 @@
       "canonical_url": "https://wiaf.ru/news/portnews-komu-voyna-komu-neft-rodna-9faf33.html"
     },
     {
+      "id": "news_b8a38cba6ad6",
+      "slug": "logirus-gosudarstvo-hochet-vzyat-u-biznesa-nds-zaranee-a-b8a38c",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-06-01T00:00:00+00:00",
+      "published_at": "2026-06-01T00:00:00+00:00",
+      "title": "Государство хочет взять у бизнеса НДС заранее, а тот предлагает расписку от банка",
+      "snippet": "Импортеры добились принципиального согласия кабмина на замену залога банковскими гарантиями",
+      "content_preview": "Государство хочет взять у бизнеса НДС заранее, а тот предлагает расписку от банка",
+      "link": "https://logirus.ru/news/custom_and_ved/gosudarstvo_khochet_vzyat_u_biznesa_nds_zaranee_a_tot_predlagaet_raspisku_ot_banka.html",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "b8a38cba6ad6cd8f8c9b6b370fbc5847",
+      "status": "published",
+      "static_url": "news/logirus-gosudarstvo-hochet-vzyat-u-biznesa-nds-zaranee-a-b8a38c.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-gosudarstvo-hochet-vzyat-u-biznesa-nds-zaranee-a-b8a38c.html"
+    },
+    {
       "id": "news_33677652eff6",
       "slug": "seanews-interaktivnaya-karta-terminalov-336776",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/delo-sergey-shishkarev-na-zasedanii-soveta-pri-prezid-8687db.html",
       "canonical_url": "https://wiaf.ru/news/delo-sergey-shishkarev-na-zasedanii-soveta-pri-prezid-8687db.html"
-    },
-    {
-      "id": "news_054df34545eb",
-      "slug": "rzd_partner-kazahstan-i-rossiya-dogovorilis-razvivat-elektro-054df3",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-05-28T15:00:44+00:00",
-      "published_at": "2026-05-28T15:00:44+00:00",
-      "title": "Казахстан и Россия договорились развивать электронный обмен данными в ж/д грузоперевозках",
-      "snippet": "Казахстан и Россия договорились развивать электронный обмен данными в ж/д грузоперевозках. ЖД Транспорт. РЖД-Партнер",
-      "content_preview": "Казахстан и Россия договорились развивать электронный обмен данными в ж/д грузоперевозках",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/kazakhstan-i-rossiya-dogovorilis-razvivat-elektronnyy-obmen-dannymi-v-zh-d-gruzoperevozkakh/",
-      "image_url": "https://www.rzd-partner.ru:443/upload/iblock/eb6/8kk36c2hnv8gel5sx7bmpf0b000gcfby/2333622.jpg",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "054df34545eb05b80fcd1e4ce5e2e9d4",
-      "status": "published",
-      "static_url": "news/rzd_partner-kazahstan-i-rossiya-dogovorilis-razvivat-elektro-054df3.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-kazahstan-i-rossiya-dogovorilis-razvivat-elektro-054df3.html"
     }
   ]
 }
