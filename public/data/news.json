@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-04T08:54:09+00:00",
+  "updated_at": "2026-06-04T11:59:54+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-04T08:54:09+00:00",
+  "cutoff_date": "2025-06-04T11:59:54+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6805,6 +6805,31 @@
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
     },
     {
+      "id": "news_058f10369710",
+      "slug": "seanews-v-peterburge-zapustili-novoe-proizvodstvo-avtomo-058f10",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-06-04T00:00:00+00:00",
+      "published_at": "2026-06-04T00:00:00+00:00",
+      "title": "В Петербурге запустили новое производство автомобилей — SeaNews",
+      "snippet": "",
+      "content_preview": "В Петербурге запустили новое производство автомобилей",
+      "link": "https://seanews.ru/2026/06/04/ru-v-peterburge-zapustili-novoe-proizvodstvo-avtomobilej/",
+      "image_url": "",
+      "category": "road",
+      "category_ru": "автологистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "058f1036971023e7c20ff6ffb8bf7318",
+      "status": "published",
+      "static_url": "news/seanews-v-peterburge-zapustili-novoe-proizvodstvo-avtomo-058f10.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-v-peterburge-zapustili-novoe-proizvodstvo-avtomo-058f10.html"
+    },
+    {
       "id": "news_662f7b8e713b",
       "slug": "seanews-strukture-novateka-razresheno-priobresti-10-v-ya-662f7b",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-iyunskiy-fevral-morskie-linii-nashli-povod-podny-f98835.html",
       "canonical_url": "https://wiaf.ru/news/logirus-iyunskiy-fevral-morskie-linii-nashli-povod-podny-f98835.html"
-    },
-    {
-      "id": "news_f9512279f2d0",
-      "slug": "logirus-tehnologii-v-obmen-na-pribyl-sollers-nashel-kita-f95122",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-05-29T00:00:00+00:00",
-      "published_at": "2026-05-29T00:00:00+00:00",
-      "title": "Технологии в обмен на прибыль: «Соллерс» нашел китайца на свой штамп",
-      "snippet": "Китайский партнер получил долю в предприятии мощностью 800 тыс. штамповочных операций в год. Старт серийного производства – второй квартал 2026 года",
-      "content_preview": "Технологии в обмен на прибыль: «Соллерс» нашел китайца на свой штамп",
-      "link": "https://logirus.ru/news/transport/tekhnologii_v_obmen_na_pribyl_sollers_nashel_kitaytsa_na_svoy_shtamp.html",
-      "image_url": "",
-      "category": "news",
-      "category_ru": "новости",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "f9512279f2d04635677921bcfbc2d799",
-      "status": "published",
-      "static_url": "news/logirus-tehnologii-v-obmen-na-pribyl-sollers-nashel-kita-f95122.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-tehnologii-v-obmen-na-pribyl-sollers-nashel-kita-f95122.html"
     }
   ]
 }
