@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-04T15:39:04+00:00",
+  "updated_at": "2026-06-04T18:24:09+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-04T15:39:04+00:00",
+  "cutoff_date": "2025-06-04T18:24:09+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6898,7 +6898,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c96c72368618cae58780de3f135c53a2",
       "status": "published",
       "static_url": "news/logirus-nablyudatel-a-ne-lishniy-novye-mehaniki-atisu-dl-c96c72.html",
