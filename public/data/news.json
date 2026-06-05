@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-05T00:14:52+00:00",
+  "updated_at": "2026-06-05T05:23:41+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-05T00:14:52+00:00",
+  "cutoff_date": "2025-06-05T05:23:41+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6205,6 +6205,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-ekspert-nazval-proliv-nevelskogo-optimalnym-mest-5e4d17.html"
     },
     {
+      "id": "news_87f180d4c8ba",
+      "slug": "seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-23-87f180",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-06-05T00:00:00+00:00",
+      "published_at": "2026-06-05T00:00:00+00:00",
+      "title": "Фрахтовый рынок Азовского и Каспийского моря, 23 неделя, 2026 — SeaNews",
+      "snippet": "",
+      "content_preview": "Фрахтовый рынок Азовского и Каспийского моря, 23 неделя, 2026",
+      "link": "https://seanews.ru/2026/06/05/ru-frahtovyj-rynok-azovskogo-i-kaspijskogo-morja-23-nedelja-2026/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "87f180d4c8ba723ef8ac33c9a00965d7",
+      "status": "published",
+      "static_url": "news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-23-87f180.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-23-87f180.html"
+    },
+    {
       "id": "news_ed97358cf7d9",
       "slug": "rzd_partner-import-novyh-legkovyh-avtomobiley-v-rf-v-marte-v-ed9735",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-prikazano-na-bumage-mintrans-propisal-shest-sluc-92d923.html",
       "canonical_url": "https://wiaf.ru/news/logirus-prikazano-na-bumage-mintrans-propisal-shest-sluc-92d923.html"
-    },
-    {
-      "id": "news_f988358af045",
-      "slug": "logirus-iyunskiy-fevral-morskie-linii-nashli-povod-podny-f98835",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-05-29T00:00:00+00:00",
-      "published_at": "2026-05-29T00:00:00+00:00",
-      "title": "«Июньский февраль»: морские линии нашли повод поднять ставки до октября",
-      "snippet": "Перевозчики совмещают пустые рейсы и пиковые сборы: спотовые ставки Азия–Нью-Йорк выросли на 6%, Азия–Генуя – на 4%. Аналитики ждут дальнейшего давления из-за раннего сезона и топливной корректировки с 1 июля",
-      "content_preview": "«Июньский февраль»: морские линии нашли повод поднять ставки до октября",
-      "link": "https://logirus.ru/news/global_logistics/iyunskiy_fevral_morskie_linii_nashli_povod_podnyat_stavki_do_oktyabrya.html",
-      "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "f988358af045bebfb951c59de9e2a1ec",
-      "status": "published",
-      "static_url": "news/logirus-iyunskiy-fevral-morskie-linii-nashli-povod-podny-f98835.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-iyunskiy-fevral-morskie-linii-nashli-povod-podny-f98835.html"
     }
   ]
 }
