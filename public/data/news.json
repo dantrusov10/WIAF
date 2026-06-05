@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-05T09:59:39+00:00",
+  "updated_at": "2026-06-05T12:45:38+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-05T09:59:39+00:00",
+  "cutoff_date": "2025-06-05T12:45:38+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6230,6 +6230,31 @@
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
     },
     {
+      "id": "news_61ed1039b1f5",
+      "slug": "seanews-otkrylas-navigatsiya-na-chukotku-61ed10",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-06-05T00:00:00+00:00",
+      "published_at": "2026-06-05T00:00:00+00:00",
+      "title": "Открылась навигация на Чукотку — SeaNews",
+      "snippet": "",
+      "content_preview": "Открылась навигация на Чукотку",
+      "link": "https://seanews.ru/2026/06/05/ru-otkrylas-navigacija-na-chukotku/",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "61ed1039b1f5b1a68be8b69ff939c7d6",
+      "status": "published",
+      "static_url": "news/seanews-otkrylas-navigatsiya-na-chukotku-61ed10.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-otkrylas-navigatsiya-na-chukotku-61ed10.html"
+    },
+    {
       "id": "news_2d080710c6c3",
       "slug": "seanews-neftemusorosborschik-novogo-pokoleniya-sever-ot--2d0807",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-begom-za-polisom-vladeltsam-avto-hotyat-podarit--f1f55b.html",
       "canonical_url": "https://wiaf.ru/news/logirus-begom-za-polisom-vladeltsam-avto-hotyat-podarit--f1f55b.html"
-    },
-    {
-      "id": "news_a527394e7d8a",
-      "slug": "logirus-tseny-na-pyatiletnie-furgony-v-i-kvartale-2026-g-a52739",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-05-29T00:00:00+00:00",
-      "published_at": "2026-05-29T00:00:00+00:00",
-      "title": "Цены на пятилетние фургоны в I квартале 2026 года превысили цены на новые в 2021 году",
-      "snippet": "Средняя цена трехлетнего Fiat Ducato в I квартале 2026 года – 4,8 млн рублей. Пятилетний Renault Master уходит с рук за 3,8 млн",
-      "content_preview": "Цены на пятилетние фургоны в I квартале 2026 года превысили цены на новые в 2021 году",
-      "link": "https://logirus.ru/news/transport/tseny_na_pyatiletnie_furgony_v_i_kvartale_2026_goda_prevysili_tseny_na_novye_v_2021_godu.html",
-      "image_url": "",
-      "category": "news",
-      "category_ru": "новости",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "a527394e7d8a9fc050d247c108932e82",
-      "status": "published",
-      "static_url": "news/logirus-tseny-na-pyatiletnie-furgony-v-i-kvartale-2026-g-a52739.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-tseny-na-pyatiletnie-furgony-v-i-kvartale-2026-g-a52739.html"
     }
   ]
 }
