@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-06T22:07:48+00:00",
+  "updated_at": "2026-06-07T00:09:32+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-06T22:07:48+00:00",
+  "cutoff_date": "2025-06-07T00:09:32+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6223,7 +6223,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "33677652eff6e96472b3b7ce8d90ede8",
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
@@ -6248,7 +6248,7 @@
       "category_ru": "аналитика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "e6c26876f80be10251d89f402e7532d7",
       "status": "published",
       "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-1-5-iyunya-2026-e6c268.html",
