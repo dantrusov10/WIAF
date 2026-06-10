@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-10T18:04:47+00:00",
+  "updated_at": "2026-06-10T21:28:57+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-06-10T18:04:47+00:00",
+  "cutoff_date": "2025-06-10T21:28:57+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1203,6 +1203,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-patrushev-zayavil-ob-otsutstvii-v-rf-edinoy-sist-65eddf.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-patrushev-zayavil-ob-otsutstvii-v-rf-edinoy-sist-65eddf.html"
+    },
+    {
+      "id": "news_052d1c404203",
+      "slug": "rzd_partner-gruzoperevozki-v-rossii-vyrosli-do-84-mlrd-tonn--052d1c",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-10-06T12:54:14+00:00",
+      "published_at": "2026-10-06T12:54:14+00:00",
+      "title": "Грузоперевозки в России выросли до 8,4 млрд тонн, а пассажирские перевозки – на 13% за 3 года",
+      "snippet": "Министерство транспорта Российской Федерации разработало проект обновленной Транспортной стратегии, рассчитанной на период до 2036 года с прогнозными ориентирами до 2050 года. Согласно представленным данным, объем грузоперевозок в России в 2024 году показал устойчивую положительную динамику, достигнув 8,4 млрд тонн, что на 5% больше по сравнению с уровнем 2021 года.",
+      "content_preview": "Грузоперевозки в России выросли до 8,4 млрд тонн, а пассажирские перевозки – на 13% за 3 года",
+      "link": "https://www.rzd-partner.ru/logistics/news/gruzoperevozki-v-rossii-vyrosli-do-8-4-mlrd-tonn-a-passazhirskie-perevozki-na-13-za-tri-goda/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "052d1c404203d6f7813475af87af8a12",
+      "status": "published",
+      "static_url": "news/rzd_partner-gruzoperevozki-v-rossii-vyrosli-do-84-mlrd-tonn--052d1c.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-gruzoperevozki-v-rossii-vyrosli-do-84-mlrd-tonn--052d1c.html"
     },
     {
       "id": "news_e175df14696e",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-zolotoy-pasport-po-rossiyski-vezd-v-grazhdanstvo-1b44ea.html",
       "canonical_url": "https://wiaf.ru/news/logirus-zolotoy-pasport-po-rossiyski-vezd-v-grazhdanstvo-1b44ea.html"
-    },
-    {
-      "id": "news_27d82ec09fed",
-      "slug": "logirus-perehodnyy-period-bez-shtrafov-i-pravo-na-oshibk-27d82e",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-06-07T00:00:00+00:00",
-      "published_at": "2026-06-07T00:00:00+00:00",
-      "title": "Переходный период без штрафов и право на ошибку: четыре меры, чтобы цифровизация не обрушила авторынок",
-      "snippet": "Ускоренное внедрение новых обязанностей без переходных периодов и механизма корректировки ошибок ведет к сокращению МСП и росту транспортных издержек в экономике",
-      "content_preview": "Переходный период без штрафов и право на ошибку: четыре меры, чтобы цифровизация не обрушила авторынок",
-      "link": "https://logirus.ru/news/transport/perekhodnyy_period_bez_shtrafov_i_pravo_na_oshibku_chetyre_mery_chtoby_tsifrovizatsiya_ne_obrushil.html",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "авто",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "27d82ec09fed6f046973b76e1a2ec27b",
-      "status": "published",
-      "static_url": "news/logirus-perehodnyy-period-bez-shtrafov-i-pravo-na-oshibk-27d82e.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-perehodnyy-period-bez-shtrafov-i-pravo-na-oshibk-27d82e.html"
     }
   ]
 }
