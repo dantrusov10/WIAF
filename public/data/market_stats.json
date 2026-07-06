@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-05T23:05:56+00:00",
+  "updated_at": "2026-07-06T03:52:13+00:00",
   "items": [
     {
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "active_auctions": 43,
       "new_auctions_day": 9,
       "new_auctions_week": 34,
@@ -14,7 +14,7 @@
       "usd_rub": 77.2264,
       "cny_rub": 11.3803,
       "eur_rub": 88.0304,
-      "updated_at": "2026-07-05T23:05:56+00:00"
+      "updated_at": "2026-07-06T03:52:13+00:00"
     }
   ],
   "auctions": [
