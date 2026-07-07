@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-07T00:13:18+00:00",
+  "updated_at": "2026-07-07T04:56:34+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-07-07T00:13:18+00:00",
+  "cutoff_date": "2025-07-07T04:56:34+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6680,6 +6680,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-nds-22-za-vhod-v-onlayn-minpromtorg-zhmet-na-kur-7c084c.html"
     },
     {
+      "id": "news_38e569b6e85f",
+      "slug": "logirus-avans-33-i-padenie-na-55-lizing-v-2026-m-provery-38e569",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-07-07T00:00:00+00:00",
+      "published_at": "2026-07-07T00:00:00+00:00",
+      "title": "Аванс 33% и падение на 55%: лизинг в 2026-м проверяет бизнес на прочность",
+      "snippet": "Брокеры уходят в консалтинг, сроки рассмотрения растут, а кадровые перестановки рвут привычные связи",
+      "content_preview": "Аванс 33% и падение на 55%: лизинг в 2026-м проверяет бизнес на прочность",
+      "link": "https://logirus.ru/news/transport/avans_33_i_padenie_na_55_lizing_v_2026-m_proveryaet_biznes_na_prochnost.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "38e569b6e85f7ca1f1f4f3a17c3a75e3",
+      "status": "published",
+      "static_url": "news/logirus-avans-33-i-padenie-na-55-lizing-v-2026-m-provery-38e569.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-avans-33-i-padenie-na-55-lizing-v-2026-m-provery-38e569.html"
+    },
+    {
       "id": "news_eeac1e0c756e",
       "slug": "logirus-mintrans-vseh-vyvedet-na-edinyy-ekran-vklyuchaya-eeac1e",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-rzhd-v-2026-godu-zakupyat-110-vagonov-prigorodny-610c7b.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-rzhd-v-2026-godu-zakupyat-110-vagonov-prigorodny-610c7b.html"
-    },
-    {
-      "id": "news_df1ce2418956",
-      "slug": "rzd_partner-mishustin-zayavil-o-vypadenii-okolo-10-mirovogo--df1ce2",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-07-04T11:26:37+00:00",
-      "published_at": "2026-07-04T11:26:37+00:00",
-      "title": "Мишустин заявил о выпадении около 10% мирового производства жидких углеводородов",
-      "snippet": "Около 10% мирового производства жидких углеводородов временно оказалось выведено с рынка на фоне ситуации в Персидском заливе. Об этом заявил премьер-министр России Михаил Мишустин, открывая стратегическую сессию «Развитие топливно-энергетического комплекса».",
-      "content_preview": "Мишустин заявил о выпадении около 10% мирового производства жидких углеводородов",
-      "link": "https://www.rzd-partner.ru/logistics/news/mishustin-zayavil-o-vypadenii-okolo-10-mirovogo-proizvodstva-zhidkikh-uglevodorodov/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "df1ce2418956a54254b0b5914f3ecd0c",
-      "status": "published",
-      "static_url": "news/rzd_partner-mishustin-zayavil-o-vypadenii-okolo-10-mirovogo--df1ce2.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-mishustin-zayavil-o-vypadenii-okolo-10-mirovogo--df1ce2.html"
     }
   ]
 }
