@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-10T16:59:49+00:00",
+  "updated_at": "2026-07-10T18:29:02+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-07-10T16:59:49+00:00",
+  "cutoff_date": "2025-07-10T18:29:02+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1728,6 +1728,31 @@
       "status": "published",
       "static_url": "news/logirus-tamozhnya-stala-trebovat-voennoe-zaklyuchenie-na-47a8e0.html",
       "canonical_url": "https://wiaf.ru/news/logirus-tamozhnya-stala-trebovat-voennoe-zaklyuchenie-na-47a8e0.html"
+    },
+    {
+      "id": "news_fff79fbee859",
+      "slug": "logirus-pokupatel-ushel-v-neyroset-kto-v-es-snimet-slivk-fff79f",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-10-10T00:00:00+00:00",
+      "published_at": "2026-10-10T00:00:00+00:00",
+      "title": "Покупатель ушел в нейросеть: кто в ЕС снимет сливки с ИИ-революции, пока остальные пилотируют",
+      "snippet": "Только 15% ритейлеров вкладывают деньги в направления с максимальной отдачей. Остальные распыляются на сотни пилотов и буксуют",
+      "content_preview": "Покупатель ушел в нейросеть: кто в ЕС снимет сливки с ИИ-революции, пока остальные пилотируют",
+      "link": "https://logirus.ru/news/e-commerce/pokupatel_ushel_v_neyroset_kto_v_es_snimet_slivki_s_ii-revolyutsii_poka_ostalnye_pilotiruyut.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "fff79fbee8592e1160bdf261d2d6d19d",
+      "status": "published",
+      "static_url": "news/logirus-pokupatel-ushel-v-neyroset-kto-v-es-snimet-slivk-fff79f.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-pokupatel-ushel-v-neyroset-kto-v-es-snimet-slivk-fff79f.html"
     },
     {
       "id": "news_3e2c23746d22",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-ottsepki-vagonov-iz-za-neispravnosti-telezhki-v--23dab9.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-ottsepki-vagonov-iz-za-neispravnosti-telezhki-v--23dab9.html"
-    },
-    {
-      "id": "news_cc2f5021f7ca",
-      "slug": "rzd_partner-tret-punktov-propuska-na-granitse-s-kazahstanom--cc2f50",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-08-05T08:51:28+00:00",
-      "published_at": "2026-08-05T08:51:28+00:00",
-      "title": "Треть пунктов пропуска на границе с Казахстаном модернизируют",
-      "snippet": "10 из 30 автомобильных погранпереходов будут реконструированы в приоритетном порядке. Речь идет об АПП Сагарчин, Маштаково, Озинки, Илек, Караузек, Бугристое, Орск, Павловка, Петухово и Ольховка.",
-      "content_preview": "Треть пунктов пропуска на границе с Казахстаном модернизируют",
-      "link": "https://www.rzd-partner.ru/logistics/news/tret-punktov-propuska-na-granitse-s-kazakhstanom-moderniziruyut/",
-      "image_url": "",
-      "category": "road",
-      "category_ru": "автологистика",
-      "transport_type": "авто",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "cc2f5021f7ca052638fd545a4a7ae206",
-      "status": "published",
-      "static_url": "news/rzd_partner-tret-punktov-propuska-na-granitse-s-kazahstanom--cc2f50.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-tret-punktov-propuska-na-granitse-s-kazahstanom--cc2f50.html"
     }
   ]
 }
