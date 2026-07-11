@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-11T19:10:22+00:00",
+  "updated_at": "2026-07-11T20:55:20+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-07-11T19:10:22+00:00",
+  "cutoff_date": "2025-07-11T20:55:20+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -2153,6 +2153,31 @@
       "status": "published",
       "static_url": "news/rzd_partner-dalniy-vostok-mozhet-uvelichit-konteynerooborot--e6310d.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-dalniy-vostok-mozhet-uvelichit-konteynerooborot--e6310d.html"
+    },
+    {
+      "id": "news_5fa42be23290",
+      "slug": "rzd_partner-dalnevostochnyy-konteynernyy-forum-2026-novye-ma-5fa42b",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-10-07T12:06:41+00:00",
+      "published_at": "2026-10-07T12:06:41+00:00",
+      "title": "Дальневосточный контейнерный форум 2026: новые маршруты и будущее контейнерной логистики",
+      "snippet": "&lt;p&gt; Владивосток, Россия — 9–10 июля 2026 года в Lotte Hotel Vladivostok состоялся V &lt;a href=&quot;https://icf.events/dkf&quot;&gt;Дальневосточный контейнерный форум&lt;/a&gt; — одно из ключевых отраслевых мероприятий в сфере контейнерной логистики, международных транспортных коридоров и экспортных перевозок. &lt;/p&gt; &lt;br&gt; &lt;br&gt;",
+      "content_preview": "Дальневосточный контейнерный форум 2026: новые маршруты и будущее контейнерной логистики",
+      "link": "https://www.rzd-partner.ru/logistics/news/dalnevostochnyy-konteynernyy-forum-2026-novye-marshruty-i-budushchee-konteynernoy-logistiki/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "5fa42be23290fd4e3ade27cd8a94a38f",
+      "status": "published",
+      "static_url": "news/rzd_partner-dalnevostochnyy-konteynernyy-forum-2026-novye-ma-5fa42b.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-dalnevostochnyy-konteynernyy-forum-2026-novye-ma-5fa42b.html"
     },
     {
       "id": "news_efe083f66ce3",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-moskve-nazvali-naibolee-vostrebovannye-kommerc-c62660.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-moskve-nazvali-naibolee-vostrebovannye-kommerc-c62660.html"
-    },
-    {
-      "id": "news_23dab9665883",
-      "slug": "rzd_partner-ottsepki-vagonov-iz-za-neispravnosti-telezhki-v--23dab9",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-08-05T09:05:13+00:00",
-      "published_at": "2026-08-05T09:05:13+00:00",
-      "title": "Отцепки вагонов из-за неисправности тележки в прошлом году снизились на 1%",
-      "snippet": "Снижение, главным образом, обеспечило улучшение ситуации с фрикционными клиньями.",
-      "content_preview": "Отцепки вагонов из-за неисправности тележки в прошлом году снизились на 1%",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/ottsepki-vagonov-iz-za-neispravnosti-telezhki-v-proshlom-godu-snizilis-na-1/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "23dab966588381913040119704d41c49",
-      "status": "published",
-      "static_url": "news/rzd_partner-ottsepki-vagonov-iz-za-neispravnosti-telezhki-v--23dab9.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-ottsepki-vagonov-iz-za-neispravnosti-telezhki-v--23dab9.html"
     }
   ]
 }
