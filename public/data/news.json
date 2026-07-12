@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-12T16:07:51+00:00",
+  "updated_at": "2026-07-12T18:03:32+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-07-12T16:07:51+00:00",
+  "cutoff_date": "2025-07-12T18:03:32+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1680,8 +1680,8 @@
       "canonical_url": "https://wiaf.ru/news/logirus-kladovschik-po-tsene-aytishnika-rynok-sorvalo-s--3e2c23.html"
     },
     {
-      "id": "news_d948a1411000",
-      "slug": "logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1",
+      "id": "news_7268506b85af",
+      "slug": "logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850",
       "source": "Logirus",
       "source_id": "logirus",
       "source_group": "industry_media",
@@ -1689,20 +1689,20 @@
       "priority": 100,
       "date": "2026-10-12T00:00:00+00:00",
       "published_at": "2026-10-12T00:00:00+00:00",
-      "title": "Тихий ужас на ставках: Drewry обновил максимум с 2024-го",
-      "snippet": "Индекс взял планку в $4639. Ставки на западное побережье США рванули на 121% за год. Восточное затаилось перед июльскими надбавками. Свободной вместимости почти нет – лишь три отмены рейса на весь трейд",
-      "content_preview": "Тихий ужас на ставках: Drewry обновил максимум с 2024-го",
-      "link": "https://logirus.ru/news/global_logistics/tikhiy_uzhas_na_stavkakh_drewry_obnovil_maksimum_s_2024-go.html",
+      "title": "Выпустить джинна: Минэкономики открывает полигон для роверов и беспилотников",
+      "snippet": "Проект постановления правительства запускает механизм легализации наземных беспилотников через «песочницы»",
+      "content_preview": "Выпустить джинна: Минэкономики открывает полигон для роверов и беспилотников",
+      "link": "https://logirus.ru/news/transport/vypustit_dzhinna_minekonomiki_otkryvaet_poligon_dlya_roverov_i_bespilotnikov.html",
       "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
+      "category": "news",
+      "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
       "freshness": "fresh",
-      "hash": "d948a1411000bd25711dc931c9ea7380",
+      "hash": "7268506b85afd8f04bf28c6f8e526316",
       "status": "published",
-      "static_url": "news/logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1.html"
+      "static_url": "news/logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850.html"
     },
     {
       "id": "news_5c0709f95e3d",
@@ -1755,8 +1755,8 @@
       "canonical_url": "https://wiaf.ru/news/logirus-raspisanie-slomalos-konteynernyy-flot-upersya-v--fcbc7b.html"
     },
     {
-      "id": "news_7268506b85af",
-      "slug": "logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850",
+      "id": "news_d948a1411000",
+      "slug": "logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1",
       "source": "Logirus",
       "source_id": "logirus",
       "source_group": "industry_media",
@@ -1764,20 +1764,20 @@
       "priority": 100,
       "date": "2026-10-12T00:00:00+00:00",
       "published_at": "2026-10-12T00:00:00+00:00",
-      "title": "Выпустить джинна: Минэкономики открывает полигон для роверов и беспилотников",
-      "snippet": "Проект постановления правительства запускает механизм легализации наземных беспилотников через «песочницы»",
-      "content_preview": "Выпустить джинна: Минэкономики открывает полигон для роверов и беспилотников",
-      "link": "https://logirus.ru/news/transport/vypustit_dzhinna_minekonomiki_otkryvaet_poligon_dlya_roverov_i_bespilotnikov.html",
+      "title": "Тихий ужас на ставках: Drewry обновил максимум с 2024-го",
+      "snippet": "Индекс взял планку в $4639. Ставки на западное побережье США рванули на 121% за год. Восточное затаилось перед июльскими надбавками. Свободной вместимости почти нет – лишь три отмены рейса на весь трейд",
+      "content_preview": "Тихий ужас на ставках: Drewry обновил максимум с 2024-го",
+      "link": "https://logirus.ru/news/global_logistics/tikhiy_uzhas_na_stavkakh_drewry_obnovil_maksimum_s_2024-go.html",
       "image_url": "",
-      "category": "news",
-      "category_ru": "новости",
+      "category": "rates",
+      "category_ru": "ставки",
       "transport_type": "смешанная",
       "region": "RU",
       "freshness": "fresh",
-      "hash": "7268506b85afd8f04bf28c6f8e526316",
+      "hash": "d948a1411000bd25711dc931c9ea7380",
       "status": "published",
-      "static_url": "news/logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-vypustit-dzhinna-minekonomiki-otkryvaet-poligon--726850.html"
+      "static_url": "news/logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-tihiy-uzhas-na-stavkah-drewry-obnovil-maksimum-s-d948a1.html"
     },
     {
       "id": "news_16aabf89bceb",
