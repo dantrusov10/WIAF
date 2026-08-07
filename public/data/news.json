@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-07T05:46:41+00:00",
+  "updated_at": "2026-08-07T07:22:43+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-07T05:46:41+00:00",
+  "cutoff_date": "2025-08-07T07:22:43+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6705,6 +6705,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-figuranta-dela-o-moshennichestve-pri-stroitelstv-312f18.html"
     },
     {
+      "id": "news_132e710f1587",
+      "slug": "seanews-paket-skidok-dlya-metallurgicheskih-gruzov-132e71",
+      "source": "SeaNews",
+      "source_id": "seanews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 90,
+      "date": "2026-08-07T00:00:00+00:00",
+      "published_at": "2026-08-07T00:00:00+00:00",
+      "title": "Пакет скидок для металлургических грузов — SeaNews",
+      "snippet": "",
+      "content_preview": "Пакет скидок для металлургических грузов",
+      "link": "https://seanews.ru/2026/08/07/ru-paket-skidok-dlja-metallurgicheskih-gruzov/",
+      "image_url": "",
+      "category": "road",
+      "category_ru": "автологистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "132e710f1587467df8ed5c48eaaca9a3",
+      "status": "published",
+      "static_url": "news/seanews-paket-skidok-dlya-metallurgicheskih-gruzov-132e71.html",
+      "canonical_url": "https://wiaf.ru/news/seanews-paket-skidok-dlya-metallurgicheskih-gruzov-132e71.html"
+    },
+    {
       "id": "news_cda8b88fe4c4",
       "slug": "portnews-intervyu-s-direktorom-tsentra-propulsivnyh-siste-cda8b8",
       "source": "PortNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-konteynernye-perevozki-na-ozhd-za-chetyre-mesyat-cf7821.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-konteynernye-perevozki-na-ozhd-za-chetyre-mesyat-cf7821.html"
-    },
-    {
-      "id": "news_1957b170fb32",
-      "slug": "rzd_partner-suhogruz-pizhma-nachal-subsidirovannye-perevozki-1957b1",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-08-05T12:34:09+00:00",
-      "published_at": "2026-08-05T12:34:09+00:00",
-      "title": "Сухогруз «Пижма» начал субсидированные перевозки между Петербургом и Калининградом",
-      "snippet": "Сухогруз «Пижма», входящий во флот компании «Оборонлогистика», приступил к выполнению рейсов на линии Санкт-Петербург – Калининград в рамках программы субсидирования морских перевозок. Об этом сообщила пресс-служба перевозчика.",
-      "content_preview": "Сухогруз «Пижма» начал субсидированные перевозки между Петербургом и Калининградом",
-      "link": "https://www.rzd-partner.ru/wate-transport/news/sukhogruz-pizhma-nachal-subsidirovannye-perevozki-mezhdu-peterburgom-i-kaliningradom/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "1957b170fb329b74d5f348d387396eb2",
-      "status": "published",
-      "static_url": "news/rzd_partner-suhogruz-pizhma-nachal-subsidirovannye-perevozki-1957b1.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-suhogruz-pizhma-nachal-subsidirovannye-perevozki-1957b1.html"
     }
   ]
 }
