@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-07T14:58:13+00:00",
+  "updated_at": "2026-08-07T16:01:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-07T14:58:13+00:00",
+  "cutoff_date": "2025-08-07T16:01:35+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6705,6 +6705,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-figuranta-dela-o-moshennichestve-pri-stroitelstv-312f18.html"
     },
     {
+      "id": "news_49e540cc67ca",
+      "slug": "logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-08-07T00:00:00+00:00",
+      "published_at": "2026-08-07T00:00:00+00:00",
+      "title": "Асфальт не резиновый. Минтранс ввел спецпроверку для тяжеловесов",
+      "snippet": "Полная диагностика раз в пять лет, плановая – ежегодно, впервые с единой процедурой",
+      "content_preview": "Асфальт не резиновый. Минтранс ввел спецпроверку для тяжеловесов",
+      "link": "https://logirus.ru/news/infrastructure/asfalt_ne_rezinovyy_mintrans_vvel_spetsproverku_dlya_tyazhelovesov.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "49e540cc67cadda0c9fbaec145deb667",
+      "status": "published",
+      "static_url": "news/logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540.html"
+    },
+    {
       "id": "news_d6cbc0a07f12",
       "slug": "logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-32-7745c1.html",
       "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-32-7745c1.html"
-    },
-    {
-      "id": "news_fb9a3ebeeed6",
-      "slug": "rzd_partner-mintrans-aviareysy-iz-yuzhnyh-aeroportov-rossii--fb9a3e",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-08-05T13:49:30+00:00",
-      "published_at": "2026-08-05T13:49:30+00:00",
-      "title": "Минтранс: авиарейсы из южных аэропортов России начали частично восстанавливаться",
-      "snippet": "Авиасообщение с южными регионами России постепенно возвращается к работе. Как сообщили в Минтрансе РФ, перевозчики начали поэтапное возобновление полетов по ряду направлений.",
-      "content_preview": "Минтранс: авиарейсы из южных аэропортов России начали частично восстанавливаться",
-      "link": "https://www.rzd-partner.ru/aviation/news/mintrans-aviareysy-iz-yuzhnykh-aeroportov-rossii-nachali-chastichno-vosstanavlivatsya/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "авиа",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "fb9a3ebeeed67c6f728724ea3e014d42",
-      "status": "published",
-      "static_url": "news/rzd_partner-mintrans-aviareysy-iz-yuzhnyh-aeroportov-rossii--fb9a3e.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-mintrans-aviareysy-iz-yuzhnyh-aeroportov-rossii--fb9a3e.html"
     }
   ]
 }
