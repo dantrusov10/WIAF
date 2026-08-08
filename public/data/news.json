@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-08T07:56:08+00:00",
+  "updated_at": "2026-08-08T08:47:39+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-08T07:56:08+00:00",
+  "cutoff_date": "2025-08-08T08:47:39+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6155,6 +6155,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-poka-soft-dorozhaet-na-chetvert-servery-dlya-neg-8320c6.html"
     },
     {
+      "id": "news_51b2cfee045a",
+      "slug": "rzd_partner-tk-kit-sezon-perevozok-meda-v-2026-godu-stanet-b-51b2cf",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-08-08T07:42:27+00:00",
+      "published_at": "2026-08-08T07:42:27+00:00",
+      "title": "ТК КИТ: сезон перевозок меда в 2026 году станет более продолжительным",
+      "snippet": "В сезоне 2026 года российские производители меда будут активнее расширять географию продаж, а грузопоток станет более распределенным по времени и направлениям. По прогнозу Транспортной Компании КИТ, основной объем отправок традиционно придется на август и сентябрь, однако высокая интенсивность перевозок может сохраняться в течение всей осени.",
+      "content_preview": "ТК КИТ: сезон перевозок меда в 2026 году станет более продолжительным",
+      "link": "https://www.rzd-partner.ru/logistics/news/tk-kit-sezon-perevozok-meda-v-2026-godu-stanet-bolee-prodolzhitelnym/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "51b2cfee045acbaeee915c086c182d2a",
+      "status": "published",
+      "static_url": "news/rzd_partner-tk-kit-sezon-perevozok-meda-v-2026-godu-stanet-b-51b2cf.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-tk-kit-sezon-perevozok-meda-v-2026-godu-stanet-b-51b2cf.html"
+    },
+    {
       "id": "news_c03c07712143",
       "slug": "rzd_partner-rst-tseny-na-aviaperelety-po-rossii-i-za-rubezh--c03c07",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-gtlk-peredala-v-lizing-dve-barzhi-ploschadki-82e9a9.html",
       "canonical_url": "https://wiaf.ru/news/seanews-gtlk-peredala-v-lizing-dve-barzhi-ploschadki-82e9a9.html"
-    },
-    {
-      "id": "news_7745c180a500",
-      "slug": "seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-32-7745c1",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-08-06T00:00:00+00:00",
-      "published_at": "2026-08-06T00:00:00+00:00",
-      "title": "Фрахтовый рынок Азовского и Каспийского моря, 32 неделя, 2026 — SeaNews",
-      "snippet": "",
-      "content_preview": "Фрахтовый рынок Азовского и Каспийского моря, 32 неделя, 2026",
-      "link": "https://seanews.ru/2026/08/06/ru-frahtovyj-rynok-azovskogo-i-kaspijskogo-morja-32-nedelja-2026/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "7745c180a500bf6a91ed6620b6d4c3c2",
-      "status": "published",
-      "static_url": "news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-32-7745c1.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-azovskogo-i-kaspiyskogo-morya-32-7745c1.html"
     }
   ]
 }
