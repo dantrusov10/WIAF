@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-08T23:34:32+00:00",
+  "updated_at": "2026-08-09T01:58:42+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-08T23:34:32+00:00",
+  "cutoff_date": "2025-08-09T01:58:42+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -6748,7 +6748,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "49e540cc67cadda0c9fbaec145deb667",
       "status": "published",
       "static_url": "news/logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540.html",
@@ -6798,7 +6798,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "33677652eff6e96472b3b7ce8d90ede8",
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
