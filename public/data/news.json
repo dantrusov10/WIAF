@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-10T21:46:03+00:00",
+  "updated_at": "2026-08-10T22:42:34+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-10T21:46:03+00:00",
+  "cutoff_date": "2025-08-10T22:42:34+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -2265,13 +2265,13 @@
       "date": "2026-10-08T11:59:43+00:00",
       "published_at": "2026-10-08T11:59:43+00:00",
       "title": "Погрузка экспортного угля на восток в июле достигла 10,9 млн тонн",
-      "snippet": "Погрузка экспортного угля на восток в июле достигла 10,9 млн тонн. ЖД Транспорт. РЖД-Партнер",
+      "snippet": "Статьи и новости на транспортную тематику.",
       "content_preview": "Погрузка экспортного угля на восток в июле достигла 10,9 млн тонн",
       "link": "https://www.rzd-partner.ru/zhd-transport/news/pogruzka-eksportnogo-uglya-na-vostok-v-iyule-dostigla-10-9-mln-tonn/",
       "image_url": "https://www.rzd-partner.ru:443/upload/iblock/a94/el1okwdd3tgpef5nir9cgprzsse8u4ci/2903693.jpg",
       "category": "ports",
       "category_ru": "порты",
-      "transport_type": "железнодорожная",
+      "transport_type": "смешанная",
       "region": "RU",
       "freshness": "fresh",
       "hash": "33d08b18f6951cc84edec20fda3342ba",
