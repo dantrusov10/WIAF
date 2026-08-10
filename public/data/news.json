@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-10T04:05:56+00:00",
+  "updated_at": "2026-08-10T06:13:59+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-10T04:05:56+00:00",
+  "cutoff_date": "2025-08-10T06:13:59+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1928,6 +1928,31 @@
       "status": "published",
       "static_url": "news/logirus-kitaytsy-zamenyat-60-ruchnogo-truda-v-punkte-pro-14ca51.html",
       "canonical_url": "https://wiaf.ru/news/logirus-kitaytsy-zamenyat-60-ruchnogo-truda-v-punkte-pro-14ca51.html"
+    },
+    {
+      "id": "news_0c0fb25b6dc5",
+      "slug": "rzd_partner-proizvodstvo-aviatopliva-v-rossii-v-avguste-vyra-0c0fb2",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-10-08T06:04:41+00:00",
+      "published_at": "2026-10-08T06:04:41+00:00",
+      "title": "Производство авиатоплива в России в августе вырастет на 4%",
+      "snippet": "Минэнерго РФ ожидает увеличения производства авиационного керосина в августе 2026 года на 4% по сравнению с июлем. При этом объем выпуска должен соответствовать уровню августа прошлого года.",
+      "content_preview": "Производство авиатоплива в России в августе вырастет на 4%",
+      "link": "https://www.rzd-partner.ru/aviation/news/proizvodstvo-aviatopliva-v-rossii-v-avguste-vyrastet-na-4/",
+      "image_url": "https://www.rzd-partner.ru:443/upload/iblock/460/evmoyezunogmymofl9l8jsfzckfeavus/9405088667080094e89a23b8067246c2bb8a13b43979b_m.jpg",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "авиа",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "0c0fb25b6dc5a188d2aa0cc907f0a60d",
+      "status": "published",
+      "static_url": "news/rzd_partner-proizvodstvo-aviatopliva-v-rossii-v-avguste-vyra-0c0fb2.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-proizvodstvo-aviatopliva-v-rossii-v-avguste-vyra-0c0fb2.html"
     },
     {
       "id": "news_4f2b424e110a",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-frahtovyy-rynok-chernogo-morya-32-nedelya-2026-0f7251.html",
       "canonical_url": "https://wiaf.ru/news/seanews-frahtovyy-rynok-chernogo-morya-32-nedelya-2026-0f7251.html"
-    },
-    {
-      "id": "news_82e9a9529e8a",
-      "slug": "seanews-gtlk-peredala-v-lizing-dve-barzhi-ploschadki-82e9a9",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-08-06T00:00:00+00:00",
-      "published_at": "2026-08-06T00:00:00+00:00",
-      "title": "ГТЛК передала в лизинг две баржи-площадки — SeaNews",
-      "snippet": "",
-      "content_preview": "ГТЛК передала в лизинг две баржи-площадки",
-      "link": "https://seanews.ru/2026/08/06/ru-gtlk-peredala-v-lizing-dve-barzhi-ploshhadki/",
-      "image_url": "",
-      "category": "sea",
-      "category_ru": "морская логистика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "82e9a9529e8a9c8851dc6dca0a4021d5",
-      "status": "published",
-      "static_url": "news/seanews-gtlk-peredala-v-lizing-dve-barzhi-ploschadki-82e9a9.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-gtlk-peredala-v-lizing-dve-barzhi-ploschadki-82e9a9.html"
     }
   ]
 }
