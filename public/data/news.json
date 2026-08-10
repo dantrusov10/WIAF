@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-10T16:58:27+00:00",
+  "updated_at": "2026-08-10T17:56:25+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-10T16:58:27+00:00",
+  "cutoff_date": "2025-08-10T17:56:25+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1903,6 +1903,31 @@
       "status": "published",
       "static_url": "news/logirus-tamozhnya-stala-trebovat-voennoe-zaklyuchenie-na-47a8e0.html",
       "canonical_url": "https://wiaf.ru/news/logirus-tamozhnya-stala-trebovat-voennoe-zaklyuchenie-na-47a8e0.html"
+    },
+    {
+      "id": "news_bbd1ce51b259",
+      "slug": "logirus-v-poti-ischut-nevozmozhnoe-svobodnuyu-furu-i-mes-bbd1ce",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-10-10T00:00:00+00:00",
+      "published_at": "2026-10-10T00:00:00+00:00",
+      "title": "В Поти ищут невозможное: свободную фуру и место на борту",
+      "snippet": "Контейнеры ждут очереди, CMA остановила букинг из Индии, а MSC подняла фрахт на 40% за месяц",
+      "content_preview": "В Поти ищут невозможное: свободную фуру и место на борту",
+      "link": "https://logirus.ru/news/custom_and_ved/v_poti_ishchut_nevozmozhnoe_svobodnuyu_furu_i_mesto_na_bortu.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "bbd1ce51b25908e3114060ee220b97c2",
+      "status": "published",
+      "static_url": "news/logirus-v-poti-ischut-nevozmozhnoe-svobodnuyu-furu-i-mes-bbd1ce.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-v-poti-ischut-nevozmozhnoe-svobodnuyu-furu-i-mes-bbd1ce.html"
     },
     {
       "id": "news_4c79e40f3c6c",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0.html",
       "canonical_url": "https://wiaf.ru/news/logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0.html"
-    },
-    {
-      "id": "news_b5e83877c548",
-      "slug": "seanews-analiticheskiy-daydzhest-seanews-3-7-avgusta-202-b5e838",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-08-07T00:00:00+00:00",
-      "published_at": "2026-08-07T00:00:00+00:00",
-      "title": "Аналитический дайджест SeaNews, 3-7 августа 2026 — SeaNews",
-      "snippet": "",
-      "content_preview": "Аналитический дайджест SeaNews, 3-7 августа 2026",
-      "link": "https://seanews.ru/2026/08/07/ru-analiticheskij-dajdzhest-seanews-3-7-avgusta-2026/",
-      "image_url": "",
-      "category": "analytics",
-      "category_ru": "аналитика",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "b5e83877c548e6c1e67116340b140924",
-      "status": "published",
-      "static_url": "news/seanews-analiticheskiy-daydzhest-seanews-3-7-avgusta-202-b5e838.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-analiticheskiy-daydzhest-seanews-3-7-avgusta-202-b5e838.html"
     }
   ]
 }
