@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-10T22:42:34+00:00",
+  "updated_at": "2026-08-10T23:40:18+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-10T22:42:34+00:00",
+  "cutoff_date": "2025-08-10T23:40:18+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -1028,6 +1028,31 @@
       "status": "published",
       "static_url": "news/logirus-probka-na-milliard-ormuzskiy-proliv-snova-zahlop-4d3fd0.html",
       "canonical_url": "https://wiaf.ru/news/logirus-probka-na-milliard-ormuzskiy-proliv-snova-zahlop-4d3fd0.html"
+    },
+    {
+      "id": "news_132704dc6cfd",
+      "slug": "logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-11-10T00:00:00+00:00",
+      "published_at": "2026-11-10T00:00:00+00:00",
+      "title": "Больше трехсот заявок за день: владельцы ПВЗ выстроились в очередь за новым бизнесом от Wildberries",
+      "snippet": "Порог входа – 200 квадратных метров, тарифы обсуждают индивидуально. Параллельно маркетплейс продумывает модель сдачи полок в аренду селлерам",
+      "content_preview": "Больше трехсот заявок за день: владельцы ПВЗ выстроились в очередь за новым бизнесом от Wildberries",
+      "link": "https://logirus.ru/news/infrastructure/bolshe_trekhsot_zayavok_za_den_vladeltsy_pvz_vystroilis_v_ochered_za_novym_biznesom_ot_wildberries.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "132704dc6cfd06b690f753b62b5e204d",
+      "status": "published",
+      "static_url": "news/logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704.html"
     },
     {
       "id": "news_471ee70ab39f",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540.html",
       "canonical_url": "https://wiaf.ru/news/logirus-asfalt-ne-rezinovyy-mintrans-vvel-spetsproverku--49e540.html"
-    },
-    {
-      "id": "news_d6cbc0a07f12",
-      "slug": "logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-08-07T00:00:00+00:00",
-      "published_at": "2026-08-07T00:00:00+00:00",
-      "title": "Роуминг без приказа: операторы сами запустили пилот по пересылке черновиков",
-      "snippet": "Операторы ЭДО реализовали обмен черновиками без нормативного требования, опираясь на запрос бизнеса",
-      "content_preview": "Роуминг без приказа: операторы сами запустили пилот по пересылке черновиков",
-      "link": "https://logirus.ru/news/transport/rouming_bez_prikaza_operatory_sami_zapustili_pilot_po_peresylke_chernovikov.html",
-      "image_url": "",
-      "category": "news",
-      "category_ru": "новости",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "d6cbc0a07f12c299d8f66f1d61ef575f",
-      "status": "published",
-      "static_url": "news/logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-rouming-bez-prikaza-operatory-sami-zapustili-pil-d6cbc0.html"
     }
   ]
 }
