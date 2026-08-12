@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-12T13:17:41+00:00",
+  "updated_at": "2026-08-12T15:02:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-12T13:17:41+00:00",
+  "cutoff_date": "2025-08-12T15:02:35+00:00",
   "items": [
     {
       "id": "news_996c5b2a358c",
@@ -328,6 +328,31 @@
       "status": "published",
       "static_url": "news/logirus-odin-zvonok-vmesto-dvuh-lufthansa-cargo-sobrala--b8e1f8.html",
       "canonical_url": "https://wiaf.ru/news/logirus-odin-zvonok-vmesto-dvuh-lufthansa-cargo-sobrala--b8e1f8.html"
+    },
+    {
+      "id": "news_23e323356c80",
+      "slug": "logirus-kitay-stroit-svoy-severnyy-morskoy-put-vnutri-na-23e323",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-12-12T00:00:00+00:00",
+      "published_at": "2026-12-12T00:00:00+00:00",
+      "title": "Китай строит свой «Северный морской путь» внутри нашего, пока РФ считает тонны",
+      "snippet": "Пекин строит независимый контур спутниковой навигации, прогнозирования льдов и собственный терминал в Архангельске",
+      "content_preview": "Китай строит свой «Северный морской путь» внутри нашего, пока РФ считает тонны",
+      "link": "https://logirus.ru/news/transport/kitay_stroit_svoy_severnyy_morskoy_put_vnutri_nashego_poka_rf_schitaet_tonny.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "23e323356c8071b41abe02a7e5ea79f6",
+      "status": "published",
+      "static_url": "news/logirus-kitay-stroit-svoy-severnyy-morskoy-put-vnutri-na-23e323.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-kitay-stroit-svoy-severnyy-morskoy-put-vnutri-na-23e323.html"
     },
     {
       "id": "news_b3899bdeafd9",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-minpromtorg-prevysheniy-kantserogenov-v-rossiysk-a0221d.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-minpromtorg-prevysheniy-kantserogenov-v-rossiysk-a0221d.html"
-    },
-    {
-      "id": "news_9c2209bd10c9",
-      "slug": "rzd_partner-zatseper-proehal-tri-chasa-mezhdu-vagonami-skoro-9c2209",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-04T08:12:45+00:00",
-      "published_at": "2026-09-04T08:12:45+00:00",
-      "title": "Зацепер проехал три часа между вагонами скоростного поезда из Твери в Петербург",
-      "snippet": "Сотрудники транспортной полиции задержали 19-летнего жителя Москвы, который добрался из Твери до Санкт-Петербурга, находясь в межвагонном пространстве скоростного фирменного поезда. Об этом сообщила официальный представитель МВД России Ирина Волк.",
-      "content_preview": "Зацепер проехал три часа между вагонами скоростного поезда из Твери в Петербург",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/zatseper-proekhal-tri-chasa-mezhdu-vagonami-skorostnogo-poezda-iz-tveri-v-peterburg/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "9c2209bd10c9d7d70dee33663282ddea",
-      "status": "published",
-      "static_url": "news/rzd_partner-zatseper-proehal-tri-chasa-mezhdu-vagonami-skoro-9c2209.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-zatseper-proehal-tri-chasa-mezhdu-vagonami-skoro-9c2209.html"
     }
   ]
 }
