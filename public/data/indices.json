@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T23:46:13+00:00",
+  "updated_at": "2026-08-14T02:10:34+00:00",
   "cache_used": false,
   "items": [
     {
@@ -17,7 +17,7 @@
       "id": "idx_ccfi",
       "source": "Shanghai Shipping Exchange",
       "index_name": "CCFI",
-      "date": "2026-08-13",
+      "date": "2026-08-14",
       "value": 2001.0,
       "unit": "index_points",
       "change_abs": 0.0,
