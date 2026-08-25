@@ -1,9 +1,34 @@
 {
-  "updated_at": "2026-08-25T08:47:23+00:00",
+  "updated_at": "2026-08-25T09:39:54+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-08-25T08:47:23+00:00",
+  "cutoff_date": "2025-08-25T09:39:54+00:00",
   "items": [
+    {
+      "id": "news_3098f1ecd205",
+      "slug": "portnews-kongress-gts-i-dnouglublenie-3098f1",
+      "source": "PortNews",
+      "source_id": "portnews",
+      "source_group": "ports_media",
+      "lang": "ru",
+      "priority": 95,
+      "date": "2027-02-17T00:00:00+00:00",
+      "published_at": "2027-02-17T00:00:00+00:00",
+      "title": "Десятый конгресс «Гидротехнические сооружения и дноуглубление»",
+      "snippet": "",
+      "content_preview": "Конгресс ГТС и дноуглубление",
+      "link": "https://portnews.ru/conferences/congress/",
+      "image_url": "https://portnews.ru/upload/conference/image/zastavka_dnouglublenie__1472kh960_poster_66_1106_1865.jpg",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "3098f1ecd205349f3f2b1b99d18ef8df",
+      "status": "published",
+      "static_url": "news/portnews-kongress-gts-i-dnouglublenie-3098f1.html",
+      "canonical_url": "https://wiaf.ru/news/portnews-kongress-gts-i-dnouglublenie-3098f1.html"
+    },
     {
       "id": "news_996c5b2a358c",
       "slug": "logirus-hr-kollaps-s-1-marta-2027-goda-deshevyh-vysokokv-996c5b",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-nesmotrya-na-sluhi-o-zakrytii-suda-prodolzhayut--309bad.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-nesmotrya-na-sluhi-o-zakrytii-suda-prodolzhayut--309bad.html"
-    },
-    {
-      "id": "news_e49b5f6dc51d",
-      "slug": "rzd_partner-lukashenko-poruchil-vospolzovatsya-momentom-i-ak-e49b5f",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-04T11:35:40+00:00",
-      "published_at": "2026-09-04T11:35:40+00:00",
-      "title": "Лукашенко поручил воспользоваться моментом и активизировать строительство дорог",
-      "snippet": "Президент Белоруссии Александр Лукашенко поручил правительству воспользоваться моментом и уделить больше внимания дорожному строительству, передает ТАСС.",
-      "content_preview": "Лукашенко поручил воспользоваться моментом и активизировать строительство дорог",
-      "link": "https://www.rzd-partner.ru/auto/news/lukashenko-poruchil-vospolzovatsya-momentom-i-aktivizirovat-stroitelstvo-dorog/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "e49b5f6dc51d47dc225f8337a2401bdb",
-      "status": "published",
-      "static_url": "news/rzd_partner-lukashenko-poruchil-vospolzovatsya-momentom-i-ak-e49b5f.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-lukashenko-poruchil-vospolzovatsya-momentom-i-ak-e49b5f.html"
     }
   ]
 }
