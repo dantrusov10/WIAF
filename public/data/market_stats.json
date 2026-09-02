@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T13:26:22+00:00",
+  "updated_at": "2026-09-02T17:44:41+00:00",
   "items": [
     {
       "date": "2026-09-02",
@@ -11,10 +11,10 @@
       "avg_responses": 4.3,
       "avg_internal_rate": 1980.0,
       "calculated_market_index": 89.0,
-      "usd_rub": 86.753,
-      "cny_rub": 12.897,
-      "eur_rub": 100.5988,
-      "updated_at": "2026-09-02T13:26:22+00:00"
+      "usd_rub": 86.9963,
+      "cny_rub": 12.9217,
+      "eur_rub": 100.8287,
+      "updated_at": "2026-09-02T17:44:41+00:00"
     }
   ],
   "auctions": [
