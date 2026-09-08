@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-08T18:34:19+00:00",
+  "updated_at": "2026-09-08T21:43:15+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-08T18:34:19+00:00",
+  "cutoff_date": "2025-09-08T21:43:15+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6180,6 +6180,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-indeks-gruzovikov-zastyl-avtotransport-vydohsya--d292be.html"
     },
     {
+      "id": "news_15909009582e",
+      "slug": "logirus-nebo-derzhit-tsenu-minus-3-k-iyulyu-vmesto-dolgo-159090",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-09-08T00:00:00+00:00",
+      "published_at": "2026-09-08T00:00:00+00:00",
+      "title": "Небо держит цену: минус 3% к июлю вместо долгожданного пике",
+      "snippet": "Авиакомпании держат цены на 24% выше прошлогодних. Покупатели мощностей не готовы с этим мириться",
+      "content_preview": "Небо держит цену: минус 3% к июлю вместо долгожданного пике",
+      "link": "https://logirus.ru/news/global_logistics/nebo_derzhit_tsenu_minus_3_k_iyulyu_vmesto_dolgozhdannogo_pike.html",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "15909009582e99ae2368290d2de1981a",
+      "status": "published",
+      "static_url": "news/logirus-nebo-derzhit-tsenu-minus-3-k-iyulyu-vmesto-dolgo-159090.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-nebo-derzhit-tsenu-minus-3-k-iyulyu-vmesto-dolgo-159090.html"
+    },
+    {
       "id": "news_dca81b4c0344",
       "slug": "logirus-instock-wms-v8-na-semat2026-ii-agenty-otkrytyy-k-dca81b",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-do-40-proektov-robotizatsii-stalkivayutsya-s-zad-85e2b9.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-do-40-proektov-robotizatsii-stalkivayutsya-s-zad-85e2b9.html"
-    },
-    {
-      "id": "news_fb4377ebfa69",
-      "slug": "rzd_partner-v-moskve-otkryt-vtoroy-tramvaynyy-diametr-t2-nov-fb4377",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-04T13:23:05+00:00",
-      "published_at": "2026-09-04T13:23:05+00:00",
-      "title": "В Москве открыт второй трамвайный диаметр Т2 «Новогиреево — Чертановская»",
-      "snippet": "Мэр Москвы Сергей Собянин открыл второй Московский трамвайный диаметр Т2, соединивший станции «Новогиреево» и «Чертановская». Новый маршрут протяженностью 33 км стал самым длинным диаметральным трамвайным маршрутом в мире.",
-      "content_preview": "В Москве открыт второй трамвайный диаметр Т2 «Новогиреево — Чертановская»",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/v-moskve-otkryt-vtoroy-tramvaynyy-diametr-t2-novogireevo-chertanovskaya/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "fb4377ebfa690d6ebce5493cfad7833b",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-moskve-otkryt-vtoroy-tramvaynyy-diametr-t2-nov-fb4377.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-moskve-otkryt-vtoroy-tramvaynyy-diametr-t2-nov-fb4377.html"
     }
   ]
 }
