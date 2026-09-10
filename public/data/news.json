@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-10T17:36:48+00:00",
+  "updated_at": "2026-09-10T20:38:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-10T17:36:48+00:00",
+  "cutoff_date": "2025-09-10T20:38:36+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -3578,6 +3578,31 @@
       "status": "published",
       "static_url": "news/logirus-sklad-na-vynos-ataki-bpla-vygnali-tovary-s-marke-0b4898.html",
       "canonical_url": "https://wiaf.ru/news/logirus-sklad-na-vynos-ataki-bpla-vygnali-tovary-s-marke-0b4898.html"
+    },
+    {
+      "id": "news_74d402cd3ad3",
+      "slug": "logirus-regionalnyy-sklad-perestal-byt-narezkoy-rynok-us-74d402",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-10-10T00:00:00+00:00",
+      "published_at": "2026-10-10T00:00:00+00:00",
+      "title": "Региональный склад перестал быть «нарезкой»: рынок ушел от спекуляций",
+      "snippet": "Дробная сдача складов в регионах обнулилась: объекты больше не делят на блоки по 5–10 тыс. кв. м. Спрос сконцентрировался вокруг e-commerce и федеральных ритейлеров, которые строят исключительно под себя в формате BTS, а спекулятивное строительство выжило только там, где есть сильный региональный бизнес",
+      "content_preview": "Региональный склад перестал быть «нарезкой»: рынок ушел от спекуляций",
+      "link": "https://logirus.ru/news/infrastructure/regionalnyy_sklad_perestal_byt_narezkoy_rynok_ushel_ot_spekulyatsiy.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "74d402cd3ad3d34b1434662293070639",
+      "status": "published",
+      "static_url": "news/logirus-regionalnyy-sklad-perestal-byt-narezkoy-rynok-us-74d402.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-regionalnyy-sklad-perestal-byt-narezkoy-rynok-us-74d402.html"
     },
     {
       "id": "news_681064412cb1",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-mintrans-kyrgyzstana-predlagaet-vydavat-razreshe-e4b54c.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-mintrans-kyrgyzstana-predlagaet-vydavat-razreshe-e4b54c.html"
-    },
-    {
-      "id": "news_f082ac140abb",
-      "slug": "rzd_partner-il-114-300-prodolzhat-modernizirovat-parallelno--f082ac",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-07T11:58:37+00:00",
-      "published_at": "2026-09-07T11:58:37+00:00",
-      "title": "Ил-114-300 продолжат модернизировать параллельно с поставками авиакомпаниям",
-      "snippet": "Работы по развитию и модернизации регионального самолета Ил-114-300 продолжатся одновременно с его поставками и началом эксплуатации в авиакомпаниях. Об этом сообщил управляющий директор ПАО «Ил» Даниил Бренерман.",
-      "content_preview": "Ил-114-300 продолжат модернизировать параллельно с поставками авиакомпаниям",
-      "link": "https://www.rzd-partner.ru/aviation/news/il-114-300-prodolzhat-modernizirovat-parallelno-s-postavkami-aviakompaniyam/",
-      "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
-      "transport_type": "авиа",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "f082ac140abb1f008607215c4a874dea",
-      "status": "published",
-      "static_url": "news/rzd_partner-il-114-300-prodolzhat-modernizirovat-parallelno--f082ac.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-il-114-300-prodolzhat-modernizirovat-parallelno--f082ac.html"
     }
   ]
 }
