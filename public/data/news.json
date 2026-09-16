@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-16T19:56:06+00:00",
+  "updated_at": "2026-09-16T22:46:28+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-16T19:56:06+00:00",
+  "cutoff_date": "2025-09-16T22:46:28+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7130,6 +7130,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-minekonomrazvitiya-dobavilo-vtoroy-paket-sellery-97712f.html"
     },
     {
+      "id": "news_a56a1cc8903f",
+      "slug": "logirus-tri-kategorii-perevozchikov-kotorye-rynok-vynese-a56a1c",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-09-16T00:00:00+00:00",
+      "published_at": "2026-09-16T00:00:00+00:00",
+      "title": "Три категории перевозчиков, которые рынок «вынесет вперед ногами»",
+      "snippet": "Гендиректор «Каргономики» Александр Проскурин назвал рациональным решением для владельцев одной-двух стареющих сцепок продажу машины, пока она сохраняет стоимость, и переход в наем",
+      "content_preview": "Три категории перевозчиков, которые рынок «вынесет вперед ногами»",
+      "link": "https://logirus.ru/news/transport/tri_kategorii_perevozchikov_kotorye_rynok_vyneset_vpered_nogami.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "a56a1cc8903f1478cd14cc4b7a1a485e",
+      "status": "published",
+      "static_url": "news/logirus-tri-kategorii-perevozchikov-kotorye-rynok-vynese-a56a1c.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-tri-kategorii-perevozchikov-kotorye-rynok-vynese-a56a1c.html"
+    },
+    {
       "id": "news_35dc98edcced",
       "slug": "logirus-ekspert-dve-treti-rossiyskih-perevozchikov-v-opa-35dc98",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-na-yuge-primorya-planiruyut-postroit-suhoy-port-5e4f7a.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-na-yuge-primorya-planiruyut-postroit-suhoy-port-5e4f7a.html"
-    },
-    {
-      "id": "news_f69608b12751",
-      "slug": "rzd_partner-v-yakutii-nachali-stroitelstvo-glubokovodnogo-te-f69608",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-15T13:34:23+00:00",
-      "published_at": "2026-09-15T13:34:23+00:00",
-      "title": "В Якутии начали строительство глубоководного терминала «Найба»",
-      "snippet": "В морском порту Тикси началось строительство глубоководного грузового терминала «Найба». Старт проекту дал председатель Морской коллегии Николай Патрушев.",
-      "content_preview": "В Якутии начали строительство глубоководного терминала «Найба»",
-      "link": "https://www.rzd-partner.ru/wate-transport/news/v-yakutii-nachali-stroitelstvo-glubokovodnogo-terminala-nayba/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "f69608b12751cc24415b7a7ebe351200",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-yakutii-nachali-stroitelstvo-glubokovodnogo-te-f69608.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-yakutii-nachali-stroitelstvo-glubokovodnogo-te-f69608.html"
     }
   ]
 }
