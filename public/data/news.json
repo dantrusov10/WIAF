@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-19T13:48:00+00:00",
+  "updated_at": "2026-09-19T17:05:36+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-19T13:48:00+00:00",
+  "cutoff_date": "2025-09-19T17:05:36+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7448,7 +7448,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "32d3d9e2b057a8210ca3fae5da49c0f2",
       "status": "published",
       "static_url": "news/rzd_partner-latviya-i-estoniya-okazalis-sredi-liderov-es-po--32d3d9.html",
