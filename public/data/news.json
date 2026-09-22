@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-21T23:58:19+00:00",
+  "updated_at": "2026-09-22T03:59:45+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-21T23:58:19+00:00",
+  "cutoff_date": "2025-09-22T03:59:45+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7205,6 +7205,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-marketpleysy-atakuyut-dvazhdy-snachala-drony-tep-4b2e3a.html"
     },
     {
+      "id": "news_55411f91be75",
+      "slug": "logirus-vremennyy-upravlyayuschiy-obeschaet-ashanu-i-lem-55411f",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-09-21T00:00:00+00:00",
+      "published_at": "2026-09-21T00:00:00+00:00",
+      "title": "Временный управляющий обещает «Ашану» и «Лемана ПРО» защиту от дронов и сохранение команды",
+      "snippet": "Андрей Краюшкин просит сохранить команду и штатное расписание, но замораживает сделки, займы и выплаты топ-менеджменту до регистрации изменений в ЕГРЮЛ",
+      "content_preview": "Временный управляющий обещает «Ашану» и «Лемана ПРО» защиту от дронов и сохранение команды",
+      "link": "https://logirus.ru/news/infrastructure/vremennyy_upravlyayushchiy_obeshchaet_ashanu_i_lemana_pro_zashchitu_ot_dronov_i_sokhranenie_koma.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "55411f91be75d7adc8fd616725c21e25",
+      "status": "published",
+      "static_url": "news/logirus-vremennyy-upravlyayuschiy-obeschaet-ashanu-i-lem-55411f.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-vremennyy-upravlyayuschiy-obeschaet-ashanu-i-lem-55411f.html"
+    },
+    {
       "id": "news_15c5266f6dcf",
       "slug": "logirus-12-mlrd-na-strah-i-25-sverhu-logistika-vhodit-v--15c526",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/infranews-zakonteynerami-konteynernyy-biznes-2026-vzglyad--f4a9f1.html",
       "canonical_url": "https://wiaf.ru/news/infranews-zakonteynerami-konteynernyy-biznes-2026-vzglyad--f4a9f1.html"
-    },
-    {
-      "id": "news_a34bf63e1ee1",
-      "slug": "rzd_partner-eto-ne-koridor-a-poka-tolko-dvustoronnie-perevoz-a34bf6",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-18T12:31:54+00:00",
-      "published_at": "2026-09-18T12:31:54+00:00",
-      "title": "«Это не коридор, а пока только двусторонние перевозки»: эксперт о МТК «Север — Юг»",
-      "snippet": "МТК «Север — Юг» пока нельзя считать полноценным международным транспортным коридором: фактически перевозки по нему остаются преимущественно двусторонними, а участникам маршрута приходится отдельно решать вопросы тарифов, прохождения границ и сроков доставки. Такую оценку на конференции «Бизнес-проекты в Иране: нефтегаз, химия, IT, машиностроение, энергетика» представил профессор, доктор экономических наук, заведующий лабораторией Института народнохозяйственного прогнозирования РАН и кафедрой РГ",
-      "content_preview": "«Это не коридор, а пока только двусторонние перевозки»: эксперт о МТК «Север — Юг»",
-      "link": "https://www.rzd-partner.ru/logistics/news/eto-ne-koridor-a-poka-tolko-dvustoronnie-perevozki-ekspert-o-mtk-sever-yug/",
-      "image_url": "",
-      "category": "rates",
-      "category_ru": "ставки",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "recent",
-      "hash": "a34bf63e1ee1acb0b092c604a66cc8e4",
-      "status": "published",
-      "static_url": "news/rzd_partner-eto-ne-koridor-a-poka-tolko-dvustoronnie-perevoz-a34bf6.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-eto-ne-koridor-a-poka-tolko-dvustoronnie-perevoz-a34bf6.html"
     }
   ]
 }
