@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-25T18:23:03+00:00",
+  "updated_at": "2026-09-25T22:06:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-25T18:23:03+00:00",
+  "cutoff_date": "2025-09-25T22:06:35+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7330,6 +7330,31 @@
       "canonical_url": "https://wiaf.ru/news/logirus-sellery-ischut-fulfilment-po-regionam-d08f47.html"
     },
     {
+      "id": "news_59e4acd32218",
+      "slug": "logirus-chernoe-more-tselikom-stalo-zonoy-voennogo-riska-59e4ac",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-09-25T00:00:00+00:00",
+      "published_at": "2026-09-25T00:00:00+00:00",
+      "title": "Черное море целиком стало зоной военного риска",
+      "snippet": "Военный риск добавляет около 25 тысяч долларов в день и до шести суток прохода. Для типового рейса это порядка 150 тысяч долларов сверху",
+      "content_preview": "Черное море целиком стало зоной военного риска",
+      "link": "https://logirus.ru/news/global_logistics/chernoe_more_tselikom_stalo_zonoy_voennogo_riska.html",
+      "image_url": "",
+      "category": "sea",
+      "category_ru": "морская логистика",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "59e4acd3221810afe2eaaf90db1739d3",
+      "status": "published",
+      "static_url": "news/logirus-chernoe-more-tselikom-stalo-zonoy-voennogo-riska-59e4ac.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-chernoe-more-tselikom-stalo-zonoy-voennogo-riska-59e4ac.html"
+    },
+    {
       "id": "news_22be9e5de336",
       "slug": "seanews-rossiyskiy-morskoy-registr-sudohodstva-22be9e",
       "source": "SeaNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-regiony-dalnego-vostoka-opredelili-prioritetnye--8379b2.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-regiony-dalnego-vostoka-opredelili-prioritetnye--8379b2.html"
-    },
-    {
-      "id": "news_f55fa07a2789",
-      "slug": "rzd_partner-v-vshe-obsudyat-prognozirovanie-zheleznodorozhny-f55fa0",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-24T13:47:29+00:00",
-      "published_at": "2026-09-24T13:47:29+00:00",
-      "title": "В ВШЭ обсудят прогнозирование железнодорожных перевозок грузов",
-      "snippet": "Во вторник 29 сентября 2026 г. в ВШЭ пройдёт очередное, 50-е заседание открытого межвузовского научно-практического семинара «Экономика железнодорожного транспорта», который проходит под эгидой Института экономики и регулирования инфраструктурных отраслей НИУ ВШЭ.",
-      "content_preview": "В ВШЭ обсудят прогнозирование железнодорожных перевозок грузов",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/v-vshe-obsudyat-prognozirovanie-zheleznodorozhnykh-perevozok-gruzov/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "авто",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "f55fa07a278948be029293bdb9f1e363",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-vshe-obsudyat-prognozirovanie-zheleznodorozhny-f55fa0.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-vshe-obsudyat-prognozirovanie-zheleznodorozhny-f55fa0.html"
     }
   ]
 }
