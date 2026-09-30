@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-30T18:56:17+00:00",
+  "updated_at": "2026-09-30T22:54:05+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-30T18:56:17+00:00",
+  "cutoff_date": "2025-09-30T22:54:05+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6930,6 +6930,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-mintrans-izrailya-potreboval-priostanovit-reysy--e7fc47.html"
     },
     {
+      "id": "news_940762a6f2aa",
+      "slug": "rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-09-30T12:18:06+00:00",
+      "published_at": "2026-09-30T12:18:06+00:00",
+      "title": "В порту Актау углубляют дно из-за снижения уровня Каспия и строят два новых причала",
+      "snippet": "В порту Актау из-за снижения уровня Каспийского моря проводят углубление дна, в ходе которого планируется извлечь 1 миллион 300 тысяч кубометров грунта. Этот грунт будет использован при строительстве двух новых причалов.",
+      "content_preview": "В порту Актау углубляют дно из-за снижения уровня Каспия и строят два новых причала",
+      "link": "https://www.rzd-partner.ru/wate-transport/news/v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-urovnya-kaspiya-i-stroyat-dva-novykh-prichala/",
+      "image_url": "",
+      "category": "ports",
+      "category_ru": "порты",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "940762a6f2aac5c8a16759246dd2f51b",
+      "status": "published",
+      "static_url": "news/rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762.html"
+    },
+    {
       "id": "news_a9149a8cb88a",
       "slug": "rzd_partner-perevozki-eksportnyh-gruzov-v-porty-dalnego-vost-a9149a",
       "source": "РЖД-Партнер",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
       "canonical_url": "https://wiaf.ru/news/seanews-interaktivnaya-karta-terminalov-336776.html"
-    },
-    {
-      "id": "news_6d7fd85eda3d",
-      "slug": "seanews-gruzooborot-morskih-portov-kitaya-v-yanvare-iyul-6d7fd8",
-      "source": "SeaNews",
-      "source_id": "seanews",
-      "source_group": "ports_media",
-      "lang": "ru",
-      "priority": 90,
-      "date": "2026-09-29T00:00:00+00:00",
-      "published_at": "2026-09-29T00:00:00+00:00",
-      "title": "Грузооборот морских портов Китая в январе-июле 2026 — SeaNews",
-      "snippet": "",
-      "content_preview": "Грузооборот морских портов Китая в январе-июле 2026",
-      "link": "https://seanews.ru/2026/09/29/ru-gruzooborot-morskih-portov-kitaja-v-janvare-ijule-2026/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "6d7fd85eda3daa60fd533b9872f3f39c",
-      "status": "published",
-      "static_url": "news/seanews-gruzooborot-morskih-portov-kitaya-v-yanvare-iyul-6d7fd8.html",
-      "canonical_url": "https://wiaf.ru/news/seanews-gruzooborot-morskih-portov-kitaya-v-yanvare-iyul-6d7fd8.html"
     }
   ]
 }
