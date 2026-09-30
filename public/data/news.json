@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-29T20:33:54+00:00",
+  "updated_at": "2026-09-30T00:10:19+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-09-29T20:33:54+00:00",
+  "cutoff_date": "2025-09-30T00:10:19+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -1662,8 +1662,8 @@
       "source_group": "operator",
       "lang": "ru",
       "priority": 76,
-      "date": "2026-11-29T00:00:00+00:00",
-      "published_at": "2026-11-29T00:00:00+00:00",
+      "date": "2026-11-30T00:00:00+00:00",
+      "published_at": "2026-11-30T00:00:00+00:00",
       "title": "Дальневосточный терминал Глобал Портс расширяет линейку сервисов из Китая",
       "snippet": "",
       "content_preview": "",
@@ -7455,6 +7455,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-seminar-sk-rossii-aktsent-na-bezopasnost-transpo-c3386f.html"
     },
     {
+      "id": "news_cd4f3c55f910",
+      "slug": "rzd_partner-v-poezdah-vsm-moskva-peterburg-poyavitsya-vysoko-cd4f3c",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-09-28T11:16:44+00:00",
+      "published_at": "2026-09-28T11:16:44+00:00",
+      "title": "В поездах ВСМ Москва – Петербург появится высокоскоростной интернет",
+      "snippet": "Поезда, которые будут курсировать по высокоскоростной магистрали (ВСМ) Москва – Санкт-Петербург, оснастят высокоскоростным интернетом. Для обеспечения связи планируется использовать в том числе низкоорбитальные спутниковые системы, сообщил глава РЖД Олег Белозеров.",
+      "content_preview": "В поездах ВСМ Москва – Петербург появится высокоскоростной интернет",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/v-poezdakh-vsm-moskva-peterburg-poyavitsya-vysokoskorostnoy-internet/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "cd4f3c55f910a1779bd870cd45de3945",
+      "status": "published",
+      "static_url": "news/rzd_partner-v-poezdah-vsm-moskva-peterburg-poyavitsya-vysoko-cd4f3c.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-poezdah-vsm-moskva-peterburg-poyavitsya-vysoko-cd4f3c.html"
+    },
+    {
       "id": "news_1bb3fbd5abc7",
       "slug": "infranews-konteynernyy-otchet-po-itogam-9-mesyatsev-2026-g-1bb3fb",
       "source": "InfraNews",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/infranews-konteynernyy-otchet-po-itogam-9-mesyatsev-2026-g-1bb3fb.html",
       "canonical_url": "https://wiaf.ru/news/infranews-konteynernyy-otchet-po-itogam-9-mesyatsev-2026-g-1bb3fb.html"
-    },
-    {
-      "id": "news_7c733dd52331",
-      "slug": "rzd_partner-mezhdunarodnye-transportnye-koridory-v-primorsko-7c733d",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-28T06:17:58+00:00",
-      "published_at": "2026-09-28T06:17:58+00:00",
-      "title": "Международные транспортные коридоры в Приморском крае реанимируют льготами",
-      "snippet": "Вдохнуть новую жизнь в МТК «Приморье-1» и «Приморье-2» возможно за счет формирования инвестиционно-логистической экосистемы на базе международной территории опережающего развития с созданием порт-хаба.",
-      "content_preview": "Международные транспортные коридоры в Приморском крае реанимируют льготами",
-      "link": "https://www.rzd-partner.ru/logistics/news/mezhdunarodnye-transportnye-koridory-v-primorskom-krae-reanimiruyut-lgotami-/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "7c733dd523319526a2e98afa2ea34d2e",
-      "status": "published",
-      "static_url": "news/rzd_partner-mezhdunarodnye-transportnye-koridory-v-primorsko-7c733d.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-mezhdunarodnye-transportnye-koridory-v-primorsko-7c733d.html"
     }
   ]
 }
