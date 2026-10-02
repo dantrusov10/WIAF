@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-01T21:41:41+00:00",
+  "updated_at": "2026-10-02T01:25:47+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-01T21:41:41+00:00",
+  "cutoff_date": "2025-10-02T01:25:47+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7073,7 +7073,7 @@
       "category_ru": "ставки",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "cde9e50d786a24114a6171f19f6bdfa6",
       "status": "published",
       "static_url": "news/infranews-infranewsru-portal-o-logistike-i-transporte-cde9e5.html",
