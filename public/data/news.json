@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-03T23:38:24+00:00",
+  "updated_at": "2026-10-04T04:58:35+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-03T23:38:24+00:00",
+  "cutoff_date": "2025-10-04T04:58:35+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6748,7 +6748,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "33677652eff6e96472b3b7ce8d90ede8",
       "status": "published",
       "static_url": "news/seanews-interaktivnaya-karta-terminalov-336776.html",
@@ -6773,7 +6773,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "2e5f578e65c2b8262b1f6f5919581ba0",
       "status": "published",
       "static_url": "news/seanews-ocheredi-na-estonskoy-granitse-2e5f57.html",
