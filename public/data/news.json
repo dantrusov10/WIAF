@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-05T18:08:22+00:00",
+  "updated_at": "2026-10-06T00:42:20+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-05T18:08:22+00:00",
+  "cutoff_date": "2025-10-06T00:42:20+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -7348,7 +7348,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "183c8db230be08a0678a9fd034735a15",
       "status": "published",
       "static_url": "news/rzd_partner-v-afganistane-otkryli-uchastok-zheleznoy-dorogi--183c8d.html",
