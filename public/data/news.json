@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-07T20:31:17+00:00",
+  "updated_at": "2026-10-08T00:50:48+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-07T20:31:17+00:00",
+  "cutoff_date": "2025-10-08T00:50:48+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6130,6 +6130,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-severnyy-morskoy-put-dostupen-dlya-zapadnyh-stra-dafd22.html"
     },
     {
+      "id": "news_d721af27ebd7",
+      "slug": "logirus-gosudarstvo-perevelo-perevozki-v-elektronnyy-vid-d721af",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-10-06T00:00:00+00:00",
+      "published_at": "2026-10-06T00:00:00+00:00",
+      "title": "Государство перевело перевозки в электронный вид. Бизнес перевел сотрудников в режим копипаста",
+      "snippet": "Ручное заполнение одной ЭТрН занимает 10-15 минут и стоит от 130 до 195 рублей",
+      "content_preview": "Государство перевело перевозки в электронный вид. Бизнес перевел сотрудников в режим копипаста",
+      "link": "https://logirus.ru/news/transport/gosudarstvo_perevelo_perevozki_v_elektronnyy_vid_biznes_perevel_sotrudnikov_v_rezhim_kopipasta.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "d721af27ebd71138c03802457cefb9a5",
+      "status": "published",
+      "static_url": "news/logirus-gosudarstvo-perevelo-perevozki-v-elektronnyy-vid-d721af.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-gosudarstvo-perevelo-perevozki-v-elektronnyy-vid-d721af.html"
+    },
+    {
       "id": "news_cc7ae74e7c7e",
       "slug": "logirus-fns-skleila-banki-rosreestr-i-proslezhivaemost-v-cc7ae7",
       "source": "Logirus",
@@ -6148,7 +6173,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "cc7ae74e7c7ed924b8e0e103d07d51f2",
       "status": "published",
       "static_url": "news/logirus-fns-skleila-banki-rosreestr-i-proslezhivaemost-v-cc7ae7.html",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-v-afganistane-otkryli-uchastok-zheleznoy-dorogi--183c8d.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-v-afganistane-otkryli-uchastok-zheleznoy-dorogi--183c8d.html"
-    },
-    {
-      "id": "news_589f0b60606b",
-      "slug": "rzd_partner-uzhe-cherez-den-sostoitsya-konferentsiya-operato-589f0b",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-29T13:33:21+00:00",
-      "published_at": "2026-09-29T13:33:21+00:00",
-      "title": "Уже через день состоится конференция «Операторский бизнес: экономика, качество, взаимодействие с рынком»",
-      "snippet": "Мероприятие пройдет 1 октября 2026 года в г. Москве (отель «Золотое кольцо», ул. Смоленская, д.5). Помимо офлайн-формата, возможно онлайн-участие.",
-      "content_preview": "Уже через день состоится конференция «Операторский бизнес: экономика, качество, взаимодействие с рынком»",
-      "link": "https://www.rzd-partner.ru/zhd-transport/news/uzhe-cherez-den-sostoitsya-konferentsiya-operatorskiy-biznes-ekonomika-kachestvo-vzaimodeystvie-s-ry/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "589f0b60606b3386253052cd2140f518",
-      "status": "published",
-      "static_url": "news/rzd_partner-uzhe-cherez-den-sostoitsya-konferentsiya-operato-589f0b.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-uzhe-cherez-den-sostoitsya-konferentsiya-operato-589f0b.html"
     }
   ]
 }
