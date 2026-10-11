@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-11T08:29:54+00:00",
+  "updated_at": "2026-10-11T15:28:03+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-11T08:29:54+00:00",
+  "cutoff_date": "2025-10-11T15:28:03+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4598,7 +4598,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "15cf3bd2ec3ac953cc0412df123aa107",
       "status": "published",
       "static_url": "news/logirus-ekspert-perehodnyy-period-po-etrn-mozhet-zatyanu-15cf3b.html",
@@ -4623,7 +4623,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "d2520194711f2ff41831b6c9fd7ef0e8",
       "status": "published",
       "static_url": "news/logirus-novaya-praktika-zakazchiki-otkazyvayutsya-podpis-d25201.html",
