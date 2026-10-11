@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-11T20:03:21+00:00",
+  "updated_at": "2026-10-11T23:39:46+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-11T20:03:21+00:00",
+  "cutoff_date": "2025-10-11T23:39:46+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -503,6 +503,31 @@
       "status": "published",
       "static_url": "news/logirus-odin-zvonok-vmesto-dvuh-lufthansa-cargo-sobrala--b8e1f8.html",
       "canonical_url": "https://wiaf.ru/news/logirus-odin-zvonok-vmesto-dvuh-lufthansa-cargo-sobrala--b8e1f8.html"
+    },
+    {
+      "id": "news_90eab995ee3d",
+      "slug": "logirus-poka-podnebesnaya-otdyhaet-indeks-drewry-hudeet-90eab9",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-12-11T00:00:00+00:00",
+      "published_at": "2026-12-11T00:00:00+00:00",
+      "title": "Пока Поднебесная отдыхает, индекс Drewry худеет",
+      "snippet": "Сводный индекс Drewry опустился до $4351 за FEU – минус 2% за неделю и второе снижение подряд",
+      "content_preview": "Пока Поднебесная отдыхает, индекс Drewry худеет",
+      "link": "https://logirus.ru/news/global_logistics/poka_podnebesnaya_otdykhaet_indeks_drewry_khudeet.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "морская",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "90eab995ee3d6a76320d7fdcc06d61f6",
+      "status": "published",
+      "static_url": "news/logirus-poka-podnebesnaya-otdyhaet-indeks-drewry-hudeet-90eab9.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-poka-podnebesnaya-otdyhaet-indeks-drewry-hudeet-90eab9.html"
     },
     {
       "id": "news_a17f9bb8707a",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-mintrans-izrailya-potreboval-priostanovit-reysy--e7fc47.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-mintrans-izrailya-potreboval-priostanovit-reysy--e7fc47.html"
-    },
-    {
-      "id": "news_940762a6f2aa",
-      "slug": "rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-09-30T12:18:06+00:00",
-      "published_at": "2026-09-30T12:18:06+00:00",
-      "title": "В порту Актау углубляют дно из-за снижения уровня Каспия и строят два новых причала",
-      "snippet": "В порту Актау из-за снижения уровня Каспийского моря проводят углубление дна, в ходе которого планируется извлечь 1 миллион 300 тысяч кубометров грунта. Этот грунт будет использован при строительстве двух новых причалов.",
-      "content_preview": "В порту Актау углубляют дно из-за снижения уровня Каспия и строят два новых причала",
-      "link": "https://www.rzd-partner.ru/wate-transport/news/v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-urovnya-kaspiya-i-stroyat-dva-novykh-prichala/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "морская",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "940762a6f2aac5c8a16759246dd2f51b",
-      "status": "published",
-      "static_url": "news/rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-v-portu-aktau-uglublyayut-dno-iz-za-snizheniya-u-940762.html"
     }
   ]
 }
