@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-11T23:39:46+00:00",
+  "updated_at": "2026-10-12T05:03:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-11T23:39:46+00:00",
+  "cutoff_date": "2025-10-12T05:03:14+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6423,7 +6423,7 @@
       "category_ru": "аналитика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "599cba5f96b37d570b57305f9bcc10f1",
       "status": "published",
       "static_url": "news/seanews-informatsionno-analiticheskoe-agentstvo-599cba.html",
@@ -6448,7 +6448,7 @@
       "category_ru": "железная дорога",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "b60b471e17dc1d9018a3a4f51a6724b8",
       "status": "published",
       "static_url": "news/seanews-rzhd-ispytali-novogo-robota-b60b47.html",
@@ -6473,7 +6473,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "44708de3604b016aeedcebe357d6751a",
       "status": "published",
       "static_url": "news/seanews-vsm-protyanut-ot-moskvy-do-minska-44708d.html",
