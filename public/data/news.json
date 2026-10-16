@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-16T17:15:50+00:00",
+  "updated_at": "2026-10-16T20:42:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-16T17:15:50+00:00",
+  "cutoff_date": "2025-10-16T20:42:14+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -5173,7 +5173,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "9cf606db07d30114e105e727f07105cd",
       "status": "published",
       "static_url": "news/portnews-chem-zaymetsya-novaya-morskaya-administratsiya-9cf606.html",
