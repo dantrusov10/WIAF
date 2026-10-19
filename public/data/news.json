@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-19T19:11:02+00:00",
+  "updated_at": "2026-10-19T23:28:18+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-19T19:11:02+00:00",
+  "cutoff_date": "2025-10-19T23:28:18+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6023,7 +6023,7 @@
       "category_ru": "порты",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "2100f78ac05f3771b84ab3a4af75fdc6",
       "status": "published",
       "static_url": "news/rzd_partner-rzhd-podgotovili-investprogrammu-na-2027-god-2100f7.html",
@@ -6673,7 +6673,7 @@
       "category_ru": "автологистика",
       "transport_type": "железнодорожная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c3d817d9e163362527ec632c1439deca",
       "status": "published",
       "static_url": "news/rzd_partner-dlya-naraschivaniya-tempov-vagonostroeniya-poka--c3d817.html",
