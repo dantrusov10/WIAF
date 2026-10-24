@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-24T14:24:08+00:00",
+  "updated_at": "2026-10-24T17:59:49+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-24T14:24:08+00:00",
+  "cutoff_date": "2025-10-24T17:59:49+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -5880,6 +5880,31 @@
       "canonical_url": "https://wiaf.ru/news/rzd_partner-minpromtorg-profinansiroval-zamenu-dvigateley-sa-279902.html"
     },
     {
+      "id": "news_216927818d35",
+      "slug": "rzd_partner-elektrichki-poydut-po-bamu-216927",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-10-20T07:07:11+00:00",
+      "published_at": "2026-10-20T07:07:11+00:00",
+      "title": "Электрички пойдут по БАМу",
+      "snippet": "В следующем году будет впервые запушено движение электропоездов между Хабаровском и Комсомольском, сообщил сегодня на пресс-конференции губернатор Хабаровского края Дмитрий Демешин.",
+      "content_preview": "Электрички пойдут по БАМу",
+      "link": "https://www.rzd-partner.ru/zhd-transport/news/elektrichki-poydut-po-bamu/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "железнодорожная",
+      "region": "RU",
+      "freshness": "recent",
+      "hash": "216927818d35bcd57d137ab845bfaf0a",
+      "status": "published",
+      "static_url": "news/rzd_partner-elektrichki-poydut-po-bamu-216927.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-elektrichki-poydut-po-bamu-216927.html"
+    },
+    {
       "id": "news_54e183b1ed6c",
       "slug": "logirus-videoanalitika-montrans-v-dva-raza-snizila-summu-54e183",
       "source": "Logirus",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-uchastok-trassy-omsk-granitsa-s-kazahstanom-rass-2beb2a.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-uchastok-trassy-omsk-granitsa-s-kazahstanom-rass-2beb2a.html"
-    },
-    {
-      "id": "news_756410073089",
-      "slug": "rzd_partner-rossiya-gotova-uchastvovat-v-razvitii-transportn-756410",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-10-15T12:20:34+00:00",
-      "published_at": "2026-10-15T12:20:34+00:00",
-      "title": "Россия готова участвовать в развитии транспортной инфраструктуры между Арменией и Азербайджаном",
-      "snippet": "Россия пока не получала предложений об участии в проекте нового транспортного маршрута между Арменией и Азербайджаном, сообщил глава МИД РФ Сергей Лавров.",
-      "content_preview": "Россия готова участвовать в развитии транспортной инфраструктуры между Арменией и Азербайджаном",
-      "link": "https://www.rzd-partner.ru/logistics/news/rossiya-gotova-uchastvovat-v-razvitii-transportnoy-infrastruktury-mezhdu-armeniey-i-azerbaydzhanom/",
-      "image_url": "",
-      "category": "ports",
-      "category_ru": "порты",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "75641007308935969c867ff202767eed",
-      "status": "published",
-      "static_url": "news/rzd_partner-rossiya-gotova-uchastvovat-v-razvitii-transportn-756410.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-rossiya-gotova-uchastvovat-v-razvitii-transportn-756410.html"
     }
   ]
 }
