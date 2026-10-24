@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-24T05:33:28+00:00",
+  "updated_at": "2026-10-24T10:35:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-24T05:33:28+00:00",
+  "cutoff_date": "2025-10-24T10:35:16+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4823,7 +4823,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "e8e0cc1511ced7a1a9e202d2fc32e975",
       "status": "published",
       "static_url": "news/portnews-o-perspektivah-universalnyh-terminalov-na-fone-p-e8e0cc.html",
