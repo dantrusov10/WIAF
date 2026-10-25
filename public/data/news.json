@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-25T06:00:21+00:00",
+  "updated_at": "2026-10-25T11:12:16+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-25T06:00:21+00:00",
+  "cutoff_date": "2025-10-25T11:12:16+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4173,7 +4173,7 @@
       "category_ru": "автологистика",
       "transport_type": "авто",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "7561e067a9b7975babdbab527b2c2c3f",
       "status": "published",
       "static_url": "news/rzd_partner-cherez-verhniy-lars-ezhednevno-prohodit-do-13-ty-7561e0.html",
@@ -4273,7 +4273,7 @@
       "category_ru": "морская логистика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "6e1a6b06468fabb631b76fa489859c36",
       "status": "published",
       "static_url": "news/seanews-tehnicheskie-raboty-na-sayte-seanews-6e1a6b.html",
