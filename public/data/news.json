@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-28T23:01:14+00:00",
+  "updated_at": "2026-10-29T02:20:44+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-28T23:01:14+00:00",
+  "cutoff_date": "2025-10-29T02:20:44+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4998,7 +4998,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "caf49d2c254f36dd65a3c166d3278dbc",
       "status": "published",
       "static_url": "news/delo-global-ports-provel-obrazovatelnyy-intensiv-v-un-caf49d.html",
@@ -6748,7 +6748,7 @@
       "category_ru": "новости операторов",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "1edd0c9137bd760c0f7d7eb16379e4d2",
       "status": "published",
       "static_url": "news/delo-sovet-direktorov-uk-delo-vozglavil-kirill-komaro-1edd0c.html",
@@ -6773,7 +6773,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "d85e021b3c636fdea809c64a7399fafa",
       "status": "published",
       "static_url": "news/delo-rezultaty-operatsionnoy-deyatelnosti-global-port-d85e02.html",
