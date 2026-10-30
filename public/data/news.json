@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-29T21:40:59+00:00",
+  "updated_at": "2026-10-30T01:43:55+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-29T21:40:59+00:00",
+  "cutoff_date": "2025-10-30T01:43:55+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -6573,7 +6573,7 @@
       "category_ru": "порты",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "f67a403a67ac0818bde22b1237a5d797",
       "status": "published",
       "static_url": "news/seanews-pervyy-mezhdunarodnyy-forum-portovyh-gorodov-f67a40.html",
