@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-30T20:33:55+00:00",
+  "updated_at": "2026-10-31T00:34:22+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-10-30T20:33:55+00:00",
+  "cutoff_date": "2025-10-31T00:34:22+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4573,7 +4573,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "91fd388c1a58dfd8287c4e2ba5033641",
       "status": "published",
       "static_url": "news/rzd_partner-news-91fd38.html",
@@ -4598,7 +4598,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c421b18ead9ef40261121299935fe846",
       "status": "published",
       "static_url": "news/rzd_partner-news-c421b1.html",
