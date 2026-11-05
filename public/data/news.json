@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-04T23:25:21+00:00",
+  "updated_at": "2026-11-05T05:46:32+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-04T23:25:21+00:00",
+  "cutoff_date": "2025-11-05T05:46:32+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4748,7 +4748,7 @@
       "category_ru": "аналитика",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "599cba5f96b37d570b57305f9bcc10f1",
       "status": "published",
       "static_url": "news/seanews-informatsionno-analiticheskoe-agentstvo-599cba.html",
