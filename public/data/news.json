@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-05T21:25:10+00:00",
+  "updated_at": "2026-11-06T02:05:18+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-05T21:25:10+00:00",
+  "cutoff_date": "2025-11-06T02:05:18+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -4223,7 +4223,7 @@
       "category_ru": "порты",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "recent",
+      "freshness": "archive",
       "hash": "a30cebc7c4df8c9dab662d4091d7ea9b",
       "status": "published",
       "static_url": "news/delo-deloports-lider-sredi-otvetstvennyh-kompaniy-yuf-a30ceb.html",
