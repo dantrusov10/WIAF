@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-14T02:04:32+00:00",
+  "updated_at": "2026-11-14T09:57:53+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-14T02:04:32+00:00",
+  "cutoff_date": "2025-11-14T09:57:53+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -2703,6 +2703,31 @@
       "status": "published",
       "static_url": "news/delo-dalnevostochnyy-terminal-global-ports-rasshiryae-6d9a3e.html",
       "canonical_url": "https://wiaf.ru/news/delo-dalnevostochnyy-terminal-global-ports-rasshiryae-6d9a3e.html"
+    },
+    {
+      "id": "news_a758a94dbeb0",
+      "slug": "logirus-tri-nedeli-vniz-drewry-fiksiruet-padenie-stavok--a758a9",
+      "source": "Logirus",
+      "source_id": "logirus",
+      "source_group": "industry_media",
+      "lang": "ru",
+      "priority": 100,
+      "date": "2026-11-14T00:00:00+00:00",
+      "published_at": "2026-11-14T00:00:00+00:00",
+      "title": "Три недели вниз: Drewry фиксирует падение ставок, перевозчики отвечают отменами рейсов",
+      "snippet": "Шанхай – Нью-Йорк упал на 3% до $9020, Шанхай – Роттердам – на 3% до $3504, а единственный рост Drewry нашел на Атлантике",
+      "content_preview": "Три недели вниз: Drewry фиксирует падение ставок, перевозчики отвечают отменами рейсов",
+      "link": "https://logirus.ru/news/global_logistics/tri_nedeli_vniz_drewry_fiksiruet_padenie_stavok_perevozchiki_otvechayut_otmenami_reysov.html",
+      "image_url": "",
+      "category": "news",
+      "category_ru": "новости",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "a758a94dbeb090198436c4b9faeb9413",
+      "status": "published",
+      "static_url": "news/logirus-tri-nedeli-vniz-drewry-fiksiruet-padenie-stavok--a758a9.html",
+      "canonical_url": "https://wiaf.ru/news/logirus-tri-nedeli-vniz-drewry-fiksiruet-padenie-stavok--a758a9.html"
     },
     {
       "id": "news_090a82168439",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/rzd_partner-novyy-aeroport-smolensk-smozhet-pristupit-k-rabo-c74cff.html",
       "canonical_url": "https://wiaf.ru/news/rzd_partner-novyy-aeroport-smolensk-smozhet-pristupit-k-rabo-c74cff.html"
-    },
-    {
-      "id": "news_470c7ef89fb0",
-      "slug": "rzd_partner-k-2030-godu-doroga-r-217-kavkaz-stanet-polnostyu-470c7e",
-      "source": "РЖД-Партнер",
-      "source_id": "rzd_partner",
-      "source_group": "rail_media",
-      "lang": "ru",
-      "priority": 88,
-      "date": "2026-10-26T10:04:05+00:00",
-      "published_at": "2026-10-26T10:04:05+00:00",
-      "title": "К 2030 году дорога Р-217 Кавказ станет полностью 4-полосной",
-      "snippet": "Расширение федеральной трассы необходимо в свете увеличения перевозок по МТК «Север – Юг».",
-      "content_preview": "К 2030 году дорога Р-217 Кавказ станет полностью 4-полосной",
-      "link": "https://www.rzd-partner.ru/auto/news/k-2030-godu-doroga-r-217-kavkaz-stanet-polnostyu-4-polosnoy-/",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "смешанная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "470c7ef89fb09c5d32a9d5bcbfd2a748",
-      "status": "published",
-      "static_url": "news/rzd_partner-k-2030-godu-doroga-r-217-kavkaz-stanet-polnostyu-470c7e.html",
-      "canonical_url": "https://wiaf.ru/news/rzd_partner-k-2030-godu-doroga-r-217-kavkaz-stanet-polnostyu-470c7e.html"
     }
   ]
 }
