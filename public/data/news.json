@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-15T16:12:48+00:00",
+  "updated_at": "2026-11-15T21:33:10+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-15T16:12:48+00:00",
+  "cutoff_date": "2025-11-15T21:33:10+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -2998,7 +2998,7 @@
       "category_ru": "ставки",
       "transport_type": "морская",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "c8582ae3eb8732006009025ac6917d7a",
       "status": "published",
       "static_url": "news/portnews-konteynernyy-dozhd-baltiki-c8582a.html",
