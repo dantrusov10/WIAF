@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-17T21:36:40+00:00",
+  "updated_at": "2026-11-18T03:26:14+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-17T21:36:40+00:00",
+  "cutoff_date": "2025-11-18T03:26:14+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -3273,7 +3273,7 @@
       "category_ru": "новости",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "f69db2a649c96b28d671f276311405e1",
       "status": "published",
       "static_url": "news/logirus-ekspert-srok-okupaemosti-skladskogo-proekta-v-re-f69db2.html",
