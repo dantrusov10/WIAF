@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T11:29:40+00:00",
+  "updated_at": "2026-11-19T20:13:28+00:00",
   "cache_used": false,
   "items": [
     {
@@ -26,15 +26,16 @@
       "source_url": "https://en.sse.net.cn/indices/ccfinew.jsp"
     },
     {
-      "id": "idx_003",
+      "id": "idx_wci",
       "source": "Drewry",
       "index_name": "WCI",
-      "date": "2026-03-20",
-      "value": 3186.0,
-      "unit": "usd_per_forty_ft",
-      "change_abs": -64.0,
-      "change_pct": -2.0,
-      "status": "published"
+      "date": "2026-11-19",
+      "value": 126.0,
+      "unit": "usd_per_40ft",
+      "change_abs": -3060.0,
+      "change_pct": -96.05,
+      "status": "published",
+      "source_url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
     },
     {
       "id": "idx_fbx",
