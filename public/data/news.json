@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-21T09:24:40+00:00",
+  "updated_at": "2026-11-21T17:14:07+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-21T09:24:40+00:00",
+  "cutoff_date": "2025-11-21T17:14:07+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -3273,7 +3273,7 @@
       "category_ru": "железная дорога",
       "transport_type": "смешанная",
       "region": "RU",
-      "freshness": "fresh",
+      "freshness": "recent",
       "hash": "04885d7ad79b0692dad1de4b042ce22d",
       "status": "published",
       "static_url": "news/rzd_partner-news-04885d.html",
