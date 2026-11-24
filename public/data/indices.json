@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T21:00:23+00:00",
+  "updated_at": "2026-11-24T05:16:31+00:00",
   "cache_used": false,
   "items": [
     {
@@ -17,7 +17,7 @@
       "id": "idx_ccfi",
       "source": "Shanghai Shipping Exchange",
       "index_name": "CCFI",
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "value": 2001.0,
       "unit": "index_points",
       "change_abs": 0.0,
@@ -29,7 +29,7 @@
       "id": "idx_wci",
       "source": "Drewry",
       "index_name": "WCI",
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "value": 126.0,
       "unit": "usd_per_40ft",
       "change_abs": 0.0,
@@ -41,7 +41,7 @@
       "id": "idx_fbx",
       "source": "Freightos",
       "index_name": "FBX",
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "value": 2011.0,
       "unit": "index_points",
       "change_abs": 0.0,
