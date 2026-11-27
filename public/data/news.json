@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-27T14:51:41+00:00",
+  "updated_at": "2026-11-27T23:20:00+00:00",
   "cache_used": false,
   "retention_days": 365,
-  "cutoff_date": "2025-11-27T14:51:41+00:00",
+  "cutoff_date": "2025-11-27T23:20:00+00:00",
   "items": [
     {
       "id": "news_3098f1ecd205",
@@ -3128,6 +3128,31 @@
       "status": "published",
       "static_url": "news/seanews-biznes-gotov-obnovlyat-tehniku-tolko-pri-korotki-f233de.html",
       "canonical_url": "https://wiaf.ru/news/seanews-biznes-gotov-obnovlyat-tehniku-tolko-pri-korotki-f233de.html"
+    },
+    {
+      "id": "news_b6d25152b69e",
+      "slug": "rzd_partner-15-b6d251",
+      "source": "РЖД-Партнер",
+      "source_id": "rzd_partner",
+      "source_group": "rail_media",
+      "lang": "ru",
+      "priority": 88,
+      "date": "2026-11-26T09:01:52+00:00",
+      "published_at": "2026-11-26T09:01:52+00:00",
+      "title": "Ð Ð¾ÑÑÐ¸Ñ Ð¸ ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½ ÑÐ¾Ñ ÑÐ°Ð½ÑÑÑ Ð¾ÑÐ¸ÐµÐ½ÑÐ¸Ñ Ð½Ð° Ð¿ÐµÑÐµÐ²Ð¾Ð·ÐºÑ Ð½Ðµ Ð¼ÐµÐ½ÐµÐµ 15 Ð¼Ð»Ð½ Ñ Ð³ÑÑÐ·Ð¾Ð² Ð² Ð³Ð¾Ð´ Ð¿Ð¾ ÐÐ¢Ð Â«Ð¡ÐµÐ²ÐµÑ â Ð®Ð³Â»",
+      "snippet": "Ð Ð¾ÑÑÐ¸Ñ Ð¸ ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½ ÑÐ¾Ñ ÑÐ°Ð½ÑÑÑ ÑÐµÐ»ÐµÐ²Ð¾Ð¹ Ð¾ÑÐ¸ÐµÐ½ÑÐ¸Ñ Ð¿Ð¾ ÑÐ²ÐµÐ»Ð¸ÑÐµÐ½Ð¸Ñ Ð¾Ð±ÑÐµÐ¼Ð° Ð³ÑÑÐ·Ð¾Ð¿ÐµÑÐµÐ²Ð¾Ð·Ð¾Ðº Ð¿Ð¾ Ð¼ÐµÐ¶Ð´ÑÐ½Ð°ÑÐ¾Ð´Ð½Ð¾Ð¼Ñ ÑÑÐ°Ð½ÑÐ¿Ð¾ÑÑÐ½Ð¾Ð¼Ñ ÐºÐ¾ÑÐ¸Ð´Ð¾ÑÑ (ÐÐ¢Ð) Â«Ð¡ÐµÐ²ÐµÑ â Ð®Ð³Â» Ð´Ð¾ Ð½Ðµ Ð¼ÐµÐ½ÐµÐµ 15 Ð¼Ð»Ð½ Ñ Ð² Ð³Ð¾Ð´, Ð½ÐµÑÐ¼Ð¾ÑÑÑ Ð½Ð° Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½ÑÐ¹ Ð¿ÐµÑÐµÑÐ¼Ð¾ÑÑ ÑÑÐ¾ÐºÐ¾Ð² ÐµÐ³Ð¾ Ð´Ð¾ÑÑÐ¸Ð¶ÐµÐ½Ð¸Ñ. ÐÐ± ÑÑÐ¾Ð¼ Ð·Ð°ÑÐ²Ð¸Ð» Ð¿Ð¾ÑÐ¾Ð» ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½Ð° Ð² Ð Ð¾ÑÑÐ¸Ð¸ Ð Ð°Ñ",
+      "content_preview": "Ð Ð¾ÑÑÐ¸Ñ Ð¸ ÐÐ·ÐµÑÐ±Ð°Ð¹Ð´Ð¶Ð°Ð½ ÑÐ¾Ñ ÑÐ°Ð½ÑÑÑ Ð¾ÑÐ¸ÐµÐ½ÑÐ¸Ñ Ð½Ð° Ð¿ÐµÑÐµÐ²Ð¾Ð·ÐºÑ Ð½Ðµ Ð¼ÐµÐ½ÐµÐµ 15 Ð¼Ð»Ð½ Ñ Ð³ÑÑÐ·Ð¾Ð² Ð² Ð³Ð¾Ð´ Ð¿Ð¾ ÐÐ¢Ð Â«Ð¡ÐµÐ²ÐµÑ â Ð®Ð³Â»",
+      "link": "https://www.rzd-partner.ru/logistics/news/rossiya-i-azerbaydzhan-sokhranyayut-orientir-na-perevozku-ne-menee-15-mln-t-gruzov-v-god-po-mtk-seve/",
+      "image_url": "",
+      "category": "rail",
+      "category_ru": "железная дорога",
+      "transport_type": "смешанная",
+      "region": "RU",
+      "freshness": "fresh",
+      "hash": "b6d25152b69eb7a7b5e18fdcbfe06bc2",
+      "status": "published",
+      "static_url": "news/rzd_partner-15-b6d251.html",
+      "canonical_url": "https://wiaf.ru/news/rzd_partner-15-b6d251.html"
     },
     {
       "id": "news_c05a7dee8cf3",
@@ -7478,31 +7503,6 @@
       "status": "published",
       "static_url": "news/logirus-suets-dyshit-ormuz-molchit-a-nava-sheva-kipit-16a32e.html",
       "canonical_url": "https://wiaf.ru/news/logirus-suets-dyshit-ormuz-molchit-a-nava-sheva-kipit-16a32e.html"
-    },
-    {
-      "id": "news_132704dc6cfd",
-      "slug": "logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704",
-      "source": "Logirus",
-      "source_id": "logirus",
-      "source_group": "industry_media",
-      "lang": "ru",
-      "priority": 100,
-      "date": "2026-11-12T00:00:00+00:00",
-      "published_at": "2026-11-12T00:00:00+00:00",
-      "title": "Больше трехсот заявок за день: владельцы ПВЗ выстроились в очередь за новым бизнесом от Wildberries",
-      "snippet": "Порог входа – 200 квадратных метров, тарифы обсуждают индивидуально. Параллельно маркетплейс продумывает модель сдачи полок в аренду селлерам",
-      "content_preview": "Больше трехсот заявок за день: владельцы ПВЗ выстроились в очередь за новым бизнесом от Wildberries",
-      "link": "https://logirus.ru/news/infrastructure/bolshe_trekhsot_zayavok_za_den_vladeltsy_pvz_vystroilis_v_ochered_za_novym_biznesom_ot_wildberries.html",
-      "image_url": "",
-      "category": "rail",
-      "category_ru": "железная дорога",
-      "transport_type": "железнодорожная",
-      "region": "RU",
-      "freshness": "fresh",
-      "hash": "132704dc6cfd06b690f753b62b5e204d",
-      "status": "published",
-      "static_url": "news/logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704.html",
-      "canonical_url": "https://wiaf.ru/news/logirus-bolshe-trehsot-zayavok-za-den-vladeltsy-pvz-vyst-132704.html"
     }
   ]
 }
